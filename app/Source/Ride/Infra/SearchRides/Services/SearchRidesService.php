@@ -19,6 +19,7 @@ class SearchRidesService
             ->where('to_place_id', $toPlaceId)
             ->where('time', '>=', $minStartTime->format('Y-m-d H:i:s'))
             ->with(['fromPlace', 'toPlace', 'user'])
+            ->orderBy('time', 'ASC')
             ->paginate();
 
         return $rides;

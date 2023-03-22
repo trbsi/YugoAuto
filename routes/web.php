@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::middleware([
     'auth:sanctum',
@@ -27,9 +23,11 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
-    Route::prefix('ride')->group(function () {
-        Route::get('search', [RideController::class, 'search'])->name('ride.list');
-    });
 });
 
+//PUBLIC
+Route::prefix('ride')->group(function () {
+    Route::get('search', [RideController::class, 'search'])->name('ride.list');
+});
+
+Route::get('/', [RideController::class, 'search']);

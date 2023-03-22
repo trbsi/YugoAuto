@@ -7,9 +7,47 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 
+/**
+ * App\Models\Ride
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property int $from_place_id
+ * @property int $to_place_id
+ * @property Carbon $time
+ * @property int $price
+ * @property string $currency
+ * @property int $number_of_seats
+ * @property string|null $description
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read \App\Models\Place $fromPlace
+ * @property-read \App\Models\Place $toPlace
+ * @property-read \App\Models\User $user
+ * @method static \Database\Factories\RideFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCurrency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereFromPlaceId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereNumberOfSeats($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereToPlaceId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUserId($value)
+ * @mixin \Eloquent
+ */
 class Ride extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'time' => 'datetime'
+    ];
 
     public function fromPlace(): BelongsTo
     {
@@ -100,6 +138,12 @@ class Ride extends Model
     public function getTime(): Carbon
     {
         return $this->time;
+    }
+
+
+    public function getTimeFormatted(): string
+    {
+        return $this->getTime()->format('d.m.Y. H:i');
     }
 
     public function setTime(Carbon $time): self

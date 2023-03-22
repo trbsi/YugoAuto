@@ -10,20 +10,21 @@
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($rides as $ride)
-            <li class="pb-3 sm:pb-4">
+            <li class="pb-3 pt-3 sm:pb-4">
                 <div class="flex items-center space-x-4">
-                    <!--
                     <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="/docs/images/people/profile-picture-1.jpg"
+                        <img class="w-8 h-8 rounded-full" src="{{$ride->user->getProfilePhotoUrl()}}"
                              alt="Neil image">
                     </div>
-                    -->
 
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                             {{$ride->user->getName()}}
                         </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            {{__('Departure time')}} {{$ride->getTimeFormatted()}}
+                        </p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
                             {{$ride->getDescription()}}
                         </p>
                     </div>

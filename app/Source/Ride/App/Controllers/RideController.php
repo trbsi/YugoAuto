@@ -9,6 +9,7 @@ use App\Source\Place\Domain\SearchPlaces\SearchPlacesBusinessLogic;
 use App\Source\Ride\App\Requests\SearchRidesRequest;
 use App\Source\Ride\Domain\SearchRides\SearchRidesBusinessLogic;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class RideController extends Controller
 {
@@ -18,7 +19,7 @@ class RideController extends Controller
         SearchPlacesBusinessLogic $placesBusinessLogic
     ) {
         $rides = null;
-        $fromPlaceId = $fromPlaceName = $toPlaceId = $toPlaceName = $time = null;
+        $fromPlace = $toPlace = $time = null;
 
         if ($request->from_place_id && $request->to_place_id && $request->time) {
             $rides = $businessLogic->search(
@@ -28,22 +29,16 @@ class RideController extends Controller
             );
 
             $fromPlace = $placesBusinessLogic->getById((int)$request->from_place_id);
-            $fromPlaceId = $fromPlace->getId();
-            $fromPlaceName = $fromPlace->getName();
             $toPlace = $placesBusinessLogic->getById((int)$request->to_place_id);
-            $toPlaceId = $toPlace->getId();
-            $toPlaceName = $toPlace->getName();
             $time = $request->time;
         }
 
         return view(
-            'ride.list',
+            (Auth::guest()) ? 'ride.public_list' : 'ride.list',
             [
                 'rides' => $rides,
-                'fromPlaceId' => $fromPlaceId,
-                'fromPlaceName' => $fromPlaceName,
-                'toPlaceId' => $toPlaceId,
-                'toPlaceName' => $toPlaceName,
+                'fromPlace' => $fromPlace,
+                'toPlace' => $toPlace,
                 'time' => $time,
             ]
         );
