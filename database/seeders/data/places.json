@@ -12,7 +12,7 @@
     },
     {
         "city": "Split",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "176314",
         "iso2": "HR",
@@ -23,7 +23,7 @@
     },
     {
         "city": "Rijeka",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "141172",
         "iso2": "HR",
@@ -34,7 +34,7 @@
     },
     {
         "city": "Slavonski Brod",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "60742",
         "iso2": "HR",
@@ -45,7 +45,7 @@
     },
     {
         "city": "Osijek",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "88140",
         "iso2": "HR",
@@ -56,7 +56,7 @@
     },
     {
         "city": "Zadar",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "47145",
         "iso2": "HR",
@@ -67,7 +67,7 @@
     },
     {
         "city": "Pula",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "59078",
         "iso2": "HR",
@@ -78,7 +78,7 @@
     },
     {
         "city": "Karlovac",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "48123",
         "iso2": "HR",
@@ -88,8 +88,8 @@
         "population": "55063"
     },
     {
-        "city": "\u0160ibenik",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "city": "Šibenik",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "37112",
         "iso2": "HR",
@@ -100,7 +100,7 @@
     },
     {
         "city": "Dubrovnik",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "28428",
         "iso2": "HR",
@@ -111,7 +111,7 @@
     },
     {
         "city": "Luka",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -121,8 +121,8 @@
         "population": ""
     },
     {
-        "city": "Luka\u010d",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "city": "Lukač",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -133,7 +133,7 @@
     },
     {
         "city": "Bol",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -144,7 +144,7 @@
     },
     {
         "city": "Popovac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -155,7 +155,7 @@
     },
     {
         "city": "Zrinski Topolovac",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -166,7 +166,7 @@
     },
     {
         "city": "Slano",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -176,8 +176,8 @@
         "population": ""
     },
     {
-        "city": "Gar\u010din",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Garčin",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -187,8 +187,8 @@
         "population": ""
     },
     {
-        "city": "Jak\u0161i\u0107",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "city": "Jakšić",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -199,7 +199,7 @@
     },
     {
         "city": "Podbablje",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -210,7 +210,7 @@
     },
     {
         "city": "Klakar",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -221,7 +221,7 @@
     },
     {
         "city": "Biograd na Moru",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -232,7 +232,7 @@
     },
     {
         "city": "Vis",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -242,8 +242,8 @@
         "population": ""
     },
     {
-        "city": "Kra\u0161i\u0107",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Krašić",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -254,7 +254,7 @@
     },
     {
         "city": "Delnice",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -264,8 +264,8 @@
         "population": ""
     },
     {
-        "city": "Rovi\u0161\u0107e",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Rovišće",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -276,7 +276,7 @@
     },
     {
         "city": "Rovinj",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -287,7 +287,7 @@
     },
     {
         "city": "Labin",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -298,7 +298,7 @@
     },
     {
         "city": "Bilice",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -308,8 +308,8 @@
         "population": ""
     },
     {
-        "city": "Mikleu\u0161",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "city": "Mikleuš",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -320,7 +320,7 @@
     },
     {
         "city": "Ogulin",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -330,8 +330,8 @@
         "population": ""
     },
     {
-        "city": "\u017dumberak",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "žumberak",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -342,7 +342,7 @@
     },
     {
         "city": "Solin",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -352,8 +352,8 @@
         "population": ""
     },
     {
-        "city": "\u010cepin",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Čepin",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -364,7 +364,7 @@
     },
     {
         "city": "Kukljica",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -375,7 +375,7 @@
     },
     {
         "city": "Babino Polje",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -386,7 +386,7 @@
     },
     {
         "city": "Povljana",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -396,8 +396,8 @@
         "population": ""
     },
     {
-        "city": "Ka\u0161telir",
-        "admin": "Istarska \u017dupanija",
+        "city": "Kaštelir",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -407,8 +407,8 @@
         "population": ""
     },
     {
-        "city": "Re\u0161etari",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Rešetari",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -419,7 +419,7 @@
     },
     {
         "city": "Lasinja",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -430,7 +430,7 @@
     },
     {
         "city": "Galovac",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -440,8 +440,8 @@
         "population": ""
     },
     {
-        "city": "\u0160odolovci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Šodolovci",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -452,7 +452,7 @@
     },
     {
         "city": "Kalinovac",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -463,7 +463,7 @@
     },
     {
         "city": "Pribislavec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -474,7 +474,7 @@
     },
     {
         "city": "Jagodnjak",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -484,8 +484,8 @@
         "population": ""
     },
     {
-        "city": "Podgora\u010d",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Podgorač",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -496,7 +496,7 @@
     },
     {
         "city": "Orehovica",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -507,7 +507,7 @@
     },
     {
         "city": "Donji Andrijevci",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -518,7 +518,7 @@
     },
     {
         "city": "Dugopolje",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -529,7 +529,7 @@
     },
     {
         "city": "Prelog",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -540,7 +540,7 @@
     },
     {
         "city": "Donja Stubica",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -551,7 +551,7 @@
     },
     {
         "city": "Vir",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -562,7 +562,7 @@
     },
     {
         "city": "Petrinja",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -572,8 +572,8 @@
         "population": ""
     },
     {
-        "city": "Gra\u010dac",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Gračac",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -584,7 +584,7 @@
     },
     {
         "city": "Pakrac",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -595,7 +595,7 @@
     },
     {
         "city": "Oklaj",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -605,8 +605,8 @@
         "population": ""
     },
     {
-        "city": "Vojni\u0107",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "city": "Vojnić",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -617,7 +617,7 @@
     },
     {
         "city": "Krnjak",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -628,7 +628,7 @@
     },
     {
         "city": "Hercegovac",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -639,7 +639,7 @@
     },
     {
         "city": "Saborsko",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -650,7 +650,7 @@
     },
     {
         "city": "Pregrada",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -661,7 +661,7 @@
     },
     {
         "city": "Otok",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -672,7 +672,7 @@
     },
     {
         "city": "Sveti Martin na Muri",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -683,7 +683,7 @@
     },
     {
         "city": "Brestovac",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -693,8 +693,8 @@
         "population": ""
     },
     {
-        "city": "\u017dminj",
-        "admin": "Istarska \u017dupanija",
+        "city": "žminj",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -704,8 +704,8 @@
         "population": ""
     },
     {
-        "city": "Komi\u017ea",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Komiža",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -716,7 +716,7 @@
     },
     {
         "city": "Prgomet",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -726,8 +726,8 @@
         "population": ""
     },
     {
-        "city": "Su\u0107uraj",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Sućuraj",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -738,7 +738,7 @@
     },
     {
         "city": "Nova Kapela",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -749,7 +749,7 @@
     },
     {
         "city": "Vrlika",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -760,7 +760,7 @@
     },
     {
         "city": "Podcrkavlje",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -771,7 +771,7 @@
     },
     {
         "city": "Klana",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -782,7 +782,7 @@
     },
     {
         "city": "Antunovac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -793,7 +793,7 @@
     },
     {
         "city": "Novalja",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -804,7 +804,7 @@
     },
     {
         "city": "Topusko",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -815,7 +815,7 @@
     },
     {
         "city": "Mali Bukovec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -826,7 +826,7 @@
     },
     {
         "city": "Brinje",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -837,7 +837,7 @@
     },
     {
         "city": "Vodice",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -847,8 +847,8 @@
         "population": ""
     },
     {
-        "city": "Otri\u0107-Seoci",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "city": "Otrić-Seoci",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -858,8 +858,8 @@
         "population": ""
     },
     {
-        "city": "Plo\u010de",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "city": "Ploče",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -869,8 +869,8 @@
         "population": ""
     },
     {
-        "city": "Ru\u017ei\u0107",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "city": "Ružić",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -881,7 +881,7 @@
     },
     {
         "city": "Rakovec",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -892,7 +892,7 @@
     },
     {
         "city": "Tuhelj",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -903,7 +903,7 @@
     },
     {
         "city": "Gornja Rijeka",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -913,8 +913,8 @@
         "population": ""
     },
     {
-        "city": "Bo\u0161njaci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "Bošnjaci",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -925,7 +925,7 @@
     },
     {
         "city": "Petrijanec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -936,7 +936,7 @@
     },
     {
         "city": "Orle",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -947,7 +947,7 @@
     },
     {
         "city": "Biskupija",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -958,7 +958,7 @@
     },
     {
         "city": "Lobor",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -968,8 +968,8 @@
         "population": ""
     },
     {
-        "city": "Desini\u0107",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Desinić",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -979,8 +979,8 @@
         "population": ""
     },
     {
-        "city": "\u0160estanovac",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Šestanovac",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -991,7 +991,7 @@
     },
     {
         "city": "Kistanje",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1002,7 +1002,7 @@
     },
     {
         "city": "Novi Golubovec",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1013,7 +1013,7 @@
     },
     {
         "city": "Ozalj",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1024,7 +1024,7 @@
     },
     {
         "city": "Peteranec",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1035,7 +1035,7 @@
     },
     {
         "city": "Milna",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1046,7 +1046,7 @@
     },
     {
         "city": "Oriovac",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1056,8 +1056,8 @@
         "population": ""
     },
     {
-        "city": "Dragali\u0107",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Dragalić",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1067,8 +1067,8 @@
         "population": ""
     },
     {
-        "city": "Vo\u0107in",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "city": "Voćin",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1079,7 +1079,7 @@
     },
     {
         "city": "Donji Miholjac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1090,7 +1090,7 @@
     },
     {
         "city": "Lumbarda",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1101,7 +1101,7 @@
     },
     {
         "city": "Severin",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1112,7 +1112,7 @@
     },
     {
         "city": "Sveti Ivan Zelina",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1123,7 +1123,7 @@
     },
     {
         "city": "Buje",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1134,7 +1134,7 @@
     },
     {
         "city": "Brtonigla",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1144,8 +1144,8 @@
         "population": ""
     },
     {
-        "city": "Nere\u017ei\u0161\u0107e",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Nerežišće",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1155,8 +1155,8 @@
         "population": ""
     },
     {
-        "city": "Le\u0107evica",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Lećevica",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1167,7 +1167,7 @@
     },
     {
         "city": "Dvor",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1178,7 +1178,7 @@
     },
     {
         "city": "Matulji",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1188,8 +1188,8 @@
         "population": ""
     },
     {
-        "city": "Gori\u010dan",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Goričan",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1200,7 +1200,7 @@
     },
     {
         "city": "Vlaka",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1211,7 +1211,7 @@
     },
     {
         "city": "Brckovljani",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1222,7 +1222,7 @@
     },
     {
         "city": "Donji Kukuruzari",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1232,8 +1232,8 @@
         "population": ""
     },
     {
-        "city": "Klo\u0161tar Podravski",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "city": "Kloštar Podravski",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1243,8 +1243,8 @@
         "population": ""
     },
     {
-        "city": "Klo\u0161tar Ivani\u0107",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Kloštar Ivanić",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1255,7 +1255,7 @@
     },
     {
         "city": "Darda",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1266,7 +1266,7 @@
     },
     {
         "city": "Daruvar",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1277,7 +1277,7 @@
     },
     {
         "city": "Vrhovine",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1287,8 +1287,8 @@
         "population": ""
     },
     {
-        "city": "Nova Ra\u010da",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Nova Rača",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1299,7 +1299,7 @@
     },
     {
         "city": "Tar",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1310,7 +1310,7 @@
     },
     {
         "city": "Zemunik Donji",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1321,7 +1321,7 @@
     },
     {
         "city": "Klis",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1332,7 +1332,7 @@
     },
     {
         "city": "Petlovac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1343,7 +1343,7 @@
     },
     {
         "city": "Vrsar",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1354,7 +1354,7 @@
     },
     {
         "city": "Dekanovec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1364,8 +1364,8 @@
         "population": ""
     },
     {
-        "city": "\u00d0ur\u0111enovac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Đurđenovac",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1375,8 +1375,8 @@
         "population": ""
     },
     {
-        "city": "\u00d0ur\u0111evac",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "city": "Đurđevac",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1386,8 +1386,8 @@
         "population": ""
     },
     {
-        "city": "\u010cazma",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Čazma",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1398,7 +1398,7 @@
     },
     {
         "city": "Rugvica",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1409,7 +1409,7 @@
     },
     {
         "city": "Buzet",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1420,7 +1420,7 @@
     },
     {
         "city": "Cernik",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1430,8 +1430,8 @@
         "population": ""
     },
     {
-        "city": "Levanjska Varo\u0161",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Levanjska Varoš",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1441,8 +1441,8 @@
         "population": ""
     },
     {
-        "city": "Gradi\u0161te",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "Gradište",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1452,8 +1452,8 @@
         "population": ""
     },
     {
-        "city": "Po\u017eega",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "city": "Požega",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1463,8 +1463,8 @@
         "population": ""
     },
     {
-        "city": "Barilovi\u0107",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "city": "Barilović",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1474,8 +1474,8 @@
         "population": ""
     },
     {
-        "city": "Pi\u0107an",
-        "admin": "Istarska \u017dupanija",
+        "city": "Pićan",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1486,7 +1486,7 @@
     },
     {
         "city": "Tompojevci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1496,8 +1496,8 @@
         "population": ""
     },
     {
-        "city": "Trnovec Bartolove\u010dki",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Trnovec Bartolovečki",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1507,8 +1507,8 @@
         "population": ""
     },
     {
-        "city": "Budin\u0161\u0107ina",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Budinšćina",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1518,8 +1518,8 @@
         "population": ""
     },
     {
-        "city": "\u010ca\u010dinci",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "city": "Čačinci",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1529,8 +1529,8 @@
         "population": ""
     },
     {
-        "city": "Fa\u017eana",
-        "admin": "Istarska \u017dupanija",
+        "city": "Fažana",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1541,7 +1541,7 @@
     },
     {
         "city": "Bednja",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1552,7 +1552,7 @@
     },
     {
         "city": "Bedenica",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1563,7 +1563,7 @@
     },
     {
         "city": "Imotski",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1573,8 +1573,8 @@
         "population": ""
     },
     {
-        "city": "Peru\u0161i\u0107",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "city": "Perušić",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1585,7 +1585,7 @@
     },
     {
         "city": "Hrvace",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1596,7 +1596,7 @@
     },
     {
         "city": "Gornji Stupnik",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1607,7 +1607,7 @@
     },
     {
         "city": "Novi Marof",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1618,7 +1618,7 @@
     },
     {
         "city": "Bilje",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1629,7 +1629,7 @@
     },
     {
         "city": "Kumrovec",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1640,7 +1640,7 @@
     },
     {
         "city": "Sveti Ilija",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1650,8 +1650,8 @@
         "population": ""
     },
     {
-        "city": "Mursko Sredi\u0161\u0107e",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Mursko Središće",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1661,8 +1661,8 @@
         "population": ""
     },
     {
-        "city": "Metkovi\u0107",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "city": "Metković",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1673,7 +1673,7 @@
     },
     {
         "city": "Lekenik",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1683,8 +1683,8 @@
         "population": ""
     },
     {
-        "city": "\u017dupanja",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "županja",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1695,7 +1695,7 @@
     },
     {
         "city": "Podstrana",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1706,7 +1706,7 @@
     },
     {
         "city": "Vrbnik",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1717,7 +1717,7 @@
     },
     {
         "city": "Rasinja",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1728,7 +1728,7 @@
     },
     {
         "city": "Veliki Bukovec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1738,8 +1738,8 @@
         "population": ""
     },
     {
-        "city": "Omi\u0161alj",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Omišalj",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1750,7 +1750,7 @@
     },
     {
         "city": "Lovinac",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1761,7 +1761,7 @@
     },
     {
         "city": "Umag",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1772,7 +1772,7 @@
     },
     {
         "city": "Srebreno",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1782,8 +1782,8 @@
         "population": ""
     },
     {
-        "city": "De\u017eanovac",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Dežanovac",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1794,7 +1794,7 @@
     },
     {
         "city": "Medulin",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1805,7 +1805,7 @@
     },
     {
         "city": "Orahovica",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1815,8 +1815,8 @@
         "population": ""
     },
     {
-        "city": "Ba\u0161ka",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Baška",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1827,7 +1827,7 @@
     },
     {
         "city": "Kutina",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1838,7 +1838,7 @@
     },
     {
         "city": "Generalski Stol",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1849,7 +1849,7 @@
     },
     {
         "city": "Velika Gorica",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1859,8 +1859,8 @@
         "population": ""
     },
     {
-        "city": "Slavonski \u0160amac",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Slavonski Šamac",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1871,7 +1871,7 @@
     },
     {
         "city": "Dugi Rat",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1882,7 +1882,7 @@
     },
     {
         "city": "Mrkopalj",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1893,7 +1893,7 @@
     },
     {
         "city": "Vukovar",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1904,7 +1904,7 @@
     },
     {
         "city": "Oroslavje",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1915,7 +1915,7 @@
     },
     {
         "city": "Donji Vidovec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1926,7 +1926,7 @@
     },
     {
         "city": "Lokve",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1936,8 +1936,8 @@
         "population": ""
     },
     {
-        "city": "Mali Lo\u0161inj",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Mali Lošinj",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1948,7 +1948,7 @@
     },
     {
         "city": "Babina Greda",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1959,7 +1959,7 @@
     },
     {
         "city": "Tribunj",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1970,7 +1970,7 @@
     },
     {
         "city": "Oprisavci",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1981,7 +1981,7 @@
     },
     {
         "city": "Oprtalj",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -1992,7 +1992,7 @@
     },
     {
         "city": "Staro Petrovo Selo",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2003,7 +2003,7 @@
     },
     {
         "city": "Kostrena",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2014,7 +2014,7 @@
     },
     {
         "city": "Primorski Dolac",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2025,7 +2025,7 @@
     },
     {
         "city": "Visoko",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2036,7 +2036,7 @@
     },
     {
         "city": "Samobor",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2047,7 +2047,7 @@
     },
     {
         "city": "Jesenice",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2058,7 +2058,7 @@
     },
     {
         "city": "Hrvatska Dubica",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2068,8 +2068,8 @@
         "population": ""
     },
     {
-        "city": "Vara\u017edinske Toplice",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Varaždinske Toplice",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2079,8 +2079,8 @@
         "population": ""
     },
     {
-        "city": "Vara\u017edin",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Varaždin",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2091,7 +2091,7 @@
     },
     {
         "city": "Velika Trnovitica",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2102,7 +2102,7 @@
     },
     {
         "city": "Petrovsko",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2113,7 +2113,7 @@
     },
     {
         "city": "Nin",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2124,7 +2124,7 @@
     },
     {
         "city": "Zagvozd",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2135,7 +2135,7 @@
     },
     {
         "city": "Stankovci",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2146,7 +2146,7 @@
     },
     {
         "city": "Zmijavci",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2157,7 +2157,7 @@
     },
     {
         "city": "Punitovci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2167,8 +2167,8 @@
         "population": ""
     },
     {
-        "city": "Ra\u017eanac",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Ražanac",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2179,7 +2179,7 @@
     },
     {
         "city": "Jasenovac",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2190,7 +2190,7 @@
     },
     {
         "city": "Bale",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2201,7 +2201,7 @@
     },
     {
         "city": "Trpanj",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2212,7 +2212,7 @@
     },
     {
         "city": "Ilok",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2223,7 +2223,7 @@
     },
     {
         "city": "Pag",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2234,7 +2234,7 @@
     },
     {
         "city": "Ervenik",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2245,7 +2245,7 @@
     },
     {
         "city": "Privlaka",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2256,7 +2256,7 @@
     },
     {
         "city": "Ivanska",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2267,7 +2267,7 @@
     },
     {
         "city": "Kolan",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2278,7 +2278,7 @@
     },
     {
         "city": "Lipovljani",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2289,7 +2289,7 @@
     },
     {
         "city": "Valpovo",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2299,8 +2299,8 @@
         "population": ""
     },
     {
-        "city": "Marku\u0161ica",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "Markušica",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2311,7 +2311,7 @@
     },
     {
         "city": "Skradin",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2322,7 +2322,7 @@
     },
     {
         "city": "Donji Lapac",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2333,7 +2333,7 @@
     },
     {
         "city": "Mala Subotica",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2344,7 +2344,7 @@
     },
     {
         "city": "Martijanec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2354,8 +2354,8 @@
         "population": ""
     },
     {
-        "city": "Sveti Petar u \u0160umi",
-        "admin": "Istarska \u017dupanija",
+        "city": "Sveti Petar u Šumi",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2366,7 +2366,7 @@
     },
     {
         "city": "Murter",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2377,7 +2377,7 @@
     },
     {
         "city": "Podravske Sesvete",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2388,7 +2388,7 @@
     },
     {
         "city": "Gornji Mihaljevec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2399,7 +2399,7 @@
     },
     {
         "city": "Crnac",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2410,7 +2410,7 @@
     },
     {
         "city": "Breznica",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2421,7 +2421,7 @@
     },
     {
         "city": "Gradec",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2432,7 +2432,7 @@
     },
     {
         "city": "Brela",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2443,7 +2443,7 @@
     },
     {
         "city": "Brdovec",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2454,7 +2454,7 @@
     },
     {
         "city": "Radoboj",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2464,8 +2464,8 @@
         "population": ""
     },
     {
-        "city": "Hra\u0161\u0107ina",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Hrašćina",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2476,7 +2476,7 @@
     },
     {
         "city": "Stari Mikanovci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2487,7 +2487,7 @@
     },
     {
         "city": "Rogoznica",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2498,7 +2498,7 @@
     },
     {
         "city": "Ivankovo",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2508,8 +2508,8 @@
         "population": ""
     },
     {
-        "city": "Omi\u0161",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Omiš",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2520,7 +2520,7 @@
     },
     {
         "city": "Jelsa",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2531,7 +2531,7 @@
     },
     {
         "city": "Zagorska Sela",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2542,7 +2542,7 @@
     },
     {
         "city": "Duga Resa",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2553,7 +2553,7 @@
     },
     {
         "city": "Sinj",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2564,7 +2564,7 @@
     },
     {
         "city": "Semeljci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2575,7 +2575,7 @@
     },
     {
         "city": "Viljevo",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2585,8 +2585,8 @@
         "population": ""
     },
     {
-        "city": "Beli\u0161\u0107e",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Belišće",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2597,7 +2597,7 @@
     },
     {
         "city": "Gundinci",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2608,7 +2608,7 @@
     },
     {
         "city": "Gunja",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2618,8 +2618,8 @@
         "population": ""
     },
     {
-        "city": "Kri\u017e",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Križ",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2629,8 +2629,8 @@
         "population": ""
     },
     {
-        "city": "Bedekov\u010dina",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Bedekovčina",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2640,8 +2640,8 @@
         "population": ""
     },
     {
-        "city": "Klin\u010da Sela",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Klinča Sela",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2652,7 +2652,7 @@
     },
     {
         "city": "Udbina",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2662,8 +2662,8 @@
         "population": ""
     },
     {
-        "city": "Andrija\u0161evci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "Andrijaševci",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2673,8 +2673,8 @@
         "population": ""
     },
     {
-        "city": "Nede\u0161\u010dina",
-        "admin": "Istarska \u017dupanija",
+        "city": "Nedeščina",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2684,8 +2684,8 @@
         "population": ""
     },
     {
-        "city": "Nedeli\u0161\u0107e",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Nedelišće",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2696,7 +2696,7 @@
     },
     {
         "city": "Sveti Filip i Jakov",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2706,8 +2706,8 @@
         "population": ""
     },
     {
-        "city": "Ko\u0161ka",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Koška",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2717,8 +2717,8 @@
         "population": ""
     },
     {
-        "city": "Ma\u010de",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Mače",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2729,7 +2729,7 @@
     },
     {
         "city": "Starigrad",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2740,7 +2740,7 @@
     },
     {
         "city": "Sibinj",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2750,8 +2750,8 @@
         "population": ""
     },
     {
-        "city": "Ivani\u0107-Grad",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Ivanić-Grad",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2762,7 +2762,7 @@
     },
     {
         "city": "Otok",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2773,7 +2773,7 @@
     },
     {
         "city": "Pleternica",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2783,8 +2783,8 @@
         "population": ""
     },
     {
-        "city": "\u0160pi\u0161i\u0107-Bukovica",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "city": "Špišić-Bukovica",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2795,7 +2795,7 @@
     },
     {
         "city": "Bebrina",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2805,8 +2805,8 @@
         "population": ""
     },
     {
-        "city": "Gare\u0161nica",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Garešnica",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2817,7 +2817,7 @@
     },
     {
         "city": "Slunj",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2828,7 +2828,7 @@
     },
     {
         "city": "Preko",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2839,7 +2839,7 @@
     },
     {
         "city": "Vladislavci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2850,7 +2850,7 @@
     },
     {
         "city": "Zabok",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2860,8 +2860,8 @@
         "population": ""
     },
     {
-        "city": "Sveti Ivan \u017dabno",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "city": "Sveti Ivan žabno",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2872,7 +2872,7 @@
     },
     {
         "city": "Marina",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2883,7 +2883,7 @@
     },
     {
         "city": "Lepoglava",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2894,7 +2894,7 @@
     },
     {
         "city": "Supetar",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2905,7 +2905,7 @@
     },
     {
         "city": "Cista Provo",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2916,7 +2916,7 @@
     },
     {
         "city": "Ribnik",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2927,7 +2927,7 @@
     },
     {
         "city": "Vrbovsko",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2938,7 +2938,7 @@
     },
     {
         "city": "Mihovljan",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2949,7 +2949,7 @@
     },
     {
         "city": "Pirovac",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2959,8 +2959,8 @@
         "population": ""
     },
     {
-        "city": "Brezni\u010dki Hum",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Breznički Hum",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2971,7 +2971,7 @@
     },
     {
         "city": "Vrbanja",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2981,8 +2981,8 @@
         "population": ""
     },
     {
-        "city": "Donja Vo\u0107a",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Donja Voća",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -2992,8 +2992,8 @@
         "population": ""
     },
     {
-        "city": "Pore\u010d",
-        "admin": "Istarska \u017dupanija",
+        "city": "Poreč",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3004,7 +3004,7 @@
     },
     {
         "city": "Trogir",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3014,8 +3014,8 @@
         "population": ""
     },
     {
-        "city": "Mo\u0161\u0107eni\u010dka Draga",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Mošćenička Draga",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3025,8 +3025,8 @@
         "population": ""
     },
     {
-        "city": "Drni\u0161",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "city": "Drniš",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3036,8 +3036,8 @@
         "population": ""
     },
     {
-        "city": "Koprivni\u010dki Bregi",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "city": "Koprivnički Bregi",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3047,8 +3047,8 @@
         "population": ""
     },
     {
-        "city": "Vrati\u0161inec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Vratišinec",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3059,7 +3059,7 @@
     },
     {
         "city": "Josipdol",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3069,8 +3069,8 @@
         "population": ""
     },
     {
-        "city": "Donja Moti\u010dina",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Donja Motičina",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3081,7 +3081,7 @@
     },
     {
         "city": "Posedarje",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3092,7 +3092,7 @@
     },
     {
         "city": "Krapina",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3103,7 +3103,7 @@
     },
     {
         "city": "Krapinske Toplice",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3114,7 +3114,7 @@
     },
     {
         "city": "Ferdinandovac",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3125,7 +3125,7 @@
     },
     {
         "city": "Cestica",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3135,8 +3135,8 @@
         "population": ""
     },
     {
-        "city": "Na\u0161ice",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Našice",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3147,7 +3147,7 @@
     },
     {
         "city": "Sutivan",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3157,8 +3157,8 @@
         "population": ""
     },
     {
-        "city": "\u0160tefanje",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Štefanje",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3169,7 +3169,7 @@
     },
     {
         "city": "Rakovica",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3180,7 +3180,7 @@
     },
     {
         "city": "Gola",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3191,7 +3191,7 @@
     },
     {
         "city": "Korenica",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3201,8 +3201,8 @@
         "population": ""
     },
     {
-        "city": "\u00d0ulovac",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Đulovac",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3213,7 +3213,7 @@
     },
     {
         "city": "Kastav",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3224,7 +3224,7 @@
     },
     {
         "city": "Gornji Kneginec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3235,7 +3235,7 @@
     },
     {
         "city": "Klanjec",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3246,7 +3246,7 @@
     },
     {
         "city": "Podgora",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3257,7 +3257,7 @@
     },
     {
         "city": "Sveti Petar Orehovec",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3267,8 +3267,8 @@
         "population": ""
     },
     {
-        "city": "Orebi\u0107",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "city": "Orebić",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3279,7 +3279,7 @@
     },
     {
         "city": "Sisak",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3289,8 +3289,8 @@
         "population": ""
     },
     {
-        "city": "Sveti Kri\u017e Za\u010dretje",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Sveti Križ Začretje",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3300,8 +3300,8 @@
         "population": ""
     },
     {
-        "city": "Kne\u017eevi Vinogradi",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Kneževi Vinogradi",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3312,7 +3312,7 @@
     },
     {
         "city": "Virje",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3323,7 +3323,7 @@
     },
     {
         "city": "Virovitica",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3333,8 +3333,8 @@
         "population": ""
     },
     {
-        "city": "Donja Pu\u0161\u0107a",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Donja Pušća",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3344,8 +3344,8 @@
         "population": ""
     },
     {
-        "city": "\u010caglin",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "city": "Čaglin",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3356,7 +3356,7 @@
     },
     {
         "city": "Ravna Gora",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3366,8 +3366,8 @@
         "population": ""
     },
     {
-        "city": "Mar\u010dana",
-        "admin": "Istarska \u017dupanija",
+        "city": "Marčana",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3378,7 +3378,7 @@
     },
     {
         "city": "Karlobag",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3389,7 +3389,7 @@
     },
     {
         "city": "Karlovac",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3399,8 +3399,8 @@
         "population": ""
     },
     {
-        "city": "Pitoma\u010da",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "city": "Pitomača",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3410,8 +3410,8 @@
         "population": ""
     },
     {
-        "city": "Oto\u010dac",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "city": "Otočac",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3421,8 +3421,8 @@
         "population": ""
     },
     {
-        "city": "Stara Gradi\u0161ka",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Stara Gradiška",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3433,7 +3433,7 @@
     },
     {
         "city": "Gradina",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3443,8 +3443,8 @@
         "population": ""
     },
     {
-        "city": "Li\u017enjan",
-        "admin": "Istarska \u017dupanija",
+        "city": "Ližnjan",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3454,8 +3454,8 @@
         "population": ""
     },
     {
-        "city": "Lani\u0161\u0107e",
-        "admin": "Istarska \u017dupanija",
+        "city": "Lanišće",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3465,8 +3465,8 @@
         "population": ""
     },
     {
-        "city": "Vi\u0161kovci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Viškovci",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3476,8 +3476,8 @@
         "population": ""
     },
     {
-        "city": "Ljube\u0161\u0107ica",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Ljubešćica",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3487,8 +3487,8 @@
         "population": ""
     },
     {
-        "city": "Tu\u010depi",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Tučepi",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3498,8 +3498,8 @@
         "population": ""
     },
     {
-        "city": "Satnica \u00d0akova\u010dka",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Satnica Đakovačka",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3509,8 +3509,8 @@
         "population": ""
     },
     {
-        "city": "Une\u0161i\u0107",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "city": "Unešić",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3520,8 +3520,8 @@
         "population": ""
     },
     {
-        "city": "Ka\u0161tel Su\u0107urac",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Kaštel Sućurac",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3532,7 +3532,7 @@
     },
     {
         "city": "Benkovac",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3543,7 +3543,7 @@
     },
     {
         "city": "Velika Kopanica",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3554,7 +3554,7 @@
     },
     {
         "city": "Molve",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3564,8 +3564,8 @@
         "population": ""
     },
     {
-        "city": "Kon\u010danica",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Končanica",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3575,8 +3575,8 @@
         "population": ""
     },
     {
-        "city": "Nu\u0161tar",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "Nuštar",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3586,8 +3586,8 @@
         "population": ""
     },
     {
-        "city": "Suko\u0161an",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Sukošan",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3598,7 +3598,7 @@
     },
     {
         "city": "Lastovo",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3609,7 +3609,7 @@
     },
     {
         "city": "Novigrad",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3619,8 +3619,8 @@
         "population": ""
     },
     {
-        "city": "Vo\u0111inci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "Vođinci",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3631,7 +3631,7 @@
     },
     {
         "city": "Hvar",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3642,7 +3642,7 @@
     },
     {
         "city": "Civljane",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3653,7 +3653,7 @@
     },
     {
         "city": "Sunja",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3664,7 +3664,7 @@
     },
     {
         "city": "Skrad",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3675,7 +3675,7 @@
     },
     {
         "city": "Ludbreg",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3686,7 +3686,7 @@
     },
     {
         "city": "Motovun",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3697,7 +3697,7 @@
     },
     {
         "city": "Glina",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3707,8 +3707,8 @@
         "population": ""
     },
     {
-        "city": "Grubi\u0161no Polje",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Grubišno Polje",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3719,7 +3719,7 @@
     },
     {
         "city": "Tinjan",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3729,8 +3729,8 @@
         "population": ""
     },
     {
-        "city": "Ba\u0161ka Voda",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Baška Voda",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3740,8 +3740,8 @@
         "population": ""
     },
     {
-        "city": "Dra\u017e",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Draž",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3752,7 +3752,7 @@
     },
     {
         "city": "Postire",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3763,7 +3763,7 @@
     },
     {
         "city": "Jakovlje",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3774,7 +3774,7 @@
     },
     {
         "city": "Klenovnik",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3785,7 +3785,7 @@
     },
     {
         "city": "Vrgorac",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3796,7 +3796,7 @@
     },
     {
         "city": "Gvozd",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3807,7 +3807,7 @@
     },
     {
         "city": "Zlatar Bistrica",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3817,8 +3817,8 @@
         "population": ""
     },
     {
-        "city": "Vi\u0161njan",
-        "admin": "Istarska \u017dupanija",
+        "city": "Višnjan",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3828,8 +3828,8 @@
         "population": ""
     },
     {
-        "city": "\u010ceminac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Čeminac",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3840,7 +3840,7 @@
     },
     {
         "city": "Cetingrad",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3851,7 +3851,7 @@
     },
     {
         "city": "Tordinci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3862,7 +3862,7 @@
     },
     {
         "city": "Berek",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3873,7 +3873,7 @@
     },
     {
         "city": "Beretinec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3883,8 +3883,8 @@
         "population": ""
     },
     {
-        "city": "Lokvi\u010di\u010d",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Lokvičič",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3894,8 +3894,8 @@
         "population": ""
     },
     {
-        "city": "Gro\u017enjan",
-        "admin": "Istarska \u017dupanija",
+        "city": "Grožnjan",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3906,7 +3906,7 @@
     },
     {
         "city": "Hlebine",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3917,7 +3917,7 @@
     },
     {
         "city": "Drenovci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3928,7 +3928,7 @@
     },
     {
         "city": "Barban",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3939,7 +3939,7 @@
     },
     {
         "city": "Dubravica",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3950,7 +3950,7 @@
     },
     {
         "city": "Knin",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3961,7 +3961,7 @@
     },
     {
         "city": "Suhopolje",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3972,7 +3972,7 @@
     },
     {
         "city": "Bosiljevo",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3982,8 +3982,8 @@
         "population": ""
     },
     {
-        "city": "Mlini\u0161te",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "city": "Mlinište",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -3993,8 +3993,8 @@
         "population": ""
     },
     {
-        "city": "Runovi\u0107",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Runović",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4004,8 +4004,8 @@
         "population": ""
     },
     {
-        "city": "Netreti\u0107",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "city": "Netretić",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4016,7 +4016,7 @@
     },
     {
         "city": "Petrijevci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4026,8 +4026,8 @@
         "population": ""
     },
     {
-        "city": "Jal\u017eabet",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Jalžabet",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4038,7 +4038,7 @@
     },
     {
         "city": "Gradac",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4049,7 +4049,7 @@
     },
     {
         "city": "Selca",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4060,7 +4060,7 @@
     },
     {
         "city": "Davor",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4071,7 +4071,7 @@
     },
     {
         "city": "Lupoglav",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4082,7 +4082,7 @@
     },
     {
         "city": "Grohote",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4093,7 +4093,7 @@
     },
     {
         "city": "Sokolovac",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4103,8 +4103,8 @@
         "population": ""
     },
     {
-        "city": "Kr\u0161an",
-        "admin": "Istarska \u017dupanija",
+        "city": "Kršan",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4115,7 +4115,7 @@
     },
     {
         "city": "Sikirevci",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4125,8 +4125,8 @@
         "population": ""
     },
     {
-        "city": "Svetvin\u010denat",
-        "admin": "Istarska \u017dupanija",
+        "city": "Svetvinčenat",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4136,8 +4136,8 @@
         "population": ""
     },
     {
-        "city": "Sra\u010dinec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Sračinec",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4148,7 +4148,7 @@
     },
     {
         "city": "Jarmina",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4158,8 +4158,8 @@
         "population": ""
     },
     {
-        "city": "Donji Mu\u0107",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Donji Muć",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4169,8 +4169,8 @@
         "population": ""
     },
     {
-        "city": "Nova Gradi\u0161ka",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Nova Gradiška",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4181,7 +4181,7 @@
     },
     {
         "city": "Pazin",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4191,8 +4191,8 @@
         "population": ""
     },
     {
-        "city": "Maru\u0161evec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Maruševec",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4203,7 +4203,7 @@
     },
     {
         "city": "Poljanica Bistranska",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4214,7 +4214,7 @@
     },
     {
         "city": "Kaptol",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4224,8 +4224,8 @@
         "population": ""
     },
     {
-        "city": "\u010cabar",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Čabar",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4236,7 +4236,7 @@
     },
     {
         "city": "Brodski Stupnik",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4246,8 +4246,8 @@
         "population": ""
     },
     {
-        "city": "Li\u0161ane Ostrovi\u010dke",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Lišane Ostrovičke",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4258,7 +4258,7 @@
     },
     {
         "city": "Veliko Trojstvo",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4268,8 +4268,8 @@
         "population": ""
     },
     {
-        "city": "Veliko Trgovi\u0161\u0107e",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Veliko Trgovišće",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4279,8 +4279,8 @@
         "population": ""
     },
     {
-        "city": "Oku\u010dani",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Okučani",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4291,7 +4291,7 @@
     },
     {
         "city": "Drenje",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4302,7 +4302,7 @@
     },
     {
         "city": "Kula Norinska",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4313,7 +4313,7 @@
     },
     {
         "city": "Lopar",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4324,7 +4324,7 @@
     },
     {
         "city": "Kotoriba",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4334,8 +4334,8 @@
         "population": ""
     },
     {
-        "city": "Gospi\u0107",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "city": "Gospić",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4346,7 +4346,7 @@
     },
     {
         "city": "Tisno",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4357,7 +4357,7 @@
     },
     {
         "city": "Zdenci",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4368,7 +4368,7 @@
     },
     {
         "city": "Marija Gorica",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4378,8 +4378,8 @@
         "population": ""
     },
     {
-        "city": "Gornji Bogi\u010devci",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "city": "Gornji Bogičevci",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4389,8 +4389,8 @@
         "population": ""
     },
     {
-        "city": "Dragani\u0107i",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "city": "Draganići",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4401,7 +4401,7 @@
     },
     {
         "city": "Kraljevica",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4412,7 +4412,7 @@
     },
     {
         "city": "Kraljevec na Sutli",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4423,7 +4423,7 @@
     },
     {
         "city": "Dobrinj",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4433,8 +4433,8 @@
         "population": ""
     },
     {
-        "city": "\u00d0urmanec",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Đurmanec",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4444,8 +4444,8 @@
         "population": ""
     },
     {
-        "city": "Sveti \u00d0ur\u0111",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "city": "Sveti Đurđ",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4455,8 +4455,8 @@
         "population": ""
     },
     {
-        "city": "\u010ca\u0111avica",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "city": "Čađavica",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4466,8 +4466,8 @@
         "population": ""
     },
     {
-        "city": "Sira\u010d",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Sirač",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4478,7 +4478,7 @@
     },
     {
         "city": "Janjina",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4489,7 +4489,7 @@
     },
     {
         "city": "Strizivojna",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4500,7 +4500,7 @@
     },
     {
         "city": "Gornja Vrba",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4510,8 +4510,8 @@
         "population": ""
     },
     {
-        "city": "\u00d0elekovec",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "city": "Đelekovec",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4521,8 +4521,8 @@
         "population": ""
     },
     {
-        "city": "Vi\u017einada",
-        "admin": "Istarska \u017dupanija",
+        "city": "Vižinada",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4533,7 +4533,7 @@
     },
     {
         "city": "Cavtat",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4543,8 +4543,8 @@
         "population": ""
     },
     {
-        "city": "\u010cavle",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Čavle",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4555,7 +4555,7 @@
     },
     {
         "city": "Gorjani",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4566,7 +4566,7 @@
     },
     {
         "city": "Novo Virje",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4577,7 +4577,7 @@
     },
     {
         "city": "Opatija",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4587,8 +4587,8 @@
         "population": ""
     },
     {
-        "city": "Farka\u0161evac",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Farkaševac",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4599,7 +4599,7 @@
     },
     {
         "city": "Drnje",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4609,8 +4609,8 @@
         "population": ""
     },
     {
-        "city": "Veliki Gr\u0111evac",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Veliki Grđevac",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4621,7 +4621,7 @@
     },
     {
         "city": "Dugo Selo",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4631,8 +4631,8 @@
         "population": ""
     },
     {
-        "city": "\u00d0akovo",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Đakovo",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4643,7 +4643,7 @@
     },
     {
         "city": "Kali",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4654,7 +4654,7 @@
     },
     {
         "city": "Funtana",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4665,7 +4665,7 @@
     },
     {
         "city": "Sopje",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4676,7 +4676,7 @@
     },
     {
         "city": "Cres",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4686,8 +4686,8 @@
         "population": ""
     },
     {
-        "city": "\u0160trigova",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Štrigova",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4698,7 +4698,7 @@
     },
     {
         "city": "Vrbovec",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4709,7 +4709,7 @@
     },
     {
         "city": "Vrsi",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4720,7 +4720,7 @@
     },
     {
         "city": "Lopatinec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4731,7 +4731,7 @@
     },
     {
         "city": "Makarska",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4742,7 +4742,7 @@
     },
     {
         "city": "Kutjevo",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4753,7 +4753,7 @@
     },
     {
         "city": "Tounj",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4764,7 +4764,7 @@
     },
     {
         "city": "Belica",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4775,7 +4775,7 @@
     },
     {
         "city": "Nova Bukovica",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4786,7 +4786,7 @@
     },
     {
         "city": "Velika",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4797,7 +4797,7 @@
     },
     {
         "city": "Novigrad",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4808,7 +4808,7 @@
     },
     {
         "city": "Novigrad Podravski",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4819,7 +4819,7 @@
     },
     {
         "city": "Gornje Jesenje",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4830,7 +4830,7 @@
     },
     {
         "city": "Sveta Marija",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4841,7 +4841,7 @@
     },
     {
         "city": "Sveta Nedjelja",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4852,7 +4852,7 @@
     },
     {
         "city": "Koprivnica",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4862,8 +4862,8 @@
         "population": ""
     },
     {
-        "city": "Popova\u010da",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "city": "Popovača",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4874,7 +4874,7 @@
     },
     {
         "city": "Crikvenica",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4884,8 +4884,8 @@
         "population": ""
     },
     {
-        "city": "\u010cakovec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Čakovec",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4896,7 +4896,7 @@
     },
     {
         "city": "Kijevo",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4907,7 +4907,7 @@
     },
     {
         "city": "Vrbje",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4917,8 +4917,8 @@
         "population": ""
     },
     {
-        "city": "Pla\u0161ki",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "city": "Plaški",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4929,7 +4929,7 @@
     },
     {
         "city": "Smokvica",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4939,8 +4939,8 @@
         "population": ""
     },
     {
-        "city": "\u0160androvac",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "city": "Šandrovac",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4950,8 +4950,8 @@
         "population": ""
     },
     {
-        "city": "Ra\u0161a",
-        "admin": "Istarska \u017dupanija",
+        "city": "Raša",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4962,7 +4962,7 @@
     },
     {
         "city": "Trpinja",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4973,7 +4973,7 @@
     },
     {
         "city": "Kapela",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4984,7 +4984,7 @@
     },
     {
         "city": "Borovo",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -4995,7 +4995,7 @@
     },
     {
         "city": "Pokupsko",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5006,7 +5006,7 @@
     },
     {
         "city": "Lovas",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5017,7 +5017,7 @@
     },
     {
         "city": "Sali",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5027,8 +5027,8 @@
         "population": ""
     },
     {
-        "city": "Primo\u0161ten",
-        "admin": "\u0160ibensko-Kninska \u017dupanija",
+        "city": "Primošten",
+        "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5039,7 +5039,7 @@
     },
     {
         "city": "Bakar",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5050,7 +5050,7 @@
     },
     {
         "city": "Martinska Ves",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5061,7 +5061,7 @@
     },
     {
         "city": "Marjanci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5072,7 +5072,7 @@
     },
     {
         "city": "Vidovec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5082,8 +5082,8 @@
         "population": ""
     },
     {
-        "city": "Stubi\u010dke Toplice",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Stubičke Toplice",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5093,8 +5093,8 @@
         "population": ""
     },
     {
-        "city": "Donji Prolo\u017eac",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Donji Proložac",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5105,7 +5105,7 @@
     },
     {
         "city": "Lovran",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5115,8 +5115,8 @@
         "population": ""
     },
     {
-        "city": "Lovre\u0107",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Lovreć",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5126,8 +5126,8 @@
         "population": ""
     },
     {
-        "city": "Sveti Lovre\u010d Pazenati\u010dki",
-        "admin": "Istarska \u017dupanija",
+        "city": "Sveti Lovreč Pazenatički",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5138,7 +5138,7 @@
     },
     {
         "city": "Kalnik",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5148,8 +5148,8 @@
         "population": ""
     },
     {
-        "city": "\u0160titar",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "city": "Štitar",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5160,7 +5160,7 @@
     },
     {
         "city": "Novi Vinodolski",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5171,7 +5171,7 @@
     },
     {
         "city": "Trilj",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5182,7 +5182,7 @@
     },
     {
         "city": "Bukovlje",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5193,7 +5193,7 @@
     },
     {
         "city": "Legrad",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5204,7 +5204,7 @@
     },
     {
         "city": "Kraj",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5215,7 +5215,7 @@
     },
     {
         "city": "Privlaka",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5225,8 +5225,8 @@
         "population": ""
     },
     {
-        "city": "\u017dakanje",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "city": "žakanje",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5236,8 +5236,8 @@
         "population": ""
     },
     {
-        "city": "Pa\u0161man",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Pašman",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5248,7 +5248,7 @@
     },
     {
         "city": "Brod Moravice",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5258,8 +5258,8 @@
         "population": ""
     },
     {
-        "city": "Doma\u0161inec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Domašinec",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5269,8 +5269,8 @@
         "population": ""
     },
     {
-        "city": "Pu\u010di\u0161\u0107e",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "city": "Pučišće",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5281,7 +5281,7 @@
     },
     {
         "city": "Tovarnik",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5291,8 +5291,8 @@
         "population": ""
     },
     {
-        "city": "Kor\u010dula",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "city": "Korčula",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5303,7 +5303,7 @@
     },
     {
         "city": "Ston",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5314,7 +5314,7 @@
     },
     {
         "city": "Slatina",
-        "admin": "Viroviti\u010dko-Podravska \u017dupanija",
+        "admin": "Virovitičko-Podravska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5325,7 +5325,7 @@
     },
     {
         "city": "Okrug Gornji",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5336,7 +5336,7 @@
     },
     {
         "city": "Bogdanovci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5347,7 +5347,7 @@
     },
     {
         "city": "Donji Seget",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5358,7 +5358,7 @@
     },
     {
         "city": "Rab",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5369,7 +5369,7 @@
     },
     {
         "city": "Kamanje",
-        "admin": "Karlova\u010dka \u017dupanija",
+        "admin": "Karlovačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5380,7 +5380,7 @@
     },
     {
         "city": "Kanfanar",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5391,7 +5391,7 @@
     },
     {
         "city": "Cerovlje",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5402,7 +5402,7 @@
     },
     {
         "city": "Zlatar",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5412,8 +5412,8 @@
         "population": ""
     },
     {
-        "city": "Koprivni\u010dki Ivanec",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "city": "Koprivnički Ivanec",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5424,7 +5424,7 @@
     },
     {
         "city": "Donji Kraljevec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5435,7 +5435,7 @@
     },
     {
         "city": "Punat",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5446,7 +5446,7 @@
     },
     {
         "city": "Dubrava",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5457,7 +5457,7 @@
     },
     {
         "city": "Lipik",
-        "admin": "Po\u017ee\u0161ko-Slavonska \u017dupanija",
+        "admin": "Požeško-Slavonska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5468,7 +5468,7 @@
     },
     {
         "city": "Beli Manastir",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5479,7 +5479,7 @@
     },
     {
         "city": "Obrovac",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5490,7 +5490,7 @@
     },
     {
         "city": "Jastrebarsko",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5501,7 +5501,7 @@
     },
     {
         "city": "Kravarsko",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5512,7 +5512,7 @@
     },
     {
         "city": "Negoslavci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5523,7 +5523,7 @@
     },
     {
         "city": "Podravska Moslavina",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5533,8 +5533,8 @@
         "population": ""
     },
     {
-        "city": "Vi\u0161kovo",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Viškovo",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5545,7 +5545,7 @@
     },
     {
         "city": "Magadenovac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5555,8 +5555,8 @@
         "population": ""
     },
     {
-        "city": "Feri\u010danci",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "city": "Feričanci",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5567,7 +5567,7 @@
     },
     {
         "city": "Zadvarje",
-        "admin": "Splitsko-Dalmatinska \u017dupanija",
+        "admin": "Splitsko-Dalmatinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5578,7 +5578,7 @@
     },
     {
         "city": "Bjelovar",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5589,7 +5589,7 @@
     },
     {
         "city": "Stari Jankovci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5600,7 +5600,7 @@
     },
     {
         "city": "Starigrad",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5611,7 +5611,7 @@
     },
     {
         "city": "Preseka",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5622,7 +5622,7 @@
     },
     {
         "city": "Erdut",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5633,7 +5633,7 @@
     },
     {
         "city": "Jelenje",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5644,7 +5644,7 @@
     },
     {
         "city": "Strahoninec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5654,8 +5654,8 @@
         "population": ""
     },
     {
-        "city": "\u0160enkovec",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "city": "Šenkovec",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5666,7 +5666,7 @@
     },
     {
         "city": "Novska",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5677,7 +5677,7 @@
     },
     {
         "city": "Bibinje",
-        "admin": "Zadarska \u017dupanija",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5687,8 +5687,8 @@
         "population": ""
     },
     {
-        "city": "Kri\u017eevci",
-        "admin": "Koprivni\u010dko-Kri\u017eeva\u010dka \u017dupanija",
+        "city": "Križevci",
+        "admin": "Koprivničko-Križevačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5698,8 +5698,8 @@
         "population": ""
     },
     {
-        "city": "Fu\u017eine",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "city": "Fužine",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5710,7 +5710,7 @@
     },
     {
         "city": "Blato",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5720,8 +5720,8 @@
         "population": ""
     },
     {
-        "city": "\u0160kabrnje",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Škabrnje",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5732,7 +5732,7 @@
     },
     {
         "city": "Bizovac",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5743,7 +5743,7 @@
     },
     {
         "city": "Gornja Stubica",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5754,7 +5754,7 @@
     },
     {
         "city": "Vela Luka",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5765,7 +5765,7 @@
     },
     {
         "city": "Vinkovci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5776,7 +5776,7 @@
     },
     {
         "city": "Marija Bistrica",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5787,7 +5787,7 @@
     },
     {
         "city": "Malinska",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5798,7 +5798,7 @@
     },
     {
         "city": "Krk",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5808,8 +5808,8 @@
         "population": ""
     },
     {
-        "city": "Poli\u010dnik",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Poličnik",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5819,8 +5819,8 @@
         "population": ""
     },
     {
-        "city": "Pako\u0161tane",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Pakoštane",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5830,8 +5830,8 @@
         "population": ""
     },
     {
-        "city": "Zapre\u0161i\u0107",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "city": "Zaprešić",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5842,7 +5842,7 @@
     },
     {
         "city": "Velika Ludina",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5853,7 +5853,7 @@
     },
     {
         "city": "Hum na Sutli",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5864,7 +5864,7 @@
     },
     {
         "city": "Senj",
-        "admin": "Li\u010dko-Senjska \u017dupanija",
+        "admin": "Ličko-Senjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5875,7 +5875,7 @@
     },
     {
         "city": "Nijemci",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5886,7 +5886,7 @@
     },
     {
         "city": "Trnava",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5897,7 +5897,7 @@
     },
     {
         "city": "Velika Pisanica",
-        "admin": "Bjelovarsko-Bilogorska \u017dupanija",
+        "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5908,7 +5908,7 @@
     },
     {
         "city": "Karojba",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5919,7 +5919,7 @@
     },
     {
         "city": "Opuzen",
-        "admin": "Dubrova\u010dko-Neretvanska \u017dupanija",
+        "admin": "Dubrovačko-Neretvanska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5929,8 +5929,8 @@
         "population": ""
     },
     {
-        "city": "Gra\u010di\u0161\u0107e",
-        "admin": "Istarska \u017dupanija",
+        "city": "Gračišće",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5941,7 +5941,7 @@
     },
     {
         "city": "Vrpolje",
-        "admin": "Brodsko-Posavska \u017dupanija",
+        "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5951,8 +5951,8 @@
         "population": ""
     },
     {
-        "city": "Konj\u0161\u0107ina",
-        "admin": "Krapinsko-Zagorska \u017dupanija",
+        "city": "Konjšćina",
+        "admin": "Krapinsko-Zagorska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5963,7 +5963,7 @@
     },
     {
         "city": "Selnica",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5974,7 +5974,7 @@
     },
     {
         "city": "Vuka",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5985,7 +5985,7 @@
     },
     {
         "city": "Vinica",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -5996,7 +5996,7 @@
     },
     {
         "city": "Donja Dubrava",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6007,7 +6007,7 @@
     },
     {
         "city": "Vodnjan",
-        "admin": "Istarska \u017dupanija",
+        "admin": "Istarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6018,7 +6018,7 @@
     },
     {
         "city": "Majur",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6029,7 +6029,7 @@
     },
     {
         "city": "Hrvatska Kostajnica",
-        "admin": "Sisa\u010dko-Moslava\u010dka \u017dupanija",
+        "admin": "Sisačko-Moslavačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6040,7 +6040,7 @@
     },
     {
         "city": "Ernestinovo",
-        "admin": "Osje\u010dko-Baranjska \u017dupanija",
+        "admin": "Osječko-Baranjska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6050,8 +6050,8 @@
         "population": ""
     },
     {
-        "city": "Pola\u010da",
-        "admin": "Zadarska \u017dupanija",
+        "city": "Polača",
+        "admin": "Zadarska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6062,7 +6062,7 @@
     },
     {
         "city": "Pisarovina",
-        "admin": "Zagreba\u010dka \u017dupanija",
+        "admin": "Zagrebačka županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6073,7 +6073,7 @@
     },
     {
         "city": "Ivanec",
-        "admin": "Vara\u017edinska \u017dupanija",
+        "admin": "Varaždinska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6084,7 +6084,7 @@
     },
     {
         "city": "Bribir",
-        "admin": "Primorsko-Goranska \u017dupanija",
+        "admin": "Primorsko-Goranska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6095,7 +6095,7 @@
     },
     {
         "city": "Podturen",
-        "admin": "Me\u0111imurska \u017dupanija",
+        "admin": "Međimurska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",
@@ -6106,7 +6106,7 @@
     },
     {
         "city": "Cerna",
-        "admin": "Vukovarsko-Srijemska \u017dupanija",
+        "admin": "Vukovarsko-Srijemska županija",
         "country": "Croatia",
         "population_proper": "",
         "iso2": "HR",

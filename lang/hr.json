@@ -187,5 +187,9 @@
     "You may not delete your personal team.": "Nemate pravo izbrisati svoj osobni tim.",
     "You may not leave a team that you created.": "Ne možete napustiti tim koji ste stvorili.",
     "Your email address is unverified.": "Vaša e-mail adresa nije potvrđena.",
-    "Search ride": "Traži prijevoze"
+    "Search ride": "Traži prijevoze",
+    "From place": "Odakle krećeš",
+    "To place": "Dokud ideš",
+    "Search": "Traži",
+    "Minimum departure time": "Početno vrijeme polaska"
 }

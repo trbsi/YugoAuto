@@ -4,19 +4,27 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
 
 class Ride extends Model
 {
     use HasFactory;
 
-    private int $id;
-    private int $user_id;
-    private int $from_place_id;
-    private int $to_place_id;
-    private int $price;
-    private int $number_of_seats;
-    private string $description;
+    public function fromPlace(): BelongsTo
+    {
+        return $this->belongsTo(Place::class, 'from_place_id', 'id');
+    }
+
+    public function toPlace(): BelongsTo
+    {
+        return $this->belongsTo(Place::class, 'to_place_id', 'id');
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 
     public function getId(): int
     {
@@ -97,6 +105,17 @@ class Ride extends Model
     public function setTime(Carbon $time): self
     {
         $this->time = $time;
+        return $this;
+    }
+
+    public function getCurrency(): string
+    {
+        return $this->currency;
+    }
+
+    public function setCurrency(string $currency): self
+    {
+        $this->currency = $currency;
         return $this;
     }
 }

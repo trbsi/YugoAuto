@@ -29,6 +29,7 @@ Route::middleware([
     })->name('dashboard');
 
     Route::prefix('ride')->group(function () {
-        Route::get('', [RideController::class, 'list'])->name('ride.list');
+        Route::get('search', [RideController::class, 'search'])->name('ride.list');
     });
 });
+
