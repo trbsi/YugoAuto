@@ -34,7 +34,7 @@ class RideController extends Controller
         }
 
         return view(
-            (Auth::guest()) ? 'ride.public_list' : 'ride.list',
+            (Auth::guest()) ? 'ride.search.public_list' : 'ride.search.list',
             [
                 'rides' => $rides,
                 'fromPlace' => $fromPlace,
@@ -42,5 +42,21 @@ class RideController extends Controller
                 'time' => $time,
             ]
         );
+    }
+
+    public function showCreate()
+    {
+        return view(
+            'ride.create.form',
+            [
+                'fromPlace' => null,
+                'toPlace' => null,
+                'time' => null,
+            ]
+        );
+    }
+
+    public function myRides()
+    {
     }
 }

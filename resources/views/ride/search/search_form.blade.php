@@ -5,7 +5,7 @@
 ?>
 <div
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
-    <form method="GET" action="{{route('ride.list')}}">
+    <form method="GET" action="{{route('ride.search')}}">
         <div class="mb-6">
             <label for="from_place"
                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('From place')}}</label>

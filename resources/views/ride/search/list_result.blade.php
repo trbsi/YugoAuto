@@ -2,11 +2,15 @@
 /** @var \Illuminate\Contracts\Pagination\LengthAwarePaginator $rides */
 
 /** @var \App\Models\Ride $ride */
+
+/** @var \App\Models\Place $fromPlace */
+
+/** @var \App\Models\Place $toPlace */
 ?>
 <div
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
-    <h2 class="pb-6 text-4xl">{{$fromPlaceName}} - {{$toPlaceName}}</h2>
+    <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}} - {{$toPlace->getName()}}</h2>
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($rides as $ride)

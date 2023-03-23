@@ -23,11 +23,16 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::prefix('ride')->group(function () {
+        Route::get('create', [RideController::class, 'showCreate'])->name('ride.create');
+        Route::get('my', [RideController::class, 'myRides'])->name('ride.my-rides');
+    });
 });
 
 //PUBLIC
 Route::prefix('ride')->group(function () {
-    Route::get('search', [RideController::class, 'search'])->name('ride.list');
+    Route::get('search', [RideController::class, 'search'])->name('ride.search');
 });
 
 Route::get('/', [RideController::class, 'search']);
