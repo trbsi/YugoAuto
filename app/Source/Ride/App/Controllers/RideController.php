@@ -4,10 +4,15 @@ declare(strict_types=1);
 
 namespace App\Source\Ride\App\Controllers;
 
+use App\Enum\TimeEnum;
 use App\Http\Controllers\Controller;
 use App\Source\Place\Domain\SearchPlaces\SearchPlacesBusinessLogic;
+use App\Source\Ride\App\Requests\CreateRideRequest;
 use App\Source\Ride\App\Requests\SearchRidesRequest;
+use App\Source\Ride\Domain\CreateRide\CreateRideBusinessLogic;
 use App\Source\Ride\Domain\SearchRides\SearchRidesBusinessLogic;
+use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,7 +30,7 @@ class RideController extends Controller
             $rides = $businessLogic->search(
                 (int)$request->from_place_id,
                 (int)$request->to_place_id,
-                Carbon::createFromFormat('Y-m-d\TH:i', $request->time)
+                Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time)
             );
 
             $fromPlace = $placesBusinessLogic->getById((int)$request->from_place_id);
@@ -44,16 +49,45 @@ class RideController extends Controller
         );
     }
 
-    public function showCreate()
-    {
+    public function showCreate(
+        Request $request,
+        SearchPlacesBusinessLogic $searchPlacesBusinessLogic
+    ) {
+        $fromPlaceId = old('from_place_id');
+        $toPlaceId = old('to_place_id');
+        $toPlace = $fromPlace = null;
+        if ($fromPlaceId && $toPlaceId) {
+            $fromPlace = $searchPlacesBusinessLogic->getById((int)$fromPlaceId);
+            $toPlace = $searchPlacesBusinessLogic->getById((int)$toPlaceId);
+        }
         return view(
             'ride.create.form',
             [
-                'fromPlace' => null,
-                'toPlace' => null,
-                'time' => null,
+                'fromPlace' => $fromPlace,
+                'toPlace' => $toPlace,
             ]
         );
+    }
+
+    public function save(
+        CreateRideRequest $request,
+        CreateRideBusinessLogic $businessLogic
+    ) {
+        try {
+            $businessLogic->create(
+                Auth::id(),
+                (int)$request->from_place_id,
+                (int)$request->to_place_id,
+                Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time),
+                (int)$request->number_of_seats,
+                (int)$request->price,
+                $request->description
+            );
+        } catch (Exception $exception) {
+            dd($exception);
+            return redirect()->back()->withInput();
+        }
+        return redirect(route('ride.my-rides'));
     }
 
     public function myRides()

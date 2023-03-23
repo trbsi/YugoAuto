@@ -5,7 +5,7 @@ namespace App\Source\Ride\App\Requests;
 use App\Enum\TimeEnum;
 use Illuminate\Foundation\Http\FormRequest;
 
-class SearchRidesRequest extends FormRequest
+class CreateRideRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +23,13 @@ class SearchRidesRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'from_place_id' => ['nullable', 'integer'],
-            'to_place_id' => ['nullable', 'integer'],
-            'time' => ['nullable', 'date_format:' . TimeEnum::TIME_FORMAT->value],
+            'from_place_id' => ['required', 'integer'],
+            'to_place_id' => ['required', 'integer'],
+            'time' => ['required', 'date_format:' . TimeEnum::TIME_FORMAT->value],
+            'number_of_seats' => ['required', 'integer'],
+            'price' => ['required', 'integer'],
+            'description' => ['nullable', 'string', 'max:500'],
         ];
     }
+
 }

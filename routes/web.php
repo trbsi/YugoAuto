@@ -26,6 +26,7 @@ Route::middleware([
 
     Route::prefix('ride')->group(function () {
         Route::get('create', [RideController::class, 'showCreate'])->name('ride.create');
+        Route::post('save', [RideController::class, 'save'])->name('ride.save');
         Route::get('my', [RideController::class, 'myRides'])->name('ride.my-rides');
     });
 });

@@ -37,3 +37,13 @@ $(function () {
     };
 
 });
+
+
+$(document).ready(function () {
+    $('#time').datetimepicker(
+        {
+            format: 'd.m.Y H:i',
+            minDate: 0
+        }
+    );
+});

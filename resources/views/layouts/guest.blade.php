@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{{asset('assets/datetimepicker/jquery.datetimepicker.min.css')}}">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -24,7 +25,8 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-<script src="{{asset('js/place.js')}}"></script>
+<script src="{{asset('assets/datetimepicker/jquery.datetimepicker.full.min.js')}}"></script>
+<script src="{{asset('assets/js/place.js')}}"></script>
 
 </body>
 </html>

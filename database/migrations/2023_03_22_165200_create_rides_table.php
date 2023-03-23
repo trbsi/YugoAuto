@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->integer('price');
             $table->string('currency')->default('EUR');
             $table->integer('number_of_seats');
-            $table->string('description')->nullable();
+            $table->string('description', 500)->nullable();
             $table->timestamps();
             $table->index(['from_place_id', 'to_place_id', 'time']);
         });
