@@ -10,11 +10,14 @@ use App\Source\Place\Domain\SearchPlaces\SearchPlacesBusinessLogic;
 use App\Source\Ride\App\Requests\CreateRideRequest;
 use App\Source\Ride\App\Requests\SearchRidesRequest;
 use App\Source\Ride\Domain\CreateRide\CreateRideBusinessLogic;
+use App\Source\Ride\Domain\DeleteRide\DeleteRideBusinessLogic;
+use App\Source\Ride\Domain\MyRides\MyRidesBusinessLogic;
 use App\Source\Ride\Domain\SearchRides\SearchRidesBusinessLogic;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class RideController extends Controller
 {
@@ -84,13 +87,27 @@ class RideController extends Controller
                 $request->description
             );
         } catch (Exception $exception) {
-            dd($exception);
             return redirect()->back()->withInput();
         }
         return redirect(route('ride.my-rides'));
     }
 
-    public function myRides()
-    {
+    public function myRides(
+        MyRidesBusinessLogic $businessLogic
+    ) {
+        $rides = $businessLogic->get(Auth::id());
+        return view('ride.my-rides.list', compact('rides'));
+    }
+
+    public function delete(
+        int $id,
+        DeleteRideBusinessLogic $businessLogic
+    ) {
+        try {
+            $businessLogic->delete($id, Auth::id());
+        } catch (Exception $exception) {
+            Log::error($exception->getMessage());
+        }
+        return redirect()->back();
     }
 }

@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->integer('number_of_seats');
             $table->string('description', 500)->nullable();
             $table->timestamps();
+            $table->softDeletes();
             $table->index(['from_place_id', 'to_place_id', 'time']);
         });
     }

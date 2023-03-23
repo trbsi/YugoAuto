@@ -18,6 +18,9 @@
                     <x-nav-link href="{{ route('ride.create') }}" :active="request()->routeIs('ride.create')">
                         {{ __('Create ride') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('ride.my-rides') }}" :active="request()->routeIs('ride.my-rides')">
+                        {{ __('My rides') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -160,6 +163,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('ride.create') }}" :active="request()->routeIs('ride.create')">
                 {{ __('Create ride') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('ride.my-rides') }}" :active="request()->routeIs('ride.my-rides')">
+                {{ __('My rides') }}
             </x-responsive-nav-link>
         </div>
 
