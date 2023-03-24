@@ -19,11 +19,13 @@ class SearchRidesBusinessLogic
     }
 
     public function search(
+        int $userId,
         int $fromPlaceId,
         int $toPlaceId,
         Carbon $minStartTime
     ): LengthAwarePaginator {
         return $this->searchRidesService->search(
+            $userId,
             $fromPlaceId,
             $toPlaceId,
             $minStartTime

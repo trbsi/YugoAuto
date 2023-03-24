@@ -29,7 +29,26 @@
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             {{$ride->getDescription()}}
                         </p>
-                        @include('ride.my-rides.delete-form')
+                        <hr>
+
+                        @if ($ride->pendingRideRequests->count())
+                            <div
+                                class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+                                role="alert">
+                                {{__('You have x pending requests', ['number' => $ride->pendingRideRequests->count()])}}
+                            </div>
+                        @endif
+
+                        <div class="flex flex-row mt-2">
+                            <div class="mr-2">
+                                <a
+                                    href="{{route('ride-request.my-requests', ['rideId' => $ride->getId()])}}"
+                                    class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    {{__('Requests')}}
+                                </a>
+                            </div>
+                            @include('ride.my-rides.components.delete-form')
+                        </div>
                     </div>
                     <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                         {{$ride->getPrice()}} {{$ride->getCurrency()}}

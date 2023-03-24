@@ -31,6 +31,7 @@ class RideController extends Controller
 
         if ($request->from_place_id && $request->to_place_id && $request->time) {
             $rides = $businessLogic->search(
+                Auth::id(),
                 (int)$request->from_place_id,
                 (int)$request->to_place_id,
                 Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time)
@@ -42,7 +43,7 @@ class RideController extends Controller
         }
 
         return view(
-            (Auth::guest()) ? 'ride.search.public_list' : 'ride.search.list',
+            (Auth::guest()) ? 'ride.search.public_list' : 'ride.search.private_list',
             [
                 'rides' => $rides,
                 'fromPlace' => $fromPlace,

@@ -1,6 +1,7 @@
 <?php
 
 use App\Source\Ride\App\Controllers\RideController;
+use App\Source\RideRequest\App\Controllers\RideRequestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,15 @@ Route::middleware([
         Route::post('save', [RideController::class, 'save'])->name('ride.save');
         Route::get('my', [RideController::class, 'myRides'])->name('ride.my-rides');
         Route::post('delete/{id}', [RideController::class, 'delete'])->name('ride.delete');
+    });
+
+    Route::prefix('ride-request')->group(function () {
+        Route::post('send-request/{rideId}', [RideRequestController::class, 'sendRequest'])->name(
+            'ride-request.send-request'
+        );
+        Route::get('my-requests/{rideId}', [RideRequestController::class, 'myRequests'])->name(
+            'ride-request.my-requests'
+        );
     });
 });
 

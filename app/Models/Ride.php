@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
+use App\Source\RideRequest\Enum\RideRequestEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * App\Models\Ride
@@ -40,6 +44,16 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereToPlaceId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUserId($value)
+ * @property Carbon|null $deleted_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read int|null $pending_ride_requests_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
+ * @property-read int|null $ride_requests_count
+ * @property-read \App\Models\RideRequest|null $rideRequestsForAuthUser
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -64,6 +78,23 @@ class Ride extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    public function rideRequests(): HasMany
+    {
+        return $this->hasMany(RideRequest::class, 'ride_id', 'id');
+    }
+
+    public function pendingRideRequests(): HasMany
+    {
+        return $this->hasMany(RideRequest::class, 'ride_id', 'id')
+            ->where('status', RideRequestEnum::PENDING->value);
+    }
+
+    public function rideRequestsForAuthUser(): HasOne
+    {
+        return $this->hasOne(RideRequest::class, 'ride_id', 'id')
+            ->where('user_id', Auth::id());
     }
 
     public function getId(): int

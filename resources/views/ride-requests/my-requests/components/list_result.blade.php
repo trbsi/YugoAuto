@@ -1,16 +1,13 @@
 <?php
-/** @var \Illuminate\Contracts\Pagination\LengthAwarePaginator $rides */
+/** @var \Illuminate\Contracts\Pagination\LengthAwarePaginator $requests */
 
+/** @var \App\Models\RideRequest $request */
 /** @var \App\Models\Ride $ride */
-
-/** @var \App\Models\Place $fromPlace */
-
-/** @var \App\Models\Place $toPlace */
 ?>
 <div
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
-    <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}} - {{$toPlace->getName()}}</h2>
+    <h2 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h2>
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($rides as $ride)
@@ -31,6 +28,16 @@
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             {{$ride->getDescription()}}
                         </p>
+                        @if(!$ride->rideRequestsForAuthUser)
+                            @include('ride.search.components.request-form')
+                        @else
+                            <p class="mt-2">
+                                <span
+                                    class="p-1 status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
+                                {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
+                                </span>
+                            </p>
+                        @endif
                     </div>
                     <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                         {{$ride->getPrice()}} {{$ride->getCurrency()}}

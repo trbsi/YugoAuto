@@ -12,7 +12,8 @@ class GetRidesByUserService
     public function get(int $userId): LengthAwarePaginator
     {
         return Ride::where('user_id', $userId)
-            ->orderBy('id', 'desc')
+            ->orderBy('time', 'desc')
+            ->with(['pendingRideRequests'])
             ->paginate();
     }
 }

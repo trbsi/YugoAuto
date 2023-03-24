@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.status-pending {
+    background: #ffee7a;
+}
+
+.status-rejected {
+    background: #ad1d15;
+    color: white;
+}
+
+.status-accepted {
+    background: #1f8f1c;
+    color: white;
+}

@@ -11,6 +11,7 @@ use Illuminate\Support\Carbon;
 class SearchRidesService
 {
     public function search(
+        int $userId,
         int $fromPlaceId,
         int $toPlaceId,
         Carbon $minStartTime
@@ -21,7 +22,12 @@ class SearchRidesService
             ->where('to_place_id', $toPlaceId)
             ->where('time', '>=', $minStartTime->format('Y-m-d H:i:s'))
             ->where('time', '>=', $now->format('Y-m-d H:i:s')) //has to be newer than current time
-            ->with(['fromPlace', 'toPlace', 'user'])
+            ->with([
+                'fromPlace',
+                'toPlace',
+                'user',
+                'rideRequestsForAuthUser',
+            ])
             ->orderBy('time', 'ASC')
             ->paginate();
 

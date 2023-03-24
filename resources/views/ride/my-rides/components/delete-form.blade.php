@@ -1,4 +1,4 @@
-<div class="mt-2">
+<div>
     <form
         method="POST"
         action="{{route('ride.delete', ['id' => $ride->getId()])}}"

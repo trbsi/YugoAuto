@@ -21,7 +21,7 @@ class RideSeeder extends Seeder
                     'user_id' => User::first()->getId(),
                     'from_place_id' => Place::where('name', 'Zagreb')->first()->getId(),
                     'to_place_id' => Place::where('name', 'Split')->first()->getId(),
-                    'time' => Carbon::now()
+                    'time' => Carbon::now()->addDay()
                 ]
             )->create();
         }

@@ -6,6 +6,28 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * App\Models\RideRequest
+ *
+ * @property int $id
+ * @property int $ride_id
+ * @property int $user_id
+ * @property string $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Ride $ride
+ * @property-read \App\Models\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest query()
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereRideId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUserId($value)
+ * @mixin \Eloquent
+ */
 class RideRequest extends Model
 {
     use HasFactory;
