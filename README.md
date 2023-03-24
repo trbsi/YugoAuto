@@ -1,6 +1,6 @@
 # About
 
-Laravel BlaBlaCar free alternative
+Laravel BlaBlaCar free alternative.
 
 # Used components
 
@@ -15,3 +15,4 @@ https://jqueryui.com/autocomplete/#custom-data
 ## Datetime picker
 
 https://github.com/xdan/datetimepicker
+
