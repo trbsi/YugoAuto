@@ -10,7 +10,8 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
 <div
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
-    <h2 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h2>
+    <h1 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h1>
+    <h2 class="pb-6 text-xl">{{__('Departure time')}} {{$ride->getTimeFormatted()}}</h2>
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($requests as $request)

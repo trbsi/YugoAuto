@@ -127,4 +127,15 @@ class User extends Authenticatable
     {
         return $this->profile_photo_url;
     }
+
+    public function getPhoneNumber(): string
+    {
+        return $this->phone_number;
+    }
+
+    public function setPhoneNumber(string $phone_number): self
+    {
+        $this->phone_number = $phone_number;
+        return $this;
+    }
 }
