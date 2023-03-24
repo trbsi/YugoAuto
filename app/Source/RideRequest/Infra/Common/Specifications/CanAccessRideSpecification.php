@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Source\RideRequest\Infra\RideRequests\Specifications;
+namespace App\Source\RideRequest\Infra\Common\Specifications;
 
 use App\Models\Ride;
 

@@ -2,6 +2,8 @@
 
 namespace App\Source\RideRequest\App\Controllers;
 
+use App\Source\RideRequest\App\Requests\ChangeStatusRequest;
+use App\Source\RideRequest\Domain\ChangeStatus\ChangeStatusBusinessLogic;
 use App\Source\RideRequest\Domain\RequestRide\RequestRideBusinessLogic;
 use App\Source\RideRequest\Domain\RideRequests\RideRequestsBusinessLogic;
 use Exception;
@@ -38,5 +40,18 @@ class RideRequestController
             Log::error($exception->getMessage());
             return redirect()->back();
         }
+    }
+
+    public function changeStatus(
+        ChangeStatusRequest $request,
+        ChangeStatusBusinessLogic $businessLogic
+    ) {
+        $businessLogic->change(
+            Auth::id(),
+            (int)$request->ride_id,
+            (int)$request->user_id,
+            $request->status
+        );
+        return redirect()->back();
     }
 }

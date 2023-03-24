@@ -1,4 +1,7 @@
 <?php
+
+use App\Source\RideRequest\Enum\RideRequestEnum;
+
 /** @var \Illuminate\Contracts\Pagination\LengthAwarePaginator $requests */
 
 /** @var \App\Models\RideRequest $request */
@@ -10,33 +13,32 @@
     <h2 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h2>
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
-        @foreach($rides as $ride)
+        @foreach($requests as $request)
             <li class="pb-3 pt-3 sm:pb-4">
                 <div class="flex items-center space-x-4">
                     <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="{{$ride->user->getProfilePhotoUrl()}}"
+                        <img class="w-8 h-8 rounded-full" src="{{$request->user->getProfilePhotoUrl()}}"
                              alt="Neil image">
                     </div>
 
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{$ride->user->getName()}}
+                            {{$request->user->getName()}}
                         </p>
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{__('Departure time')}} {{$ride->getTimeFormatted()}}
+                            {{__('Rating')}} {{$request->user->profile->getRating()}}
                         </p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">
-                            {{$ride->getDescription()}}
-                        </p>
-                        @if(!$ride->rideRequestsForAuthUser)
-                            @include('ride.search.components.request-form')
-                        @else
-                            <p class="mt-2">
+                        <p class="mt-2">
                                 <span
-                                    class="p-1 status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
-                                {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
+                                    class="p-1 status-{{$request->getStatus()}}">
+                                {{__('Ride request status')}}: {{__($request->getStatus())}}
                                 </span>
-                            </p>
+                        </p>
+                        @if($request->getStatus() === RideRequestEnum::PENDING->value)
+                            <div class="flex flex-row mt-2">
+                                @include('ride-requests.my-requests.components.accept-form')
+                                @include('ride-requests.my-requests.components.reject-form')
+                            </div>
                         @endif
                     </div>
                     <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
@@ -47,5 +49,5 @@
         @endforeach
     </ul>
 
-    {{$rides->withQueryString()->links()}}
+    {{$requests->withQueryString()->links()}}
 </div>

@@ -39,6 +39,9 @@ Route::middleware([
         Route::get('my-requests/{rideId}', [RideRequestController::class, 'myRequests'])->name(
             'ride-request.my-requests'
         );
+        Route::post('my-requests/change-status', [RideRequestController::class, 'changeStatus'])->name(
+            'ride-request.change-status'
+        );
     });
 });
 

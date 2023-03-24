@@ -3,8 +3,8 @@
 namespace App\Source\RideRequest\Domain\RideRequests;
 
 use App\Models\Ride;
+use App\Source\RideRequest\Infra\Common\Specifications\CanAccessRideSpecification;
 use App\Source\RideRequest\Infra\RideRequests\Services\GetRideRequestsService;
-use App\Source\RideRequest\Infra\RideRequests\Specifications\CanAccessRideSpecification;
 use Exception;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 

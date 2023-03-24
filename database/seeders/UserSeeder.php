@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\UserProfile;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -16,6 +17,13 @@ class UserSeeder extends Seeder
             ->state([
                 'email' => 'a@a.com'
             ])
+            ->has(UserProfile::factory(), 'profile')
             ->create();
+
+        for ($i = 0; $i < 10; $i++) {
+            User::factory()
+                ->has(UserProfile::factory(), 'profile')
+                ->create();
+        }
     }
 }
