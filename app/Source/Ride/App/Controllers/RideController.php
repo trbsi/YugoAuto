@@ -96,8 +96,12 @@ class RideController extends Controller
     public function myRides(
         MyRidesBusinessLogic $businessLogic
     ) {
-        $rides = $businessLogic->get(Auth::id());
-        return view('ride.my-rides.list', compact('rides'));
+        $authUserId = Auth::id();
+        $rides = $businessLogic->get($authUserId);
+        return view(
+            'ride.my-rides.list',
+            compact('rides', 'authUserId')
+        );
     }
 
     public function delete(

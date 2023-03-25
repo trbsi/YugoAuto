@@ -2,6 +2,7 @@
 
 use App\Source\Ride\App\Controllers\RideController;
 use App\Source\RideRequest\App\Controllers\RideRequestController;
+use App\Source\User\App\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+// AUTH
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -48,6 +50,10 @@ Route::middleware([
 //PUBLIC
 Route::prefix('ride')->group(function () {
     Route::get('search', [RideController::class, 'search'])->name('ride.search');
+});
+
+Route::prefix('user')->group(function () {
+    Route::get('/{id}', [UserController::class, 'show'])->name('user.show');
 });
 
 Route::get('/', [RideController::class, 'search']);

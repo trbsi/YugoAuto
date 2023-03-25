@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained('users');
             $table->enum('status', RideRequestEnum::values());
             $table->timestamps();
+            $table->unique(['ride_id', 'user_id']);
         });
     }
 

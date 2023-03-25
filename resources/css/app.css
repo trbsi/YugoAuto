@@ -4,14 +4,26 @@
 
 .status-pending {
     background: #ffee7a;
+    font-size: 14px;
+    border-radius: 7px;
+    display: inline-block;
+    margin-top: 7px;
 }
 
 .status-rejected {
     background: #ad1d15;
     color: white;
+    font-size: 14px;
+    border-radius: 7px;
+    display: inline-block;
+    margin-top: 7px;
 }
 
 .status-accepted {
     background: #1f8f1c;
     color: white;
+    font-size: 14px;
+    border-radius: 7px;
+    display: inline-block;
+    margin-top: 7px;
 }

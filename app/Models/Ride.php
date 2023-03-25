@@ -195,5 +195,10 @@ class Ride extends Model
         $this->currency = $currency;
         return $this;
     }
+
+    public function isActiveRide(): bool
+    {
+        return $this->getTime() > Carbon::now();
+    }
 }
 
