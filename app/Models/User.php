@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -60,6 +62,7 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -107,6 +110,11 @@ class User extends Authenticatable
         return $this->hasOne(UserProfile::class, 'user_id', 'id');
     }
 
+    public function socialLogins(): HasMany
+    {
+        return $this->hasMany(SocialLogin::class, 'user_id', 'id');
+    }
+
     public function getId(): int
     {
         return $this->id;
@@ -128,14 +136,36 @@ class User extends Authenticatable
         return $this->profile_photo_url;
     }
 
-    public function getPhoneNumber(): string
+    public function getPhoneNumber(): ?string
     {
         return $this->phone_number;
     }
 
-    public function setPhoneNumber(string $phone_number): self
+    public function setPhoneNumber(?string $phone_number): self
     {
         $this->phone_number = $phone_number;
+        return $this;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+        return $this;
+    }
+
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
         return $this;
     }
 }

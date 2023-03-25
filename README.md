@@ -16,3 +16,6 @@ https://jqueryui.com/autocomplete/#custom-data
 
 https://github.com/xdan/datetimepicker
 
+## Cookie consent
+
+https://cookieconsent.popupsmart.com/gdpr-cookie-consent/
