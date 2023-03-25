@@ -2,8 +2,10 @@
 
 namespace App\Source\RideRequest\App\Controllers;
 
-use App\Source\RideRequest\App\Requests\ChangeStatusRequest;
-use App\Source\RideRequest\Domain\ChangeStatus\ChangeStatusBusinessLogic;
+use App\Source\RideRequest\App\Requests\AcceptOrRejectRideRequest;
+use App\Source\RideRequest\App\Requests\CancelRideRequest;
+use App\Source\RideRequest\Domain\AcceptOrReject\AcceptOrRejectBusinessLogic;
+use App\Source\RideRequest\Domain\CancelRide\CancelRideBusinessLogic;
 use App\Source\RideRequest\Domain\RequestRide\RequestRideBusinessLogic;
 use App\Source\RideRequest\Domain\RideRequests\RideRequestsBusinessLogic;
 use Exception;
@@ -12,19 +14,6 @@ use Illuminate\Support\Facades\Log;
 
 class RideRequestController
 {
-    public function sendRequest(
-        int $rideId,
-        RequestRideBusinessLogic $businessLogic
-    ) {
-        try {
-            $businessLogic->requestRide(Auth::id(), $rideId);
-        } catch (Exception $exception) {
-            Log::error($exception->getMessage());
-        }
-
-        return redirect()->back();
-    }
-
     public function myRequests(
         int $rideId,
         RideRequestsBusinessLogic $businessLogic
@@ -42,16 +31,53 @@ class RideRequestController
         }
     }
 
-    public function changeStatus(
-        ChangeStatusRequest $request,
-        ChangeStatusBusinessLogic $businessLogic
+    public function acceptOrReject(
+        AcceptOrRejectRideRequest $request,
+        AcceptOrRejectBusinessLogic $businessLogic
     ) {
-        $businessLogic->change(
-            Auth::id(),
-            (int)$request->ride_id,
-            (int)$request->user_id,
-            $request->status
-        );
+        try {
+            $businessLogic->acceptOrReject(
+                Auth::id(),
+                (int)$request->ride_id,
+                (int)$request->user_id,
+                $request->status
+            );
+        } catch (Exception $exception) {
+            Log::error($exception->getMessage());
+        }
+
         return redirect()->back();
     }
+
+    public function sendRequest(
+        int $rideId,
+        RequestRideBusinessLogic $businessLogic
+    ) {
+        try {
+            $businessLogic->requestRide(Auth::id(), $rideId);
+        } catch (Exception $exception) {
+            Log::error($exception->getMessage());
+        }
+
+        return redirect()->back();
+    }
+
+    public function cancelRequest(
+        CancelRideRequest $request,
+        CancelRideBusinessLogic $businessLogic
+    ) {
+        try {
+            $businessLogic->cancel(
+                Auth::id(),
+                $request->passenger_id,
+                $request->ride_id
+            );
+        } catch (Exception $exception) {
+            Log::error($exception->getMessage());
+        }
+
+        return redirect()->back();
+    }
+
+
 }

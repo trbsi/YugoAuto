@@ -1,7 +1,7 @@
 <div class="mt-2">
     <form
         method="POST"
-        action="{{route('ride-request.send-request', ['rideId' => $ride->getId()])}}"
+        action="{{route('ride-request.request-ride', ['rideId' => $ride->getId()])}}"
         onsubmit="return confirm('{{__('Are you sure?')}}');"
     >
         @csrf

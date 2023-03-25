@@ -10,10 +10,8 @@ class IsRideRequestedSpecification
         int $passengerId,
         int $rideId
     ): bool {
-        $count = RideRequest::where('passenger_id', $passengerId)
-            ->where('ride_id', $rideId)
-            ->count();
-
-        return $count > 0;
+        return RideRequest::where('passenger_id', $passengerId)
+                ->where('ride_id', $rideId)
+                ->count() > 0;
     }
 }

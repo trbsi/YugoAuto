@@ -65,7 +65,7 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
                         @endif
                         @if(!$ride->isOwner())
                             <span
-                                class="p-1 status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
+                                class="p-1 status-text status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
                            {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
                            </span>
                         @endif

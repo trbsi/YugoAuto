@@ -56,6 +56,13 @@ use Illuminate\Support\Facades\Auth;
  * @property-read \App\Models\RideRequest|null $rideRequestsForAuthUser
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
+ * @property int $driver_id
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
+ * @property-read int|null $accepted_ride_requests_count
+ * @property-read \App\Models\User $driver
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDriverId($value)
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -91,6 +98,12 @@ class Ride extends Model
     {
         return $this->hasMany(RideRequest::class, 'ride_id', 'id')
             ->where('status', RideRequestEnum::PENDING->value);
+    }
+
+    public function acceptedRideRequests(): HasMany
+    {
+        return $this->hasMany(RideRequest::class, 'ride_id', 'id')
+            ->where('status', RideRequestEnum::ACCEPTED->value);
     }
 
     public function rideRequestsForAuthUser(): HasOne
@@ -206,6 +219,11 @@ class Ride extends Model
     public function isActiveRide(): bool
     {
         return $this->getTime() > Carbon::now();
+    }
+
+    public function isFilled(): bool
+    {
+        return $this->acceptedRideRequests->count() >= $this->getNumberOfSeats();
     }
 }
 

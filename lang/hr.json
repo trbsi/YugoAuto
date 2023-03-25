@@ -206,6 +206,7 @@
     "pending": "Na čekanju",
     "accepted": "Prihvaćen",
     "rejected": "Odbijen",
+    "cancelled": "Otkazano",
     "You have x pending requests": "Zahtjevi na čekanju: :number",
     "Requests": "Zahtjevi",
     "My requests": "Moji zahtjevi",
@@ -215,8 +216,8 @@
     "Phone number": "Mobitel",
     "Active ride": "Aktivan prijevoz",
     "No requests": "Nema zahtjeva",
-    "": "",
-    "": "",
+    "Cancel": "Otkaži",
+    "Ride is filled": "Prijevoz je popunjen",
     "": "",
     "": "",
     "": ""

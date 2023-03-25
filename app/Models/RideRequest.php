@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Source\RideRequest\Enum\RideRequestEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Models\RideRequest
@@ -27,6 +29,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUserId($value)
  * @method static \Database\Factories\RideRequestFactory factory($count = null, $state = [])
+ * @property int $passenger_id
+ * @property string|null $cancelled_time
+ * @property int|null $cancelled_by
+ * @property-read \App\Models\User $passenger
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCancelledBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCancelledTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest wherePassengerId($value)
  * @mixin \Eloquent
  */
 class RideRequest extends Model
@@ -79,5 +88,47 @@ class RideRequest extends Model
     {
         $this->status = $status;
         return $this;
+    }
+
+    public function getCancelledTime(): Carbon
+    {
+        return $this->cancelled_time;
+    }
+
+    public function setCancelledTime(Carbon $cancelled_time): self
+    {
+        $this->cancelled_time = $cancelled_time;
+        return $this;
+    }
+
+    public function getCancelledBy(): int
+    {
+        return $this->cancelled_by;
+    }
+
+    public function setCancelledBy(int $cancelled_by): self
+    {
+        $this->cancelled_by = $cancelled_by;
+        return $this;
+    }
+
+    public function canBeCancelled(): bool
+    {
+        return in_array(
+            $this->getStatus(),
+            [
+                RideRequestEnum::ACCEPTED->value
+            ]
+        );
+    }
+
+    public function canBeAcceptedOrRejected(): bool
+    {
+        return in_array(
+            $this->getStatus(),
+            [
+                RideRequestEnum::PENDING->value
+            ]
+        );
     }
 }

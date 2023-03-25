@@ -4,7 +4,7 @@ namespace App\Source\RideRequest\Infra\Common\Specifications;
 
 use App\Models\Ride;
 
-class CanAccessRideSpecification
+class CanDriverAccessRideSpecification
 {
     public function isSatisfied(int $userId, int $rideId): bool
     {

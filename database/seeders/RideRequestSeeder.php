@@ -16,8 +16,10 @@ class RideRequestSeeder extends Seeder
     public function run(): void
     {
         $mainUser = User::first();
+
         /** @var Ride $ride */
         foreach (Ride::get() as $ride) {
+            //request ride for the main user
             if ($ride->getDriverId() === $mainUser->getId()) {
                 for ($i = 0; $i < rand(1, 5); $i++) {
                     try {
@@ -31,7 +33,8 @@ class RideRequestSeeder extends Seeder
                         //duplicate entry
                     }
                 }
-            } else {
+            } //act as main user requested a ride
+            else {
                 RideRequest::factory()->state(
                     [
                         'passenger_id' => $mainUser->getId(),

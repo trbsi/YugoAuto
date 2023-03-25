@@ -16,16 +16,19 @@ class SearchRidesService
         Carbon $minStartTime
     ): LengthAwarePaginator {
         $now = Carbon::now();
+        if ($minStartTime < $now) {
+            $minStartTime = $now;
+        }
 
         $rides = Ride::where('from_place_id', $fromPlaceId)
             ->where('to_place_id', $toPlaceId)
             ->where('time', '>=', $minStartTime->format('Y-m-d H:i:s'))
-            ->where('time', '>=', $now->format('Y-m-d H:i:s')) //has to be newer than current time
             ->with([
                 'fromPlace',
                 'toPlace',
                 'driver',
                 'rideRequestsForAuthUser',
+                'acceptedRideRequests'
             ])
             ->orderBy('time', 'ASC')
             ->paginate();

@@ -3,7 +3,7 @@
 namespace App\Source\RideRequest\Domain\RideRequests;
 
 use App\Models\Ride;
-use App\Source\RideRequest\Infra\Common\Specifications\CanAccessRideSpecification;
+use App\Source\RideRequest\Infra\Common\Specifications\CanDriverAccessRideSpecification;
 use App\Source\RideRequest\Infra\RideRequests\Services\GetRideRequestsService;
 use Exception;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -11,14 +11,14 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 class RideRequestsBusinessLogic
 {
     public function __construct(
-        private CanAccessRideSpecification $canAccessRideSpecification,
+        private CanDriverAccessRideSpecification $canDriverAccessRideSpecification,
         private GetRideRequestsService $getRideRequestsService
     ) {
     }
 
     public function getRequests(int $userId, int $rideId): LengthAwarePaginator
     {
-        if (!$this->canAccessRideSpecification->isSatisfied($userId, $rideId)) {
+        if (!$this->canDriverAccessRideSpecification->isSatisfied($userId, $rideId)) {
             throw new Exception('Cannot access ride');
         }
 

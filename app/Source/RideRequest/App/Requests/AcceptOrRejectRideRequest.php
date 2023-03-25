@@ -5,7 +5,7 @@ namespace App\Source\RideRequest\App\Requests;
 use App\Source\RideRequest\Enum\RideRequestEnum;
 use Illuminate\Foundation\Http\FormRequest;
 
-class ChangeStatusRequest extends FormRequest
+class AcceptOrRejectRideRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

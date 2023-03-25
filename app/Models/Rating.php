@@ -29,6 +29,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|Rating whereRideId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Rating whereTakerId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Rating whereUpdatedAt($value)
+ * @property int $driver_id
+ * @property int $passenger_id
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereDriverId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating wherePassengerId($value)
  * @mixin \Eloquent
  */
 class Rating extends Model

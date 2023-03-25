@@ -16,6 +16,8 @@ return new class extends Migration {
             $table->foreignId('ride_id')->constrained('rides');
             $table->foreignId('passenger_id')->constrained('users');
             $table->enum('status', RideRequestEnum::values());
+            $table->datetime('cancelled_time')->nullable();
+            $table->foreignId('cancelled_by')->nullable()->constrained('users');
             $table->timestamps();
             $table->unique(['ride_id', 'passenger_id']);
         });

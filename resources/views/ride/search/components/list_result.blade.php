@@ -35,12 +35,18 @@
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             {{$ride->getDescription()}}
                         </p>
-                        @if(!$ride->rideRequestsForAuthUser)
+                        @if($ride->isFilled())
+                            <div
+                                class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+                                role="alert">
+                                {{__('Ride is filled')}}
+                            </div>
+                        @elseif(!$ride->rideRequestsForAuthUser)
                             @include('ride.search.components.request-ride-form')
                         @else
                             <p class="mt-2">
                                 <span
-                                    class="p-1 status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
+                                    class="p-1 status-text status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
                                 {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
                                 </span>
                             </p>

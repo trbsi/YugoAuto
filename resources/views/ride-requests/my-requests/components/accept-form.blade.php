@@ -6,7 +6,7 @@
 <div class="mr-2">
     <form
         method="POST"
-        action="{{route('ride-request.change-status')}}"
+        action="{{route('ride-request.accept-reject')}}"
         onsubmit="return confirm('{{__('Are you sure?')}}');"
     >
         @csrf

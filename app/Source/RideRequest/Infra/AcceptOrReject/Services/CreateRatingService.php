@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Source\RideRequest\Infra\ChangeStatus\Services;
+namespace App\Source\RideRequest\Infra\AcceptOrReject\Services;
 
 use App\Models\Rating;
 
