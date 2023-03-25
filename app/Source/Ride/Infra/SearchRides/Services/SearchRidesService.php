@@ -11,7 +11,6 @@ use Illuminate\Support\Carbon;
 class SearchRidesService
 {
     public function search(
-        int $userId,
         int $fromPlaceId,
         int $toPlaceId,
         Carbon $minStartTime
