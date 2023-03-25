@@ -48,7 +48,8 @@
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="{{asset('assets/datetimepicker/jquery.datetimepicker.full.min.js')}}"></script>
 <script src="{{asset('assets/js/place.js')}}"></script>
-
+@include('components.cookie-consent')
+@include('components.google-analytics')
 @stack('javascript')
 
 </body>
