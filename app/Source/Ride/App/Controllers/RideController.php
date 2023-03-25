@@ -100,7 +100,7 @@ class RideController extends Controller
         $rides = $businessLogic->get($authUserId);
         return view(
             'ride.my-rides.list',
-            compact('rides', 'authUserId')
+            compact('rides')
         );
     }
 

@@ -107,6 +107,11 @@ class Ride extends Model
         return $this->user_id;
     }
 
+    public function isOwner(): int
+    {
+        return $this->getUserId() === Auth::id();
+    }
+
     public function setUserId(int $user_id): self
     {
         $this->user_id = $user_id;

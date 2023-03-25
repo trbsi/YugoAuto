@@ -15,7 +15,8 @@ class UserSeeder extends Seeder
     {
         User::factory()
             ->state([
-                'email' => 'a@a.com'
+                'email' => 'a@a.com',
+                'name' => 'Main User',
             ])
             ->has(UserProfile::factory(), 'profile')
             ->create();

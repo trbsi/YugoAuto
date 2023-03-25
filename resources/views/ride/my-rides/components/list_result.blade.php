@@ -37,7 +37,7 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
                             {{$ride->getDescription()}}
                         </p>
 
-                        @if($authUserId === $ride->getUserId())
+                        @if($ride->isOwner() && $ride->isActiveRide())
                             <hr>
                             @if ($ride->pendingRideRequests->count())
                                 <div
@@ -58,11 +58,12 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
                                 </div>
                                 @include('ride.my-rides.components.delete-form')
                             </div>
-                        @else
+                        @endif
+                        @if(!$ride->isOwner())
                             <span
                                 class="p-1 status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
-                                    {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
-                                    </span>
+                           {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
+                           </span>
                         @endif
                     </div>
                     <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
