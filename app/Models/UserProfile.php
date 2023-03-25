@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRating($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUserId($value)
+ * @method static \Database\Factories\UserProfileFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
 class UserProfile extends Model

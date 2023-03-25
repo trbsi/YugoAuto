@@ -26,6 +26,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUserId($value)
+ * @method static \Database\Factories\RideRequestFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
 class RideRequest extends Model
