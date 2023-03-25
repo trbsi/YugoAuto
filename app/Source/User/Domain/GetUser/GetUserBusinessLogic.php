@@ -8,6 +8,6 @@ class GetUserBusinessLogic
 {
     public function get(int $id): User
     {
-        return User::firstOrFail($id);
+        return User::findOrFail($id);
     }
 }

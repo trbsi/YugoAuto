@@ -17,13 +17,17 @@
             <li class="pb-3 pt-3 sm:pb-4">
                 <div class="flex items-center space-x-4">
                     <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="{{$ride->user->getProfilePhotoUrl()}}"
-                             alt="Neil image">
+                        <a class="underline" href="{{user_profile($ride->user->getId())}}">
+                            <img class="w-8 h-8 rounded-full" src="{{$ride->user->getProfilePhotoUrl()}}"
+                                 alt="Neil image">
+                        </a>
                     </div>
 
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{$ride->user->getName()}}
+                            <a class="underline" href="{{user_profile($ride->user->getId())}}">
+                                {{$ride->user->getName()}}
+                            </a>
                         </p>
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                             {{__('Departure time')}} {{$ride->getTimeFormatted()}}
@@ -32,7 +36,7 @@
                             {{$ride->getDescription()}}
                         </p>
                         @if(!$ride->rideRequestsForAuthUser)
-                            @include('ride.search.components.request-form')
+                            @include('ride.search.components.request-ride-form')
                         @else
                             <p class="mt-2">
                                 <span

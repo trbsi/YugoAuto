@@ -14,7 +14,7 @@ class GetRidesByUserService
     {
         return Ride::where('user_id', $userId)
             ->orderBy('time', 'desc')
-            ->with(['pendingRideRequests', 'rideRequestsForAuthUser'])
+            ->with(['user', 'pendingRideRequests', 'rideRequestsForAuthUser'])
             ->orWhereHas('rideRequests', function (Builder $query) use ($userId) {
                 $query->where('user_id', $userId);
             })
