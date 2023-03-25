@@ -10,7 +10,7 @@ use Illuminate\Support\Carbon;
 class CreateRideService
 {
     public function create(
-        int $userId,
+        int $driverId,
         int $fromPlaceId,
         int $toPlaceId,
         Carbon $time,
@@ -20,7 +20,7 @@ class CreateRideService
     ): void {
         $model = new Ride();
         $model
-            ->setUserId($userId)
+            ->setDriverId($driverId)
             ->setCurrency('EUR')
             ->setPrice($price)
             ->setDescription($description)

@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('rides', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('driver_id')->constrained('users');
             $table->foreignId('from_place_id')->constrained('places');
             $table->foreignId('to_place_id')->constrained('places');
             $table->datetime('time');

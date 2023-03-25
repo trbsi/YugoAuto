@@ -8,7 +8,7 @@ class CanAccessRideSpecification
 {
     public function isSatisfied(int $userId, int $rideId): bool
     {
-        return Ride::where('user_id', $userId)
+        return Ride::where('driver_id', $userId)
                 ->where('id', $rideId)
                 ->count() > 0;
     }

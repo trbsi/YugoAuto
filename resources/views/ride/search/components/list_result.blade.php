@@ -17,16 +17,16 @@
             <li class="pb-3 pt-3 sm:pb-4">
                 <div class="flex items-center space-x-4">
                     <div class="flex-shrink-0">
-                        <a class="underline" href="{{user_profile($ride->user->getId())}}">
-                            <img class="w-8 h-8 rounded-full" src="{{$ride->user->getProfilePhotoUrl()}}"
+                        <a class="underline" href="{{user_profile($ride->driver->getId())}}">
+                            <img class="w-8 h-8 rounded-full" src="{{$ride->driver->getProfilePhotoUrl()}}"
                                  alt="Neil image">
                         </a>
                     </div>
 
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            <a class="underline" href="{{user_profile($ride->user->getId())}}">
-                                {{$ride->user->getName()}}
+                            <a class="underline" href="{{user_profile($ride->driver->getId())}}">
+                                {{$ride->driver->getName()}}
                             </a>
                         </p>
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">

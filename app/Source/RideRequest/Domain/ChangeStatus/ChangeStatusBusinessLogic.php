@@ -2,7 +2,9 @@
 
 namespace App\Source\RideRequest\Domain\ChangeStatus;
 
+use App\Source\RideRequest\Enum\RideRequestEnum;
 use App\Source\RideRequest\Infra\ChangeStatus\Services\ChangeStatusService;
+use App\Source\RideRequest\Infra\ChangeStatus\Services\CreateRatingService;
 use App\Source\RideRequest\Infra\Common\Specifications\CanAccessRideSpecification;
 use Exception;
 
@@ -10,25 +12,34 @@ class ChangeStatusBusinessLogic
 {
     public function __construct(
         private CanAccessRideSpecification $canAccessRideSpecification,
-        private ChangeStatusService $changeStatusService
+        private ChangeStatusService $changeStatusService,
+        private CreateRatingService $createRatingService
     ) {
     }
 
     public function change(
-        int $rideOwnerId,
+        int $driverId,
         int $rideId,
-        int $rideRequesterId,
+        int $passengerId,
         string $status
     ) {
-        if (!$this->canAccessRideSpecification->isSatisfied($rideOwnerId, $rideId)) {
+        if (!$this->canAccessRideSpecification->isSatisfied($driverId, $rideId)) {
             throw new Exception('Cannot access ride');
         }
 
         $this->changeStatusService->change(
             $rideId,
-            $rideRequesterId,
+            $passengerId,
             $status
         );
+
+        if ($status === RideRequestEnum::ACCEPTED->value) {
+            $this->createRatingService->create(
+                $rideId,
+                $driverId,
+                $passengerId
+            );
+        }
         //TODO send email
     }
 }

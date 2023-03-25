@@ -77,9 +77,9 @@ class Ride extends Model
         return $this->belongsTo(Place::class, 'to_place_id', 'id');
     }
 
-    public function user(): BelongsTo
+    public function driver(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'driver_id', 'id');
     }
 
     public function rideRequests(): HasMany
@@ -96,7 +96,7 @@ class Ride extends Model
     public function rideRequestsForAuthUser(): HasOne
     {
         return $this->hasOne(RideRequest::class, 'ride_id', 'id')
-            ->where('user_id', Auth::id());
+            ->where('passenger_id', Auth::id());
     }
 
     public function getId(): int
@@ -104,19 +104,19 @@ class Ride extends Model
         return $this->id;
     }
 
-    public function getUserId(): int
+    public function getDriverId(): int
     {
-        return $this->user_id;
+        return $this->driver_id;
     }
 
     public function isOwner(): int
     {
-        return $this->getUserId() === Auth::id();
+        return $this->getDriverId() === Auth::id();
     }
 
-    public function setUserId(int $user_id): self
+    public function setDriverId(int $driver_id): self
     {
-        $this->user_id = $user_id;
+        $this->driver_id = $driver_id;
         return $this;
     }
 

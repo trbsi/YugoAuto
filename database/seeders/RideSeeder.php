@@ -21,7 +21,7 @@ class RideSeeder extends Seeder
 
             Ride::factory()->state(
                 [
-                    'user_id' => User::first()->getId(),
+                    'driver_id' => User::first()->getId(),
                     'from_place_id' => Place::where('name', 'Zagreb')->first()->getId(),
                     'to_place_id' => Place::where('name', 'Split')->first()->getId(),
                     'time' => $time
@@ -35,7 +35,7 @@ class RideSeeder extends Seeder
 
             Ride::factory()->state(
                 [
-                    'user_id' => User::where('id', 2)->first()->getId(),
+                    'driver_id' => User::where('id', 2)->first()->getId(),
                     'from_place_id' => Place::where('name', 'Đakovo')->first()->getId(),
                     'to_place_id' => Place::where('name', 'Osijek')->first()->getId(),
                     'time' => $time

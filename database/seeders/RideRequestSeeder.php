@@ -18,12 +18,12 @@ class RideRequestSeeder extends Seeder
         $mainUser = User::first();
         /** @var Ride $ride */
         foreach (Ride::get() as $ride) {
-            if ($ride->getUserId() === $mainUser->getId()) {
+            if ($ride->getDriverId() === $mainUser->getId()) {
                 for ($i = 0; $i < rand(1, 5); $i++) {
                     try {
                         RideRequest::factory()->state(
                             [
-                                'user_id' => User::inRandomOrder()->where('id', '>', 1)->first()->getId(),
+                                'passenger_id' => User::inRandomOrder()->where('id', '>', 1)->first()->getId(),
                                 'ride_id' => $ride->getId(),
                             ]
                         )->create();
@@ -34,7 +34,7 @@ class RideRequestSeeder extends Seeder
             } else {
                 RideRequest::factory()->state(
                     [
-                        'user_id' => $mainUser->getId(),
+                        'passenger_id' => $mainUser->getId(),
                         'ride_id' => $ride->getId(),
                     ]
                 )->create();

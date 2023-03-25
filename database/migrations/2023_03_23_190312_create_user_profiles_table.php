@@ -13,7 +13,8 @@ return new class extends Migration {
         Schema::create('user_profiles', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->decimal('rating', 2, 1)->default(0);
+            $table->integer('rating_sum')->default(0);
+            $table->integer('rating_count')->default(0);
             $table->timestamps();
         });
     }

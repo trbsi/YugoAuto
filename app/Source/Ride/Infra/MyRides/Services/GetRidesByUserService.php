@@ -12,11 +12,11 @@ class GetRidesByUserService
 {
     public function get(int $userId): LengthAwarePaginator
     {
-        return Ride::where('user_id', $userId)
+        return Ride::where('driver_id', $userId)
             ->orderBy('time', 'desc')
-            ->with(['user', 'pendingRideRequests', 'rideRequestsForAuthUser'])
+            ->with(['driver', 'pendingRideRequests', 'rideRequestsForAuthUser'])
             ->orWhereHas('rideRequests', function (Builder $query) use ($userId) {
-                $query->where('user_id', $userId);
+                $query->where('passenger_id', $userId);
             })
             ->paginate();
     }

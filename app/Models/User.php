@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -176,6 +177,17 @@ class User extends Authenticatable
     public function setPassword(string $password): self
     {
         $this->password = $password;
+        return $this;
+    }
+
+    public function getEmailVerifiedAt(): Carbon
+    {
+        return $this->email_verified_at;
+    }
+
+    public function setEmailVerifiedAt(Carbon $email_verified_at): self
+    {
+        $this->email_verified_at = $email_verified_at;
         return $this;
     }
 }

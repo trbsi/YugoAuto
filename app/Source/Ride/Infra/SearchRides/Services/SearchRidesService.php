@@ -24,7 +24,7 @@ class SearchRidesService
             ->with([
                 'fromPlace',
                 'toPlace',
-                'user',
+                'driver',
                 'rideRequestsForAuthUser',
             ])
             ->orderBy('time', 'ASC')

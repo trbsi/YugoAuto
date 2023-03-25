@@ -44,14 +44,34 @@ class UserProfile extends Model
         return $this;
     }
 
-    public function getRating(): float
+    public function getRatingSum(): int
     {
-        return $this->rating;
+        return $this->rating_sum;
     }
 
-    public function setRating(float $rating): self
+    public function setRatingSum(int $rating_sum): self
     {
-        $this->rating = $rating;
+        $this->rating_sum = $rating_sum;
         return $this;
+    }
+
+    public function getRatingCount(): int
+    {
+        return $this->rating_count;
+    }
+
+    public function setRatingCount(int $rating_count): self
+    {
+        $this->rating_count = $rating_count;
+        return $this;
+    }
+
+    public function getRating(): float
+    {
+        if ($this->getRatingCount() === 0) {
+            return 0;
+        }
+        
+        return round($this->getRatingSum() / $this->getRatingCount(), 2);
     }
 }

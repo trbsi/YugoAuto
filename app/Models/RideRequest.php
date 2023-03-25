@@ -38,9 +38,9 @@ class RideRequest extends Model
         return $this->belongsTo(Ride::class, 'ride_id', 'id');
     }
 
-    public function user(): BelongsTo
+    public function passenger(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'passenger_id', 'id');
     }
 
     public function getId(): int
@@ -59,14 +59,14 @@ class RideRequest extends Model
         return $this;
     }
 
-    public function getUserId(): int
+    public function getPassengerId(): int
     {
-        return $this->user_id;
+        return $this->passenger_id;
     }
 
-    public function setUserId(int $user_id): self
+    public function setPassengerId(int $passenger_id): self
     {
-        $this->user_id = $user_id;
+        $this->passenger_id = $passenger_id;
         return $this;
     }
 

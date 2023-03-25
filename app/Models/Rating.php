@@ -55,25 +55,25 @@ class Rating extends Model
         return $this->id;
     }
 
-    public function getGiverId(): int
+    public function getPassengerId(): int
     {
-        return $this->giver_id;
+        return $this->passenger_id;
     }
 
-    public function setGiverId(int $giver_id): self
+    public function setPassengerId(int $passenger_id): self
     {
-        $this->giver_id = $giver_id;
+        $this->passenger_id = $passenger_id;
         return $this;
     }
 
-    public function getTakerId(): int
+    public function getDriverId(): int
     {
-        return $this->taker_id;
+        return $this->driver_id;
     }
 
-    public function setTakerId(int $taker_id): self
+    public function setDriverId(int $driver_id): self
     {
-        $this->taker_id = $taker_id;
+        $this->driver_id = $driver_id;
         return $this;
     }
 
@@ -87,7 +87,7 @@ class Rating extends Model
         $this->ride_id = $ride_id;
         return $this;
     }
-
+    
     public function getRating(): int
     {
         return $this->rating;

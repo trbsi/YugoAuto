@@ -8,11 +8,11 @@ class ChangeStatusService
 {
     public function change(
         int $rideId,
-        int $rideRequesterId,
+        int $passengerId,
         string $status
     ): void {
         $model = RideRequest::where('ride_id', $rideId)
-            ->where('user_id', $rideRequesterId)
+            ->where('passenger_id', $passengerId)
             ->first();
 
         $model

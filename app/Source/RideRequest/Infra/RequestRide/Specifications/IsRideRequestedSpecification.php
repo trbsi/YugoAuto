@@ -7,10 +7,10 @@ use App\Models\RideRequest;
 class IsRideRequestedSpecification
 {
     public function isSatisfied(
-        int $userId,
+        int $passengerId,
         int $rideId
     ): bool {
-        $count = RideRequest::where('user_id', $userId)
+        $count = RideRequest::where('passenger_id', $passengerId)
             ->where('ride_id', $rideId)
             ->count();
 

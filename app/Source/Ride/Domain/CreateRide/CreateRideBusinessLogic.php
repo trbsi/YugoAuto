@@ -18,7 +18,7 @@ class CreateRideBusinessLogic
     }
 
     public function create(
-        int $userId,
+        int $driverId,
         int $fromPlaceId,
         int $toPlaceId,
         Carbon $time,
@@ -27,7 +27,7 @@ class CreateRideBusinessLogic
         ?string $description
     ): void {
         $this->createRideService->create(
-            $userId,
+            $driverId,
             $fromPlaceId,
             $toPlaceId,
             $time,

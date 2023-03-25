@@ -45,15 +45,15 @@ Route::middleware([
             'ride-request.change-status'
         );
     });
+
+    Route::prefix('user')->group(function () {
+        Route::get('/{id}', [UserController::class, 'show'])->name('user.show');
+    });
 });
 
 //PUBLIC
 Route::prefix('ride')->group(function () {
     Route::get('search', [RideController::class, 'search'])->name('ride.search');
-});
-
-Route::prefix('user')->group(function () {
-    Route::get('/{id}', [UserController::class, 'show'])->name('user.show');
 });
 
 Route::get('/', [RideController::class, 'search']);

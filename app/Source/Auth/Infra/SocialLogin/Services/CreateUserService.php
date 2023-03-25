@@ -15,12 +15,10 @@ class CreateUserService
 {
     public function create(SocialiteUser $socialUser, string $driver): User
     {
-        $username = $this->getUsername($socialUser);
-
         $user = new User();
         $user
-            ->setUsername($username)
-            ->setSocialEmail($socialUser->getEmail() ?? null)
+            ->setName($this->getName($socialUser))
+            ->setEmail($socialUser->getEmail() ?? null)
             ->setPassword(Hash::make(Str::random()))
             ->setEmailVerifiedAt(Carbon::now())
             ->save();
@@ -39,28 +37,10 @@ class CreateUserService
         return $user;
     }
 
-    private function getUsername(SocialiteUser $socialUser): string
+    private function getName(SocialiteUser $socialUser): string
     {
-        if ($socialUser->getNickname()) {
-            $username = $socialUser->getNickname();
-        } else {
-            if ($socialUser->getName()) {
-                $username = $socialUser->getName();
-            } else {
-                $username = 'user' . rand(0, 1000);
-            }
-        }
-
-        $username = Str::slug($username);
-
-        do {
-            $userCount = User::where('username', $username)->count();
-
-            if ($userCount > 0) {
-                $username = sprintf('%s%s', $username, rand(0, 1000));
-            }
-        } while ($userCount > 0);
-
-        return $username;
+        $name = $socialUser->getName();
+        $exploded = explode(' ', $name);
+        return $exploded[0] ?? 'Name';
     }
 }

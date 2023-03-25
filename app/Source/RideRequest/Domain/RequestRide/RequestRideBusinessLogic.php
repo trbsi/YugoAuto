@@ -15,14 +15,14 @@ class RequestRideBusinessLogic
     }
 
     public function requestRide(
-        int $userId,
+        int $passengerId,
         int $rideId
     ): void {
-        if ($this->isRideRequestedSpecification->isSatisfied($userId, $rideId)) {
+        if ($this->isRideRequestedSpecification->isSatisfied($passengerId, $rideId)) {
             throw new Exception(__('Ride is requested'));
         }
 
-        $this->saveRideRequestService->save($userId, $rideId);
+        $this->saveRideRequestService->save($passengerId, $rideId);
         //TODO send email
     }
 }

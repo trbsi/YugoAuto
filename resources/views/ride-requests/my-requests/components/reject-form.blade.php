@@ -1,3 +1,8 @@
+<?php
+/** @var \App\Models\Ride $ride */
+
+/** @var \App\Models\RideRequest $request */
+?>
 <div>
     <form
         method="POST"
@@ -6,7 +11,7 @@
     >
         @csrf
         <input type="hidden" name="ride_id" value="{{$ride->getId()}}">
-        <input type="hidden" name="user_id" value="{{$request->getUserId()}}">
+        <input type="hidden" name="user_id" value="{{$request->getPassengerId()}}">
         <input type="hidden" name="status" value="{{\App\Source\RideRequest\Enum\RideRequestEnum::REJECTED->value}}">
         <div class=" mb-6">
             <button type="submit"

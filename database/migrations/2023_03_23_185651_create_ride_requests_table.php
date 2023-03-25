@@ -14,10 +14,10 @@ return new class extends Migration {
         Schema::create('ride_requests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('ride_id')->constrained('rides');
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('passenger_id')->constrained('users');
             $table->enum('status', RideRequestEnum::values());
             $table->timestamps();
-            $table->unique(['ride_id', 'user_id']);
+            $table->unique(['ride_id', 'passenger_id']);
         });
     }
 
