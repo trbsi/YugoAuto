@@ -16,7 +16,7 @@
         <div class=" mb-6">
             <button type="submit"
                     class="px-3 py-2 text-xs font-medium text-center text-white bg-yellow-500 rounded-lg hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
-                {{__('Cancel')}}
+                {{__('Cancel ride')}}
             </button>
         </div>
     </form>

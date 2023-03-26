@@ -87,6 +87,7 @@ class RideController extends Controller
                 $request->description
             );
         } catch (Exception $exception) {
+            $request->session()->flash('error', $exception->getMessage());
             return redirect()->back()->withInput();
         }
         return redirect(route('ride.my-rides'));
@@ -105,11 +106,13 @@ class RideController extends Controller
 
     public function delete(
         int $id,
+        Request $request,
         DeleteRideBusinessLogic $businessLogic
     ) {
         try {
             $businessLogic->delete($id, Auth::id());
         } catch (Exception $exception) {
+            $request->session()->flash('error', $exception->getMessage());
             Log::error($exception->getMessage());
         }
         return redirect()->back();
