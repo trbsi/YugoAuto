@@ -10,15 +10,15 @@
                     </div>
                     <div class="divide-y divide-gray-200">
                         <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                            <form action="{{ route('contact') }}" method="POST">
+                            <form action="{{ route('contact.send-message') }}" method="POST">
+                                @csrf
                                 @if(auth()->guest())
-                                    @csrf
                                     <div class="mb-4">
                                         <label class="block text-gray-700 font-bold mb-2" for="name">
                                             {{__('Name')}}
                                         </label>
                                         <input type="text" name="name" id="name" class="form-input w-full"
-                                               placeholder="John Doe">
+                                               placeholder="John Doe" required>
                                         @error('name')
                                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                                         @enderror
@@ -28,7 +28,7 @@
                                             {{__('Email')}}
                                         </label>
                                         <input type="email" name="email" id="email" class="form-input w-full"
-                                               placeholder="john@example.com">
+                                               placeholder="john@example.com" required>
                                         @error('email')
                                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                                         @enderror
@@ -40,7 +40,7 @@
                                         {{__('Message')}}
                                     </label>
                                     <textarea name="message" id="message" rows="5"
-                                              class="form-textarea w-full"></textarea>
+                                              class="form-textarea w-full" required></textarea>
                                     @error('message')
                                     <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                                     @enderror

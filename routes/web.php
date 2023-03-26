@@ -62,6 +62,7 @@ Route::prefix('ride')->group(function () {
 
 Route::get('/', [RideController::class, 'search']);
 Route::get('contact', [PublicController::class, 'contact'])->name('contact');
+Route::post('send-message', [PublicController::class, 'sendMessage'])->name('contact.send-message');
 
 //Route::get('/auth/redirect/{driver}', [SocialController::class, 'redirect'])->name('social_login.redirect');
 //Route::get('/auth/callback/{driver}', [SocialController::class, 'callback'])->name('social_login.callback');
