@@ -1,6 +1,6 @@
 <?php
 
-use App\Source\Auth\App\Controllers\SocialController;
+use App\Source\Public\App\Controllers\PublicController;
 use App\Source\Ride\App\Controllers\RideController;
 use App\Source\RideRequest\App\Controllers\RideRequestController;
 use App\Source\User\App\Controllers\UserController;
@@ -61,8 +61,8 @@ Route::prefix('ride')->group(function () {
 });
 
 Route::get('/', [RideController::class, 'search']);
+Route::get('contact', [PublicController::class, 'contact'])->name('contact');
 
-Route::get('/auth/redirect/{driver}', [SocialController::class, 'redirect'])->name('social_login.redirect');
-
-Route::get('/auth/callback/{driver}', [SocialController::class, 'callback'])->name('social_login.callback');
+//Route::get('/auth/redirect/{driver}', [SocialController::class, 'redirect'])->name('social_login.redirect');
+//Route::get('/auth/callback/{driver}', [SocialController::class, 'callback'])->name('social_login.callback');
 
