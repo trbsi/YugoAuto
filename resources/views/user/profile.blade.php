@@ -9,17 +9,14 @@
             <img class="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
                  src="{{$user->getProfilePhotoUrl()}}" alt="">
             <div class="text-center mt-2 text-3xl font-medium">{{$user->getName()}}</div>
-            <?php
-            /*
-                       <div class=" text-center mt-2 font-light text-sm">@devpenzil
-                       </div>
-                       <div class="text-center font-normal text-lg">Kerala</div>
-                       <div class="px-6 text-center mt-2 font-light text-sm">
-                           <p>
-                               Front end Developer, avid reader. Love to take a long walk, swim
-                           </p>
-                       </div>
-            */ ?>
+            
+            <div class="m-3">
+                <a href="#"
+                   class="text-center block w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    {{__('Send a message')}}
+                </a>
+            </div>
+
             <hr class="mt-8">
             <div class="flex p-4">
                 <div class="w-1/2 text-center">
