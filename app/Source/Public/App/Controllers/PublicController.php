@@ -3,19 +3,19 @@
 namespace App\Source\Public\App\Controllers;
 
 use App\Source\Public\App\Requests\ContactRequest;
-use App\Source\Public\Domain\Contact\ContactBusinessLogic;
+use App\Source\Public\Domain\Contact\ContactLogic;
 use Illuminate\Support\Facades\Auth;
 
 class PublicController
 {
     public function sendMessage(
         ContactRequest $request,
-        ContactBusinessLogic $businessLogic
+        ContactLogic $ogic
     ) {
         if (Auth::id()) {
-            $businessLogic->sendForAuthUser(Auth::id(), $request->message);
+            $ogic->sendForAuthUser(Auth::id(), $request->message);
         } else {
-            $businessLogic->sendForGuest(
+            $ogic->sendForGuest(
                 $request->name,
                 $request->email,
                 $request->message

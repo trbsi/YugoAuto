@@ -33,6 +33,15 @@
                     <x-nav-link href="{{ route('ride.my-rides') }}" :active="request()->routeIs('ride.my-rides')">
                         {{ __('My rides') }}
                     </x-nav-link>
+                    <x-nav-link class="relative" href="{{ route('messaging.conversation.list') }}"
+                                :active="request()->routeIs('messaging.conversation.list')">
+                        {{ __('Messages') }}
+                        @if($unreadMessages)
+                            <p class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white ml-2">
+                                {{$unreadMessages}}
+                            </p>
+                        @endif
+                    </x-nav-link>
                     <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
                         {{ __('Contact') }}
                     </x-nav-link>
@@ -194,6 +203,10 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('ride.my-rides') }}" :active="request()->routeIs('ride.my-rides')">
                 {{ __('My rides') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('messaging.conversation.list') }}"
+                                   :active="request()->routeIs('messaging.conversation.list')">
+                {{ __('Messages') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
                 {{ __('Contact') }}

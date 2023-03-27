@@ -26,6 +26,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $rating_count
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRatingCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRatingSum($value)
+ * @property int $unread_messages_count
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUnreadMessagesCount($value)
  * @mixin \Eloquent
  */
 class UserProfile extends Model
@@ -75,7 +77,18 @@ class UserProfile extends Model
         if ($this->getRatingCount() === 0) {
             return 0;
         }
-        
+
         return round($this->getRatingSum() / $this->getRatingCount(), 2);
+    }
+
+    public function getUnreadMessagesCount(): int
+    {
+        return $this->unread_messages_count;
+    }
+
+    public function setUnreadMessagesCount(int $unread_messages_count): self
+    {
+        $this->unread_messages_count = $unread_messages_count;
+        return $this;
     }
 }

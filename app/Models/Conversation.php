@@ -4,32 +4,117 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Auth;
 
+/**
+ * App\Models\Conversation
+ *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property mixed $name
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
+ * @property-read int|null $messages_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $users
+ * @property-read int|null $users_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereUpdatedAt($value)
+ * @property int $sender_id
+ * @property int $recipient_id
+ * @property int $sender_read
+ * @property int $recipient_read
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $users
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereRecipientId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereRecipientRead($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereSenderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereSenderRead($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
+ * @property-read \App\Models\User $recipient
+ * @property-read \App\Models\User $sender
+ * @mixin \Eloquent
+ */
 class Conversation extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = [];
 
     public function messages()
     {
         return $this->hasMany(Message::class);
     }
 
-    public function users()
+    public function sender(): BelongsTo
     {
-        return $this->belongsToMany(User::class, 'participants', 'conversation_id', 'user_id')
-            ->withTimestamps();
+        return $this->belongsTo(User::class, 'sender_id', 'id');
     }
 
-    public function getNameAttribute()
+    public function recipient(): BelongsTo
     {
-        return $this->name;
+        return $this->belongsTo(User::class, 'recipient_id', 'id');
     }
 
-    public function setNameAttribute($value)
+    public function getId(): int
     {
-        $this->name = $value;
+        return $this->id;
     }
 
+    public function getSenderId(): int
+    {
+        return $this->sender_id;
+    }
+
+    public function setSenderId(int $sender_id): self
+    {
+        $this->sender_id = $sender_id;
+        return $this;
+    }
+
+    public function getRecipientId(): int
+    {
+        return $this->recipient_id;
+    }
+
+    public function setRecipientId(int $recipient_id): self
+    {
+        $this->recipient_id = $recipient_id;
+        return $this;
+    }
+
+    public function isSenderRead(): bool
+    {
+        return $this->sender_read;
+    }
+
+    public function setSenderRead(bool $sender_read): self
+    {
+        $this->sender_read = $sender_read;
+        return $this;
+    }
+
+    public function isRecipientRead(): bool
+    {
+        return $this->recipient_read;
+    }
+
+    public function setRecipientRead(bool $recipient_read): self
+    {
+        $this->recipient_read = $recipient_read;
+        return $this;
+    }
+
+    public function getOtherUser(): User
+    {
+        if ($this->getSenderId() === Auth::id()) {
+            return $this->recipient;
+        }
+
+        return $this->sender;
+    }
 }

@@ -20,6 +20,7 @@ class SearchRidesService
             $minStartTime = $now;
         }
 
+        //TODO - check query index
         $rides = Ride::where('from_place_id', $fromPlaceId)
             ->where('to_place_id', $toPlaceId)
             ->where('time', '>=', $minStartTime->format('Y-m-d H:i:s'))

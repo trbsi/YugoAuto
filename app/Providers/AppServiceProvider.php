@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $unreadMessages = 0;
+        if ($user = Auth::user()) {
+            $unreadMessages = $user->profile->getUnreadMessagesCount();
+        }
+        View::share('unreadMessages', $unreadMessages);
     }
 }

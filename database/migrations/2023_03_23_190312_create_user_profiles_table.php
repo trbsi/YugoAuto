@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained('users');
             $table->integer('rating_sum')->default(0);
             $table->integer('rating_count')->default(0);
+            $table->integer('unread_messages_count')->default(0);
             $table->timestamps();
         });
     }

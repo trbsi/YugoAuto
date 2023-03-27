@@ -9,7 +9,7 @@ use App\Source\Auth\Infra\SocialLogin\Services\CreateUserService;
 use App\Source\Auth\Infra\SocialLogin\Services\GetSocialUserService;
 use Laravel\Socialite\Facades\Socialite;
 
-class SocialLoginBusinessLogic
+class SocialLoginLogic
 {
     private GetSocialUserService $getSocialUserService;
 

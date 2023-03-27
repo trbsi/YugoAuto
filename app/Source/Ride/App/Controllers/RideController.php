@@ -6,13 +6,13 @@ namespace App\Source\Ride\App\Controllers;
 
 use App\Enum\TimeEnum;
 use App\Http\Controllers\Controller;
-use App\Source\Place\Domain\SearchPlaces\SearchPlacesBusinessLogic;
+use App\Source\Place\Domain\SearchPlaces\SearchPlacesLogic;
 use App\Source\Ride\App\Requests\CreateRideRequest;
 use App\Source\Ride\App\Requests\SearchRidesRequest;
-use App\Source\Ride\Domain\CreateRide\CreateRideBusinessLogic;
-use App\Source\Ride\Domain\DeleteRide\DeleteRideBusinessLogic;
-use App\Source\Ride\Domain\MyRides\MyRidesBusinessLogic;
-use App\Source\Ride\Domain\SearchRides\SearchRidesBusinessLogic;
+use App\Source\Ride\Domain\CreateRide\CreateRideLogic;
+use App\Source\Ride\Domain\DeleteRide\DeleteRideLogic;
+use App\Source\Ride\Domain\MyRides\MyRidesLogic;
+use App\Source\Ride\Domain\SearchRides\SearchRidesLogic;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -23,14 +23,14 @@ class RideController extends Controller
 {
     public function search(
         SearchRidesRequest $request,
-        SearchRidesBusinessLogic $businessLogic,
-        SearchPlacesBusinessLogic $placesBusinessLogic
+        SearchRidesLogic $ogic,
+        SearchPlacesLogic $placesBusinessLogic
     ) {
         $rides = null;
         $fromPlace = $toPlace = $time = null;
 
         if ($request->from_place_id && $request->to_place_id && $request->time) {
-            $rides = $businessLogic->search(
+            $rides = $ogic->search(
                 (int)$request->from_place_id,
                 (int)$request->to_place_id,
                 Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time)
@@ -54,7 +54,7 @@ class RideController extends Controller
 
     public function showCreate(
         Request $request,
-        SearchPlacesBusinessLogic $searchPlacesBusinessLogic
+        SearchPlacesLogic $searchPlacesBusinessLogic
     ) {
         $fromPlaceId = old('from_place_id');
         $toPlaceId = old('to_place_id');
@@ -74,10 +74,10 @@ class RideController extends Controller
 
     public function save(
         CreateRideRequest $request,
-        CreateRideBusinessLogic $businessLogic
+        CreateRideLogic $ogic
     ) {
         try {
-            $businessLogic->create(
+            $ogic->create(
                 Auth::id(),
                 (int)$request->from_place_id,
                 (int)$request->to_place_id,
@@ -94,10 +94,10 @@ class RideController extends Controller
     }
 
     public function myRides(
-        MyRidesBusinessLogic $businessLogic
+        MyRidesLogic $ogic
     ) {
         $authUserId = Auth::id();
-        $rides = $businessLogic->get($authUserId);
+        $rides = $ogic->get($authUserId);
         return view(
             'ride.my-rides.list',
             compact('rides')
@@ -107,10 +107,10 @@ class RideController extends Controller
     public function delete(
         int $id,
         Request $request,
-        DeleteRideBusinessLogic $businessLogic
+        DeleteRideLogic $ogic
     ) {
         try {
-            $businessLogic->delete($id, Auth::id());
+            $ogic->delete($id, Auth::id());
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
             Log::error($exception->getMessage());

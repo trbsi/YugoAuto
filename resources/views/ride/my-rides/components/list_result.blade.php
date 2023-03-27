@@ -19,7 +19,7 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
                 <div class="flex items-center space-x-4">
 
                     <div class="flex-shrink-0">
-                        <a class="underline" href="{{user_profile($ride->driver->getId())}}">
+                        <a class="underline" href="{{user_profile_url($ride->driver->getId())}}">
                             <img class="w-8 h-8 rounded-full" src="{{$ride->driver->getProfilePhotoUrl()}}"
                                  alt="Neil image">
                         </a>
@@ -27,7 +27,7 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
 
                     <div class="flex-1 min-w-0">
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            <a class="underline" href="{{user_profile($ride->driver->getId())}}">
+                            <a class="underline" href="{{user_profile_url($ride->driver->getId())}}">
                                 {{$ride->driver->getName()}}
                             </a>
                         </p>

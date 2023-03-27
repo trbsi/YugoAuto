@@ -7,7 +7,7 @@ namespace App\Source\Auth\Domain\Register;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class RegisterBusinessLogic
+class RegisterLogic
 {
     public function register(array $input): User
     {

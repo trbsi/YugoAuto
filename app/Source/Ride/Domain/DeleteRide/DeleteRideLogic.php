@@ -8,7 +8,7 @@ use App\Models\Ride;
 use App\Source\Ride\Infra\DeleteRide\Specifications\CanDeleteSpecification;
 use Exception;
 
-class DeleteRideBusinessLogic
+class DeleteRideLogic
 {
     private CanDeleteSpecification $canDeleteSpecification;
 

@@ -59,6 +59,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
 
     private function getPhoneNumber(?string $phoneNumber): ?string
     {
+        return null; //TODO remove this when you want to enable phone
         if (!$phoneNumber) {
             return null;
         }

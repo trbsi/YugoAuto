@@ -7,7 +7,7 @@ namespace App\Source\Ride\Domain\MyRides;
 use App\Source\Ride\Infra\MyRides\Services\GetRidesByUserService;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
-class MyRidesBusinessLogic
+class MyRidesLogic
 {
     private GetRidesByUserService $getRidesByUserService;
 

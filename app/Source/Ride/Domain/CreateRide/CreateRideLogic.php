@@ -9,7 +9,7 @@ use App\Source\Ride\Infra\CreateRide\Specifications\CanCreateRideSpecification;
 use Exception;
 use Illuminate\Support\Carbon;
 
-class CreateRideBusinessLogic
+class CreateRideLogic
 {
     public function __construct(
         private CreateRideService $createRideService,

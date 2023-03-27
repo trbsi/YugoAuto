@@ -1,14 +1,15 @@
 <?php
 
-if (!function_exists('user_profile')) {
-    /**
-     * Create a new Carbon instance for the current time.
-     *
-     * @param \DateTimeZone|string|null $tz
-     * @return \Illuminate\Support\Carbon
-     */
-    function user_profile(int $userId): string
+if (!function_exists('user_profile_url')) {
+    function user_profile_url(int $userId): string
     {
         return route('user.show', ['id' => $userId]);
+    }
+}
+
+if (!function_exists('conversation_url')) {
+    function conversation_url(int $messageId): string
+    {
+        return route('messaging.message.single', ['id' => $messageId]);
     }
 }

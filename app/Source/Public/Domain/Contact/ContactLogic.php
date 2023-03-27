@@ -7,7 +7,7 @@ use App\Source\SystemCommunication\Base\Infra\Events\SystemCommunicationEvent;
 use App\Source\SystemCommunication\Email\Infra\Value\EmailSystemCommunicationValue;
 use App\Source\SystemCommunication\Email\Infra\Value\FromValueObject;
 
-class ContactBusinessLogic
+class ContactLogic
 {
     public function sendForAuthUser(int $userId, string $message): void
     {

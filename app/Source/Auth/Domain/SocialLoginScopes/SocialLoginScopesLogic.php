@@ -6,7 +6,7 @@ namespace App\Source\Auth\Domain\SocialLoginScopes;
 
 use App\Models\SocialLogin;
 
-class SocialLoginScopesBusinessLogic
+class SocialLoginScopesLogic
 {
     public function getScopes(string $driver): array
     {

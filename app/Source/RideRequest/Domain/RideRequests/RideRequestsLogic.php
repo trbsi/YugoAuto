@@ -8,7 +8,7 @@ use App\Source\RideRequest\Infra\RideRequests\Services\GetRideRequestsService;
 use Exception;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
-class RideRequestsBusinessLogic
+class RideRequestsLogic
 {
     public function __construct(
         private CanDriverAccessRideSpecification $canDriverAccessRideSpecification,

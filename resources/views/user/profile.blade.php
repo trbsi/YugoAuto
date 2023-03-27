@@ -9,9 +9,9 @@
             <img class="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
                  src="{{$user->getProfilePhotoUrl()}}" alt="">
             <div class="text-center mt-2 text-3xl font-medium">{{$user->getName()}}</div>
-            
+
             <div class="m-3">
-                <a href="#"
+                <a href="{{route('messaging.conversation.create-form', ['userId' => $user->getId()])}}"
                    class="text-center block w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                     {{__('Send a message')}}
                 </a>
@@ -19,21 +19,23 @@
 
             <hr class="mt-8">
             <div class="flex p-4">
-                <div class="w-1/2 text-center">
-                    {{__('Rating')}} <span class="font-bold">{{$user->profile->getRating()}}</span>
-                </div>
-                <div class="w-0 border border-gray-300">
+                @if ($user->getPhoneNumber())
+                    <div class="w-1/2 text-center">
+                        {{__('Rating')}} <span class="font-bold">{{$user->profile->getRating()}}</span>
+                    </div>
+                    <div class="w-0 border border-gray-300">
 
-                </div>
-                <div class="w-1/2 text-center">
-                    {{__('Phone')}} <span class="font-bold">
-                        @if ($user->getPhoneNumber())
+                    </div>
+                    <div class="w-1/2 text-center">
+                        {{__('Phone')}} <span class="font-bold">
                             <a class="underline" href="tel:{{$user->getPhoneNumber()}}">{{$user->getPhoneNumber()}}</a>
-                        @else
-                            {{__('No phone')}}
-                        @endif
                     </span>
-                </div>
+                    </div>
+                @else
+                    <div class="w-full text-center">
+                        {{__('Rating')}} <span class="font-bold">{{$user->profile->getRating()}}</span>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

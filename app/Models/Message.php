@@ -4,28 +4,46 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
+/**
+ * App\Models\Message
+ *
+ * @property int $id
+ * @property int $conversation_id
+ * @property int $sender_id
+ * @property int $recipient_id
+ * @property int $sender_read
+ * @property int $recipient_read
+ * @property string $content
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Conversation $conversation
+ * @property-read \App\Models\User $recipient
+ * @property-read \App\Models\User $sender
+ * @method static \Illuminate\Database\Eloquent\Builder|Message newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Message newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Message query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereConversationId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereRecipientId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereRecipientRead($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderRead($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Message whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class Message extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'conversation_id',
-        'sender_id',
-        'recipient_id',
-        'content',
-        'timestamp',
-    ];
-
+    protected $fillable = [];
 
     public function sender()
     {
         return $this->belongsTo(User::class, 'sender_id');
-    }
-
-    public function recipient()
-    {
-        return $this->belongsTo(User::class, 'recipient_id');
     }
 
     public function conversation()
@@ -44,6 +62,17 @@ class Message extends Model
         return $this;
     }
 
+    public function getContent(): string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
+        return $this;
+    }
+
     public function getSenderId(): int
     {
         return $this->sender_id;
@@ -55,25 +84,12 @@ class Message extends Model
         return $this;
     }
 
-    public function getRecipientId(): int
+    public function isMyMessage(): bool
     {
-        return $this->recipient_id;
-    }
+        if ($this->getSenderId() === Auth::id()) {
+            return true;
+        }
 
-    public function setRecipientId(int $recipient_id): self
-    {
-        $this->recipient_id = $recipient_id;
-        return $this;
-    }
-
-    public function getContent(): string
-    {
-        return $this->content;
-    }
-
-    public function setContent(string $content): self
-    {
-        $this->content = $content;
-        return $this;
+        return false;
     }
 }

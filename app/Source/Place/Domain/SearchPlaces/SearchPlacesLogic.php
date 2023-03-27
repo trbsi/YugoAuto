@@ -8,7 +8,7 @@ use App\Models\Place;
 use App\Source\Place\Infra\SearchPlaces\Services\GetPlacesService;
 use Illuminate\Database\Eloquent\Collection;
 
-class SearchPlacesBusinessLogic
+class SearchPlacesLogic
 {
     private GetPlacesService $getPlacesService;
 

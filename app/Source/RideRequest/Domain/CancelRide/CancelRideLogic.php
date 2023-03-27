@@ -6,7 +6,7 @@ use App\Source\RideRequest\Infra\CancelRide\Services\CancelRideService;
 use App\Source\RideRequest\Infra\CancelRide\Specifications\CanCancelRideSpecification;
 use Exception;
 
-class CancelRideBusinessLogic
+class CancelRideLogic
 {
     public function __construct(
         private CanCancelRideSpecification $canCancelRideSpecification,

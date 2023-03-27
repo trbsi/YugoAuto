@@ -6,7 +6,7 @@ use App\Source\RideRequest\Infra\RequestRide\Services\SaveRideRequestService;
 use App\Source\RideRequest\Infra\RequestRide\Specifications\IsRideRequestedSpecification;
 use Exception;
 
-class RequestRideBusinessLogic
+class RequestRideLogic
 {
     public function __construct(
         private IsRideRequestedSpecification $isRideRequestedSpecification,

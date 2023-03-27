@@ -60,15 +60,18 @@
             <x-input-error for="name" class="mt-2"/>
         </div>
 
-        <!-- Name -->
-        <div class="col-span-6 sm:col-span-4">
-            <x-label for="phone_number" value="{{ __('Phone number') }}"/>
-            <x-input id="phone_number" type="number" class="mt-1 block w-full" wire:model.defer="state.phone_number"
-                     autocomplete="phone_number"/>
-            <x-input-error for="name" class="mt-2"/>
-        </div>
+        <!-- Phone number -->
+        <?php
+        /*
+               <div class="col-span-6 sm:col-span-4">
+                   <x-label for="phone_number" value="{{ __('Phone number') }}"/>
+                   <x-input id="phone_number" type="number" class="mt-1 block w-full" wire:model.defer="state.phone_number"
+                            autocomplete="phone_number"/>
+                   <x-input-error for="name" class="mt-2"/>
+               </div>
+               */ ?>
 
-        <!-- Email -->
+            <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="email" value="{{ __('Email') }}"/>
             <x-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email"

@@ -8,7 +8,7 @@ use App\Source\Ride\Infra\SearchRides\Services\SearchRidesService;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 
-class SearchRidesBusinessLogic
+class SearchRidesLogic
 {
     private SearchRidesService $searchRidesService;
 

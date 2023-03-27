@@ -8,7 +8,7 @@ use App\Source\RideRequest\Infra\AcceptOrReject\Services\CreateRatingService;
 use App\Source\RideRequest\Infra\Common\Specifications\CanDriverAccessRideSpecification;
 use Exception;
 
-class AcceptOrRejectBusinessLogic
+class AcceptOrRejectLogic
 {
     public function __construct(
         private CanDriverAccessRideSpecification $canDriverAccessRideSpecification,
