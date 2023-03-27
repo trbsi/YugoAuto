@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderRead($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereUpdatedAt($value)
+ * @method static \Database\Factories\MessageFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
 class Message extends Model

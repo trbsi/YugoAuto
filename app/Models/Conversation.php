@@ -7,36 +7,32 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Auth;
 
+
 /**
  * App\Models\Conversation
  *
  * @property int $id
+ * @property int $sender_id
+ * @property int $recipient_id
+ * @property int $sender_read
+ * @property int $recipient_read
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property mixed $name
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
  * @property-read int|null $messages_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $users
- * @property-read int|null $users_count
+ * @property-read \App\Models\User $recipient
+ * @property-read \App\Models\User $sender
+ * @method static \Database\Factories\ConversationFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation query()
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereUpdatedAt($value)
- * @property int $sender_id
- * @property int $recipient_id
- * @property int $sender_read
- * @property int $recipient_read
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\User> $users
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereRecipientId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereRecipientRead($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereSenderId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereSenderRead($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
- * @property-read \App\Models\User $recipient
- * @property-read \App\Models\User $sender
+ * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Conversation extends Model
