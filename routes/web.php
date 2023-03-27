@@ -69,7 +69,7 @@ Route::middleware([
 
         Route::prefix('message')->group(function () {
             Route::get('/single/{id}', [MessageController::class, 'list'])->name('messaging.message.single');
-            Route::get('/send', [MessageController::class, 'send'])->name('messaging.message.send');
+            Route::post('/send', [MessageController::class, 'send'])->name('messaging.message.send');
         });
     });
 });

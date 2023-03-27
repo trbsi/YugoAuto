@@ -6,8 +6,8 @@ namespace App\Source\Messaging\Domain\CreateConversation;
 
 use App\Source\Messaging\Domain\FindConversation\FindConversationLogic;
 use App\Source\Messaging\Domain\SendMessage\SendMessageLogic;
+use App\Source\Messaging\Infra\Common\Services\UpdateUserProfileService;
 use App\Source\Messaging\Infra\CreateConversation\Services\SaveConversationService;
-use App\Source\Messaging\Infra\CreateConversation\Services\UpdateUserProfileService;
 use Exception;
 
 class CreateConversationLogic
@@ -36,7 +36,7 @@ class CreateConversationLogic
                 $recipientId,
             );
 
-            $this->updateUserProfileService->updateUnreadMessagesCount($recipientId);
+            $this->updateUserProfileService->increaseUnreadMessagesCount($recipientId);
         }
 
         $this->sendMessageLogic->send(

@@ -62,13 +62,14 @@
                             <div class="py-5">
                                 <form method="POST" action="{{route('messaging.message.send')}}">
                                     @csrf
-                                    <input type="hidden" name="conversationId" value="{{$conversationId}}">
+                                    <input type="hidden" name="conversation_id" value="{{$conversationId}}">
                                     <button type="submit"
                                             class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                                         {{__('Send')}}
                                     </button>
                                     <input
-                                        name="message"
+                                        required
+                                        name="message_content"
                                         class="w-full bg-gray-300 py-5 px-3 rounded-xl"
                                         type="text"
                                         placeholder="{{__('type your message here...')}}"

@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Source\Messaging\App\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Source\Messaging\App\Requests\CreateConversationRequest;
-use App\Source\Messaging\Domain\CreateConversation\CreateConversationLogic;
+use App\Source\Messaging\App\Requests\SendMessageRequest;
 use App\Source\Messaging\Domain\ListMessages\ListMessagesLogic;
+use App\Source\Messaging\Domain\SendMessage\SendMessageLogic;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Auth;
 class MessageController extends Controller
 {
     public function send(
-        CreateConversationRequest $request,
-        CreateConversationLogic $ogic
+        SendMessageRequest $request,
+        SendMessageLogic $logic
     ) {
         try {
-            $ogic->create(
+            $logic->send(
                 Auth::id(),
-                (int)$request->receiver_id,
+                (int)$request->conversation_id,
                 $request->message_content
             );
         } catch (Exception $e) {

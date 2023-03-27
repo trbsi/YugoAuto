@@ -37,9 +37,10 @@
                                 :active="request()->routeIs('messaging.conversation.list')">
                         {{ __('Messages') }}
                         @if($unreadMessages)
-                            <p class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white ml-2">
-                                {{$unreadMessages}}
-                            </p>
+                            <div
+                                class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">
+                                *
+                            </div>
                         @endif
                     </x-nav-link>
                     <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
@@ -207,6 +208,12 @@
             <x-responsive-nav-link href="{{ route('messaging.conversation.list') }}"
                                    :active="request()->routeIs('messaging.conversation.list')">
                 {{ __('Messages') }}
+                @if($unreadMessages)
+                    <div
+                        class="inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">
+                        *
+                    </div>
+                @endif
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
                 {{ __('Contact') }}

@@ -38,6 +38,7 @@ class FindConversationService
         return Conversation::where('sender_id', $userId)
             ->orWhere('recipient_id', $userId)
             ->with(['recipient', 'sender'])
+            ->orderBy('updated_at', 'DESC')
             ->paginate();
     }
 }

@@ -117,4 +117,13 @@ class Conversation extends Model
 
         return $this->sender;
     }
+
+    public function isReadByUser(): bool
+    {
+        if ($this->getSenderId() === Auth::id()) {
+            return $this->isSenderRead();
+        }
+
+        return $this->isRecipientRead();
+    }
 }
