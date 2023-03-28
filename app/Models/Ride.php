@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
  * App\Models\Ride
  *
  * @property int $id
- * @property int $user_id
+ * @property int $driver_id
  * @property int $from_place_id
  * @property int $to_place_id
  * @property Carbon $time
@@ -26,16 +26,26 @@ use Illuminate\Support\Facades\Auth;
  * @property string|null $description
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ * @property Carbon|null $deleted_at
+ * @property-read \App\Models\RideRequest|null $acceptedRideRequestForAuthUser
+ * @property-read \App\Models\User $driver
  * @property-read \App\Models\Place $fromPlace
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read int|null $pending_ride_requests_count
+ * @property-read \App\Models\RideRequest|null $rideRequestForAuthUser
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
+ * @property-read int|null $ride_requests_count
  * @property-read \App\Models\Place $toPlace
- * @property-read \App\Models\User $user
  * @method static \Database\Factories\RideFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Ride newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride query()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCurrency($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDriverId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereFromPlaceId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereNumberOfSeats($value)
@@ -43,41 +53,8 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereToPlaceId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUserId($value)
- * @property Carbon|null $deleted_at
- * @method static \Illuminate\Database\Eloquent\Builder|Ride onlyTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read int|null $pending_ride_requests_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @property-read int|null $ride_requests_count
- * @property-read \App\Models\RideRequest|null $rideRequestsForAuthUser
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @property int $driver_id
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read int|null $accepted_ride_requests_count
- * @property-read \App\Models\User $driver
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDriverId($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -115,13 +92,14 @@ class Ride extends Model
             ->where('status', RideRequestEnum::PENDING->value);
     }
 
-    public function acceptedRideRequests(): HasMany
+    public function acceptedRideRequestForAuthUser(): HasOne
     {
-        return $this->hasMany(RideRequest::class, 'ride_id', 'id')
-            ->where('status', RideRequestEnum::ACCEPTED->value);
+        return $this->hasOne(RideRequest::class, 'ride_id', 'id')
+            ->where('status', RideRequestEnum::ACCEPTED->value)
+            ->where('passenger_id', Auth::id());
     }
 
-    public function rideRequestsForAuthUser(): HasOne
+    public function rideRequestForAuthUser(): HasOne
     {
         return $this->hasOne(RideRequest::class, 'ride_id', 'id')
             ->where('passenger_id', Auth::id());
@@ -234,6 +212,15 @@ class Ride extends Model
     public function isActiveRide(): bool
     {
         return $this->getTime() > Carbon::now();
+    }
+
+    public function canLeaveFeedback(): bool
+    {
+        return $this->getTime() < Carbon::now() &&
+            (
+                $this->isOwner() ||
+                $this->rideRequestForAuthUser->getStatus() === RideRequestEnum::ACCEPTED->value
+            );
     }
 
     public function isFilled(): bool

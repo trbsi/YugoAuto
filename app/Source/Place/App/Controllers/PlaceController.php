@@ -12,9 +12,9 @@ class PlaceController
 {
     public function searchPlaces(
         GetPlacesRequest $request,
-        SearchPlacesLogic $ogic
+        SearchPlacesLogic $logic
     ): JsonResponse {
-        $places = $ogic->get($request->term);
+        $places = $logic->get($request->term);
         $data = [];
         foreach ($places as $place) {
             $data[] = [

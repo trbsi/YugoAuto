@@ -26,7 +26,7 @@ class CreateConversationLogic
         string $messageContent
     ): void {
         if ($authUserId === $recipientId) {
-            throw new Exception(__('Cannot send message to yourself'));
+            throw new Exception(__('Cannot send a message to yourself'));
         }
         $conversation = $this->findConversationLogic->findSingleByBetweenTwoUsers($authUserId, $recipientId);
 

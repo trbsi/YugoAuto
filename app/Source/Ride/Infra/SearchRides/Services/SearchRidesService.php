@@ -28,7 +28,7 @@ class SearchRidesService
                 'fromPlace',
                 'toPlace',
                 'driver',
-                'rideRequestsForAuthUser',
+                'rideRequestForAuthUser',
                 'acceptedRideRequests'
             ])
             ->orderBy('time', 'ASC')

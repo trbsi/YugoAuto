@@ -5,5 +5,6 @@
         </h2>
     </x-slot>
 
-   @include('ride.search.components.list')
+    @include('components.new-messages-alert')
+    @include('ride.search.components.list')
 </x-app-layout>

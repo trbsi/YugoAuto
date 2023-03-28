@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Rating;
 use App\Models\Ride;
 use App\Models\RideRequest;
 use App\Models\User;
+use App\Source\RideRequest\Enum\RideRequestEnum;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\Seeder;
 
@@ -23,24 +25,47 @@ class RideRequestSeeder extends Seeder
             if ($ride->getDriverId() === $mainUser->getId()) {
                 for ($i = 0; $i < rand(1, 5); $i++) {
                     try {
-                        RideRequest::factory()->state(
+                        $passenger = User::inRandomOrder()->where('id', '>', 1)->first();
+                        $rideRequest = RideRequest::factory()->state(
                             [
-                                'passenger_id' => User::inRandomOrder()->where('id', '>', 1)->first()->getId(),
+                                'passenger_id' => $passenger->getId(),
                                 'ride_id' => $ride->getId(),
                             ]
                         )->create();
+
+                        if ($rideRequest->getStatus() === RideRequestEnum::ACCEPTED->value) {
+                            Rating::factory()
+                                ->state(
+                                    [
+                                        'ride_id' => $ride->getId(),
+                                        'driver_id' => $ride->getDriverId(),
+                                        'passenger_id' => $passenger->getId(),
+                                    ]
+                                )->create();
+                        }
                     } catch (QueryException $exception) {
                         //duplicate entry
                     }
                 }
             } //act as main user requested a ride
             else {
-                RideRequest::factory()->state(
+                $rideRequest = RideRequest::factory()->state(
                     [
                         'passenger_id' => $mainUser->getId(),
                         'ride_id' => $ride->getId(),
                     ]
                 )->create();
+
+                if ($rideRequest->getStatus() === RideRequestEnum::ACCEPTED->value) {
+                    Rating::factory()
+                        ->state(
+                            [
+                                'ride_id' => $ride->getId(),
+                                'driver_id' => $ride->getDriverId(),
+                                'passenger_id' => $mainUser->getId(),
+                            ]
+                        )->create();
+                }
             }
         }
     }

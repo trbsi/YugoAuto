@@ -91,15 +91,26 @@ class Rating extends Model
         $this->ride_id = $ride_id;
         return $this;
     }
-    
-    public function getRating(): int
+
+    public function getDriverRating(): int
     {
-        return $this->rating;
+        return $this->driver_rating;
     }
 
-    public function setRating(int $rating): self
+    public function setDriverRating(int $driver_rating): self
     {
-        $this->rating = $rating;
+        $this->driver_rating = $driver_rating;
+        return $this;
+    }
+
+    public function getPassengerRating(): int
+    {
+        return $this->passenger_rating;
+    }
+
+    public function setPassengerRating(int $passenger_rating): self
+    {
+        $this->passenger_rating = $passenger_rating;
         return $this;
     }
 }

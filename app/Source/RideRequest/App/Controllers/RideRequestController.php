@@ -18,11 +18,11 @@ class RideRequestController
     public function myRequests(
         int $rideId,
         Request $request,
-        RideRequestsLogic $ogic
+        RideRequestsLogic $logic
     ) {
         try {
-            $requests = $ogic->getRequests(Auth::id(), $rideId);
-            $ride = $ogic->getRide($rideId);
+            $requests = $logic->getRequests(Auth::id(), $rideId);
+            $ride = $logic->getRide($rideId);
             return view(
                 'ride-requests.my-requests.list',
                 compact('requests', 'ride')
@@ -36,10 +36,10 @@ class RideRequestController
 
     public function acceptOrReject(
         AcceptOrRejectRideRequest $request,
-        AcceptOrRejectLogic $ogic
+        AcceptOrRejectLogic $logic
     ) {
         try {
-            $ogic->acceptOrReject(
+            $logic->acceptOrReject(
                 Auth::id(),
                 (int)$request->ride_id,
                 (int)$request->user_id,
@@ -56,10 +56,10 @@ class RideRequestController
     public function sendRequest(
         int $rideId,
         Request $request,
-        RequestRideLogic $ogic
+        RequestRideLogic $logic
     ) {
         try {
-            $ogic->requestRide(Auth::id(), $rideId);
+            $logic->requestRide(Auth::id(), $rideId);
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
             Log::error($exception->getMessage());
@@ -70,10 +70,10 @@ class RideRequestController
 
     public function cancelRequest(
         CancelRideRequest $request,
-        CancelRideLogic $ogic
+        CancelRideLogic $logic
     ) {
         try {
-            $ogic->cancel(
+            $logic->cancel(
                 Auth::id(),
                 $request->passenger_id,
                 $request->ride_id

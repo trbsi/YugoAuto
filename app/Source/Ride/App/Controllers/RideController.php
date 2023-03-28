@@ -23,14 +23,14 @@ class RideController extends Controller
 {
     public function search(
         SearchRidesRequest $request,
-        SearchRidesLogic $ogic,
+        SearchRidesLogic $logic,
         SearchPlacesLogic $placesBusinessLogic
     ) {
         $rides = null;
         $fromPlace = $toPlace = $time = null;
 
         if ($request->from_place_id && $request->to_place_id && $request->time) {
-            $rides = $ogic->search(
+            $rides = $logic->search(
                 (int)$request->from_place_id,
                 (int)$request->to_place_id,
                 Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time)
@@ -74,10 +74,10 @@ class RideController extends Controller
 
     public function save(
         CreateRideRequest $request,
-        CreateRideLogic $ogic
+        CreateRideLogic $logic
     ) {
         try {
-            $ogic->create(
+            $logic->create(
                 Auth::id(),
                 (int)$request->from_place_id,
                 (int)$request->to_place_id,
@@ -94,10 +94,10 @@ class RideController extends Controller
     }
 
     public function myRides(
-        MyRidesLogic $ogic
+        MyRidesLogic $logic
     ) {
         $authUserId = Auth::id();
-        $rides = $ogic->get($authUserId);
+        $rides = $logic->get($authUserId);
         return view(
             'ride.my-rides.list',
             compact('rides')
@@ -107,10 +107,10 @@ class RideController extends Controller
     public function delete(
         int $id,
         Request $request,
-        DeleteRideLogic $ogic
+        DeleteRideLogic $logic
     ) {
         try {
-            $ogic->delete($id, Auth::id());
+            $logic->delete($id, Auth::id());
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
             Log::error($exception->getMessage());

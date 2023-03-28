@@ -10,12 +10,12 @@ class PublicController
 {
     public function sendMessage(
         ContactRequest $request,
-        ContactLogic $ogic
+        ContactLogic $logic
     ) {
         if (Auth::id()) {
-            $ogic->sendForAuthUser(Auth::id(), $request->message);
+            $logic->sendForAuthUser(Auth::id(), $request->message);
         } else {
-            $ogic->sendForGuest(
+            $logic->sendForGuest(
                 $request->name,
                 $request->email,
                 $request->message

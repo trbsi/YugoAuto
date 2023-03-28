@@ -1,6 +1,6 @@
 # About
 
-Laravel BlaBlaCar free alternative.
+BlaBlaCar free alternative written in Laravel (PHP+MySQL). This is web version.
 
 # Used components
 

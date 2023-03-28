@@ -42,32 +42,44 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
                         </p>
 
                         @if($ride->isOwner() && $ride->isActiveRide())
-                            <hr>
-                            @if ($ride->pendingRideRequests->count())
-                                <div
-                                    class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
-                                    role="alert">
-                                    {{__('You have x pending requests', ['number' => $ride->pendingRideRequests->count()])}}
-                                </div>
-                            @endif
+                            <div class="flex flex-col">
+                                @if ($ride->pendingRideRequests->count())
+                                    <div class="p-1">
+                                        <div
+                                            class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+                                            role="alert">
+                                            {{__('You have x pending requests', ['number' => $ride->pendingRideRequests->count()])}}
+                                        </div>
 
-
-                            <div class="flex flex-row mt-2">
-                                <div class="mr-2">
+                                    </div>
+                                @endif
+                                <div class="p-1">
                                     <a
                                         href="{{route('ride-request.my-requests', ['rideId' => $ride->getId()])}}"
-                                        class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                         {{__('Requests')}}
-                                    </a>
+                                    </a></div>
+                                <div class="p-1">
+                                    @include('ride.my-rides.components.delete-form')
                                 </div>
-                                @include('ride.my-rides.components.delete-form')
                             </div>
                         @endif
                         @if(!$ride->isOwner())
-                            <span
-                                class="p-1 status-text status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
-                           {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
-                           </span>
+                            <div class="p-1">
+                                <span
+                                    class="w-full text-center p-1 status-text status-{{$ride->rideRequestForAuthUser->getStatus()}}">
+                               {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
+                               </span>
+                            </div>
+                        @endif
+                        @if($ride->canLeaveFeedback())
+                            <div class="p-1">
+                                <a
+                                    href="{{route('ride-request.my-requests', ['rideId' => $ride->getId()])}}"
+                                    class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    {{__('Leave rating')}}
+                                </a>
+                            </div>
                         @endif
                     </div>
                     <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">

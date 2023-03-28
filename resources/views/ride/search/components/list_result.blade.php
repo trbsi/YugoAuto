@@ -41,13 +41,13 @@
                                 role="alert">
                                 {{__('Ride is filled')}}
                             </div>
-                        @elseif(!$ride->rideRequestsForAuthUser)
+                        @elseif(!$ride->rideRequestForAuthUser)
                             @include('ride.search.components.request-ride-form')
                         @else
                             <p class="mt-2">
                                 <span
-                                    class="p-1 status-text status-{{$ride->rideRequestsForAuthUser->getStatus()}}">
-                                {{__('Ride request status')}}: {{__($ride->rideRequestsForAuthUser->getStatus())}}
+                                    class="p-1 status-text status-{{$ride->rideRequestForAuthUser->getStatus()}}">
+                                {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
                                 </span>
                             </p>
                         @endif

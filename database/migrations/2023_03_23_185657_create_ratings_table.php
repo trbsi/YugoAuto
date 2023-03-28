@@ -12,10 +12,11 @@ return new class extends Migration {
     {
         Schema::create('ratings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('driver_id')->constrained('users');
-            $table->foreignId('passenger_id')->constrained('users');
             $table->foreignId('ride_id')->constrained('rides');
-            $table->tinyInteger('rating')->default(0);
+            $table->foreignId('driver_id')->constrained('users');
+            $table->tinyInteger('driver_rating')->default(0)->comment('Given by passenger');
+            $table->foreignId('passenger_id')->constrained('users');
+            $table->tinyInteger('passenger_rating')->default(0)->comment('Given by driver');;
             $table->timestamps();
         });
     }
