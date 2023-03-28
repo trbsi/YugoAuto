@@ -139,7 +139,7 @@
                                 </x-dropdown-link>
 
                                 <x-dropdown-link href="{{ route('profile.show') }}">
-                                    {{ __('Profile') }}
+                                    {{ __('Settings') }}
                                 </x-dropdown-link>
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -247,7 +247,7 @@
 
                     <x-responsive-nav-link href="{{ route('profile.show') }}"
                                            :active="request()->routeIs('profile.show')">
-                        {{ __('Profile') }}
+                        {{ __('Settings') }}
                     </x-responsive-nav-link>
 
                     @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

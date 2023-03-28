@@ -12,14 +12,11 @@ class ModifyImageService
 {
     private InterventionImage $image;
     private ChangeSizeImageService $changeSizeImageService;
-    private BlurImageService $blurImageService;
 
     public function __construct(
-        ChangeSizeImageService $changeSizeImageService,
-        BlurImageService $blurImageService
+        ChangeSizeImageService $changeSizeImageService
     ) {
         $this->changeSizeImageService = $changeSizeImageService;
-        $this->blurImageService = $blurImageService;
     }
 
     public function createImage(string $imagePath): self
@@ -43,12 +40,6 @@ class ModifyImageService
     public function orientate(): self
     {
         $this->image = $this->image->orientate();
-        return $this;
-    }
-
-    public function blur(int $blur): self
-    {
-        $this->image = $this->blurImageService->blur($this->image, $blur);
         return $this;
     }
 }

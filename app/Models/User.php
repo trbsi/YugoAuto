@@ -139,6 +139,17 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this;
     }
 
+    public function getProfilePhotoPath(): string
+    {
+        return $this->profile_photo_path;
+    }
+
+    public function setProfilePhotoPath(string $profile_photo_path): self
+    {
+        $this->profile_photo_path = $profile_photo_path;
+        return $this;
+    }
+
     public function getProfilePhotoUrl(): string
     {
         return $this->profile_photo_url;

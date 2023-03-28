@@ -3,6 +3,7 @@
 namespace App\Actions\Fortify;
 
 use App\Models\User;
+use App\Source\User\Domain\UpdateProfilePhoto\UpdateProfilePhotoLogic;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -10,6 +11,11 @@ use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
 
 class UpdateUserProfileInformation implements UpdatesUserProfileInformation
 {
+    public function __construct(
+        private readonly UpdateProfilePhotoLogic $updateProfilePhotoLogic
+    ) {
+    }
+
     /**
      * Validate and update the given user's profile information.
      *
@@ -26,6 +32,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
 
         if (isset($input['photo'])) {
             $user->updateProfilePhoto($input['photo']);
+            $this->updateProfilePhotoLogic->modifyPhoto($user);
         }
 
         if ($input['email'] !== $user->email &&
