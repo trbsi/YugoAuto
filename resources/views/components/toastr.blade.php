@@ -10,6 +10,10 @@
     @endforeach
     @endif
 
+    @if(request()->has('verified'))
+    toastr.success('{{__('Account is verified')}}');
+    @endif
+
     @foreach (['error', 'warning', 'success', 'info'] as $key)
     @if(session()->has($key))
     @switch($key)
