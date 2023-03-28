@@ -23,7 +23,7 @@ class UpdateUserProfileService
         int $userId
     ): void {
         //if user already read the message, don't decrease unread messages count
-        if ($conversation->isReadByUser()) {
+        if ($conversation->isReadByCurrentUser()) {
             return;
         }
 

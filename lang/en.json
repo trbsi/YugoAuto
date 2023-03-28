@@ -1,3 +1,5 @@
 {
-    "You have x pending requests": "Number of pending requests: :number"
+    "You have x pending requests": "Number of pending requests: :number",
+    "Somebody left you a request": ":name left a ride request.",
+    "Somebody sent you a message": ":name send you a message"
 }

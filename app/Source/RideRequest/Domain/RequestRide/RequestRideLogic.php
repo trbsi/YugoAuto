@@ -2,6 +2,8 @@
 
 namespace App\Source\RideRequest\Domain\RequestRide;
 
+use App\Models\Ride;
+use App\Source\RideRequest\Domain\SendEmail\SendEmailLogic;
 use App\Source\RideRequest\Infra\RequestRide\Services\SaveRideRequestService;
 use App\Source\RideRequest\Infra\RequestRide\Specifications\IsRideRequestedSpecification;
 use Exception;
@@ -19,10 +21,11 @@ class RequestRideLogic
         int $rideId
     ): void {
         if ($this->isRideRequestedSpecification->isSatisfied($passengerId, $rideId)) {
-            throw new Exception(__('Ride is requested'));
+            throw new Exception(__('Ride is already requested'));
         }
 
-        $this->saveRideRequestService->save($passengerId, $rideId);
-        //TODO send email
+        $ride = Ride::firstOrFail($rideId);
+        $rideRequest = $this->saveRideRequestService->save($passengerId, $rideId);
+        SendEmailLogic::sendEmailToDriver($ride, $rideRequest);
     }
 }

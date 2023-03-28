@@ -12,15 +12,12 @@ use Illuminate\Support\Facades\Auth;
  * @property int $id
  * @property int $conversation_id
  * @property int $sender_id
- * @property int $recipient_id
- * @property int $sender_read
- * @property int $recipient_read
  * @property string $content
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Conversation $conversation
- * @property-read \App\Models\User $recipient
  * @property-read \App\Models\User $sender
+ * @method static \Database\Factories\MessageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Message newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Message newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Message query()
@@ -28,12 +25,8 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereConversationId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Message whereRecipientId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Message whereRecipientRead($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Message whereSenderRead($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Message whereUpdatedAt($value)
- * @method static \Database\Factories\MessageFactory factory($count = null, $state = [])
  * @mixin \Eloquent
  */
 class Message extends Model

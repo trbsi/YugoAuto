@@ -43,9 +43,6 @@
                             </div>
                         @endif
                     </x-nav-link>
-                    <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
-                        {{ __('Contact') }}
-                    </x-nav-link>
                 </div>
             </div>
 
@@ -214,9 +211,6 @@
                         *
                     </div>
                 @endif
-            </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
-                {{ __('Contact') }}
             </x-responsive-nav-link>
         </div>
 

@@ -13,29 +13,26 @@ use Illuminate\Support\Carbon;
  *
  * @property int $id
  * @property int $ride_id
- * @property int $user_id
+ * @property int $passenger_id
  * @property string $status
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $cancelled_time
+ * @property int|null $cancelled_by
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read \App\Models\User $passenger
  * @property-read \App\Models\Ride $ride
- * @property-read \App\Models\User $user
+ * @method static \Database\Factories\RideRequestFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest query()
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCancelledBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCancelledTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|RideRequest wherePassengerId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereRideId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUserId($value)
- * @method static \Database\Factories\RideRequestFactory factory($count = null, $state = [])
- * @property int $passenger_id
- * @property string|null $cancelled_time
- * @property int|null $cancelled_by
- * @property-read \App\Models\User $passenger
- * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCancelledBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereCancelledTime($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RideRequest wherePassengerId($value)
  * @mixin \Eloquent
  */
 class RideRequest extends Model

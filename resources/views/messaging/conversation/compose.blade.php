@@ -19,7 +19,8 @@
                     </div>
                     <div class="divide-y divide-gray-200">
                         <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                            <form action="{{ route('messaging.conversation.create') }}" method="POST">
+                            <form action="{{ route('messaging.conversation.create') }}" method="POST"
+                                  id="send_message_form">
                                 @csrf
                                 <input type="hidden" name="receiver_id" value="{{$user->getId()}}">
                                 <div class="mb-4">
@@ -31,10 +32,10 @@
                                     @enderror
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block text-gray-700 font-bold mb-2" for="content">
+                                    <label class="block text-gray-700 font-bold mb-2" for="message_content">
                                         {{__('Message')}}:
                                     </label>
-                                    <textarea required name="message_content" id="content" rows="5"
+                                    <textarea required name="message_content" id="message_content" rows="5"
                                               class="form-textarea w-full"></textarea>
                                     @error('content')
                                     <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
@@ -53,4 +54,14 @@
             </div>
         </div>
     </div>
+
+    @push('javascript')
+        <script>
+            document.querySelector('#message_content').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    $('#send_message_form').submit();
+                }
+            });
+        </script>
+    @endpush
 </x-app-layout>

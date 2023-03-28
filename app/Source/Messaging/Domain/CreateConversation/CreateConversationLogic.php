@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Source\Messaging\Domain\CreateConversation;
 
 use App\Source\Messaging\Domain\FindConversation\FindConversationLogic;
+use App\Source\Messaging\Domain\SendEmail\SendEmailLogic;
 use App\Source\Messaging\Domain\SendMessage\SendMessageLogic;
 use App\Source\Messaging\Infra\Common\Services\UpdateUserProfileService;
 use App\Source\Messaging\Infra\CreateConversation\Services\SaveConversationService;
@@ -44,6 +45,12 @@ class CreateConversationLogic
             $conversation->getId(),
             $messageContent
         );
-        //TODO send email to recipient
+
+
+        SendEmailLogic::sendEmailToRecipient(
+            conversation: $conversation,
+            sender: $conversation->getMe(),
+            recipient: $conversation->getOtherUser()
+        );
     }
 }

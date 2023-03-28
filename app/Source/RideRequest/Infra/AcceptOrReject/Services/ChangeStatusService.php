@@ -10,7 +10,7 @@ class ChangeStatusService
         int $rideId,
         int $passengerId,
         string $status
-    ): void {
+    ): RideRequest {
         $model = RideRequest::where('ride_id', $rideId)
             ->where('passenger_id', $passengerId)
             ->first();
@@ -18,5 +18,7 @@ class ChangeStatusService
         $model
             ->setStatus($status)
             ->save();
+
+        return $model;
     }
 }

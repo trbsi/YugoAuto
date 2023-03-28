@@ -10,24 +10,22 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property int $user_id
- * @property int $rating
+ * @property int $rating_sum
+ * @property int $rating_count
+ * @property int $unread_messages_count
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\UserProfileFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile query()
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRating($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUserId($value)
- * @method static \Database\Factories\UserProfileFactory factory($count = null, $state = [])
- * @property int $rating_sum
- * @property int $rating_count
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRatingCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRatingSum($value)
- * @property int $unread_messages_count
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUnreadMessagesCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUserId($value)
  * @mixin \Eloquent
  */
 class UserProfile extends Model

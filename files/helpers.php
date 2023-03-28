@@ -20,3 +20,12 @@ if (!function_exists('rating_url')) {
         return route('rating.show', ['rideId' => $rideId]);
     }
 }
+
+if (!function_exists('single_ride_requests_url')) {
+    function single_ride_requests_url(int $rideId): string
+    {
+        return route('ride-request.my-requests', ['rideId' => $rideId]);
+    }
+}
+
+

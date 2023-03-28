@@ -2,6 +2,7 @@
 
 namespace App\Source\RideRequest\Domain\AcceptOrReject;
 
+use App\Source\RideRequest\Domain\SendEmail\SendEmailLogic;
 use App\Source\RideRequest\Enum\RideRequestEnum;
 use App\Source\RideRequest\Infra\AcceptOrReject\Services\ChangeStatusService;
 use App\Source\RideRequest\Infra\AcceptOrReject\Services\CreateRatingService;
@@ -34,7 +35,7 @@ class AcceptOrRejectLogic
         }
 
 
-        $this->changeStatusService->change(
+        $rideRequest = $this->changeStatusService->change(
             $rideId,
             $passengerId,
             $status
@@ -47,6 +48,7 @@ class AcceptOrRejectLogic
                 $passengerId
             );
         }
-        //TODO send email
+
+        SendEmailLogic::sendEmailToPassenger($rideRequest);
     }
 }

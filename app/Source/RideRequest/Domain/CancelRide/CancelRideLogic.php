@@ -2,6 +2,7 @@
 
 namespace App\Source\RideRequest\Domain\CancelRide;
 
+use App\Source\RideRequest\Domain\SendEmail\SendEmailLogic;
 use App\Source\RideRequest\Infra\CancelRide\Services\CancelRideService;
 use App\Source\RideRequest\Infra\CancelRide\Specifications\CanCancelRideSpecification;
 use Exception;
@@ -23,7 +24,7 @@ class CancelRideLogic
             throw new Exception('You cannot cancel this ride');
         }
 
-        $this->cancelRideService->cancel($passengerId, $rideId);
-        //TODO send email
+        $rideRequest = $this->cancelRideService->cancel($passengerId, $rideId);
+        SendEmailLogic::sendEmailToPassenger($rideRequest);
     }
 }

@@ -1,14 +1,13 @@
 @component('mail::message')
-Hello
+    {{__('Hello')}}
 
-{!! $body !!}
+    {!! $body !!}
 
-@if(isset($buttonUrl))
-@component('mail::button', ['url' => $buttonUrl])
-{{$buttonText}}
-@endcomponent
-@endif
+    @if(isset($buttonUrl))
+        @component('mail::button', ['url' => $buttonUrl])
+            {{$buttonText}}
+        @endcomponent
+    @endif
 
-Thanks,
-"{{ config('app.name') }}"
+    "{{ config('app.name') }}"
 @endcomponent

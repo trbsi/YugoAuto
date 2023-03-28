@@ -33,12 +33,6 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereSenderId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereSenderRead($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Conversation whereUpdatedAt($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Message> $messages
  * @mixin \Eloquent
  */
 class Conversation extends Model
@@ -120,7 +114,16 @@ class Conversation extends Model
         return $this->sender;
     }
 
-    public function isReadByUser(): bool
+    public function getMe(): User
+    {
+        if ($this->getSenderId() === Auth::id()) {
+            return $this->sender;
+        }
+
+        return $this->recipient;
+    }
+
+    public function isReadByCurrentUser(): bool
     {
         if ($this->getSenderId() === Auth::id()) {
             return $this->isSenderRead();

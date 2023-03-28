@@ -6,6 +6,38 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * App\Models\Rating
+ *
+ * @property int $id
+ * @property int $ride_id
+ * @property int $driver_id
+ * @property int $driver_rating Given by passenger
+ * @property string|null $driver_comment Given by passenger
+ * @property int $passenger_id
+ * @property int $passenger_rating Given by driver
+ * @property string|null $passenger_comment Given by driver
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\User $driver
+ * @property-read \App\Models\User $passenger
+ * @property-read \App\Models\Ride $ride
+ * @method static \Database\Factories\RatingFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereDriverComment($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereDriverId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereDriverRating($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating wherePassengerComment($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating wherePassengerId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating wherePassengerRating($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereRideId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Rating whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class Rating extends Model
 {
     use HasFactory;

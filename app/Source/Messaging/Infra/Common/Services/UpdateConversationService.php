@@ -11,7 +11,8 @@ class UpdateConversationService
     public function markConversationAsRead(Conversation $conversation, int $senderId): Conversation
     {
         //just so updated_at is not updated
-        if ($conversation->isReadByUser()) {
+        //no need to set to true because it is already true
+        if ($conversation->isReadByCurrentUser()) {
             return $conversation;
         }
 
@@ -29,7 +30,7 @@ class UpdateConversationService
     {
         //just so updated_at is not updated
         //no need to set to false because it is already false
-        if (false === $conversation->isReadByUser()) {
+        if (false === $conversation->isReadByCurrentUser()) {
             return $conversation;
         }
 

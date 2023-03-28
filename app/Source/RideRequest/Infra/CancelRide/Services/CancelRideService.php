@@ -10,13 +10,15 @@ class CancelRideService
     public function cancel(
         int $passengerId,
         int $rideId
-    ): void {
-        $rideRequest = RideRequest::where('passenger_id', $passengerId)
+    ): RideRequest {
+        $model = RideRequest::where('passenger_id', $passengerId)
             ->where('ride_id', $rideId)
             ->first();
 
-        $rideRequest
+        $model
             ->setStatus(RideRequestEnum::CANCELLED->value)
             ->save();
+
+        return $model;
     }
 }

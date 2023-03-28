@@ -10,12 +10,14 @@ class SaveRideRequestService
     public function save(
         int $passengerId,
         int $rideId
-    ): void {
+    ): RideRequest {
         $model = new RideRequest();
         $model
             ->setRideId($rideId)
             ->setPassengerId($passengerId)
             ->setStatus(RideRequestEnum::PENDING->value)
             ->save();
+
+        return $model;
     }
 }
