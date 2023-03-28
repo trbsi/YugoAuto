@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
+
 /**
  * App\Models\Ride
  *
@@ -27,7 +28,8 @@ use Illuminate\Support\Facades\Auth;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property Carbon|null $deleted_at
- * @property-read \App\Models\RideRequest|null $acceptedRideRequestForAuthUser
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
+ * @property-read int|null $accepted_ride_requests_count
  * @property-read \App\Models\User $driver
  * @property-read \App\Models\Place $fromPlace
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
@@ -92,11 +94,10 @@ class Ride extends Model
             ->where('status', RideRequestEnum::PENDING->value);
     }
 
-    public function acceptedRideRequestForAuthUser(): HasOne
+    public function acceptedRideRequests(): HasMany
     {
-        return $this->hasOne(RideRequest::class, 'ride_id', 'id')
-            ->where('status', RideRequestEnum::ACCEPTED->value)
-            ->where('passenger_id', Auth::id());
+        return $this->hasMany(RideRequest::class, 'ride_id', 'id')
+            ->where('status', RideRequestEnum::ACCEPTED->value);
     }
 
     public function rideRequestForAuthUser(): HasOne
@@ -181,7 +182,7 @@ class Ride extends Model
         return $this;
     }
 
-    public function getTime(): Carbon
+    public function getRideTime(): Carbon
     {
         return $this->time;
     }
@@ -189,10 +190,10 @@ class Ride extends Model
 
     public function getTimeFormatted(): string
     {
-        return $this->getTime()->format('d.m.Y. H:i');
+        return $this->getRideTime()->format('d.m.Y. H:i');
     }
 
-    public function setTime(Carbon $time): self
+    public function setRideTime(Carbon $time): self
     {
         $this->time = $time;
         return $this;
@@ -211,14 +212,15 @@ class Ride extends Model
 
     public function isActiveRide(): bool
     {
-        return $this->getTime() > Carbon::now();
+        return $this->getRideTime() > Carbon::now();
     }
 
     public function canLeaveFeedback(): bool
     {
-        return $this->getTime() < Carbon::now() &&
+        return
+            $this->getRideTime() < Carbon::now() &&
             (
-                $this->isOwner() ||
+                ($this->isOwner() && $this->acceptedRideRequests->count() > 0) ||
                 $this->rideRequestForAuthUser->getStatus() === RideRequestEnum::ACCEPTED->value
             );
     }

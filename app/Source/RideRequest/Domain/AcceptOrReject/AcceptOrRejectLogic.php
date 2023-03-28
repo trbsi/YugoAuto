@@ -5,13 +5,13 @@ namespace App\Source\RideRequest\Domain\AcceptOrReject;
 use App\Source\RideRequest\Enum\RideRequestEnum;
 use App\Source\RideRequest\Infra\AcceptOrReject\Services\ChangeStatusService;
 use App\Source\RideRequest\Infra\AcceptOrReject\Services\CreateRatingService;
-use App\Source\RideRequest\Infra\Common\Specifications\CanDriverAccessRideSpecification;
+use App\Source\RideRequest\Infra\Common\Specifications\CanAccessRideSpecification;
 use Exception;
 
 class AcceptOrRejectLogic
 {
     public function __construct(
-        private CanDriverAccessRideSpecification $canDriverAccessRideSpecification,
+        private CanAccessRideSpecification $canDriverAccessRideSpecification,
         private ChangeStatusService $changeStatusService,
         private CreateRatingService $createRatingService
     ) {
@@ -29,7 +29,7 @@ class AcceptOrRejectLogic
         }
 
         //only driver can accept and reject
-        if (!$this->canDriverAccessRideSpecification->isSatisfied($driverId, $rideId)) {
+        if (!$this->canDriverAccessRideSpecification->isSatisfiedByDriver($driverId, $rideId)) {
             throw new Exception('Cannot access ride');
         }
 

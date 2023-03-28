@@ -1,7 +1,5 @@
 <?php
 
-use App\Source\RideRequest\Enum\RideRequestEnum;
-
 /** @var \Illuminate\Contracts\Pagination\LengthAwarePaginator $rides */
 
 /** @var \App\Models\Ride $ride */
@@ -75,7 +73,7 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
                         @if($ride->canLeaveFeedback())
                             <div class="p-1">
                                 <a
-                                    href="{{route('ride-request.my-requests', ['rideId' => $ride->getId()])}}"
+                                    href="{{rating_url($ride->getId())}}"
                                     class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     {{__('Leave rating')}}
                                 </a>

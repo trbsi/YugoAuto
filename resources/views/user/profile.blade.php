@@ -32,9 +32,9 @@
                     </span>
                     </div>
                 @else
-                    <div class="w-full text-center">
-                        {{__('Rating')}} <span class="font-bold">{{$user->profile->getRating()}}</span>
-                    </div>
+                    @include('user.components.rating', [
+                        'rating' => $user->profile->getRating()
+                    ])
                 @endif
             </div>
         </div>

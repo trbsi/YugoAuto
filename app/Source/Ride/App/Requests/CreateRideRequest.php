@@ -23,11 +23,11 @@ class CreateRideRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'from_place_id' => ['required', 'integer'],
-            'to_place_id' => ['required', 'integer'],
+            'from_place_id' => ['required', 'integer', 'exists:places,id'],
+            'to_place_id' => ['required', 'integer', 'exists:places,id'],
             'time' => ['required', 'date_format:' . TimeEnum::TIME_FORMAT->value],
-            'number_of_seats' => ['required', 'integer'],
-            'price' => ['required', 'integer'],
+            'number_of_seats' => ['required', 'integer', 'max:10'],
+            'price' => ['required', 'integer', 'max:10000'],
             'description' => ['nullable', 'string', 'max:500'],
         ];
     }

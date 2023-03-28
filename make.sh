@@ -7,7 +7,7 @@ case ${target} in
     ;;
 
     install-local)
-        composer install && php artisan key:generate && php artisan storage:link && php artisan migrate:fresh --seed && npm install && npm run build && php artisan ide-helper:generate && php artisan ide-helper:meta && php artisan ide-helper:models && php artisan ide-helper:eloquent
+        composer install && php artisan key:generate && php artisan storage:link && php artisan migrate:fresh --seed && npm install && npm run build
     ;;
 
     ide)

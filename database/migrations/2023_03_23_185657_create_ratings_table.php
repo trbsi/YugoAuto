@@ -15,8 +15,11 @@ return new class extends Migration {
             $table->foreignId('ride_id')->constrained('rides');
             $table->foreignId('driver_id')->constrained('users');
             $table->tinyInteger('driver_rating')->default(0)->comment('Given by passenger');
+            $table->string('driver_comment', 500)->nullable()->comment('Given by passenger');
+
             $table->foreignId('passenger_id')->constrained('users');
-            $table->tinyInteger('passenger_rating')->default(0)->comment('Given by driver');;
+            $table->tinyInteger('passenger_rating')->default(0)->comment('Given by driver');
+            $table->string('passenger_comment', 500)->nullable()->comment('Given by driver');
             $table->timestamps();
         });
     }

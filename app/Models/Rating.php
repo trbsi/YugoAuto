@@ -6,47 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/**
- * App\Models\Rating
- *
- * @property int $id
- * @property int $giver_id
- * @property int $taker_id
- * @property int $ride_id
- * @property int $rating
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\User $giver
- * @property-read \App\Models\Ride $ride
- * @property-read \App\Models\User $taker
- * @method static \Illuminate\Database\Eloquent\Builder|Rating newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Rating newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Rating query()
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereGiverId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereRating($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereRideId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereTakerId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereUpdatedAt($value)
- * @property int $driver_id
- * @property int $passenger_id
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereDriverId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating wherePassengerId($value)
- * @mixin \Eloquent
- */
 class Rating extends Model
 {
     use HasFactory;
 
-    public function giver(): BelongsTo
+    public function driver(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'giver_id', 'id');
+        return $this->belongsTo(User::class, 'driver_id', 'id');
     }
 
-    public function taker(): BelongsTo
+    public function passenger(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'taker_id', 'id');
+        return $this->belongsTo(User::class, 'passenger_id', 'id');
     }
 
     public function ride(): BelongsTo
@@ -112,5 +83,37 @@ class Rating extends Model
     {
         $this->passenger_rating = $passenger_rating;
         return $this;
+    }
+
+    public function getDriverComment(): ?string
+    {
+        return $this->driver_comment;
+    }
+
+    public function setDriverComment(?string $driver_comment): self
+    {
+        $this->driver_comment = $driver_comment;
+        return $this;
+    }
+
+    public function getPassengerComment(): ?string
+    {
+        return $this->passenger_comment;
+    }
+
+    public function setPassengerComment(?string $passenger_comment): self
+    {
+        $this->passenger_comment = $passenger_comment;
+        return $this;
+    }
+
+    public function isDriverRated(): bool
+    {
+        return $this->getDriverRating() !== 0;
+    }
+
+    public function isPassengerRated(): bool
+    {
+        return $this->getPassengerRating() !== 0;
     }
 }

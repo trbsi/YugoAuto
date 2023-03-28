@@ -24,7 +24,7 @@ class CreateRideService
             ->setCurrency('EUR')
             ->setPrice($price)
             ->setDescription($description)
-            ->setTime($time)
+            ->setRideTime($time)
             ->setNumberOfSeats($numberOfSeats)
             ->setFromPlaceId($fromPlaceId)
             ->setToPlaceId($toPlaceId)

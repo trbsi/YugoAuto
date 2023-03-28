@@ -13,3 +13,10 @@ if (!function_exists('conversation_url')) {
         return route('messaging.message.single', ['id' => $messageId]);
     }
 }
+
+if (!function_exists('rating_url')) {
+    function rating_url(int $rideId): string
+    {
+        return route('rating.show', ['rideId' => $rideId]);
+    }
+}

@@ -40,10 +40,10 @@ class RideRequestController
     ) {
         try {
             $logic->acceptOrReject(
-                Auth::id(),
-                (int)$request->ride_id,
-                (int)$request->user_id,
-                $request->status
+                driverId: Auth::id(),
+                rideId: (int)$request->ride_id,
+                passengerId: (int)$request->user_id,
+                status: $request->status
             );
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
@@ -74,9 +74,9 @@ class RideRequestController
     ) {
         try {
             $logic->cancel(
-                Auth::id(),
-                $request->passenger_id,
-                $request->ride_id
+                authUserId: Auth::id(),
+                passengerId: $request->passenger_id,
+                rideId: $request->ride_id
             );
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());

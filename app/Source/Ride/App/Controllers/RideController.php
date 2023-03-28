@@ -31,9 +31,9 @@ class RideController extends Controller
 
         if ($request->from_place_id && $request->to_place_id && $request->time) {
             $rides = $logic->search(
-                (int)$request->from_place_id,
-                (int)$request->to_place_id,
-                Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time)
+                fromPlaceId: (int)$request->from_place_id,
+                toPlaceId: (int)$request->to_place_id,
+                minStartTime: Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time)
             );
 
             $fromPlace = $placesBusinessLogic->getById((int)$request->from_place_id);
@@ -78,13 +78,13 @@ class RideController extends Controller
     ) {
         try {
             $logic->create(
-                Auth::id(),
-                (int)$request->from_place_id,
-                (int)$request->to_place_id,
-                Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time),
-                (int)$request->number_of_seats,
-                (int)$request->price,
-                $request->description
+                driverId: Auth::id(),
+                fromPlaceId: (int)$request->from_place_id,
+                toPlaceId: (int)$request->to_place_id,
+                time: Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time),
+                numberOfSeats: (int)$request->number_of_seats,
+                price: (int)$request->price,
+                description: $request->description
             );
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
