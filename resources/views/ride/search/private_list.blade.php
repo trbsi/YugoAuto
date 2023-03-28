@@ -6,5 +6,5 @@
     </x-slot>
 
     @include('components.new-messages-alert')
-    @include('ride.search.components.list')
+    @include('ride.search.list')
 </x-app-layout>

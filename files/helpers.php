@@ -28,4 +28,16 @@ if (!function_exists('single_ride_requests_url')) {
     }
 }
 
+if (!function_exists('build_ride_search_base_query')) {
+    function build_ride_search_base_query(): string
+    {
+        $query = [];
+        foreach (\App\Source\Ride\Enum\RideBaseFiltersEnum::values() as $value) {
+            $query[$value] = request()->query($value);
+        }
+
+        return http_build_query($query);
+    }
+}
+
 

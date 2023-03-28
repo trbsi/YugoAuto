@@ -1,3 +1,4 @@
+//AUTOCOMPLETE FOR PLACES
 $(function () {
 
     if ($("#from_place").length) {
@@ -42,7 +43,7 @@ $(function () {
 
 });
 
-
+//DATE TIME PICKER
 $(document).ready(function () {
     $('#time').datetimepicker(
         {

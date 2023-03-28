@@ -1,5 +1,9 @@
 {
     "You have x pending requests": "Number of pending requests: :number",
     "Somebody left you a request": ":name left a ride request.",
-    "Somebody sent you a message": ":name send you a message"
+    "Somebody sent you a message": ":name send you a message",
+    "Filter - price_lowest": "By price - lowest first",
+    "Filter - price_highest": "By price - highest first",
+    "Filter - time_earliest": "By time - earliest first",
+    "Filter - time_latest": "By time - latest first"
 }

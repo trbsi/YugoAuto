@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Source\Ride\Infra\SearchRides\Services;
 
 use App\Models\Ride;
+use App\Source\Ride\Enum\RideFiltersEnum;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Carbon;
 
@@ -13,13 +14,9 @@ class SearchRidesService
     public function search(
         int $fromPlaceId,
         int $toPlaceId,
-        Carbon $minStartTime
+        Carbon $minStartTime,
+        string $filter
     ): LengthAwarePaginator {
-        $now = Carbon::now();
-        if ($minStartTime < $now) {
-            $minStartTime = $now;
-        }
-
         //TODO - check query index
         $rides = Ride::where('from_place_id', $fromPlaceId)
             ->where('to_place_id', $toPlaceId)
@@ -30,10 +27,16 @@ class SearchRidesService
                 'driver',
                 'rideRequestForAuthUser',
                 'acceptedRideRequests'
-            ])
-            ->orderBy('time', 'ASC')
-            ->paginate();
+            ]);
 
-        return $rides;
+        $rides = match ($filter) {
+            RideFiltersEnum::PRICE_LOWEST->value => $rides->orderBy('price', 'ASC'),
+            RideFiltersEnum::PRICE_HIGHEST->value => $rides->orderBy('price', 'DESC'),
+            RideFiltersEnum::TIME_EARLIEST->value => $rides->orderBy('time', 'ASC'),
+            RideFiltersEnum::TIME_LATEST->value => $rides->orderBy('time', 'DESC'),
+            default => $rides->orderBy('time', 'DESC')
+        };
+
+        return $rides->paginate();
     }
 }

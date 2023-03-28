@@ -27,18 +27,21 @@ class RideController extends Controller
         SearchPlacesLogic $placesBusinessLogic
     ) {
         $rides = null;
-        $fromPlace = $toPlace = $time = null;
+        $fromPlace = $request->from_place_id;
+        $toPlace = $request->to_place_id;
+        $time = $request->time;
+        $filter = $request->filter;
 
-        if ($request->from_place_id && $request->to_place_id && $request->time) {
+        if ($fromPlace && $toPlace && $time) {
+            $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);
+            $toPlace = $placesBusinessLogic->getById((int)$toPlace);
+
             $rides = $logic->search(
-                fromPlaceId: (int)$request->from_place_id,
-                toPlaceId: (int)$request->to_place_id,
-                minStartTime: Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time)
+                fromPlaceId: $fromPlace->getId(),
+                toPlaceId: $toPlace->getId(),
+                minStartTime: Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $time),
+                filter: $filter
             );
-
-            $fromPlace = $placesBusinessLogic->getById((int)$request->from_place_id);
-            $toPlace = $placesBusinessLogic->getById((int)$request->to_place_id);
-            $time = $request->time;
         }
 
         return view(
