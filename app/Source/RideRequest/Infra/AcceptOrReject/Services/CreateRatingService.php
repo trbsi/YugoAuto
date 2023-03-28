@@ -13,10 +13,11 @@ class CreateRatingService
     ): void {
         $model = new Rating();
         $model
-            ->setRating(0)
-            ->setRideId($rideId)
-            ->setPassengerId($passengerId)
             ->setDriverId($driverId)
+            ->setDriverRating(0)
+            ->setPassengerId($passengerId)
+            ->setPassengerRating(0)
+            ->setRideId($rideId)
             ->save();
     }
 }

@@ -30,7 +30,7 @@ class RideController extends Controller
         $fromPlace = $request->from_place_id;
         $toPlace = $request->to_place_id;
         $time = $request->time;
-        $filter = $request->filter;
+        $filter = $request->filter ?? '';
 
         if ($fromPlace && $toPlace && $time) {
             $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);

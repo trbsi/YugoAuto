@@ -41,6 +41,8 @@
                                 role="alert">
                                 {{__('Ride is filled')}}
                             </div>
+                        @elseif($ride->isMyRide())
+                            <b>{{__('Your ride')}}</b>
                         @elseif(!$ride->rideRequestForAuthUser)
                             @include('ride.search.components.request-ride-form')
                         @else

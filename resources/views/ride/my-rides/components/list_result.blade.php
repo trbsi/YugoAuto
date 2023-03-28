@@ -30,10 +30,13 @@
                             </a>
                         </p>
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{__('Departure time')}} {{$ride->getTimeFormatted()}}
+                            {{__('Route')}}: {{$ride->fromPlace->getName()}} -> {{$ride->toPlace->getName()}}
                         </p>
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{__('Number of seats')}} {{$ride->getNumberOfSeats()}}
+                            {{__('Departure time')}}: {{$ride->getTimeFormatted()}}
+                        </p>
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            {{__('Number of seats')}}: {{$ride->getNumberOfSeats()}}
                         </p>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             {{$ride->getDescription()}}
@@ -48,7 +51,6 @@
                                             role="alert">
                                             {{__('You have x pending requests', ['number' => $ride->pendingRideRequests->count()])}}
                                         </div>
-
                                     </div>
                                 @endif
                                 <div class="p-1">
@@ -56,7 +58,8 @@
                                         href="{{single_ride_requests_url($ride->getId())}}"
                                         class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                         {{__('Requests')}}
-                                    </a></div>
+                                    </a>
+                                </div>
                                 <div class="p-1">
                                     @include('ride.my-rides.components.delete-form')
                                 </div>

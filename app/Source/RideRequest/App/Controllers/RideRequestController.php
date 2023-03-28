@@ -60,6 +60,7 @@ class RideRequestController
     ) {
         try {
             $logic->requestRide(Auth::id(), $rideId);
+            $request->session()->flash('success', __('Ride request sent'));
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
             Log::error($exception->getMessage());

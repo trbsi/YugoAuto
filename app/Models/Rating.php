@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * App\Models\Rating
@@ -147,5 +148,24 @@ class Rating extends Model
     public function isPassengerRated(): bool
     {
         return $this->getPassengerRating() !== 0;
+    }
+
+    public function getRatedUser(): User
+    {
+        if ($this->getDriverId() === Auth::id()) {
+            return $this->passenger;
+        }
+
+        return $this->driver;
+    }
+
+    public function isCurrentUserDriver(): bool
+    {
+        return $this->getDriverId() === Auth::id();
+    }
+
+    public function isCurrentUserPassenger(): bool
+    {
+        return $this->getPassengerId() === Auth::id();
     }
 }

@@ -229,5 +229,10 @@ class Ride extends Model
     {
         return $this->acceptedRideRequests->count() >= $this->getNumberOfSeats();
     }
+
+    public function isMyRide(): bool
+    {
+        return $this->getDriverId() === Auth::id();
+    }
 }
 

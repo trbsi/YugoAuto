@@ -1,6 +1,10 @@
+<?php
+/** @var \App\Models\Conversation $conversation */
+
+?>
 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
     @foreach($conversations as $conversation)
-        <li class="py-3 sm:py-4 @if(!$conversation->isReadByUser()) bg-blue-50 @endif">
+        <li class="py-3 sm:py-4 @if(!$conversation->isReadByCurrentUser()) bg-blue-50 @endif">
             <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
                     <a href="{{conversation_url($conversation->getId())}}">

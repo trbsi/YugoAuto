@@ -12,6 +12,8 @@
         @endfor
     </label>
 </div>
-<div>
-    <i>"{{$comment}}"</i>
-</div>
+@if($comment)
+    <div>
+        <i>"{{$comment}}"</i>
+    </div>
+@endif

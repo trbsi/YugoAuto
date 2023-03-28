@@ -37,6 +37,7 @@
 
     <!-- Page Content -->
     <main>
+        @include('components.new-messages-alert')
         {{ $slot }}
     </main>
 </div>

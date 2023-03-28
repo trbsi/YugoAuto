@@ -17,10 +17,9 @@ class RatingController
         GetRatingsLogic $logic
     ) {
         $ratings = $logic->getRatings(userId: Auth::id(), rideId: $rideId);
-        $authUserId = Auth::id();
         return view(
             'rating.show',
-            compact('ratings', 'authUserId')
+            compact('ratings')
         );
     }
 

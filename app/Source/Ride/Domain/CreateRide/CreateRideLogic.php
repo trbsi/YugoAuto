@@ -26,7 +26,13 @@ class CreateRideLogic
         int $price,
         ?string $description
     ): void {
-        if (!$this->canCreateRideSpecification->isSatisfied($driverId)) {
+        $canCreate = $this->canCreateRideSpecification->isSatisfied(
+            driverId: $driverId,
+            creationTime: $time,
+            fromPlaceId: $fromPlaceId,
+            toPlaceId: $toPlaceId
+        );
+        if (!$canCreate) {
             throw new Exception(__('You have active ride for this date. Delete it first'));
         }
 

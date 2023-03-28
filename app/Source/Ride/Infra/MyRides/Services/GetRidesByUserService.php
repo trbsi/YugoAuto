@@ -17,7 +17,14 @@ class GetRidesByUserService
                 $query->where('passenger_id', $userId);
             })
             ->orderBy('time', 'desc')
-            ->with(['driver', 'pendingRideRequests', 'rideRequestForAuthUser', 'acceptedRideRequests'])
+            ->with([
+                'fromPlace',
+                'toPlace',
+                'driver',
+                'pendingRideRequests',
+                'rideRequestForAuthUser',
+                'acceptedRideRequests'
+            ])
             ->paginate();
     }
 }

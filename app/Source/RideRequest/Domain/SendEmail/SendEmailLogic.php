@@ -22,7 +22,7 @@ class SendEmailLogic
 
         $viewData = [
             'body' => $body,
-            'buttonUrl' => single_ride_requests_url($rideRequest->getRideId()),
+            'buttonUrl' => route('ride.my-rides'),
             'buttonText' => __('View ride requests')
         ];
         $event = new EmailSystemCommunicationValue(

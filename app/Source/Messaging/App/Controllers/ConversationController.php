@@ -9,7 +9,6 @@ use App\Models\User;
 use App\Source\Messaging\App\Requests\CreateConversationRequest;
 use App\Source\Messaging\Domain\CreateConversation\CreateConversationLogic;
 use App\Source\Messaging\Domain\FindConversation\FindConversationLogic;
-use App\Source\Messaging\Domain\ListConversations\ListConversationsLogic;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 

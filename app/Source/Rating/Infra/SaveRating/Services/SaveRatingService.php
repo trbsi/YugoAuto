@@ -14,7 +14,7 @@ class SaveRatingService
         int $rideId,
         int $rating,
         ?string $comment
-    ): void {
+    ): Rating {
         $model = Rating::where(function (Builder $query) use ($graderId) {
             $query->where('driver_id', $graderId)
                 ->orWhere('passenger_id', $graderId);
@@ -33,5 +33,6 @@ class SaveRatingService
         }
 
         $model->save();
+        return $model;
     }
 }

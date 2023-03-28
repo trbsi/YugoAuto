@@ -7,6 +7,13 @@ if (!function_exists('user_profile_url')) {
     }
 }
 
+if (!function_exists('my_profile_url')) {
+    function my_profile_url(): string
+    {
+        return user_profile_url(\Illuminate\Support\Facades\Auth::id());
+    }
+}
+
 if (!function_exists('conversation_url')) {
     function conversation_url(int $messageId): string
     {

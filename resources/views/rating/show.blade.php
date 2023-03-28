@@ -39,7 +39,7 @@
                                                     'rating' => $rating->getDriverRating(),
                                                     'comment' => $rating->getDriverComment()
                                                 ])
-                                            @elseif($authUserId === $rating->getDriverId() && !$rating->isDriverRated())
+                                            @elseif($rating->isCurrentUserDriver() && !$rating->isDriverRated())
                                                 {{__('You are not rated')}}
                                             @else
                                                 @include('rating.components.stars-form', [
@@ -51,13 +51,13 @@
                                             @if($rating->isPassengerRated())
                                                 @include('rating.components.stars-rating', [
                                                     'rating' => $rating->getPassengerRating(),
-                                                      'comment' => $rating->getPassengerComment()
+                                                    'comment' => $rating->getPassengerComment()
                                                 ])
-                                            @elseif($authUserId === $rating->getPassengerId() && !$rating->isPassengerRated())
+                                            @elseif($rating->isCurrentUserPassenger() && !$rating->isPassengerRated())
                                                 {{__('You are not rated')}}
                                             @else
                                                 @include('rating.components.stars-form', [
-                                                        'rideId' => $rating->getRideId()
+                                                    'rideId' => $rating->getRideId()
                                                 ])
                                             @endif
                                         </div>

@@ -7,6 +7,5 @@
         {{__('Find your ride')}}
     </div>
 
-    @include('components.new-messages-alert')
     @include('ride.search.list')
 </x-guest-layout>
