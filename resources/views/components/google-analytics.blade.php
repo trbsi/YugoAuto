@@ -6,8 +6,11 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-8T7MEWNM5J');
+  gtag('config', '{{env('GTAG')}}');
+
+
 
 </script>
 
 <!-- Google Analytics end -->
+
