@@ -45,3 +45,9 @@ npm i
 npm run build
 php artisan cache:clear
 ```
+
+## Server config
+
+# File upload
+
+In order to be able to upload a file enable: highlight_file() and tmpfile().

@@ -6,7 +6,6 @@ namespace App\Source\User\Domain\UpdateProfilePhoto;
 
 use App\Models\User;
 use App\Source\ImageModification\Infra\ModifyImage\Services\ModifyImageService;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class UpdateProfilePhotoLogic
@@ -18,7 +17,6 @@ class UpdateProfilePhotoLogic
 
     public function modifyPhoto(User $user): void
     {
-        Log::info($user->getProfilePhotoPath());
         $image = $this->modifyImageService->createImage($user->getProfilePhotoPath());
 
         $image
