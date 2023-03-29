@@ -29,3 +29,19 @@ https://cookieconsent.popupsmart.com/gdpr-cookie-consent/
 Used for showing notifications
 
 https://github.com/CodeSeven/toastr
+
+# Tech
+
+## Deployment script
+
+``` 
+git reset
+git checkout .
+git checkout master
+git pull --rebase
+composer install --no-dev
+php artisan migrate --force
+npm i
+npm run build
+php artisan cache:clear
+```

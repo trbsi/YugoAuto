@@ -3,7 +3,7 @@ target=${1:-usage}
 
 case ${target} in
     install)
-        composer install && php artisan key:generate && php artisan storage:link && npm run build && php artisan db:seed --class=PlacesSeeder;
+        composer install --no-dev && php artisan key:generate && php artisan storage:link && php artisan migrate && npm install && npm run build && php artisan db:seed --class=PlacesSeeder;
     ;;
 
     install-local)
