@@ -42,6 +42,8 @@ class RideController extends Controller
                 minStartTime: Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $time),
                 filter: $filter
             );
+        } else {
+            $fromPlace = $toPlace = $time = null;
         }
 
         return view(
