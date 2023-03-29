@@ -30,4 +30,15 @@ class PublicController
     {
         return view('public.contact');
     }
+
+    /**
+     * @see https://lokalise.com/blog/laravel-localization-step-by-step/
+     */
+    public function changeLanguage(
+        string $locale
+    ) {
+        app()->setLocale($locale);
+        session()->put('locale', $locale);
+        return redirect()->back();
+    }
 }

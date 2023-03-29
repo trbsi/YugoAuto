@@ -84,6 +84,11 @@ return [
 
     'locale' => 'hr',
 
+    'available_locale' => [
+        'hr' => 'Hrvatski',
+        'en' => 'English'
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale

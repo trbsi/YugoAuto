@@ -47,4 +47,13 @@ if (!function_exists('build_ride_search_base_query')) {
     }
 }
 
+if (!function_exists('change_lang_url')) {
+    function change_lang_url(string $lang): string
+    {
+        return route('change.language', ['locale' => $lang]);
+    }
+}
+
+
+
 
