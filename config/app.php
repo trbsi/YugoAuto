@@ -214,4 +214,9 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+
+    /*
+     * Log viewer
+     */
+    'log_access_user_id' => env('LOG_VIEW_USER_ID', 0),
 ];

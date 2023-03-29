@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View as FacadeView;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View;
+use Opcodes\LogViewer\Facades\LogViewer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,6 +29,11 @@ class AppServiceProvider extends ServiceProvider
                 $unreadMessages = $user->profile->getUnreadMessagesCount();
             }
             $view->with('unreadMessages', $unreadMessages);
+        });
+
+        LogViewer::auth(function ($request) {
+            return $request->user()
+                && $request->user()->getId() === (int)config('app.log_access_user_id');
         });
     }
 }
