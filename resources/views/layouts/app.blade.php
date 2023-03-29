@@ -7,16 +7,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link rel="stylesheet" href="{{asset('assets/datetimepicker/jquery.datetimepicker.min.css')}}">
-
+    @include('layouts.components.header')
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
     <!-- Styles -->
     @livewireStyles
 </head>
@@ -43,19 +36,9 @@
 </div>
 
 @include('layouts.components.footer')
-
 @stack('modals')
-
 @livewireScripts
-
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script src="{{asset('assets/datetimepicker/jquery.datetimepicker.full.min.js')}}"></script>
-<script src="{{asset('assets/js/custom.js')}}"></script>
-@include('components.cookie-consent')
-@include('components.google-analytics')
-@include('components.toastr')
+@include('layouts.components.footer-scripts')
 @stack('javascript')
 
 </body>
