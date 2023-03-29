@@ -2,6 +2,10 @@
 
 BlaBlaCar free alternative written in Laravel (PHP+MySQL). This is web version.
 
+## Live site
+
+https://yugoauto.com
+
 # Used components
 
 ## Tailwindcss components
