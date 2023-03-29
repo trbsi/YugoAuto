@@ -22,11 +22,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    require_once __DIR__ . '/web/ride.php';
-    require_once __DIR__ . '/web/ride-request.php';
-    require_once __DIR__ . '/web/user.php';
-    require_once __DIR__ . '/web/messaging.php';
-    require_once __DIR__ . '/web/rating.php';
+    require __DIR__ . '/web/ride.php';
+    require __DIR__ . '/web/ride-request.php';
+    require __DIR__ . '/web/user.php';
+    require __DIR__ . '/web/messaging.php';
+    require __DIR__ . '/web/rating.php';
 });
 
 //PUBLIC
