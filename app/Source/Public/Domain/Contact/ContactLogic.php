@@ -26,7 +26,7 @@ class ContactLogic
         string $message
     ): void {
         $value = new EmailSystemCommunicationValue(
-            [$email],
+            [config('mail.admin_email')],
             'Contact from site ' . config('app.name'),
             ['body' => $message],
             new  FromValueObject($email, $name)
