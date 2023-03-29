@@ -16,6 +16,6 @@ class GetPlacesService
 
     public function getById(int $id): Place
     {
-        return Place::find($id);
+        return Place::findOrFail($id);
     }
 }
