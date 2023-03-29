@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Contracts\RegisterResponse;
+use Laravel\Fortify\Contracts\VerifyEmailResponse;
 use Laravel\Fortify\Fortify;
 
 class FortifyServiceProvider extends ServiceProvider
@@ -26,6 +27,16 @@ class FortifyServiceProvider extends ServiceProvider
                 public function toResponse($request)
                 {
                     return redirect(route('profile.show', ['verification_email_sent' => 1]));
+                }
+            }
+        );
+
+        $this->app->instance(
+            VerifyEmailResponse::class,
+            new class implements RegisterResponse {
+                public function toResponse($request)
+                {
+                    return redirect(route('home', ['account_verified' => 1]));
                 }
             }
         );

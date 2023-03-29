@@ -4,7 +4,7 @@
         "showDuration": "10000"
     }
 
-    @if(request()->has('verified'))
+    @if(request()->has('account_verified'))
     toastr.success('{{__('Account is verified')}}');
     @endif
 
