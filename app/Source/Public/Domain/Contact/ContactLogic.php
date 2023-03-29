@@ -27,9 +27,9 @@ class ContactLogic
     ): void {
         $value = new EmailSystemCommunicationValue(
             [config('mail.admin_email')],
-            'Contact from site ' . config('app.name'),
+            __('Contact from site') . ' ' . config('app.name'),
             ['body' => $message],
-            new  FromValueObject($email, $name)
+            new FromValueObject($email, $name)
         );
         SystemCommunicationEvent::dispatch($value);
     }

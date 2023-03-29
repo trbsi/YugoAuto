@@ -49,7 +49,7 @@ class MarkdownEmailMailable extends Mailable
             ->with($this->viewData);
 
         if ($this->fromValueObject) {
-            $mail->from($this->fromValueObject->getEmail(), $this->fromValueObject->getName());
+            $mail->replyTo($this->fromValueObject->getEmail(), $this->fromValueObject->getName());
         }
 
         return $mail;
