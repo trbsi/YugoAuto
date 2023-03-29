@@ -43,7 +43,15 @@ composer install --no-dev
 php artisan migrate --force
 npm i
 npm run build
+#clear cache
 php artisan cache:clear
+php artisan route:clear
+php artisan config:clear
+php artisan view:clear
+#create cache
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
 ```
 
 # Server config
