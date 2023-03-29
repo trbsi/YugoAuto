@@ -4,14 +4,18 @@
         "showDuration": "10000"
     }
 
+    @if(request()->has('verified'))
+    toastr.success('{{__('Account is verified')}}');
+    @endif
+
+    @if(request()->has('verification_email_sent'))
+    toastr.success('{{__('Verification email has been sent. Check your email')}}');
+    @endif
+
     @if ($errors->any())
     @foreach ($errors->all() as $error)
     toastr.error('{!! $error !!}');
     @endforeach
-    @endif
-
-    @if(request()->has('verified'))
-    toastr.success('{{__('Account is verified')}}');
     @endif
 
     @foreach (['error', 'warning', 'success', 'info'] as $key)

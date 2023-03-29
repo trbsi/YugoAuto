@@ -30,7 +30,7 @@ Route::middleware([
 });
 
 //PUBLIC
-Route::get('/', [RideController::class, 'search']);
+Route::get('/', [RideController::class, 'search'])->name('home');
 
 Route::prefix('ride')->group(function () {
     Route::get('search', [RideController::class, 'search'])->name('ride.search');
