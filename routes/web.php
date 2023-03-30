@@ -38,7 +38,9 @@ Route::prefix('ride')->group(function () {
 
 Route::prefix('contact')->group(function () {
     Route::get('contact', [PublicController::class, 'contact'])->name('contact');
-    Route::post('send-message', [PublicController::class, 'sendMessage'])->name('contact.send-message');
+    Route::middleware('throttle:2,30')->post('send-message', [PublicController::class, 'sendMessage'])->name(
+        'contact.send-message'
+    );
 });
 
 Route::get('language/{locale}', [PublicController::class, 'changeLanguage'])->name('change.language');
