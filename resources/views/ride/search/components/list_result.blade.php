@@ -1,5 +1,9 @@
 <?php
-/** @var \Illuminate\Contracts\Pagination\LengthAwarePaginator $rides */
+
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Collection;
+
+/** @var LengthAwarePaginator|Collection $rides */
 
 /** @var \App\Models\Ride $ride */
 
@@ -10,7 +14,14 @@
 <div
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
-    <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}} - {{$toPlace->getName()}}</h2>
+    @if($fromPlace && $toPlace)
+        <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}} - {{$toPlace->getName()}}</h2>
+    @endif
+
+    @if($rides instanceof Collection)
+        <h2 class="pb-6 text-4xl">{{__('Newest rides')}}</h2>
+    @endif
+
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($rides as $ride)
@@ -62,5 +73,7 @@
         @endforeach
     </ul>
 
-    {{$rides->withQueryString()->links()}}
+    @if($rides instanceof LengthAwarePaginator)
+        {{$rides->withQueryString()->links()}}
+    @endif
 </div>

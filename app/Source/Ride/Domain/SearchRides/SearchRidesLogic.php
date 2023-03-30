@@ -6,6 +6,7 @@ namespace App\Source\Ride\Domain\SearchRides;
 
 use App\Source\Ride\Infra\SearchRides\Services\SearchRidesService;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
 
 class SearchRidesLogic
@@ -35,5 +36,10 @@ class SearchRidesLogic
             $minStartTime,
             $filter
         );
+    }
+
+    public function latestRides(): Collection
+    {
+        return $this->searchRidesService->latestRides();
     }
 }

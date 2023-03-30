@@ -10,6 +10,7 @@ class CanSendRequestSpecification
 {
     public function isSatisfied(int $passengerId, int $rideId): bool
     {
+        //cannot send request to your self
         return Ride::where('id', $rideId)
                 ->where('driver_id', $passengerId)
                 ->count() === 0;

@@ -44,6 +44,7 @@ class RideController extends Controller
             );
         } else {
             $fromPlace = $toPlace = $time = null;
+            $rides = $logic->latestRides();
         }
 
         return view(

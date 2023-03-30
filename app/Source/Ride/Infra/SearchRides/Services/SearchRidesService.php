@@ -7,6 +7,7 @@ namespace App\Source\Ride\Infra\SearchRides\Services;
 use App\Models\Ride;
 use App\Source\Ride\Enum\RideFiltersEnum;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
 
 class SearchRidesService
@@ -38,5 +39,13 @@ class SearchRidesService
         };
 
         return $rides->paginate();
+    }
+
+    public function latestRides(): Collection
+    {
+        return Ride::orderBy('id', 'DESC')
+            ->where('time', '>=', Carbon::now()->format('Y-m-d H:i:s'))
+            ->limit(20)
+            ->get();
     }
 }

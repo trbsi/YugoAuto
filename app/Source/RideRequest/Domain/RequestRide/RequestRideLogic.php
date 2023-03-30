@@ -31,6 +31,11 @@ class RequestRideLogic
         }
 
         $ride = Ride::findOrFail($rideId);
+
+        if ($ride->isFilled()) {
+            throw new Exception(__('Ride is filled'));
+        }
+
         $rideRequest = $this->saveRideRequestService->save($passengerId, $rideId);
         SendEmailLogic::sendEmailToDriver($ride, $rideRequest);
     }
