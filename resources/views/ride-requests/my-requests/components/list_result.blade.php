@@ -35,19 +35,23 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
                         </p>
                         <p class="mt-2">
                                 <span
-                                    class="p-1 status-text status-{{$request->getStatus()}}">
+                                    class="w-full text-center p-1 status-text status-{{$request->getStatus()}}">
                                 {{__('Ride request status')}}: {{__($request->getStatus())}}
                                 </span>
                         </p>
                         @if($request->canBeAcceptedOrRejected())
-                            <div class="flex flex-row mt-2">
-                                @include('ride-requests.my-requests.components.accept-form')
-                                @include('ride-requests.my-requests.components.reject-form')
+                            <div class="mt-3">
+                                <div class="mb-3">
+                                    @include('ride-requests.my-requests.components.accept-form')
+                                </div>
+                                <div>
+                                    @include('ride-requests.my-requests.components.reject-form')
+                                </div>
                             </div>
                         @endif
 
                         @if($request->canBeCancelled())
-                            <div class="flex flex-row mt-2">
+                            <div class="mt-3">
                                 @include('ride-requests.my-requests.components.cancel-form')
                             </div>
                         @endif
