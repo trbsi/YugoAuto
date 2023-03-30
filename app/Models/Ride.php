@@ -220,8 +220,13 @@ class Ride extends Model
         return
             $this->getRideTime() < Carbon::now() &&
             (
+                //user is driver and has accepted rides
                 ($this->isOwner() && $this->acceptedRideRequests->count() > 0) ||
-                $this->rideRequestForAuthUser->getStatus() === RideRequestEnum::ACCEPTED->value
+                (
+                    //user is passenger and status is accepted
+                    $this->rideRequestForAuthUser &&
+                    $this->rideRequestForAuthUser->getStatus() === RideRequestEnum::ACCEPTED->value
+                )
             );
     }
 
