@@ -44,6 +44,7 @@ class SearchRidesService
     public function latestRides(): Collection
     {
         return Ride::orderBy('id', 'DESC')
+            ->with(['fromPlace', 'toPlace'])
             ->where('time', '>=', Carbon::now()->format('Y-m-d H:i:s'))
             ->limit(20)
             ->get();

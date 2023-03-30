@@ -41,7 +41,10 @@ use Illuminate\Database\Eloquent\Collection;
                             </a>
                         </p>
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{__('Departure time')}} {{$ride->getTimeFormatted()}}
+                            {{__('Route')}}: {{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}
+                        </p>
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            {{__('Departure time')}}: {{$ride->getTimeFormatted()}}
                         </p>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             {{$ride->getDescription()}}
