@@ -73,19 +73,23 @@ class RideRequestController
         CancelRideRequest $request,
         CancelRideLogic $logic
     ) {
+        $authUserId = Auth::id();
         try {
-            $logic->cancel(
-                authUserId: Auth::id(),
+            $rideRequest = $logic->cancel(
+                authUserId: $authUserId,
                 passengerId: $request->passenger_id,
                 rideId: $request->ride_id
             );
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
             Log::error($exception->getMessage());
+            return redirect()->back();
         }
 
+        //at this point passenger does not have access to this ride
+        if ($rideRequest->getPassengerId() === $authUserId) {
+            return redirect(route('ride.my-rides'));
+        }
         return redirect()->back();
     }
-
-
 }

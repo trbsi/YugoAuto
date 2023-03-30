@@ -2,6 +2,7 @@
 
 namespace App\Source\RideRequest\Domain\CancelRide;
 
+use App\Models\RideRequest;
 use App\Source\RideRequest\Domain\SendEmail\SendEmailLogic;
 use App\Source\RideRequest\Infra\CancelRide\Services\CancelRideService;
 use App\Source\RideRequest\Infra\CancelRide\Services\RemoveRatingService;
@@ -21,7 +22,7 @@ class CancelRideLogic
         int $authUserId,
         int $passengerId,
         int $rideId
-    ): void {
+    ): RideRequest {
         if (!$this->canCancelRideSpecification->satisfiedBy($authUserId, $passengerId, $rideId)) {
             throw new Exception('You cannot cancel this ride');
         }
@@ -34,6 +35,8 @@ class CancelRideLogic
 
         $this->removeRatingService->remove($rideRequest->ride, $passengerId);
 
-        SendEmailLogic::sendEmailToPassenger($rideRequest);
+        SendEmailLogic::sendCancellationEmail($rideRequest, $authUserId);
+
+        return $rideRequest;
     }
 }

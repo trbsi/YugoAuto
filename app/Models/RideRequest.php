@@ -128,4 +128,9 @@ class RideRequest extends Model
             ]
         );
     }
+
+    public function isAccepted(): bool
+    {
+        return $this->getStatus() === RideRequestEnum::ACCEPTED->value;
+    }
 }

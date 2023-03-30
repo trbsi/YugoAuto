@@ -17,7 +17,6 @@ class SendEmailLogic
         $subject = $body = match ($rideRequest->getStatus()) {
             RideRequestEnum::ACCEPTED->value => __('Driver accepted your request'),
             RideRequestEnum::REJECTED->value => __('Driver rejected your request'),
-            RideRequestEnum::CANCELLED->value => __('Driver cancelled your request'),
         };
 
         $viewData = [
@@ -27,6 +26,26 @@ class SendEmailLogic
         ];
         $event = new EmailSystemCommunicationValue(
             toEmails: [$rideRequest->passenger->getEmail()],
+            subject: $subject,
+            viewData: $viewData
+        );
+        SystemCommunicationEvent::dispatch($event);
+    }
+
+    public static function sendCancellationEmail(RideRequest $rideRequest, int $authUserId): void
+    {
+        $subject = $body = __('Your ride is cancelled');
+        $toEmail = ($rideRequest->getPassengerId() === $authUserId) ?
+            $rideRequest->ride->driver->getEmail() :
+            $rideRequest->passenger->getEmail();
+        
+        $viewData = [
+            'body' => $body,
+            'buttonUrl' => route('ride.my-rides'),
+            'buttonText' => __('View ride requests')
+        ];
+        $event = new EmailSystemCommunicationValue(
+            toEmails: [$toEmail],
             subject: $subject,
             viewData: $viewData
         );
