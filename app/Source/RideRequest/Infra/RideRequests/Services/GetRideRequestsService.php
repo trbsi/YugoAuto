@@ -11,7 +11,7 @@ class GetRideRequestsService
     {
         return RideRequest::where('ride_id', $rideId)
             ->orderBy('id', 'DESC')
-            ->with(['passenger.profile'])
+            ->with(['passenger.profile', 'ride'])
             ->paginate();
     }
 }

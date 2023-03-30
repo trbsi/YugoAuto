@@ -15,6 +15,10 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($requests as $request)
+            @if(!$request->ride->isMyRide() && !$request->isAccepted())
+                @continue
+            @endif
+
             <li class="pb-3 pt-3 sm:pb-4">
                 <div class="flex items-center space-x-4">
                     <div class="flex-shrink-0">

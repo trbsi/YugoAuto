@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * App\Models\RideRequest
@@ -38,6 +39,10 @@ use Illuminate\Support\Carbon;
 class RideRequest extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'cancelled_time' => 'datetime'
+    ];
 
     public function ride(): BelongsTo
     {
@@ -109,28 +114,44 @@ class RideRequest extends Model
         return $this;
     }
 
+    /* HELPER METHODS */
+
+    /**
+     * driver and passenger can cancel
+     */
     public function canBeCancelled(): bool
     {
-        return in_array(
-            $this->getStatus(),
-            [
-                RideRequestEnum::ACCEPTED->value
-            ]
-        );
+        return
+            ($this->amIPassenger() || $this->ride->isMyRide()) &&
+            in_array(
+                $this->getStatus(),
+                [
+                    RideRequestEnum::ACCEPTED->value
+                ]
+            );
     }
 
+    /**
+     * Only driver can accept or reject
+     */
     public function canBeAcceptedOrRejected(): bool
     {
-        return in_array(
-            $this->getStatus(),
-            [
-                RideRequestEnum::PENDING->value
-            ]
-        );
+        return $this->ride->getDriverId() === Auth::id() &&
+            in_array(
+                $this->getStatus(),
+                [
+                    RideRequestEnum::PENDING->value
+                ]
+            );
     }
 
     public function isAccepted(): bool
     {
         return $this->getStatus() === RideRequestEnum::ACCEPTED->value;
+    }
+
+    public function amIPassenger(): bool
+    {
+        return $this->getPassengerId() === Auth::id();
     }
 }

@@ -187,7 +187,6 @@ class Ride extends Model
         return $this->time;
     }
 
-
     public function getTimeFormatted(): string
     {
         return $this->getRideTime()->format('d.m.Y. H:i');
@@ -210,6 +209,7 @@ class Ride extends Model
         return $this;
     }
 
+    /* HELPER METHODS */
     public function isActiveRide(): bool
     {
         return $this->getRideTime() > Carbon::now();
