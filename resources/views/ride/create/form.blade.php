@@ -47,7 +47,7 @@
                             <label for="time"
                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('Minimum departure time')}}</label>
                             <input type="text"
-                                   id="time"
+                                   id="datetimepicker"
                                    name="time"
                                    readonly
                                    value="{{old('time')}}"

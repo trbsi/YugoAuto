@@ -25,7 +25,7 @@ class CreateRideRequest extends FormRequest
         return [
             'from_place_id' => ['required', 'integer', 'exists:places,id'],
             'to_place_id' => ['required', 'integer', 'exists:places,id'],
-            'time' => ['required', 'date_format:' . TimeEnum::TIME_FORMAT->value],
+            'time' => ['required', 'date_format:' . TimeEnum::DATETIME_FORMAT->value],
             'number_of_seats' => ['required', 'integer', 'min:1', 'max:10'],
             'price' => ['required', 'integer', 'max:10000'],
             'description' => ['nullable', 'string', 'max:500'],

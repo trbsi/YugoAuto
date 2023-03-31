@@ -6,6 +6,7 @@ namespace App\Source\Ride\App\Controllers;
 
 use App\Enum\TimeEnum;
 use App\Http\Controllers\Controller;
+use App\Source\Helper\Trait\RequiredParamsCheckTrait;
 use App\Source\Place\Domain\SearchPlaces\SearchPlacesLogic;
 use App\Source\Ride\App\Requests\CreateRideRequest;
 use App\Source\Ride\App\Requests\SearchRidesRequest;
@@ -21,29 +22,32 @@ use Illuminate\Support\Facades\Log;
 
 class RideController extends Controller
 {
+    use RequiredParamsCheckTrait;
+
     public function search(
         SearchRidesRequest $request,
         SearchRidesLogic $logic,
         SearchPlacesLogic $placesBusinessLogic
     ) {
-        $rides = null;
-        $fromPlace = $request->from_place_id;
-        $toPlace = $request->to_place_id;
-        $time = $request->time;
-        $filter = $request->filter ?? '';
+        $requiredParams = ['from_place_id', 'to_place_id'];
+        $fromPlace = $toPlace = $time = null;
 
-        if ($fromPlace && $toPlace && $time) {
+        if ($this->hasRequiredParams($requiredParams, $request->all())) {
+            $fromPlace = $request->from_place_id;
+            $toPlace = $request->to_place_id;
+            $time = $request->time;
+            $filter = $request->filter ?? '';
+
             $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);
             $toPlace = $placesBusinessLogic->getById((int)$toPlace);
 
             $rides = $logic->search(
                 fromPlaceId: $fromPlace->getId(),
                 toPlaceId: $toPlace->getId(),
-                minStartTime: Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $time),
+                minStartTime: $time ? Carbon::createFromFormat(TimeEnum::DATE_FORMAT->value, $time) : $time,
                 filter: $filter
             );
         } else {
-            $fromPlace = $toPlace = $time = null;
             $rides = $logic->latestRides();
         }
 
@@ -87,7 +91,7 @@ class RideController extends Controller
                 driverId: Auth::id(),
                 fromPlaceId: (int)$request->from_place_id,
                 toPlaceId: (int)$request->to_place_id,
-                time: Carbon::createFromFormat(TimeEnum::TIME_FORMAT->value, $request->time),
+                time: Carbon::createFromFormat(TimeEnum::DATETIME_FORMAT->value, $request->time),
                 numberOfSeats: (int)$request->number_of_seats,
                 price: (int)$request->price,
                 description: $request->description

@@ -4,7 +4,7 @@ namespace App\Source\Ride\Enum;
 
 use ArchTech\Enums\Values;
 
-enum RideFiltersEnum: string
+enum RideExtraFiltersEnum: string
 {
     use Values;
 

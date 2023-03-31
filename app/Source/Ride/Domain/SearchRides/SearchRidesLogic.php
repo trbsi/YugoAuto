@@ -22,7 +22,7 @@ class SearchRidesLogic
     public function search(
         int $fromPlaceId,
         int $toPlaceId,
-        Carbon $minStartTime,
+        ?Carbon $minStartTime,
         string $filter
     ): LengthAwarePaginator {
         $now = Carbon::now();

@@ -4,5 +4,6 @@ namespace App\Enum;
 
 enum TimeEnum: string
 {
-    case TIME_FORMAT = 'd.m.Y H:i';
+    case DATE_FORMAT = 'd.m.Y';
+    case DATETIME_FORMAT = 'd.m.Y H:i';
 }

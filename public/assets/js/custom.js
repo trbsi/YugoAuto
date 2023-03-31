@@ -45,10 +45,18 @@ $(function () {
 
 //DATE TIME PICKER
 $(document).ready(function () {
-    $('#time').datetimepicker(
+    $('#datetimepicker').datetimepicker(
         {
             format: 'd.m.Y H:i',
-            minDate: 0
+            minDate: 0,
+        }
+    );
+
+    $('#datepicker').datetimepicker(
+        {
+            format: 'd.m.Y',
+            minDate: 0,
+            timepicker: false
         }
     );
 });
