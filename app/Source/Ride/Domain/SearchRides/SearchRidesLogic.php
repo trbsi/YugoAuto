@@ -23,6 +23,7 @@ class SearchRidesLogic
         int $fromPlaceId,
         int $toPlaceId,
         ?Carbon $minStartTime,
+        ?Carbon $maxStartTime,
         string $filter
     ): LengthAwarePaginator {
         $now = Carbon::now();
@@ -31,10 +32,11 @@ class SearchRidesLogic
         }
 
         return $this->searchRidesService->search(
-            $fromPlaceId,
-            $toPlaceId,
-            $minStartTime,
-            $filter
+            fromPlaceId: $fromPlaceId,
+            toPlaceId: $toPlaceId,
+            minStartTime: $minStartTime,
+            maxStartTime: $maxStartTime,
+            filter: $filter
         );
     }
 

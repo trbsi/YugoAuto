@@ -16,6 +16,7 @@ class SearchRidesService
         int $fromPlaceId,
         int $toPlaceId,
         ?Carbon $minStartTime,
+        ?Carbon $maxStartTime,
         string $filter
     ): LengthAwarePaginator {
         //TODO - check query index
@@ -31,6 +32,10 @@ class SearchRidesService
 
         if ($minStartTime) {
             $rides->whereRaw(sprintf('DATE(time) >= "%s"', $minStartTime->format('Y-m-d')));
+        }
+
+        if ($maxStartTime) {
+            $rides->whereRaw(sprintf('DATE(time) <= "%s"', $maxStartTime->format('Y-m-d')));
         }
 
         $rides = match ($filter) {

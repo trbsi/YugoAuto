@@ -45,14 +45,14 @@ $(function () {
 
 //DATE TIME PICKER
 $(document).ready(function () {
-    $('#datetimepicker').datetimepicker(
+    $('.datetimepicker').datetimepicker(
         {
             format: 'd.m.Y H:i',
             minDate: 0,
         }
     );
 
-    $('#datepicker').datetimepicker(
+    $('.datepicker').datetimepicker(
         {
             format: 'd.m.Y',
             minDate: 0,

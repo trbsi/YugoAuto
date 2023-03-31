@@ -30,12 +30,13 @@ class RideController extends Controller
         SearchPlacesLogic $placesBusinessLogic
     ) {
         $requiredParams = ['from_place_id', 'to_place_id'];
-        $fromPlace = $toPlace = $time = null;
+        $fromPlace = $toPlace = $minTime = $maxTime = null;
 
         if ($this->hasRequiredParams($requiredParams, $request->all())) {
             $fromPlace = $request->from_place_id;
             $toPlace = $request->to_place_id;
-            $time = $request->time;
+            $minTime = $request->min_time;
+            $maxTime = $request->max_time;
             $filter = $request->filter ?? '';
 
             $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);
@@ -44,7 +45,8 @@ class RideController extends Controller
             $rides = $logic->search(
                 fromPlaceId: $fromPlace->getId(),
                 toPlaceId: $toPlace->getId(),
-                minStartTime: $time ? Carbon::createFromFormat(TimeEnum::DATE_FORMAT->value, $time) : $time,
+                minStartTime: $minTime ? Carbon::createFromFormat(TimeEnum::DATE_FORMAT->value, $minTime) : $minTime,
+                maxStartTime: $maxTime ? Carbon::createFromFormat(TimeEnum::DATE_FORMAT->value, $maxTime) : $maxTime,
                 filter: $filter
             );
         } else {
@@ -57,7 +59,8 @@ class RideController extends Controller
                 'rides' => $rides,
                 'fromPlace' => $fromPlace,
                 'toPlace' => $toPlace,
-                'time' => $time,
+                'minTime' => $minTime,
+                'maxTime' => $maxTime,
             ]
         );
     }
