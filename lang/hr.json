@@ -188,8 +188,8 @@
     "You may not leave a team that you created.": "Ne možete napustiti tim koji ste stvorili.",
     "Your email address is unverified.": "Vaša e-mail adresa nije potvrđena.",
     "Search ride": "Traži prijevoze",
-    "From place": "Odakle krećeš",
-    "To place": "Dokud ideš",
+    "From place": "Polazište",
+    "To place": "Odredište",
     "Search": "Traži",
     "Minimum departure time": "Početno vrijeme polaska",
     "Departure time": "Polazak",
@@ -270,5 +270,7 @@
     "Verification email has been sent. Check your email": "Verification email has been sent. Check your email",
     "Contact from site": "Kontakt sa stranice",
     "Language": "Jezik",
-    "Newest rides": "Najnoviji prijevozi"
+    "Newest rides": "Najnoviji prijevozi",
+    "Optional": "Opcionalno polje",
+    "Required": "Potrebno polje"
 }

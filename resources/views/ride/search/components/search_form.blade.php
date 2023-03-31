@@ -8,7 +8,8 @@
     <form method="GET" action="{{route('ride.search')}}">
         <div class="mb-6">
             <label for="from_place"
-                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('From place')}}</label>
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('From place')}}
+                <i>({{__('Required')}})</i></label>
             <input type="text"
                    id="from_place"
                    value="{{!empty($fromPlace) ? $fromPlace->getName() : $fromPlace}}"
@@ -24,7 +25,8 @@
 
         <div class="mb-6">
             <label for="to_place"
-                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('To place')}}</label>
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('To place')}}
+                <i>({{__('Required')}})</i></label>
             <input type="text"
                    id="to_place"
                    value="{{!empty($toPlace) ? $toPlace->getName() : $toPlace}}"
@@ -40,7 +42,8 @@
 
         <div class="mb-6">
             <label for="time"
-                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('Minimum departure time')}}</label>
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('Minimum departure time')}}
+                <i>({{__('Optional')}})</i></label>
             <input type="text"
                    id="datepicker"
                    name="time"
