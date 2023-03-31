@@ -66,3 +66,21 @@ $(document).ready(function () {
 $('.clear-input').on('click focusin', function () {
     this.value = '';
 });
+
+
+//SWITCH RIDES
+$('#switch_rides').click(function () {
+    var fromPlace = $('#from_place');
+    var fromPlaceId = $('#from_place_id');
+    var toPlace = $('#to_place');
+    var toPlaceId = $('#to_place_id');
+
+    var tmpFromPlaceValue = fromPlace.val();
+    var tmpFromPlaceIdValue = fromPlaceId.val();
+
+    fromPlace.val(toPlace.val());
+    fromPlaceId.val(toPlaceId.val());
+
+    toPlace.val(tmpFromPlaceValue);
+    toPlaceId.val(tmpFromPlaceIdValue);
+});
