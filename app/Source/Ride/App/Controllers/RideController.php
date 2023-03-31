@@ -74,7 +74,7 @@ class RideController extends Controller
             $toPlace = $searchPlacesBusinessLogic->getById((int)$toPlaceId);
         }
         return view(
-            'ride.create.form',
+            'ride.create.create-form',
             [
                 'fromPlace' => $fromPlace,
                 'toPlace' => $toPlace,

@@ -9,9 +9,10 @@
         <div class="mb-6">
             <label for="from_place"
                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('From place')}}</label>
-            <input type="text" id="from_place"
+            <input type="text"
+                   id="from_place"
                    value="{{!empty($fromPlace) ? $fromPlace->getName() : $fromPlace}}"
-                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                   class="clear-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                    placeholder="Zagreb" required>
 
             <input
@@ -24,9 +25,10 @@
         <div class="mb-6">
             <label for="to_place"
                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('To place')}}</label>
-            <input type="text" id="to_place"
+            <input type="text"
+                   id="to_place"
                    value="{{!empty($toPlace) ? $toPlace->getName() : $toPlace}}"
-                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                   class="clear-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                    placeholder="Split" required>
 
             <input
@@ -44,7 +46,7 @@
                    name="time"
                    readonly
                    value="{{$time}}"
-                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                   class="clear-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
         </div>
 
         <div class=" mb-6">
@@ -52,6 +54,13 @@
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 {{__('Search')}}
             </button>
+        </div>
+
+        <div class=" mb-6">
+            <a href="{{route('home')}}"
+               class="w-full block text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
+                {{__('Reset')}}
+            </a>
         </div>
 
     </form>

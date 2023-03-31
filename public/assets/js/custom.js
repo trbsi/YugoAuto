@@ -60,3 +60,9 @@ $(document).ready(function () {
         }
     );
 });
+
+
+//CLEAR INPUTS ON FOCUS
+$('.clear-input').on('click focusin', function () {
+    this.value = '';
+});
