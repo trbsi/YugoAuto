@@ -12,3 +12,10 @@
 <link rel="mask-icon" href="{{asset('assets/img/favicon/safari-pinned-tab.svg')}}" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content=YugoAuto>
+<meta property="og:site_name" content="YugoAuto - besplatna alternativa za BlaBlaCar">
+<meta property="og:url" content=https://www.yugoauto.com/>
+<meta property="og:description" content="YugoAuto je besplatna alternativa za BlaBlaCar">
+<meta property="og:type" content=website>
+<meta property="og:image" content=https://yugoauto.com/assets/img/fb-share.png>
