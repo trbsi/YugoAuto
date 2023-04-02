@@ -77,17 +77,6 @@
         "population": "61599"
     },
     {
-        "city": "Karlovac",
-        "admin": "Karlovačka županija",
-        "country": "Croatia",
-        "population_proper": "48123",
-        "iso2": "HR",
-        "capital": "",
-        "lat": "45.491667",
-        "lng": "15.55",
-        "population": "55063"
-    },
-    {
         "city": "Šibenik",
         "admin": "Šibensko-Kninska županija",
         "country": "Croatia",
@@ -2244,17 +2233,6 @@
         "population": ""
     },
     {
-        "city": "Privlaka",
-        "admin": "Vukovarsko-Srijemska županija",
-        "country": "Croatia",
-        "population_proper": "",
-        "iso2": "HR",
-        "capital": "minor",
-        "lat": "45.194722",
-        "lng": "18.8375",
-        "population": ""
-    },
-    {
         "city": "Ivanska",
         "admin": "Bjelovarsko-Bilogorska županija",
         "country": "Croatia",
@@ -2728,17 +2706,6 @@
         "population": ""
     },
     {
-        "city": "Starigrad",
-        "admin": "Splitsko-Dalmatinska županija",
-        "country": "Croatia",
-        "population_proper": "",
-        "iso2": "HR",
-        "capital": "minor",
-        "lat": "43.184564",
-        "lng": "16.600203",
-        "population": ""
-    },
-    {
         "city": "Sibinj",
         "admin": "Brodsko-Posavska županija",
         "country": "Croatia",
@@ -2758,17 +2725,6 @@
         "capital": "minor",
         "lat": "45.708333",
         "lng": "16.396944",
-        "population": ""
-    },
-    {
-        "city": "Otok",
-        "admin": "Splitsko-Dalmatinska županija",
-        "country": "Croatia",
-        "population_proper": "",
-        "iso2": "HR",
-        "capital": "minor",
-        "lat": "43.691389",
-        "lng": "16.738333",
         "population": ""
     },
     {
@@ -4793,17 +4749,6 @@
         "capital": "minor",
         "lat": "45.454444",
         "lng": "17.661389",
-        "population": ""
-    },
-    {
-        "city": "Novigrad",
-        "admin": "Zadarska županija",
-        "country": "Croatia",
-        "population_proper": "",
-        "iso2": "HR",
-        "capital": "minor",
-        "lat": "44.183889",
-        "lng": "15.554167",
         "population": ""
     },
     {
