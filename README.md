@@ -68,3 +68,7 @@ php artisan view:cache
 ## File upload
 
 In order to be able to upload a file enable: highlight_file() and tmpfile().
+
+## Supervisor
+
+`php artisan queue:work --sleep=3 --tries=3 --max-time=3600`
