@@ -3,7 +3,7 @@
 namespace App\Source\RideRequest\Domain\RequestRide;
 
 use App\Models\Ride;
-use App\Source\RideRequest\Domain\SendEmail\SendEmailLogic;
+use App\Source\RideRequest\Domain\NotifyUser\NotifyUserLogic;
 use App\Source\RideRequest\Infra\RequestRide\Services\SaveRideRequestService;
 use App\Source\RideRequest\Infra\RequestRide\Specifications\CanSendRequestSpecification;
 use App\Source\RideRequest\Infra\RequestRide\Specifications\IsRideRequestedSpecification;
@@ -37,6 +37,6 @@ class RequestRideLogic
         }
 
         $rideRequest = $this->saveRideRequestService->save($passengerId, $rideId);
-        SendEmailLogic::sendEmailToDriver($ride, $rideRequest);
+        NotifyUserLogic::notifyDriverAboutRideRequest($ride, $rideRequest);
     }
 }

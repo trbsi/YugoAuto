@@ -4,7 +4,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 10.4.1.
+ * Generated for Laravel 10.5.0.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3770,6 +3770,18 @@
                         return $instance->extend($driver, $callback);
         }
                     /**
+         * Set the application instance used by the manager.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return \Illuminate\Cache\CacheManager 
+         * @static 
+         */ 
+        public static function setApplication($app)
+        {
+                        /** @var \Illuminate\Cache\CacheManager $instance */
+                        return $instance->setApplication($app);
+        }
+                    /**
          * Determine if an item exists in the cache.
          *
          * @param array|string $key
@@ -6584,15 +6596,16 @@
          * Get the contents of a file as decoded JSON.
          *
          * @param string $path
+         * @param int $flags
          * @param bool $lock
          * @return array 
          * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
          * @static 
          */ 
-        public static function json($path, $lock = false)
+        public static function json($path, $flags = 0, $lock = false)
         {
                         /** @var \Illuminate\Filesystem\Filesystem $instance */
-                        return $instance->json($path, $lock);
+                        return $instance->json($path, $flags, $lock);
         }
                     /**
          * Get contents of a file with shared access.
@@ -15620,6 +15633,19 @@
                         return $instance->get($path);
         }
                     /**
+         * Get the contents of a file as decoded JSON.
+         *
+         * @param string $path
+         * @param int $flags
+         * @return array|null 
+         * @static 
+         */ 
+        public static function json($path, $flags = 0)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->json($path, $flags);
+        }
+                    /**
          * Create a streamed response for a given file.
          *
          * @param string $path
@@ -18626,6 +18652,70 @@
      
 }
 
+    namespace Intervention\Image\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Image {
+                    /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = [])
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
+        }
+                    /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
+        }
+                    /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
+        }
+                    /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+     
+}
+
     namespace Jenssegers\Agent\Facades { 
             /**
      * 
@@ -19157,6 +19247,57 @@
         {            //Method inherited from \Mobile_Detect         
                         /** @var \Jenssegers\Agent\Agent $instance */
                         return $instance->mobileGrade();
+        }
+         
+    }
+     
+}
+
+    namespace Kreait\Laravel\Firebase\Facades { 
+            /**
+     * 
+     *
+     * @method static \Kreait\Firebase\Contract\AppCheck appCheck()
+     * @method static \Kreait\Firebase\Contract\Auth auth()
+     * @method static \Kreait\Firebase\Contract\Database database()
+     * @method static \Kreait\Firebase\Contract\DynamicLinks dynamicLinks()
+     * @method static \Kreait\Firebase\Contract\Firestore firestore()
+     * @method static \Kreait\Firebase\Contract\Messaging messaging()
+     * @method static \Kreait\Firebase\Contract\RemoteConfig remoteConfig()
+     * @method static \Kreait\Firebase\Contract\Storage storage()
+     * @see \Kreait\Laravel\Firebase\FirebaseProjectManager
+     * @see \Kreait\Laravel\Firebase\FirebaseProject
+     */ 
+        class Firebase {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function project($name = null)
+        {
+                        /** @var \Kreait\Laravel\Firebase\FirebaseProjectManager $instance */
+                        return $instance->project($name);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getDefaultProject()
+        {
+                        /** @var \Kreait\Laravel\Firebase\FirebaseProjectManager $instance */
+                        return $instance->getDefaultProject();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setDefaultProject($name)
+        {
+                        /** @var \Kreait\Laravel\Firebase\FirebaseProjectManager $instance */
+                        return $instance->setDefaultProject($name);
         }
          
     }
@@ -20781,6 +20922,7 @@ namespace  {
              * @param array|string $columns
              * @param string $pageName
              * @param int|null $page
+             * @param \Closure|int|null $total
              * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator 
              * @throws \InvalidArgumentException
              * @static 
@@ -24121,7 +24263,9 @@ namespace  {
             class View extends \Illuminate\Support\Facades\View {}
             class Vite extends \Illuminate\Support\Facades\Vite {}
             class Debugbar extends \Barryvdh\Debugbar\Facades\Debugbar {}
+            class Image extends \Intervention\Image\Facades\Image {}
             class Agent extends \Jenssegers\Agent\Facades\Agent {}
+            class Firebase extends \Kreait\Laravel\Firebase\Facades\Firebase {}
             class Socialite extends \Laravel\Socialite\Facades\Socialite {}
             class Livewire extends \Livewire\Livewire {}
             class Flare extends \Spatie\LaravelIgnition\Facades\Flare {}

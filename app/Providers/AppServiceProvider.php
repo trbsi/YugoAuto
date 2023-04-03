@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Source\SystemCommunication\PushNotification\Infrastructure\Services\PushNotificationSenderInterface;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View as FacadeView;
 use Illuminate\Support\ServiceProvider;
@@ -14,7 +15,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
     }
 
     /**

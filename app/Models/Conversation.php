@@ -105,9 +105,11 @@ class Conversation extends Model
         return $this;
     }
 
-    public function getOtherUser(): User
+    public function getOtherUser(?int $authUserId = null): User
     {
-        if ($this->getSenderId() === Auth::id()) {
+        $authUserId = (null === $authUserId) ? Auth::id() : $authUserId;
+
+        if ($this->getSenderId() === $authUserId) {
             return $this->recipient;
         }
 

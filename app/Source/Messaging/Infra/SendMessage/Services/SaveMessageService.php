@@ -12,12 +12,14 @@ class SaveMessageService
         int $senderId,
         int $conversationId,
         string $content
-    ): void {
+    ): Message {
         $model = new Message();
         $model
             ->setSenderId($senderId)
             ->setConversationId($conversationId)
             ->setContent($content)
             ->save();
+
+        return $model;
     }
 }

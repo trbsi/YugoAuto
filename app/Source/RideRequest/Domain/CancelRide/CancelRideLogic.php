@@ -3,7 +3,7 @@
 namespace App\Source\RideRequest\Domain\CancelRide;
 
 use App\Models\RideRequest;
-use App\Source\RideRequest\Domain\SendEmail\SendEmailLogic;
+use App\Source\RideRequest\Domain\NotifyUser\NotifyUserLogic;
 use App\Source\RideRequest\Infra\CancelRide\Services\CancelRideService;
 use App\Source\RideRequest\Infra\CancelRide\Services\RemoveRatingService;
 use App\Source\RideRequest\Infra\CancelRide\Specifications\CanCancelRideSpecification;
@@ -35,7 +35,7 @@ class CancelRideLogic
 
         $this->removeRatingService->remove($rideRequest->ride, $passengerId);
 
-        SendEmailLogic::sendCancellationEmail($rideRequest, $authUserId);
+        NotifyUserLogic::sendCancellationNotification($rideRequest, $authUserId);
 
         return $rideRequest;
     }
