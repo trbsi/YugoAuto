@@ -29,7 +29,10 @@ class RestartRunCloudSupervisorCommand extends Command
      */
     public function handle()
     {
-        if (empty(env('RUNCLOUD_API_KEY')) || empty(env('RUNCLOUD_API_SECRET'))) {
+        $apiKey = config('server.runcloud.api_key');
+        $apiSecret = config('server.runcloud.api_secret');
+        
+        if (empty($apiKey) || empty($apiSecret)) {
             throw new Exception('Missing env varialbes');
         }
 
@@ -38,7 +41,7 @@ class RestartRunCloudSupervisorCommand extends Command
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
             'Authorization' => 'Basic ' . base64_encode(
-                    env('RUNCLOUD_API_KEY') . ':' . env('RUNCLOUD_API_SECRET')
+                    $apiKey . ':' . $apiSecret
                 )
         ])
             ->post('https://manage.runcloud.io/api/v2/servers/' . $serverId . '/supervisors/rebuild');
