@@ -21,20 +21,23 @@
             <div class="flex p-4">
                 @if ($user->getPhoneNumber())
                     <div class="w-1/2 text-center">
-                        {{__('Rating')}} <span class="font-bold">{{$user->profile->getRating()}}</span>
+                        @include('user.components.rating', [
+                        'rating' => $user->profile->getRating()
+                    ])
                     </div>
-                    <div class="w-0 border border-gray-300">
-
-                    </div>
+                    <div class="w-0 border border-gray-300"></div>
                     <div class="w-1/2 text-center">
-                        {{__('Phone')}} <span class="font-bold">
-                            <a class="underline" href="tel:{{$user->getPhoneNumber()}}">{{$user->getPhoneNumber()}}</a>
-                    </span>
+                        {{__('Phone')}} <a class="underline"
+                                           href="tel:{{$user->getPhoneNumber()}}">{{$user->getPhoneNumber()}}</a>
                     </div>
                 @else
                     @include('user.components.rating', [
                         'rating' => $user->profile->getRating()
                     ])
+                    <div class="w-0 border border-gray-300"></div>
+                    <div class="w-1/2 text-center">
+                        {{__('Number of ratings')}}: {{$user->profile->getRatingCount()}}
+                    </div>
                 @endif
             </div>
         </div>
