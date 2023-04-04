@@ -14,6 +14,24 @@ use ReflectionClass;
  * @method static \Illuminate\Database\Eloquent\Builder|PushToken newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PushToken newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PushToken query()
+ * @property int $id
+ * @property int $user_id
+ * @property string $platform
+ * @property string $device_id
+ * @property string $token
+ * @property string $token_type
+ * @property Carbon|null $last_push_sent_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereDeviceId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereLastPushSentAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken wherePlatform($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereTokenType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushToken whereUserId($value)
  * @mixin \Eloquent
  */
 class PushToken extends Model

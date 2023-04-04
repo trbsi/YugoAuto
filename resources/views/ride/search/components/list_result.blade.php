@@ -47,7 +47,7 @@ use Illuminate\Database\Eloquent\Collection;
                             {{__('Departure time')}}: {{$ride->getTimeFormatted()}}
                         </p>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
-                            {{$ride->getDescription()}}
+                            {!! $ride->getDescriptionFormatted() !!}
                         </p>
                         @if($ride->isFilled())
                             <div

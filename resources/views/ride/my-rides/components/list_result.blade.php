@@ -39,7 +39,7 @@
                             {{__('Number of seats')}}: {{$ride->getNumberOfSeats()}}
                         </p>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
-                            {{$ride->getDescription()}}
+                            {!! $ride->getDescriptionFormatted() !!}
                         </p>
 
                         @if($ride->isOwner() && $ride->isActiveRide())

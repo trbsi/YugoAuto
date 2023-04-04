@@ -52,6 +52,8 @@ php artisan optimize:clear
 php artisan route:cache
 php artisan config:cache
 php artisan view:cache
+
+php artisan runcloud:restart-supervisor
 ```
 
 ## Firebase credentials

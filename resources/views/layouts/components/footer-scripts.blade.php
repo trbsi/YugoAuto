@@ -7,3 +7,12 @@
 @include('components.cookie-consent')
 @include('components.google-analytics')
 @include('components.toastr')
+<script>
+    function isUserAuthenticated() {
+        @if(auth()->guest())
+            return false;
+        @else
+            return true;
+        @endif
+    }
+</script>
