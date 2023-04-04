@@ -31,7 +31,7 @@ class RestartRunCloudSupervisorCommand extends Command
     {
         $apiKey = config('server.runcloud.api_key');
         $apiSecret = config('server.runcloud.api_secret');
-        
+
         if (empty($apiKey) || empty($apiSecret)) {
             throw new Exception('Missing env varialbes');
         }

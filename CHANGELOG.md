@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Command for restarting supervisor
+- Database queue (queue emails and push notifications)
+- Push notifications feature for mobile
 - Nl2br and strip tags to ride description
 
 ## [1.1.1] - 2023-04-03
