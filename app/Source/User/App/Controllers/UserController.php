@@ -3,7 +3,6 @@
 namespace App\Source\User\App\Controllers;
 
 use App\Models\User;
-use App\Source\User\Domain\GetUser\GetUserLogic;
 use Illuminate\Support\Facades\Auth;
 
 class UserController
@@ -14,7 +13,7 @@ class UserController
         $user = User::findOrFail($id);
 
         return view(
-            'user.profile',
+            'user.profile.profile',
             compact('user', 'authUserId')
         );
     }

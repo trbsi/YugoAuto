@@ -28,6 +28,7 @@ Route::middleware([
     require __DIR__ . '/web/messaging.php';
     require __DIR__ . '/web/rating.php';
     require __DIR__ . '/web/push-token.php';
+    require __DIR__ . '/web/report.php';
 });
 
 //PUBLIC

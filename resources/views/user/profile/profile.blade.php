@@ -21,7 +21,7 @@
             <div class="flex p-4">
                 @if ($user->getPhoneNumber())
                     <div class="w-1/2 text-center">
-                        @include('user.components.rating', [
+                        @include('user.profile.components.rating', [
                         'rating' => $user->profile->getRating()
                     ])
                     </div>
@@ -31,7 +31,7 @@
                                            href="tel:{{$user->getPhoneNumber()}}">{{$user->getPhoneNumber()}}</a>
                     </div>
                 @else
-                    @include('user.components.rating', [
+                    @include('user.profile.components.rating', [
                         'rating' => $user->profile->getRating()
                     ])
                     <div class="w-0 border border-gray-300"></div>
@@ -40,6 +40,8 @@
                     </div>
                 @endif
             </div>
+
+            @include('user.profile.components.report-form')
         </div>
     </div>
 </x-guest-layout>

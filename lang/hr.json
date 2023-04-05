@@ -275,5 +275,9 @@
     "Optional": "Opcionalno polje",
     "Required": "Obavezno polje",
     "Switch ride": "Zamijeni gradove",
-    "Number of ratings": "Broj ocjena"
+    "Number of ratings": "Broj ocjena",
+    "Report user": "Prijavi korisnika",
+    "Report reason": "Razlog prijave",
+    "User has been reported. We will review it.": "Korisnik je prijavljen. Provjerit ćemo prijavu.",
+    "User report": "Prijava korisnika"
 }

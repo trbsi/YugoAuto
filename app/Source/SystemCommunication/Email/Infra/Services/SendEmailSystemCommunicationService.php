@@ -36,13 +36,12 @@ class SendEmailSystemCommunicationService implements SendSystemCommunicationInte
             return;
         }
 
-        /*if ($communicationValue->getToEmails()[0] === 'admin') {
+        if ($communicationValue->getToEmails()[0] === 'admin') {
             $emails = $this->getAdminEmailsService->getAdminEmails();
         } else {
             $emails = $communicationValue->getToEmails();
-        }*/
+        }
 
-        $emails = $communicationValue->getToEmails();
         Mail::to($emails)->send($mail);
     }
 }
