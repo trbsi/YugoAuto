@@ -12,8 +12,8 @@ use Exception;
 class CancelRideLogic
 {
     public function __construct(
-        private CanCancelRideSpecification $canCancelRideSpecification,
-        private CancelRideService $cancelRideService,
+        private readonly CanCancelRideSpecification $canCancelRideSpecification,
+        private readonly CancelRideService $cancelRideService,
         private readonly RemoveRatingService $removeRatingService
     ) {
     }

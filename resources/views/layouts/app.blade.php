@@ -31,6 +31,7 @@
     <!-- Page Content -->
     <main>
         @include('components.new-messages-alert')
+        @include('components.pending-requests-alert')
         {{ $slot }}
     </main>
 </div>

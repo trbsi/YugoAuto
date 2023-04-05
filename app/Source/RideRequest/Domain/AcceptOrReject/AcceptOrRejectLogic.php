@@ -6,15 +6,17 @@ use App\Source\RideRequest\Domain\NotifyUser\NotifyUserLogic;
 use App\Source\RideRequest\Enum\RideRequestEnum;
 use App\Source\RideRequest\Infra\AcceptOrReject\Services\ChangeStatusService;
 use App\Source\RideRequest\Infra\AcceptOrReject\Services\CreateRatingService;
+use App\Source\RideRequest\Infra\Common\Services\UpdatePendingRequestsCountService;
 use App\Source\RideRequest\Infra\Common\Specifications\CanAccessRideSpecification;
 use Exception;
 
 class AcceptOrRejectLogic
 {
     public function __construct(
-        private CanAccessRideSpecification $canDriverAccessRideSpecification,
-        private ChangeStatusService $changeStatusService,
-        private CreateRatingService $createRatingService
+        private readonly CanAccessRideSpecification $canDriverAccessRideSpecification,
+        private readonly ChangeStatusService $changeStatusService,
+        private readonly CreateRatingService $createRatingService,
+        private readonly UpdatePendingRequestsCountService $updatePendingRequestsCountService
     ) {
     }
 
@@ -48,6 +50,8 @@ class AcceptOrRejectLogic
                 $passengerId
             );
         }
+
+        $this->updatePendingRequestsCountService->decrease($rideRequest->ride);
 
         NotifyUserLogic::notifyPassengerAboutAcceptOrReject($rideRequest);
     }

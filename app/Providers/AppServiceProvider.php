@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Source\SystemCommunication\PushNotification\Infrastructure\Services\PushNotificationSenderInterface;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View as FacadeView;
 use Illuminate\Support\ServiceProvider;
@@ -23,11 +22,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         FacadeView::composer('*', function (View $view) {
-            $unreadMessages = 0;
+            $unreadMessages = $pendingRequestsCount = 0;
             if ($user = Auth::user()) {
-                $unreadMessages = $user->profile->getUnreadMessagesCount();
+                $profile = $user->profile;
+                $unreadMessages = $profile->getUnreadMessagesCount();
+                $pendingRequestsCount = $profile->getPendingRequestsCount();
             }
             $view->with('unreadMessages', $unreadMessages);
+            $view->with('pendingRequestsCount', $pendingRequestsCount);
         });
     }
 }

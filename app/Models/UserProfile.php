@@ -89,4 +89,15 @@ class UserProfile extends Model
         $this->unread_messages_count = $unread_messages_count;
         return $this;
     }
+
+    public function getPendingRequestsCount(): int
+    {
+        return $this->pending_requests_count;
+    }
+
+    public function setPendingRequestsCount(int $pending_requests_count): self
+    {
+        $this->pending_requests_count = $pending_requests_count;
+        return $this;
+    }
 }
