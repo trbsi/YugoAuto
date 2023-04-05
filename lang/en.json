@@ -23,5 +23,6 @@
     "Filter - time_earliest": "By time - earliest first",
     "Filter - time_latest": "By time - latest first",
     "Leave rating": "Rate/See ratings",
-    "Newest rides": "New rides"
+    "Newest rides": "New rides",
+    "If photo upload does not work": "If photo upload does not work from the app, go to :domain on your browser and upload there"
 }
