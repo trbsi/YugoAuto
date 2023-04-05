@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Source\RideRequest\Enum\RideRequestEnum;
 use App\Source\SystemCommunication\Base\Infra\Events\SystemCommunicationEvent;
 use App\Source\SystemCommunication\Email\Infra\Value\EmailSystemCommunicationValue;
+use App\Source\SystemCommunication\Email\Infra\Value\ViewDataValue;
 use App\Source\SystemCommunication\PushNotification\Infra\Value\PushNotificationConversationValue;
 use App\Source\SystemCommunication\PushNotification\Infra\Value\PushNotificationGenericValue;
 
@@ -26,11 +27,11 @@ class NotifyUserLogic
 
         $passenger = $rideRequest->passenger;
 
-        $viewData = [
-            'body' => $body,
-            'buttonUrl' => route('ride.my-rides'),
-            'buttonText' => __('View ride requests')
-        ];
+        $viewData = new ViewDataValue(
+            body: $body,
+            buttonUrl: route('ride.my-rides'),
+            buttonText: __('View ride requests')
+        );
         $emailEvent = new EmailSystemCommunicationValue(
             toEmails: [$passenger->getEmail()],
             subject: $subject,
@@ -57,14 +58,16 @@ class NotifyUserLogic
             $rideRequest->ride->driver :
             $rideRequest->passenger;
 
+        $viewData = new ViewDataValue(
+            body: $body,
+            buttonUrl: route('ride.my-rides'),
+            buttonText: __('View ride requests')
+        );
+
         $emailEvent = new EmailSystemCommunicationValue(
             toEmails: [$toPerson->getEmail()],
             subject: $subject,
-            viewData: [
-                'body' => $body,
-                'buttonUrl' => route('ride.my-rides'),
-                'buttonText' => __('View ride requests')
-            ]
+            viewData: $viewData
         );
 
         $pushEvent = new PushNotificationGenericValue(
@@ -85,12 +88,12 @@ class NotifyUserLogic
         $toPerson = $ride->driver;
         $subject = __('You have a new ride request');
         $body = __('Somebody left you a request', ['name' => $rideRequest->passenger->getName()]);
-        $viewData = [
-            'body' => $body,
-            'buttonUrl' => single_ride_requests_url($ride->getId()),
-            'buttonText' => __('View ride requests')
-        ];
 
+        $viewData = new ViewDataValue(
+            body: $body,
+            buttonUrl: single_ride_requests_url($ride->getId()),
+            buttonText: __('View ride requests')
+        );
         $emailEvent = new EmailSystemCommunicationValue(
             toEmails: [$toPerson->getEmail()],
             subject: $subject,

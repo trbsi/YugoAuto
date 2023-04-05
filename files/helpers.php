@@ -1,5 +1,6 @@
 <?php
 
+/* URL GENERATOR */
 if (!function_exists('user_profile_url')) {
     function user_profile_url(int $userId): string
     {
@@ -35,6 +36,15 @@ if (!function_exists('single_ride_requests_url')) {
     }
 }
 
+
+if (!function_exists('change_lang_url')) {
+    function change_lang_url(string $lang): string
+    {
+        return route('change.language', ['locale' => $lang]);
+    }
+}
+
+/* VARIOUS */
 if (!function_exists('build_ride_search_base_query')) {
     function build_ride_search_base_query(): string
     {
@@ -47,13 +57,15 @@ if (!function_exists('build_ride_search_base_query')) {
     }
 }
 
-if (!function_exists('change_lang_url')) {
-    function change_lang_url(string $lang): string
+
+if (!function_exists('get_available_locale')) {
+    function get_available_locale(): array
     {
-        return route('change.language', ['locale' => $lang]);
+        $data = config('app.available_locale');
+        asort($data);
+        return $data;
     }
 }
-
 
 
 

@@ -8,6 +8,14 @@
             <li>
                 <a href="{{route('contact')}}" class="underline">{{__('Contact')}}</a>
             </li>
+            &nbsp;|&nbsp;
+            <li>
+                <a href="{{route('policy.show')}}" class="underline">{{__('Privacy policy')}}</a>
+            </li>
+            &nbsp;|&nbsp;
+            <li>
+                <a href="{{route('terms.show')}}" class="underline">{{__('Terms of use')}}</a>
+            </li>
         </ul>
         <div class="mt-2 text-sm text-gray-500 sm:text-center dark:text-gray-400">
             Icon by <a href="https://freeicons.io/profile/5790">ColourCreatype</a> on <a href="https://freeicons.io">freeicons.io</a>

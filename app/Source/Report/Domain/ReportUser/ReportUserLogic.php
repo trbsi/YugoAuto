@@ -7,7 +7,8 @@ namespace App\Source\Report\Domain\ReportUser;
 use App\Models\User;
 use App\Source\SystemCommunication\Base\Infra\Events\SystemCommunicationEvent;
 use App\Source\SystemCommunication\Email\Infra\Value\EmailSystemCommunicationValue;
-use App\Source\SystemCommunication\Email\Infra\Value\FromValueObject;
+use App\Source\SystemCommunication\Email\Infra\Value\FromValue;
+use App\Source\SystemCommunication\Email\Infra\Value\ViewDataValue;
 
 class ReportUserLogic
 {
@@ -19,10 +20,8 @@ class ReportUserLogic
         $event = new EmailSystemCommunicationValue(
             toEmails: ['admin'],
             subject: __('User report'),
-            viewData: [
-                'body' => $content
-            ],
-            from: new FromValueObject(email: $user->getEmail(), name: $user->getName())
+            viewData: new ViewDataValue(body: $content),
+            from: new FromValue(email: $user->getEmail(), name: $user->getName())
         );
 
         SystemCommunicationEvent::dispatch($event);

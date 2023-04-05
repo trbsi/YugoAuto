@@ -9,16 +9,16 @@ use App\Source\SystemCommunication\Base\Infra\Value\SystemCommunicationValueInte
 final class EmailSystemCommunicationValue implements SystemCommunicationValueInterface
 {
     private array $toEmails;
-    private ?FromValueObject $from;
+    private ?FromValue $from;
     private string $subject;
     private string $bladeView;
-    private array $viewData;
+    private ViewDataValue $viewData;
 
     public function __construct(
         array $toEmails,
         string $subject,
-        array $viewData = [],
-        ?FromValueObject $from = null,
+        ViewDataValue $viewData,
+        ?FromValue $from = null,
         string $bladeView = 'emails.default_mail'
     ) {
         $this->toEmails = $toEmails;
@@ -33,7 +33,7 @@ final class EmailSystemCommunicationValue implements SystemCommunicationValueInt
         return array_filter($this->toEmails);
     }
 
-    public function getFrom(): ?FromValueObject
+    public function getFrom(): ?FromValue
     {
         return $this->from;
     }
@@ -48,7 +48,7 @@ final class EmailSystemCommunicationValue implements SystemCommunicationValueInt
         return $this->bladeView;
     }
 
-    public function getViewData(): array
+    public function getViewData(): ViewDataValue
     {
         return $this->viewData;
     }

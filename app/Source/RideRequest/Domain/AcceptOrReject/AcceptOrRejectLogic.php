@@ -26,7 +26,7 @@ class AcceptOrRejectLogic
     ) {
         //you can only accept or reject here
         if (!in_array($status, [RideRequestEnum::ACCEPTED->value, RideRequestEnum::REJECTED->value])) {
-            throw new Exception('You cannot set status to pending or cancelled');
+            throw new Exception('You cannot change the status');
         }
 
         //only driver can accept and reject

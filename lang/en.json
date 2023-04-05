@@ -1,10 +1,27 @@
 {
+    "Search ride": "Search rides",
+    "Minimum departure time": "Initial departure time",
+    "Maximum departure time": "Final departure time",
+    "Create ride": "Add a ride",
+    "pending": "Pending",
+    "accepted": "Accepted",
+    "rejected": "Rejected",
+    "cancelled": "Cancelled",
     "You have x pending requests": "Number of pending requests: :number",
+    "Ride is filled": "The ride is full",
+    "You have active ride for this date. Delete it first": "You have an active ride for this date. Delete it first",
+    "Cannot delete ride": "You cannot delete this ride",
+    "Cannot access ride": "You cannot access a ride",
+    "Cannot access conversation": "You cannot access a conversation",
     "Somebody left you a request": ":name left a ride request.",
+    "Driver accepted your request": "A driver accepted your request",
+    "Driver rejected your request": "A driver rejected your request",
     "Somebody sent you a message": ":name send you a message",
+    "Filter": "Filtriraj",
     "Filter - price_lowest": "By price - lowest first",
     "Filter - price_highest": "By price - highest first",
     "Filter - time_earliest": "By time - earliest first",
     "Filter - time_latest": "By time - latest first",
-    "Leave rating": "Leave and see ratings"
+    "Leave rating": "Rate/See ratings",
+    "Newest rides": "New rides"
 }

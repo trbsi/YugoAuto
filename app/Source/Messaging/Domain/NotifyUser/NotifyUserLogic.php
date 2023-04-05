@@ -9,6 +9,7 @@ use App\Models\Message;
 use App\Models\User;
 use App\Source\SystemCommunication\Base\Infra\Events\SystemCommunicationEvent;
 use App\Source\SystemCommunication\Email\Infra\Value\EmailSystemCommunicationValue;
+use App\Source\SystemCommunication\Email\Infra\Value\ViewDataValue;
 use App\Source\SystemCommunication\PushNotification\Infra\Value\PushNotificationConversationValue;
 
 class NotifyUserLogic
@@ -39,11 +40,11 @@ class NotifyUserLogic
         $subject = sprintf('%s - %s', __('You have a new message'), config('app.name'));
         $body = __('Somebody sent you a message', ['name' => $sender->getName()]);
 
-        $viewData = [
-            'body' => $body,
-            'buttonUrl' => conversation_url($conversation->getId()),
-            'buttonText' => __('View messages')
-        ];
+        $viewData = new ViewDataValue(
+            body: $body,
+            buttonUrl: conversation_url($conversation->getId()),
+            buttonText: __('View messages')
+        );
         $event = new EmailSystemCommunicationValue(
             toEmails: [$recipient->getEmail()],
             subject: $subject,

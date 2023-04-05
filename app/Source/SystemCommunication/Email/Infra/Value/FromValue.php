@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Source\SystemCommunication\Email\Infra\Value;
 
-class FromValueObject
+class FromValue
 {
     private string $email;
     private string $name;

@@ -5,7 +5,8 @@ namespace App\Source\Public\Domain\Contact;
 use App\Models\User;
 use App\Source\SystemCommunication\Base\Infra\Events\SystemCommunicationEvent;
 use App\Source\SystemCommunication\Email\Infra\Value\EmailSystemCommunicationValue;
-use App\Source\SystemCommunication\Email\Infra\Value\FromValueObject;
+use App\Source\SystemCommunication\Email\Infra\Value\FromValue;
+use App\Source\SystemCommunication\Email\Infra\Value\ViewDataValue;
 
 class ContactLogic
 {
@@ -28,8 +29,8 @@ class ContactLogic
         $value = new EmailSystemCommunicationValue(
             [config('mail.admin_email')],
             __('Contact from site') . ' ' . config('app.name'),
-            ['body' => $message],
-            new FromValueObject($email, $name)
+            new ViewDataValue(body: $message),
+            new FromValue($email, $name)
         );
         SystemCommunicationEvent::dispatch($value);
     }

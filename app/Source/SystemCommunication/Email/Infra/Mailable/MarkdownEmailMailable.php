@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Source\SystemCommunication\Email\Infra\Mailable;
 
-use App\Source\SystemCommunication\Email\Infra\Value\FromValueObject;
+use App\Source\SystemCommunication\Email\Infra\Value\FromValue;
+use App\Source\SystemCommunication\Email\Infra\Value\ViewDataValue;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -14,10 +15,9 @@ class MarkdownEmailMailable extends Mailable
     use Queueable;
     use SerializesModels;
 
-    public $subject;
     public string $bladeView;
-    public $viewData;
-    private ?FromValueObject $fromValueObject;
+    private ?FromValue $fromValueObject;
+    private ViewDataValue $viewDataObject;
 
     /**
      * Create a new message instance.
@@ -27,12 +27,12 @@ class MarkdownEmailMailable extends Mailable
     public function __construct(
         string $subject,
         string $bladeView,
-        array $viewData,
-        ?FromValueObject $fromValueObject
+        ViewDataValue $viewDataObject,
+        ?FromValue $fromValueObject
     ) {
         $this->subject = $subject;
         $this->bladeView = $bladeView;
-        $this->viewData = $viewData;
+        $this->viewDataObject = $viewDataObject;
         $this->fromValueObject = $fromValueObject;
     }
 
@@ -46,7 +46,7 @@ class MarkdownEmailMailable extends Mailable
         $mail = $this
             ->subject($this->subject)
             ->markdown($this->bladeView)
-            ->with($this->viewData);
+            ->with($this->viewDataObject->toArray());
 
         if ($this->fromValueObject) {
             $mail->replyTo($this->fromValueObject->getEmail(), $this->fromValueObject->getName());

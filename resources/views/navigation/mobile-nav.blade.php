@@ -130,7 +130,7 @@
         </div>
 
         <div class="mt-3 space-y-1">
-            @foreach(config('app.available_locale') as $key => $name)
+            @foreach(get_available_locale() as $key => $name)
                 <x-responsive-nav-link href="{{ change_lang_url($key) }}"
                                        :active="request()->routeIs('change.language')">
                     {{ $name }}

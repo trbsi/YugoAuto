@@ -3,7 +3,7 @@
 
 {!! $body !!}
 
-@if(isset($buttonUrl))
+@if(isset($buttonUrl) && !empty($buttonUrl))
 @component('mail::button', ['url' => $buttonUrl])
 {{$buttonText}}
 @endcomponent

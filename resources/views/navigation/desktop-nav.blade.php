@@ -17,7 +17,7 @@
         </x-slot>
 
         <x-slot name="content">
-            @foreach(config('app.available_locale') as $key => $name)
+            @foreach(get_available_locale() as $key => $name)
                 <x-dropdown-link href="{{ change_lang_url($key) }}">
                     {{ $name }}
                 </x-dropdown-link>
