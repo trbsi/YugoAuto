@@ -23,50 +23,43 @@ class RideRequestSeeder extends Seeder
         foreach (Ride::get() as $ride) {
             //request ride for the main user
             if ($ride->getDriverId() === $mainUser->getId()) {
-                for ($i = 0; $i < rand(1, 5); $i++) {
-                    try {
-                        $passenger = User::inRandomOrder()->where('id', '>', 1)->first();
-                        $rideRequest = RideRequest::factory()->state(
-                            [
-                                'passenger_id' => $passenger->getId(),
-                                'ride_id' => $ride->getId(),
-                            ]
-                        )->create();
-
-                        if ($rideRequest->getStatus() === RideRequestEnum::ACCEPTED->value) {
-                            Rating::factory()
-                                ->state(
-                                    [
-                                        'ride_id' => $ride->getId(),
-                                        'driver_id' => $ride->getDriverId(),
-                                        'passenger_id' => $passenger->getId(),
-                                    ]
-                                )->create();
-                        }
-                    } catch (QueryException $exception) {
-                        //duplicate entry
-                    }
+                for ($i = 0; $i < rand(1, 10); $i++) {
+                    $passenger = User::inRandomOrder()->where('id', '>', 1)->first();
+                    $this->createRequestAndRating($passenger, $ride);
                 }
             } //act as main user requested a ride
             else {
-                $rideRequest = RideRequest::factory()->state(
-                    [
-                        'passenger_id' => $mainUser->getId(),
-                        'ride_id' => $ride->getId(),
-                    ]
-                )->create();
-
-                if ($rideRequest->getStatus() === RideRequestEnum::ACCEPTED->value) {
-                    Rating::factory()
-                        ->state(
-                            [
-                                'ride_id' => $ride->getId(),
-                                'driver_id' => $ride->getDriverId(),
-                                'passenger_id' => $mainUser->getId(),
-                            ]
-                        )->create();
+                for ($i = 0; $i < rand(1, 10); $i++) {
+                    $this->createRequestAndRating($mainUser, $ride);
                 }
             }
+        }
+    }
+
+    private function createRequestAndRating(
+        User $passenger,
+        Ride $ride
+    ): void {
+        try {
+            $rideRequest = RideRequest::factory()->state(
+                [
+                    'passenger_id' => $passenger->getId(),
+                    'ride_id' => $ride->getId(),
+                ]
+            )->create();
+
+            if ($rideRequest->getStatus() === RideRequestEnum::ACCEPTED->value) {
+                Rating::factory()
+                    ->state(
+                        [
+                            'ride_id' => $ride->getId(),
+                            'driver_id' => $ride->getDriverId(),
+                            'passenger_id' => $passenger->getId(),
+                        ]
+                    )->create();
+            }
+        } catch (QueryException $exception) {
+            //duplicate entry
         }
     }
 }
