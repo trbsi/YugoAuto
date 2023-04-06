@@ -51,7 +51,7 @@ use Illuminate\Database\Eloquent\Collection;
                         </p>
                         @if($ride->isFilled())
                             <div
-                                class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+                                class="w-full text-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
                                 role="alert">
                                 {{__('Ride is filled')}}
                             </div>
@@ -62,7 +62,7 @@ use Illuminate\Database\Eloquent\Collection;
                         @else
                             <p class="mt-2">
                                 <span
-                                    class="p-1 status-text status-{{$ride->rideRequestForAuthUser->getStatus()}}">
+                                    class="w-full text-center p-1 status-text status-{{$ride->rideRequestForAuthUser->getStatus()}}">
                                 {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
                                 </span>
                             </p>
