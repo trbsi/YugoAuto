@@ -6,7 +6,8 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{env('GTAG')}}');
+  gtag('config', '{{config('app.google_analytics_tag')}}');
+
 
 
 

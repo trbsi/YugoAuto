@@ -221,7 +221,8 @@ return [
 
 
     /*
-     * Log viewer
+     * Various
      */
     'log_access_user_id' => env('LOG_VIEW_USER_ID', 0),
+    'google_analytics_tag' => env('GTAG', null),
 ];
