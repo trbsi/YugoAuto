@@ -20,8 +20,8 @@
         <div class="mt-2 text-sm text-gray-500 sm:text-center dark:text-gray-400">
             Icon by <a href="https://freeicons.io/profile/5790">ColourCreatype</a> on <a href="https://freeicons.io">freeicons.io</a>
         </div>
-        @if(env('GITHUB_URL'))
-            <a href="{{env('GITHUB_URL')}}"
+        @if(config('app.github_url'))
+            <a href="{{config('app.github_url')}}"
                target="_blank"
                class="mt-2 text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2">
                 <svg class="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab"
