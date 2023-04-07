@@ -18,7 +18,7 @@
                     class="p-4 bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <div class="flow-root">
                         @if ($conversations->isEmpty())
-                            <h1 class="pb-6 text-4xl text-center">{{__('No conversations')}}</h1>
+                            <h1 class="pb-6 text-4xl text-center dark:text-white">{{__('No conversations')}}</h1>
                         @else
                             @include('messaging.conversation.components.list_result')
                         @endif

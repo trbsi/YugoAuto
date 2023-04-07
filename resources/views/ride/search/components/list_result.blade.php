@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Collection;
     @endif
 
     @if($rides instanceof Collection)
-        <h2 class="pb-6 text-4xl">{{__('Newest rides')}}</h2>
+        <h2 class="pb-6 text-4xl dark:text-white">{{__('Newest rides')}}</h2>
     @endif
 
 

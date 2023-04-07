@@ -14,7 +14,7 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
                 @endif
                 @include('ride.search.components.list_result')
             @else
-                <h1 class="text-4xl text-center p-6">{{__('No rides')}}</h1>
+                <h1 class="text-4xl text-center p-6 dark:text-white">{{__('No rides')}}</h1>
             @endif
         </div>
     </div>

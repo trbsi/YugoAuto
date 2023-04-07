@@ -2,8 +2,8 @@
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="{{asset('assets/datetimepicker/jquery.datetimepicker.full.min.js')}}"></script>
-<script src="{{asset('assets/js/custom.js?v=1.5.0')}}"></script>
-<script src="{{asset('assets/js/functions.js?v=1.5.0')}}"></script>
+<script src="{{asset('assets/js/custom.js?v=1.6.1')}}"></script>
+<script src="{{asset('assets/js/functions.js?v=1.6.1')}}"></script>
 @include('components.cookie-consent')
 @include('components.google-analytics')
 @include('components.toastr')

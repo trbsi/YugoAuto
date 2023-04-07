@@ -17,7 +17,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="dark:bg-gray-800">
 @livewire('navigation-menu')
 
 <div class="font-sans text-gray-900 dark:text-gray-100 antialiased dark:bg-gray-800">
