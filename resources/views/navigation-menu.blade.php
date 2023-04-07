@@ -8,6 +8,7 @@
                     <a href="{{ route('home') }}">
                         <x-application-mark class="block h-9 w-auto"/>
                     </a>
+                    @include('components.dark-mode-switcher')
                 </div>
 
                 <!-- Navigation Links -->
