@@ -8,7 +8,8 @@ We require your email and name upon registration. The phone number is optional a
 number is visible to registered users only. Your name is visible to everyone. The email address is not visible and we
 use it only to send you notifications about ride requests.
 
-We use Google Analytics to check basic information about app usage.
+We use a 'remember me' cookie to keep you logged in to our website even after you close your browser. By continuing to
+use our website, you consent to the use of this cookie.
 
 We do not have a responsibility outside of this app and we are not responsible for any disputes between drivers and
 passengers outside of the app. The app is here to connect people for the purpose of ride-sharing. The app uses a rating

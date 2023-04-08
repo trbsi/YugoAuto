@@ -52,7 +52,13 @@ class SearchRidesService
     public function latestRides(): Collection
     {
         return Ride::orderBy('time', 'ASC')
-            ->with(['fromPlace', 'toPlace'])
+            ->with([
+                'fromPlace',
+                'toPlace',
+                'driver',
+                'rideRequestForAuthUser',
+                'acceptedRideRequests'
+            ])
             ->where('time', '>=', Carbon::now()->format('Y-m-d H:i:s'))
             ->limit(20)
             ->get();
