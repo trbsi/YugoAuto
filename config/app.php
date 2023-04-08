@@ -56,6 +56,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
     'github_url' => env('GITHUB_URL', null),
+    'ios_url' => env('IOS_APP_URL', 'https://apps.apple.com/us/app/yugoauto-ride-sharing/id6447209951'),
+    'android_url' => env('ANDROID_APP_URL', 'https://play.google.com/store/apps/details?id=com.yugoauto.app'),
     'asset_url' => env('ASSET_URL'),
 
     /*

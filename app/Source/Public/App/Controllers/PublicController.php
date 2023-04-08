@@ -41,4 +41,14 @@ class PublicController
         session()->put('locale', $locale);
         return redirect()->back();
     }
+
+    public function androidStore()
+    {
+        return redirect(config('app.android_url'));
+    }
+
+    public function iphoneStore()
+    {
+        return redirect(config('app.ios_url'));
+    }
 }
