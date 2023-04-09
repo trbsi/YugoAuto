@@ -29,7 +29,11 @@
     <!-- Page Heading -->
     @if (isset($header))
         <header class="bg-white dark:bg-gray-800 shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <button onclick="history.back()" type="button"
+                        class="py-2 px-2 mr-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    < {{__('Back')}}
+                </button>
                 {{ $header }}
             </div>
         </header>
