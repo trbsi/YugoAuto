@@ -2,35 +2,10 @@
 
 namespace App\Source\Public\App\Controllers;
 
-use App\Source\Public\App\Requests\ContactRequest;
-use App\Source\Public\Domain\Contact\ContactLogic;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 class PublicController
 {
-    public function sendMessage(
-        ContactRequest $request,
-        ContactLogic $logic
-    ) {
-        if (Auth::id()) {
-            $logic->sendForAuthUser(Auth::id(), $request->message);
-        } else {
-            $logic->sendForGuest(
-                $request->name,
-                $request->email,
-                $request->message
-            );
-        }
-
-        $request->session()->flash('success', __('Message sent'));
-        return redirect()->back();
-    }
-
-    public function contact()
-    {
-        return view('public.contact');
-    }
-
     /**
      * @see https://lokalise.com/blog/laravel-localization-step-by-step/
      */
@@ -50,5 +25,19 @@ class PublicController
     public function iphoneStore()
     {
         return redirect(config('app.ios_url'));
+    }
+
+    /**
+     * Add possibility to open and redirect to another route because sometimes we want to open yugoauto.com from mobile app in mobile browser.
+     * This is because on Android we cannot choose profile pic from Webview (it just does not work)
+     * thus people need to use mobile browser to do that
+     */
+    public function openAndRedirect(
+        string $route
+    ) {
+        if (empty($route) || !Route::has($route)) {
+            abort(404);
+        }
+        return redirect(route($route));
     }
 }

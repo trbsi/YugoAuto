@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.11.0] - 2023-04-09
+
+### Added
+
+- Add possibility to open and redirect to another route because sometimes we want to open yugoauto.com from mobile app
+  in mobile browser.
+    - This is because on Android we cannot choose profile pic from Webview, thus people need to use browser to do that
+
 ## [1.10.0] - 2023-04-09
 
 ### Added
