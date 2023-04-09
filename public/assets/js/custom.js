@@ -84,3 +84,17 @@ $('#switch_rides').click(function () {
     toPlace.val(tmpFromPlaceValue);
     toPlaceId.val(tmpFromPlaceIdValue);
 });
+
+//MODAL
+let modals = ['appstore'];
+$.each(modals, function (index, modalClass) {
+    var localStorageItem = 'modalClosed-' + modalClass;
+    if (!localStorage.getItem(localStorageItem)) {
+        $('.custom-modal-' + modalClass).show();
+    }
+    $('.custom-modal-button-' + modalClass).click(function () {
+        $('.custom-modal-' + modalClass).hide();
+        localStorage.setItem(localStorageItem, true);
+    });
+});
+

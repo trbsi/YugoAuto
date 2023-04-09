@@ -24,6 +24,8 @@
     {{ $slot }}
 </div>
 
+@stack('modals')
+@include('layouts.components.custom-modal-content')
 @include('layouts.components.footer')
 @include('layouts.components.footer-scripts')
 @stack('javascript')
