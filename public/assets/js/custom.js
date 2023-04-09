@@ -49,6 +49,7 @@ $(document).ready(function () {
         {
             format: 'd.m.Y H:i',
             minDate: 0,
+            dayOfWeekStart: 1,
         }
     );
 
@@ -56,7 +57,8 @@ $(document).ready(function () {
         {
             format: 'd.m.Y',
             minDate: 0,
-            timepicker: false
+            timepicker: false,
+            dayOfWeekStart: 1,
         }
     );
 });
