@@ -98,3 +98,18 @@ $.each(modals, function (index, modalClass) {
     });
 });
 
+//ON FORM SUBMIT
+$(".formOnSubmitAsk").on('click', function (event) {
+    event.preventDefault(); // prevent the default form submission
+    var $this = $(this);
+
+    Swal.fire({
+        title: areYouSureTitle,
+        showCancelButton: true,
+        confirmButtonText: 'OK',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $this.closest('form').submit();
+        }
+    });
+});
