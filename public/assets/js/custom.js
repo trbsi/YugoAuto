@@ -88,7 +88,7 @@ $('#switch_rides').click(function () {
 });
 
 //MODAL
-let modals = ['appstore'];
+let modals = [/*'appstore'*/];
 $.each(modals, function (index, modalClass) {
     var localStorageItem = 'modalClosed-' + modalClass;
     if (!localStorage.getItem(localStorageItem)) {
