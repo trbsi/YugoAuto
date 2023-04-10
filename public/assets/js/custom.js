@@ -88,7 +88,8 @@ $('#switch_rides').click(function () {
 });
 
 //MODAL
-let modals = [/*'appstore'*/];
+//values in array corresponds to modalClass in custom-modal-content.blade.php
+let modals = ['appstoreinfo'];
 $.each(modals, function (index, modalClass) {
     var localStorageItem = 'modalClosed-' + modalClass;
     if (!localStorage.getItem(localStorageItem)) {
