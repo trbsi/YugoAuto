@@ -41,6 +41,23 @@
                 @endif
             </div>
 
+            <hr>
+            <div class="flex p-4">
+                <div class="w-1/2 text-center">
+                    <a id="showReportForm" href="javascript:;"
+                       class="w-full block text-center underline">
+                        {{__('Report user')}}
+                    </a>
+                </div>
+                <div class="w-0 border border-gray-300"></div>
+                <div class="w-1/2 text-center">
+                    <a id="showReportForm" href="{{rating_for_user_url($user->getId())}}"
+                       class="w-full block text-center underline">
+                        {{__('View ratings')}}
+                    </a>
+                </div>
+            </div>
+
             @include('user.profile.components.report-form')
         </div>
     </div>

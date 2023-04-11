@@ -22,12 +22,12 @@
                                 <div class="flex flex-col">
                                     <div class="flex">
                                         <div class="w-1/2 p-4">
-                                            @include('rating.components.user-rating', [
+                                            @include('rating.components.rating-between-users', [
                                                'user' => $rating->driver
                                            ])
                                         </div>
                                         <div class="w-1/2 p-4">
-                                            @include('rating.components.user-rating', [
+                                            @include('rating.components.rating-between-users', [
                                                'user' => $rating->passenger
                                            ])
                                         </div>

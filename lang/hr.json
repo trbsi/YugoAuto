@@ -286,5 +286,7 @@
     "App available for mobile": "Aplikacija dostupna za mobitele",
     "Back": "Nazad",
     "Person cancelled a ride": ":name je otkazao/la prijevoz",
-    "Ride is created": "Prijevoz je kreiran"
+    "Ride is created": "Prijevoz je kreiran",
+    "View ratings": "Pregledaj ocjene",
+    "Ratings for user": "Ocjene za: :name"
 }

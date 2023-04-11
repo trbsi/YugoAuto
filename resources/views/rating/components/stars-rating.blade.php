@@ -1,6 +1,3 @@
-<div>
-    {{__('Rating')}}
-</div>
 <div class="rating">
     <label>
         @for($i = 1; $i <= $rating; $i++)

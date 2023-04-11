@@ -22,10 +22,17 @@ if (!function_exists('conversation_url')) {
     }
 }
 
-if (!function_exists('rating_url')) {
-    function rating_url(int $rideId): string
+if (!function_exists('rating_for_ride_url')) {
+    function rating_for_ride_url(int $rideId): string
     {
-        return route('rating.show', ['rideId' => $rideId]);
+        return route('rating.show-for-ride', ['rideId' => $rideId]);
+    }
+}
+
+if (!function_exists('rating_for_user_url')) {
+    function rating_for_user_url(int $userId): string
+    {
+        return route('rating.show-for-user', ['userId' => $userId]);
     }
 }
 

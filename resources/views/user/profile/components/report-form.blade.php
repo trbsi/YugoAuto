@@ -1,9 +1,5 @@
 @if (auth()->id() !== $user->getId())
     <div class="m-3">
-        <a id="showReportForm" href="javascript:;"
-           class="w-full block text-center underline">
-            {{__('Report user')}}
-        </a>
         <div class="mt-3">
             <form id="reportForm" class="hidden" method="POST" action="{{route('report.user')}}">
                 @csrf

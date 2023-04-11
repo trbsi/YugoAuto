@@ -33,8 +33,8 @@
 .rating {
     display: inline-block;
     position: relative;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
     font-size: 30px;
 }
 

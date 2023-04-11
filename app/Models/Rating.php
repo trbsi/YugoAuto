@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use App\Enum\TimeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -42,6 +44,11 @@ use Illuminate\Support\Facades\Auth;
 class Rating extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'updated_at' => 'datetime',
+        'created_at' => 'datetime',
+    ];
 
     public function driver(): BelongsTo
     {
@@ -140,6 +147,21 @@ class Rating extends Model
         return $this;
     }
 
+    public function getUpdatedAt(): Carbon
+    {
+        return $this->updated_at;
+    }
+
+    public function getUpdatedAtFormatted(): string
+    {
+        return $this->getUpdatedAt()->format(TimeEnum::DATE_FORMAT->value);
+    }
+
+    public function getCreatedAt(): Carbon
+    {
+        return $this->created_at;
+    }
+
     public function isDriverRated(): bool
     {
         return $this->getDriverRating() !== 0;
@@ -167,5 +189,32 @@ class Rating extends Model
     public function isCurrentUserPassenger(): bool
     {
         return $this->getPassengerId() === Auth::id();
+    }
+
+    public function getOtherUser(): User
+    {
+        if ($this->getDriverId() === Auth::id()) {
+            return $this->passenger;
+        }
+
+        return $this->driver;
+    }
+
+    public function getRatingForUser(int $userId): int
+    {
+        if ($this->getDriverId() === $userId) {
+            return $this->getDriverRating();
+        }
+
+        return $this->getPassengerRating();
+    }
+
+    public function getCommentForUser(int $userId): ?string
+    {
+        if ($this->getDriverId() === $userId) {
+            return $this->getDriverComment();
+        }
+
+        return $this->getPassengerComment();
     }
 }

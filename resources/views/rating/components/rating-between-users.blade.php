@@ -7,8 +7,7 @@
     <div class="flex-shrink-0">
         <a href="{{user_profile_url($user->getId())}}">
             <img class="w-8 h-8 rounded-full"
-                 src="{{$user->getProfilePhotoUrl()}}"
-                 alt="Neil image">
+                 src="{{$user->getProfilePhotoUrl()}}">
         </a>
     </div>
     <div class="flex-1 min-w-0">
