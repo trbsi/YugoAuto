@@ -220,7 +220,7 @@ class Ride extends Model
         return $this->getRideTime() > Carbon::now();
     }
 
-    public function canLeaveFeedback(): bool
+    public function canLeaveRating(): bool
     {
         return
             $this->getRideTime() < Carbon::now() &&

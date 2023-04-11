@@ -72,7 +72,7 @@
                                {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
                                </span>
                             </div>
-                            @if($ride->rideRequestForAuthUser->isAccepted())
+                            @if($ride->rideRequestForAuthUser->isAccepted() && $ride->isActiveRide())
                                 <div class="p-1">
                                     <a
                                         href="{{single_ride_requests_url($ride->getId())}}"
@@ -82,7 +82,7 @@
                                 </div>
                             @endif
                         @endif
-                        @if($ride->canLeaveFeedback())
+                        @if($ride->canLeaveRating())
                             <div class="p-1">
                                 <a
                                     href="{{rating_for_ride_url($ride->getId())}}"
