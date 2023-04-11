@@ -53,10 +53,16 @@ class NotifyUserLogic
 
     public static function sendCancellationNotification(RideRequest $rideRequest, int $authUserId): void
     {
-        $subject = $body = __('Your ride is cancelled');
         $toPerson = ($rideRequest->getPassengerId() === $authUserId) ?
             $rideRequest->ride->driver :
             $rideRequest->passenger;
+
+        $cancelledBy = ($rideRequest->getPassengerId() === $authUserId) ?
+            $rideRequest->passenger :
+            $rideRequest->ride->driver;
+
+        $subject = __('Your ride is cancelled');
+        $body = __('Person cancelled a ride', ['name' => $cancelledBy->getName()]);
 
         $viewData = new ViewDataValue(
             body: $body,

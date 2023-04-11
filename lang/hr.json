@@ -252,7 +252,7 @@
     "Somebody left you a request": ":name ti je ostavio/ostavila zahtjev za vožnju.",
     "Driver accepted your request": "Vožač je prihvatio tvoj zahtjev",
     "Driver rejected your request": "Vožač je odbio tvoj zahtjev",
-    "Your ride is cancelled": "Tvoj prijevoz je otkazan",
+    "Your ride is cancelled": "Prijevoz je otkazan",
     "You have a new message": "Imaš novu poruku",
     "View messages": "Pogledaj poruke",
     "Somebody sent you a message": ":name ti je poslao/poslala poruku",
@@ -284,5 +284,6 @@
     "If photo upload does not work": "Ako promjena profilne slike ne radi preko aplikacije, klikni ovdje i probaj ponovno.",
     "Now you can download this app on your phone": "Od sada možeš skinuti i aplikaciju YugoAuto za svoj iPhone i Android.",
     "App available for mobile": "Aplikacija dostupna za mobitele",
-    "Back": "Nazad"
+    "Back": "Nazad",
+    "Person cancelled a ride": ":name je otkazao/la prijevoz"
 }
