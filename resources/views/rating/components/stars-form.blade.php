@@ -4,6 +4,7 @@
 <form class="rating" method="POST" action="{{route('rating.save')}}">
     @csrf
     <input type="hidden" name="ride_id" value="{{$rideId}}">
+    <input type="hidden" name="user_to_be_rated_id" value="{{$userToBeRatedId}}">
     <div>
         <label>
             <input type="radio" name="stars" value="1"/>

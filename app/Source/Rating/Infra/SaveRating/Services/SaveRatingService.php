@@ -11,13 +11,25 @@ class SaveRatingService
 {
     public function save(
         int $graderId,
+        int $userToBeRatedId,
         int $rideId,
         int $rating,
         ?string $comment
     ): Rating {
-        $model = Rating::where(function (Builder $query) use ($graderId) {
-            $query->where('driver_id', $graderId)
-                ->orWhere('passenger_id', $graderId);
+        $model = Rating::where(function (Builder $query) use ($graderId, $userToBeRatedId) {
+            $query->where(
+                function (Builder $query) use ($graderId, $userToBeRatedId) {
+                    $query
+                        ->where('driver_id', $graderId)
+                        ->where('passenger_id', $userToBeRatedId);
+                }
+            )->orWhere(
+                function (Builder $query) use ($graderId, $userToBeRatedId) {
+                    $query
+                        ->where('driver_id', $userToBeRatedId)
+                        ->where('passenger_id', $graderId);
+                }
+            );
         })
             ->where('ride_id', $rideId)
             ->firstOrFail();

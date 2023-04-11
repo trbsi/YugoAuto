@@ -99,6 +99,7 @@ class RideController extends Controller
                 price: (int)$request->price,
                 description: $request->description
             );
+            $request->session()->flash('success', __('Ride is created'));
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
             return redirect()->back()->withInput();

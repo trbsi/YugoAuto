@@ -33,6 +33,7 @@
                                         </div>
                                     </div>
                                     <div class="flex">
+                                        {{-- DRIVER --}}
                                         <div class="w-1/2 p-4">
                                             @if($rating->isDriverRated())
                                                 @include('rating.components.stars-rating', [
@@ -41,12 +42,14 @@
                                                 ])
                                             @elseif($rating->isCurrentUserDriver() && !$rating->isDriverRated())
                                                 {{__('You are not rated')}}
-                                            @else
+                                            @elseif($rating->isCurrentUserPassenger())
                                                 @include('rating.components.stars-form', [
-                                                        'rideId' => $rating->getRideId()
+                                                        'rideId' => $rating->getRideId(),
+                                                        'userToBeRatedId' => $rating->getDriverId()
                                                 ])
                                             @endif
                                         </div>
+                                        {{-- PASSENGER --}}
                                         <div class="w-1/2 p-4">
                                             @if($rating->isPassengerRated())
                                                 @include('rating.components.stars-rating', [
@@ -55,9 +58,10 @@
                                                 ])
                                             @elseif($rating->isCurrentUserPassenger() && !$rating->isPassengerRated())
                                                 {{__('You are not rated')}}
-                                            @else
+                                            @elseif($rating->isCurrentUserDriver())
                                                 @include('rating.components.stars-form', [
-                                                    'rideId' => $rating->getRideId()
+                                                    'rideId' => $rating->getRideId(),
+                                                    'userToBeRatedId' => $rating->getPassengerId()
                                                 ])
                                             @endif
                                         </div>
