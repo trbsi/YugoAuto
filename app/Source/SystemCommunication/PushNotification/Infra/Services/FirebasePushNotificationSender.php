@@ -45,15 +45,18 @@ final class FirebasePushNotificationSender
                 if (str_contains($e->getMessage(), 'token is not a valid')) {
                     $token->delete();
                 }
-                Log::error($e->getMessage(), [
+                Log::error('Firebase error InvalidMessage', [
+                    'message' => $e->getMessage(),
                     'trace' => $e->getTraceAsString()
                 ]);
             } catch (FirebaseException $e) {
-                Log::error($e->getMessage(), [
+                Log::error('Firebase error FirebaseException', [
+                    'message' => $e->getMessage(),
                     'trace' => $e->getTraceAsString()
                 ]);
             } catch (Exception $e) {
-                Log::error($e->getMessage(), [
+                Log::error('Firebase error Exception', [
+                    'message' => $e->getMessage(),
                     'trace' => $e->getTraceAsString()
                 ]);
             }
