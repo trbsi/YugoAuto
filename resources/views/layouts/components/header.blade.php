@@ -14,8 +14,8 @@
 <meta name="theme-color" content="#ffffff">
 
 <meta property="og:title" content=YugoAuto>
-<meta property="og:site_name" content="YugoAuto - besplatna alternativa za BlaBlaCar">
+<meta property="og:site_name" content="YugoAuto - besplatna alternativa za dijeljenje prijevoza">
 <meta property="og:url" content=https://www.yugoauto.com/>
-<meta property="og:description" content="YugoAuto je besplatna alternativa za BlaBlaCar">
+<meta property="og:description" content="YugoAuto je besplatna alternativa za dijeljenje prijevoza">
 <meta property="og:type" content=website>
-<meta property="og:image" content=https://yugoauto.com/assets/img/fb-share.png>
+<meta property="og:image" content=https://yugoauto.com/assets/img/fb-share.png?v=1>
