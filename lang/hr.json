@@ -290,5 +290,6 @@
     "View ratings": "Pregledaj ocjene",
     "Ratings for user": "Ocjene za: :name",
     "Chosen city does not exist": "Izabrani grad ne postoji, izaberi grad sa popisa kada počneš upisivat slova.",
-    "Something went wrong with the app": "Nešto nije uredu, vrati se nazad i probaj ponovno ili nas kontaktiraj."
+    "Something went wrong with the app": "Nešto nije uredu, vrati se nazad i probaj ponovno ili nas kontaktiraj.",
+    "Deleted user": "Obrisani korisnik"
 }

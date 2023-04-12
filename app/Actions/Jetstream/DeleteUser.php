@@ -25,9 +25,9 @@ class DeleteUser implements DeletesUsers
         $user->tokens->each->delete();
         $user->socialLogins()->delete();
         $user
-            ->setEmail(sprintf('%s@del.xxx', md5(time() + $user->getId())))
+            ->setEmail(sprintf('%s@del.xxx', md5(mt_rand() + $user->getId())))
             ->setPhoneNumber(null)
-            ->setName(md5(time()))
+            ->setName(__('Deleted user'))
             ->setPassword(Hash::make(mt_rand()))
             ->save();
     }
