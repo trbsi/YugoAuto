@@ -6,6 +6,7 @@ namespace App\Source\Place\Domain\SearchPlaces;
 
 use App\Models\Place;
 use App\Source\Place\Infra\SearchPlaces\Services\GetPlacesService;
+use Exception;
 use Illuminate\Database\Eloquent\Collection;
 
 class SearchPlacesLogic
@@ -25,6 +26,10 @@ class SearchPlacesLogic
 
     public function getById(int $id): Place
     {
-        return $this->getPlacesService->getById($id);
+        try {
+            return $this->getPlacesService->getById($id);
+        } catch (Exception $exception) {
+            throw new Exception(__('Chosen city does not exist'));
+        }
     }
 }

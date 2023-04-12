@@ -28,5 +28,7 @@
     "Now you can download this app on your phone": "Now you can download YugoAuto app for your iPhone and Android.",
     "Your ride is cancelled": "Ride is cancelled",
     "Person cancelled a ride": ":name cancelled a ride",
-    "Ratings for user": "Ratings for: :name"
+    "Ratings for user": "Ratings for: :name",
+    "Chosen city does not exist": "Chosen city doesn't exist. Choose the city from the list when you start typing its name.",
+    "Something went wrong with the app": "Something went wrong. Go back and try again or contact us."
 }

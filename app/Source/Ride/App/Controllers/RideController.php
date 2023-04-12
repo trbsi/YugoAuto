@@ -29,40 +29,51 @@ class RideController extends Controller
         SearchRidesLogic $logic,
         SearchPlacesLogic $placesBusinessLogic
     ) {
-        $requiredParams = ['from_place_id', 'to_place_id'];
-        $fromPlace = $toPlace = $minTime = $maxTime = null;
+        try {
+            $requiredParams = ['from_place_id', 'to_place_id'];
+            $fromPlace = $toPlace = $minTime = $maxTime = null;
 
-        if ($this->hasRequiredParams($requiredParams, $request->all())) {
-            $fromPlace = $request->from_place_id;
-            $toPlace = $request->to_place_id;
-            $minTime = $request->min_time;
-            $maxTime = $request->max_time;
-            $filter = $request->filter ?? '';
+            if ($this->hasRequiredParams($requiredParams, $request->all())) {
+                $fromPlace = $request->from_place_id;
+                $toPlace = $request->to_place_id;
+                $minTime = $request->min_time;
+                $maxTime = $request->max_time;
+                $filter = $request->filter ?? '';
 
-            $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);
-            $toPlace = $placesBusinessLogic->getById((int)$toPlace);
+                $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);
+                $toPlace = $placesBusinessLogic->getById((int)$toPlace);
 
-            $rides = $logic->search(
-                fromPlaceId: $fromPlace->getId(),
-                toPlaceId: $toPlace->getId(),
-                minStartTime: $minTime ? Carbon::createFromFormat(TimeEnum::DATE_FORMAT->value, $minTime) : $minTime,
-                maxStartTime: $maxTime ? Carbon::createFromFormat(TimeEnum::DATE_FORMAT->value, $maxTime) : $maxTime,
-                filter: $filter
+                $rides = $logic->search(
+                    fromPlaceId: $fromPlace->getId(),
+                    toPlaceId: $toPlace->getId(),
+                    minStartTime: $minTime ? Carbon::createFromFormat(
+                        TimeEnum::DATE_FORMAT->value,
+                        $minTime
+                    ) : $minTime,
+                    maxStartTime: $maxTime ? Carbon::createFromFormat(
+                        TimeEnum::DATE_FORMAT->value,
+                        $maxTime
+                    ) : $maxTime,
+                    filter: $filter
+                );
+            } else {
+                $rides = $logic->latestRides();
+            }
+
+            return view(
+                (Auth::guest()) ? 'ride.search.public_list' : 'ride.search.private_list',
+                [
+                    'rides' => $rides,
+                    'fromPlace' => $fromPlace,
+                    'toPlace' => $toPlace,
+                    'minTime' => $minTime,
+                    'maxTime' => $maxTime,
+                ]
             );
-        } else {
-            $rides = $logic->latestRides();
+        } catch (Exception $exception) {
+            $request->session()->flash('warning', $exception->getMessage());
+            return redirect()->back();
         }
-
-        return view(
-            (Auth::guest()) ? 'ride.search.public_list' : 'ride.search.private_list',
-            [
-                'rides' => $rides,
-                'fromPlace' => $fromPlace,
-                'toPlace' => $toPlace,
-                'minTime' => $minTime,
-                'maxTime' => $maxTime,
-            ]
-        );
     }
 
     public function showCreate(
