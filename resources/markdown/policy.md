@@ -1,5 +1,7 @@
 # Privacy Policy
 
+Last changes: 2023-04-12
+
 This site is not sharing private data with anyone or any 3rd party application. The website/app (later on referred as "
 app") is here to help people
 share rides and lower their costs.

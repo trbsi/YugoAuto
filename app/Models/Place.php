@@ -20,6 +20,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Place whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Place whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Place whereUpdatedAt($value)
+ * @property int $country_id
+ * @method static \Illuminate\Database\Eloquent\Builder|Place whereCountryId($value)
  * @mixin \Eloquent
  */
 class Place extends Model

@@ -26,6 +26,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUnreadMessagesCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUserId($value)
+ * @property int $pending_requests_count
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile wherePendingRequestsCount($value)
  * @mixin \Eloquent
  */
 class UserProfile extends Model
