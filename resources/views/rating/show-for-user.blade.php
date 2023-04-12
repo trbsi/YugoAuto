@@ -18,7 +18,7 @@
                 <div
                     class="p-1 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
-                    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700 p-5">
+                    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700 dark:text-white p-5">
                         @foreach($ratings as $rating)
                             <li class="py-3 sm:py-4">
                                 <div class="flex flex-wrap">
