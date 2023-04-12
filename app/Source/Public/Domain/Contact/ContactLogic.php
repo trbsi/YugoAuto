@@ -7,6 +7,7 @@ use App\Source\SystemCommunication\Base\Infra\Events\SystemCommunicationEvent;
 use App\Source\SystemCommunication\Email\Infra\Value\EmailSystemCommunicationValue;
 use App\Source\SystemCommunication\Email\Infra\Value\FromValue;
 use App\Source\SystemCommunication\Email\Infra\Value\ViewDataValue;
+use Illuminate\Support\Carbon;
 
 class ContactLogic
 {
@@ -26,9 +27,15 @@ class ContactLogic
         string $name,
         string $message
     ): void {
+        $subject = sprintf(
+            '%s %s %s',
+            __('Contact from site'),
+            config('app.name'),
+            Carbon::now()->format('Y-m-d H:i:s')
+        );
         $value = new EmailSystemCommunicationValue(
             [config('mail.admin_email')],
-            __('Contact from site') . ' ' . config('app.name'),
+            $subject,
             new ViewDataValue(body: $message),
             new FromValue($email, $name)
         );
