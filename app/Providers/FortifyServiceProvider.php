@@ -33,7 +33,7 @@ class FortifyServiceProvider extends ServiceProvider
 
         $this->app->instance(
             VerifyEmailResponse::class,
-            new class implements RegisterResponse {
+            new class implements VerifyEmailResponse {
                 public function toResponse($request)
                 {
                     return redirect(route('home', ['account_verified' => 1]));

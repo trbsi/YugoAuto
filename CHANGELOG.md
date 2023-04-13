@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.15.0] - 2023-04-13
+
+### Fixed
+
+- Validate email even if not loggedin. Because when user registers in app, clicks on link in email and it takes him in
+  browser where user is not loggedin. Then we want to verify email even if user is not loggedin.
+    - Thanks
+      to https://stackoverflow.com/questions/64172138/laravel-8-how-do-i-verify-the-users-email-address-after-registration-without-ha
+
 ## [1.14.2] - 2023-04-13
 
 ### Fixed

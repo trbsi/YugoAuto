@@ -1,5 +1,6 @@
 <?php
 
+use App\Source\Auth\App\Controllers\VerifyEmailController;
 use App\Source\Public\App\Controllers\ContactController;
 use App\Source\Public\App\Controllers\PublicController;
 use App\Source\Ride\App\Controllers\RideController;
@@ -21,6 +22,10 @@ Route::prefix('contact')->group(function () {
 });
 
 Route::get('language/{locale}', [PublicController::class, 'changeLanguage'])->name('change.language');
+
+Route::get('/email/verify/{id}/{hash}', [VerifyEmailController::class, 'verify'])
+    ->middleware(['signed', 'throttle:6,1'])
+    ->name('verification.verify');
 
 //Route::get('/auth/redirect/{driver}', [SocialController::class, 'redirect'])->name('social_login.redirect');
 //Route::get('/auth/callback/{driver}', [SocialController::class, 'callback'])->name('social_login.callback');
