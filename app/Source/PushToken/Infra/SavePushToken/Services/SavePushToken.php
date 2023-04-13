@@ -3,6 +3,7 @@
 namespace App\Source\PushToken\Infra\SavePushToken\Services;
 
 use App\Models\PushToken;
+use Illuminate\Support\Carbon;
 
 class SavePushToken
 {
@@ -24,7 +25,8 @@ class SavePushToken
         if (null !== $pushToken) {
             $pushToken
                 ->setToken($token)
-                ->setTokenType($tokenType);
+                ->setTokenType($tokenType)
+                ->setUpdatedAt(Carbon::now());
 
             $pushToken->save();
             return;
@@ -36,7 +38,8 @@ class SavePushToken
             ->setDeviceId($deviceId)
             ->setPlatform($platform)
             ->setToken($token)
-            ->setTokenType($tokenType);
+            ->setTokenType($tokenType)
+            ->setUpdatedAt(Carbon::now());
 
         $pushToken->save();
     }
