@@ -10,7 +10,8 @@
                     <div class="flex items-center space-x-5">
                         <div
                             class="h-14 w-14 bg-indigo-200 rounded-full flex flex-shrink-0 justify-center items-center text-indigo-500 text-2xl font-mono">
-                            <img class="rounded-full" src="{{$user->getProfilePhotoUrl()}}">
+                            <img class="w-14 h-14 mx-auto object-cover rounded-full border-8 border-white"
+                                 src="{{$user->getProfilePhotoUrl()}}" alt="">
                         </div>
                         <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
                             <h2 class="leading-relaxed">{{__('Compose New Message')}}</h2>
