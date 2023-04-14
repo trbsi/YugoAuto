@@ -14,12 +14,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Thanks
       to https://stackoverflow.com/questions/64172138/laravel-8-how-do-i-verify-the-users-email-address-after-registration-without-ha
 
+## [1.14.4] - 2023-04-14
+
+### Fixed
+
+- Use PHP constants to set date and time format
+
 ## [1.14.3] - 2023-04-14
 
 ### Fixed
 
 - Fix datetime picker, remove seconds from time picker in "create ride"
--
 
 ## [1.14.2] - 2023-04-13
 
