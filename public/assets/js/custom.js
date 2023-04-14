@@ -47,7 +47,7 @@ $(function () {
 $(document).ready(function () {
     $('.datetimepicker').datetimepicker(
         {
-            format: 'd.m.Y H:i:s',
+            format: 'd.m.Y H:i',
             step: 15,
             minDate: 0,
             dayOfWeekStart: 1,
