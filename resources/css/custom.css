@@ -3,7 +3,7 @@
     max-height: 50px;
 }
 
-/* Ride request status*/
+/* Ride request status */
 .status-text {
     color: white;
     font-size: 14px;
@@ -26,6 +26,11 @@
 
 .status-cancelled {
     background: #eab308;
+}
+
+/* Rides */
+.non-active-ride {
+    opacity: 0.3;
 }
 
 
