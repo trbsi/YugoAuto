@@ -30,5 +30,6 @@
     "Person cancelled a ride": ":name cancelled a ride",
     "Ratings for user": "Ratings for: :name",
     "Chosen city does not exist": "Chosen city doesn't exist. Choose the city from the list when you start typing its name.",
-    "Something went wrong with the app": "Something went wrong. Go back and try again or contact us."
+    "Something went wrong with the app": "Something went wrong. Go back and try again or contact us.",
+    "Non active ride": "Inactive/old ride"
 }
