@@ -13,10 +13,17 @@ use App\Source\SystemCommunication\Email\Infra\Value\ViewDataValue;
 class ReportUserLogic
 {
     public function report(
-        int $userId,
+        int $authUserId,
+        int $reportedUserId,
         string $content
     ): void {
-        $user = User::findOrFail($userId);
+        $user = User::findOrFail($authUserId);
+        $content = sprintf(
+            '%s. <br><br> Reported user id: %s',
+            $content,
+            $reportedUserId
+        );
+
         $event = new EmailSystemCommunicationValue(
             toEmails: ['admin'],
             subject: __('User report'),

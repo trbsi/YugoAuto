@@ -15,8 +15,9 @@ class ReportController
         ReportUserLogic $logic
     ) {
         $logic->report(
-            userId: Auth::id(),
-            content: $request->report_content
+            authUserId: Auth::id(),
+            content: $request->report_content,
+            reportedUserId: (int)$request->reported_user_id,
         );
         $request->session()->flash('success', __('User has been reported. We will review it.'));
         return redirect()->back();

@@ -3,6 +3,7 @@
         <div class="mt-3">
             <form id="reportForm" class="hidden" method="POST" action="{{route('report.user')}}">
                 @csrf
+                <input type="hidden" name="reported_user_id" value="{{$user->getId()}}">
                 <textarea required
                           rows="5"
                           class="form-textarea w-full"

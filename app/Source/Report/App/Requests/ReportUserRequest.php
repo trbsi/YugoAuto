@@ -23,6 +23,7 @@ class ReportUserRequest extends FormRequest
     {
         return [
             'report_content' => ['required', 'string'],
+            'reported_user_id' => ['required', 'integer', 'exists:users,id'],
         ];
     }
 
