@@ -293,5 +293,11 @@
     "Something went wrong with the app": "Nešto nije uredu, vrati se nazad i probaj ponovno ili nas kontaktiraj.",
     "Deleted user": "Obrisani korisnik",
     "Non active ride": "Neaktivan/stari prijevoz",
-    "Wait until it loads and then save": "Pričekaj dok se učita pa klikni na gumb Spremi"
+    "Wait until it loads and then save": "Pričekaj dok se učita pa klikni na gumb Spremi",
+    "Update driver profile": "Ažuriraj profil vozača",
+    "Add more information about you as a driver so people can trust you more": "Dodaj više informacija o sebi kao vozaču tako da ti putnici mogu više vjerovati",
+    "Car name": "Ime auta",
+    "Car plate": "Tablice auta",
+    "Animals allowed": "Životinje dozvoljene?",
+    "Smoking allowed": "Pušenje dozvoljeno?"
 }

@@ -32,5 +32,11 @@
     "Chosen city does not exist": "Chosen city doesn't exist. Choose the city from the list when you start typing its name.",
     "Something went wrong with the app": "Something went wrong. Go back and try again or contact us.",
     "Non active ride": "Inactive/old ride",
-    "Wait until it loads and then save": "Wait until pic shows up and then click on the button"
+    "Wait until it loads and then save": "Wait until pic shows up and then click on the button",
+    "Update driver profile": "Update driver profile",
+    "Add more information about you as a driver so people can trust you more": "Add more information about you as a driver so passengers can trust you more",
+    "Car name": "Car name",
+    "Car plate": "Car licence plate",
+    "Animals allowed": "Animals allowed?",
+    "Smoking allowed": "Smoking allowed?"
 }

@@ -57,6 +57,9 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
  * @mixin \Eloquent
  */
 class Ride extends Model
