@@ -292,5 +292,6 @@
     "Chosen city does not exist": "Izabrani grad ne postoji, izaberi grad sa popisa kada počneš upisivat slova.",
     "Something went wrong with the app": "Nešto nije uredu, vrati se nazad i probaj ponovno ili nas kontaktiraj.",
     "Deleted user": "Obrisani korisnik",
-    "Non active ride": "Neaktivan/stari prijevoz"
+    "Non active ride": "Neaktivan/stari prijevoz",
+    "Wait until it loads and then save": "Pričekaj dok se učita pa klikni na gumb Spremi"
 }
