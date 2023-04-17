@@ -6,6 +6,9 @@ use App\Models\Country;
 use App\Models\Place;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\Seeder;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+use SplFileInfo;
 
 class PlacesSeeder extends Seeder
 {
@@ -14,25 +17,34 @@ class PlacesSeeder extends Seeder
      */
     public function run(): void
     {
-        $data = file_get_contents(__DIR__ . '/data/places.json');
-        $data = json_decode($data, true);
+        $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(__DIR__ . '/data/'));
 
-        foreach ($data as $place) {
-            try {
-                $country = Country::query()
-                    ->firstOrCreate(
-                        [
-                            'name' => $place['country']
-                        ]
-                    );
+        /** @var SplFileInfo $file */
+        foreach ($rii as $file) {
+            if ($file->isDir()) {
+                continue;
+            }
 
-                Place::factory()
-                    ->state([
-                        'name' => $place['city'],
-                        'country_id' => $country->getId()
-                    ])->create();
-            } catch (QueryException $exception) {
-                //unique key exception
+            $data = file_get_contents($file->getPathname());
+            $data = json_decode($data, true);
+
+            foreach ($data as $place) {
+                try {
+                    $country = Country::query()
+                        ->firstOrCreate(
+                            [
+                                'name' => $place['country']
+                            ]
+                        );
+
+                    Place::factory()
+                        ->state([
+                            'name' => $place['city'],
+                            'country_id' => $country->getId()
+                        ])->create();
+                } catch (QueryException $exception) {
+                    //unique key exception
+                }
             }
         }
     }
