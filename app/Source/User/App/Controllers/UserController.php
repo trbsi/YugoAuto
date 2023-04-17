@@ -10,7 +10,8 @@ class UserController
     public function show(int $id)
     {
         $authUserId = Auth::id();
-        $user = User::findOrFail($id);
+        $user = User::with(['profile', 'driverProfile'])
+            ->findOrFail($id);
 
         return view(
             'user.profile.profile',

@@ -3,7 +3,6 @@
 
 ?>
 <x-guest-layout>
-
     <div class="dark:bg-gray-800 bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
         <div class="dark:bg-gray-700 card w-96 mx-auto bg-white  shadow-xl hover:shadow">
             <img class="w-32 h-32 mx-auto object-cover rounded-full -mt-20 border-8 border-white"
@@ -19,27 +18,42 @@
 
             <hr class="mt-8">
             <div class="flex p-4">
-                @if ($user->getPhoneNumber())
-                    <div class="w-1/2 text-center">
-                        @include('user.profile.components.rating', [
-                        'rating' => $user->profile->getRating()
-                    ])
-                    </div>
-                    <div class="w-0 border border-gray-300"></div>
-                    <div class="w-1/2 text-center">
-                        {{__('Phone')}} <a class="underline"
-                                           href="tel:{{$user->getPhoneNumber()}}">{{$user->getPhoneNumber()}}</a>
-                    </div>
-                @else
-                    @include('user.profile.components.rating', [
-                        'rating' => $user->profile->getRating()
-                    ])
-                    <div class="w-0 border border-gray-300"></div>
-                    <div class="w-1/2 text-center">
-                        {{__('Number of ratings')}}: {{$user->profile->getRatingCount()}}
-                    </div>
-                @endif
+                @include('user.profile.components.rating', [
+                    'rating' => $user->profile->getRating()
+                ])
+                <div class="w-0 border border-gray-300"></div>
+                <div class="w-1/2 text-center">
+                    <b>{{__('Number of ratings')}}:</b> {{$user->profile->getRatingCount()}}
+                </div>
             </div>
+
+            <hr class="mt-8">
+            <div class="flex p-4">
+                <div class="w-full text-center">
+                    <b>{{__('Phone')}}:</b>
+                    <x-phone-number
+                        :phoneNumber="$user->getPhoneNumber()"
+                        :isPhoneNumberPublic="$user->isPhoneNumberPublic()"></x-phone-number>
+                </div>
+            </div>
+
+            @if ($user->driverProfile)
+                <hr>
+                <div class="flex p-4">
+                    <div class="w-1/2 text-center">
+                        <b>{{__('Car name')}}:</b>
+                        <br>
+                        {{$user->driverProfile->getCarName()}}
+                    </div>
+                    <div class="w-0 border border-gray-300"></div>
+                    <div class="w-1/2 text-center">
+                        @include('driver-profiles.components.smoking-animals', [
+                            'driverProfile' => $user->driverProfile,
+                            'shorthand' => true
+                        ])
+                    </div>
+                </div>
+            @endif
 
             <hr>
             <div class="flex p-4">

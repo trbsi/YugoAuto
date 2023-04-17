@@ -299,5 +299,15 @@
     "Car name": "Ime auta",
     "Car plate": "Tablice auta",
     "Animals allowed": "Životinje dozvoljene?",
-    "Smoking allowed": "Pušenje dozvoljeno?"
+    "Smoking allowed": "Pušenje dozvoljeno?",
+    "Animals allowed shorthand": "Životinje?",
+    "Smoking allowed shorthand": "Pušenje?",
+    "Driver": "Vozač",
+    "Make sure to add phone number": "Dodaj broj mobitela kako bi lakše komunicirao i povećao sigurnost. Broj mobitela možeš dodati dolje ispod (gdje mijenjaš profilnu sliku i ime)",
+    "Is phone number visible on your profile": "Prikaži broj na javnom profilu (profil je dostupan registriranim korisnicima)",
+    "Phone not added": "Broj nije dodan",
+    "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
+    "Update your driver profile": "Ažuriraj svoj profil kao vozač",
+    "Now you can update your driver profile": "Sada možete ažurirati vaš profil kao vozač. Dodati ime auta, tablice i dozvoljavate li pušenje i životinje. Također možeš dodati i svoj broj telefona.",
+    "Click here to update driver profile": "Klikni ovdje da ažuriraš profil vozača"
 }

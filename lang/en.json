@@ -38,5 +38,15 @@
     "Car name": "Car name",
     "Car plate": "Car licence plate",
     "Animals allowed": "Animals allowed?",
-    "Smoking allowed": "Smoking allowed?"
+    "Smoking allowed": "Smoking allowed?",
+    "Animals allowed shorthand": "Animals?",
+    "Smoking allowed shorthand": "Smoking?",
+    "Driver": "Driver",
+    "Make sure to add phone number": "Add your mobile phone number to make it easier to communicate and increase security. You can add your mobile phone number below (where you change your profile picture and name)",
+    "Is phone number visible on your profile": "Show number on public profile (profile is available to registered users)",
+    "Phone not added": "Broj nije dodan",
+    "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
+    "Update your driver profile": "Update your profile as a driver",
+    "Now you can update your driver profile": "You can now update your profile as a driver. Add car name, car plates and if you allow smoking and animals. You can also add your phone number.",
+    "Click here to update driver profile": "Click here to update your driver profile"
 }

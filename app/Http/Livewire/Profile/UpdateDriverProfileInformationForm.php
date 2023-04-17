@@ -13,6 +13,7 @@ class UpdateDriverProfileInformationForm extends Component
     public string $carPlate;
     public bool $animals;
     public bool $smoking;
+    public bool $hasPhoneNumber;
 
     protected $rules = [
         'carName' => 'required|string|max:20',
@@ -30,6 +31,7 @@ class UpdateDriverProfileInformationForm extends Component
     {
         $this->animals = false;
         $this->smoking = false;
+        $this->hasPhoneNumber = (Auth::user()->getPhoneNumber() !== null);
 
         $profile = DriverProfile::where('user_id', Auth::id())->first();
         if ($profile !== null) {

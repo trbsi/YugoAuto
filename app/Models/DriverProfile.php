@@ -11,6 +11,22 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile query()
+ * @property int $id
+ * @property int $user_id
+ * @property string $car_name
+ * @property string $car_plate
+ * @property int $animals
+ * @property int $smoking
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereAnimals($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereCarName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereCarPlate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereSmoking($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereUserId($value)
  * @mixin \Eloquent
  */
 class DriverProfile extends Model

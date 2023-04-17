@@ -24,17 +24,23 @@
 
         <div class="col-span-6 sm:col-span-4">
             <x-label for="animals" value="{{ __('Pets allowed') }}"/>
-            <x-checkbox id="animals" type="text" class="mt-1" wire:model.defer="animals"
+            <x-checkbox id="animals" class="mt-1" wire:model.defer="animals"
                         autocomplete="animals"/>
             <x-input-error for="animals" class="mt-2"/>
         </div>
 
         <div class="col-span-6 sm:col-span-4">
             <x-label for="smoking" value="{{ __('Smoking allowed') }}"/>
-            <x-checkbox id="smoking" type="text" class="mt-1" wire:model.defer="smoking"
+            <x-checkbox id="smoking" class="mt-1" wire:model.defer="smoking"
                         autocomplete="smoking"/>
             <x-input-error for="smoking" class="mt-2"/>
         </div>
+
+        @if(!$hasPhoneNumber)
+            <div class="col-span-6 sm:col-span-4">
+                <x-alert role="warning" :content="__('Make sure to add phone number')"></x-alert>
+            </div>
+        @endif
     </x-slot>
 
     <x-slot name="actions">
@@ -46,4 +52,5 @@
             {{ __('Save') }}
         </x-button>
     </x-slot>
+
 </x-form-section>

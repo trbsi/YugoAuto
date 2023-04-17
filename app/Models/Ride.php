@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
-
 /**
  * App\Models\Ride
  *
@@ -57,9 +56,6 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -228,7 +224,7 @@ class Ride extends Model
         return
             $this->getRideTime() < Carbon::now() &&
             (
-                //user is driver and has accepted rides
+                //user is driver and has accepted ride requests
                 ($this->isOwner() && $this->acceptedRideRequests->count() > 0) ||
                 (
                     //user is passenger and status is accepted

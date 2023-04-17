@@ -23,12 +23,25 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
      */
     public function update(User $user, array $input): void
     {
-        Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'phone_number' => ['nullable', 'string', 'max:255', Rule::unique('users')->ignore($user->id)],
-            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
-            'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:10024'],
-        ])->validateWithBag('updateProfileInformation');
+        Validator::make(
+            $input,
+            [
+                'name' => ['required', 'string', 'max:255'],
+                'phone_number' => [
+                    'nullable',
+                    'string',
+                    'max:255',
+                    Rule::unique('users')->ignore($user->id),
+                    'regex:/^\+[1-9][0-9]{7,14}$/'
+                ],
+                'is_phone_number_public' => ['nullable', 'boolean'],
+                'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+                'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:10024'],
+            ],
+            [
+                'regex' => __('validation.phone_number_validation_message')
+            ]
+        )->validateWithBag('updateProfileInformation');
 
         if (isset($input['photo'])) {
             $user->updateProfilePhoto($input['photo']);
@@ -41,7 +54,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         } else {
             $user->forceFill([
                 'name' => $input['name'],
-                'phone_number' => $this->getPhoneNumber($input['phone_number']),
+                'phone_number' => $input['phone_number'],
+                'is_phone_number_public' => $input['is_phone_number_public'] ?: false,
                 'email' => $input['email'],
             ])->save();
         }
@@ -56,23 +70,12 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     {
         $user->forceFill([
             'name' => $input['name'],
-            'phone_number' => $this->getPhoneNumber($input['phone_number']),
+            'phone_number' => $input['phone_number'],
+            'is_phone_number_public' => $input['is_phone_number_public'] ?: false,
             'email' => $input['email'],
             'email_verified_at' => null,
         ])->save();
 
         $user->sendEmailVerificationNotification();
-    }
-
-    private function getPhoneNumber(?string $phoneNumber): ?string
-    {
-        return null; //TODO remove this when you want to enable phone
-        if (!$phoneNumber) {
-            return null;
-        }
-
-        $phoneNumber = ltrim($phoneNumber, '0');
-        $phoneNumber = sprintf('+385%s', $phoneNumber); //TODO hardcoded for HR
-        return $phoneNumber;
     }
 }

@@ -10,7 +10,7 @@
 
     <ul class="divide-y divide-gray-200 dark:divide-gray-700">
         @foreach($rides as $ride)
-            <li class="pb-3 pt-3 sm:pb-4 @if($ride->isActiveRide()) bg-blue-50 dark:bg-gray-600 @else non-active-ride @endif">
+            <li class="pb-3 pt-3 sm:pb-4 @if(!$ride->isActiveRide()) non-active-ride @endif">
                 @if($ride->isActiveRide())
                     <div class="text-center font-bold text-xl mb-3 dark:text-white">{{__('Active ride')}}</div>
                 @else

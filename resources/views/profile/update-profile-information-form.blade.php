@@ -73,17 +73,29 @@
         </div>
 
         <!-- Phone number -->
-        <?php
-        /*
-               <div class="col-span-6 sm:col-span-4">
-                   <x-label for="phone_number" value="{{ __('Phone number') }}"/>
-                   <x-input id="phone_number" type="number" class="mt-1 block w-full" wire:model.defer="state.phone_number"
-                            autocomplete="phone_number"/>
-                   <x-input-error for="name" class="mt-2"/>
-               </div>
-               */ ?>
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="phone_number" value="{{ __('Phone number') }}"/>
+            <x-input id="phone_number"
+                     type="text"
+                     class="mt-1 block w-full"
+                     wire:model.defer="state.phone_number"
+                     autocomplete="phone_number"
+                     placeholder="+385..."/>
 
-            <!-- Email -->
+            <x-input-error for="phone_number" class="mt-2"/>
+        </div>
+
+        <!-- Phone number visibility -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="is_phone_number_public" value="{{ __('Is phone number visible on your profile') }}"/>
+            <x-checkbox id="is_phone_number_public"
+                        class="mt-1 block"
+                        wire:model.defer="state.is_phone_number_public"/>
+
+            <x-input-error for="is_phone_number_public" class="mt-2"/>
+        </div>
+
+        <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-label for="email" value="{{ __('Email') }}"/>
             <x-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email"

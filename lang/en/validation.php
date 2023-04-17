@@ -150,6 +150,7 @@ return [
     'url' => 'The :attribute field must be a valid URL.',
     'ulid' => 'The :attribute field must be a valid ULID.',
     'uuid' => 'The :attribute field must be a valid UUID.',
+    'phone_number_validation_message' => 'Phone number must be in format: "+385..." depending on your country',
 
     /*
     |--------------------------------------------------------------------------

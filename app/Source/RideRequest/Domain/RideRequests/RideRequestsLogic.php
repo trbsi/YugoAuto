@@ -33,6 +33,11 @@ class RideRequestsLogic
 
     public function getRide(int $rideId): Ride
     {
-        return Ride::find($rideId);
+        return Ride::with([
+            'driver.driverProfile',
+            'rideRequestForAuthUser',
+            'fromPlace',
+            'toPlace'
+        ])->find($rideId);
     }
 }

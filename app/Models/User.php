@@ -14,7 +14,6 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-
 /**
  * App\Models\User
  *
@@ -33,6 +32,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property Carbon|null $deleted_at
+ * @property-read \App\Models\DriverProfile|null $driverProfile
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  * @property-read \App\Models\UserProfile|null $profile
@@ -119,6 +119,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(UserProfile::class, 'user_id', 'id');
     }
 
+    public function driverProfile(): HasOne
+    {
+        return $this->hasOne(DriverProfile::class, 'user_id', 'id');
+    }
+
     public function socialLogins(): HasMany
     {
         return $this->hasMany(SocialLogin::class, 'user_id', 'id');
@@ -164,6 +169,17 @@ class User extends Authenticatable implements MustVerifyEmail
     public function setPhoneNumber(?string $phone_number): self
     {
         $this->phone_number = $phone_number;
+        return $this;
+    }
+
+    public function isPhoneNumberPublic(): bool
+    {
+        return $this->is_phone_number_public;
+    }
+
+    public function setIsPhoneNumberPublic(bool $isPhoneNumberPublic): self
+    {
+        $this->is_phone_number_public = $isPhoneNumberPublic;
         return $this;
     }
 
