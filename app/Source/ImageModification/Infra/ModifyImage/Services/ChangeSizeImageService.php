@@ -17,7 +17,6 @@ class ChangeSizeImageService
                 $constraint->aspectRatio();
                 $constraint->upsize();
             }
-        )
-            ->orientate();
+        );
     }
 }
