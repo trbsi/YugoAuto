@@ -31,7 +31,7 @@ class UpdateDriverProfileInformationForm extends Component
     {
         $this->animals = false;
         $this->smoking = false;
-        $this->hasPhoneNumber = (Auth::user()->getPhoneNumber() !== null);
+        $this->hasPhoneNumber = Auth::user()->hasPhoneNumber();
 
         $profile = DriverProfile::where('user_id', Auth::id())->first();
         if ($profile !== null) {

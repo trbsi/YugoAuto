@@ -20,6 +20,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    require __DIR__ . '/web/auth.php';
     require __DIR__ . '/web/ride.php';
     require __DIR__ . '/web/ride-request.php';
     require __DIR__ . '/web/user.php';

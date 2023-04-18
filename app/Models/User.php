@@ -103,6 +103,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'is_phone_number_verified' => 'boolean'
     ];
 
     /**
@@ -166,6 +167,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->phone_number;
     }
 
+    public function hasPhoneNumber(): bool
+    {
+        return $this->getPhoneNumber() !== null;
+    }
+
     public function setPhoneNumber(?string $phone_number): self
     {
         $this->phone_number = $phone_number;
@@ -180,6 +186,17 @@ class User extends Authenticatable implements MustVerifyEmail
     public function setIsPhoneNumberPublic(bool $isPhoneNumberPublic): self
     {
         $this->is_phone_number_public = $isPhoneNumberPublic;
+        return $this;
+    }
+
+    public function isPhoneNumberVerified(): bool
+    {
+        return $this->is_phone_number_verified;
+    }
+
+    public function setIsPhoneNumberVerified(bool $is_phone_number_verified): self
+    {
+        $this->is_phone_number_verified = $is_phone_number_verified;
         return $this;
     }
 

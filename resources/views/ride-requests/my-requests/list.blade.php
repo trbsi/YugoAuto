@@ -18,9 +18,7 @@
                     <h1 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h1>
                     <div>
                         <b>{{__('Driver')}}:</b> {{$ride->driver->getName()}}
-                        <x-phone-number
-                            :phoneNumber="$ride->driver->getPhoneNumber()"
-                            :isPhoneNumberPublic="true"></x-phone-number>
+                        <x-phone-number :user="$ride->driver" :forceShow="true"></x-phone-number>
                     </div>
                     <div>
                         <b>{{__('Departure time')}}:</b> {{$ride->getTimeFormatted()}}

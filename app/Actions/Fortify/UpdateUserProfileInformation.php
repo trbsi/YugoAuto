@@ -2,6 +2,7 @@
 
 namespace App\Actions\Fortify;
 
+use App\Enum\CoreEnum;
 use App\Models\User;
 use App\Source\User\Domain\UpdateProfilePhoto\UpdateProfilePhotoLogic;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -32,7 +33,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                     'string',
                     'max:255',
                     Rule::unique('users')->ignore($user->id),
-                    'regex:/^\+[1-9][0-9]{7,14}$/'
+                    'regex:' . CoreEnum::PHONE_REGEX->value
                 ],
                 'is_phone_number_public' => ['nullable', 'boolean'],
                 'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],

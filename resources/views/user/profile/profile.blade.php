@@ -31,9 +31,7 @@
             <div class="flex p-4">
                 <div class="w-full text-center">
                     <b>{{__('Phone')}}:</b>
-                    <x-phone-number
-                        :phoneNumber="$user->getPhoneNumber()"
-                        :isPhoneNumberPublic="$user->isPhoneNumberPublic()"></x-phone-number>
+                    <x-phone-number :user="$user" :forceShow="false"></x-phone-number>
                 </div>
             </div>
 

@@ -76,6 +76,7 @@
         <div class="col-span-6 sm:col-span-4">
             <x-label for="phone_number" value="{{ __('Phone number') }}"/>
             <x-input id="phone_number"
+                     :disabled="$state['is_phone_number_verified']"
                      type="text"
                      class="mt-1 block w-full"
                      wire:model.defer="state.phone_number"
@@ -83,6 +84,12 @@
                      placeholder="+385..."/>
 
             <x-input-error for="phone_number" class="mt-2"/>
+            
+            @if(!$state['is_phone_number_verified'])
+                <x-anchor role="red"
+                          :url="route('phone-verification.show')"
+                          :text="__('Verify phone number')"></x-anchor>
+            @endif
         </div>
 
         <!-- Phone number visibility -->
