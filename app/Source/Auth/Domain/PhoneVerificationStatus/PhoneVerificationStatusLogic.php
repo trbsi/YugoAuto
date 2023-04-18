@@ -14,8 +14,8 @@ class PhoneVerificationStatusLogic
 
     public function __construct()
     {
-        $this->phoneVerificationDailyLimit = config('firebase.phone_verification_daily_limit');
-        $this->phoneVerificationUserDailyLimit = config('firebase.phone_verification_user_daily_limit');
+        $this->phoneVerificationDailyLimit = (int)config('firebase.phone_verification_daily_limit');
+        $this->phoneVerificationUserDailyLimit = (int)config('firebase.phone_verification_user_daily_limit');
     }
 
     public function canVerify(int $userId): bool
