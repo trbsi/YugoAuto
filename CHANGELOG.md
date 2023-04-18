@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Verify phone number via Firebase
+- Verify phone number via Firebase.
     - Thanks ChatGPT and https://firebase.google.com/docs/auth/web/phone-auth?hl=en&authuser=0#web-version-9_5 for help
 
 ## [1.17.0] - 2023-04-16
