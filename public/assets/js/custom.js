@@ -92,12 +92,17 @@ $('#switch_rides').click(function () {
 //values in array corresponds to modalClass in custom-modal-content.blade.php
 let modals = [/*'appstoreinfo',*/ 'driverprofile'];
 $.each(modals, function (index, modalClass) {
+    const modal = $('.custom-modal-' + modalClass)
+    if (modal.length === 0) {
+        return;
+    }
+
     var localStorageItem = 'modalClosed-' + modalClass;
     if (!localStorage.getItem(localStorageItem)) {
-        $('.custom-modal-' + modalClass).show();
+        modal.show();
     }
     $('.custom-modal-button-' + modalClass).click(function () {
-        $('.custom-modal-' + modalClass).hide();
+        modal.hide();
         localStorage.setItem(localStorageItem, true);
     });
 });
