@@ -15,6 +15,7 @@ use App\Enum\CoreEnum;
             @if(!$canVerify)
                 <x-alert role="danger" :content="__('Phone verification quota exceeded')"></x-alert>
             @else
+                <h1 class="text-2xl text-center">{{__('Verify phone number')}}</h1>
                 <form>
                     @csrf
                     <div class="mt-4">
