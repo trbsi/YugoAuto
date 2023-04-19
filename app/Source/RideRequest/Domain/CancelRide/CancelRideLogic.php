@@ -5,8 +5,9 @@ namespace App\Source\RideRequest\Domain\CancelRide;
 use App\Models\RideRequest;
 use App\Source\RideRequest\Domain\NotifyUser\NotifyUserLogic;
 use App\Source\RideRequest\Infra\CancelRide\Services\CancelRideService;
-use App\Source\RideRequest\Infra\CancelRide\Services\RemoveRatingService;
+use App\Source\RideRequest\Infra\CancelRide\Services\RatingService;
 use App\Source\RideRequest\Infra\CancelRide\Specifications\CanCancelRideSpecification;
+use App\Source\RideRequest\Infra\CancelRide\Specifications\IsLateCancellationSpecification;
 use Exception;
 
 class CancelRideLogic
@@ -14,26 +15,40 @@ class CancelRideLogic
     public function __construct(
         private readonly CanCancelRideSpecification $canCancelRideSpecification,
         private readonly CancelRideService $cancelRideService,
-        private readonly RemoveRatingService $removeRatingService
+        private readonly RatingService $ratingService,
+        private readonly IsLateCancellationSpecification $isLateCancellationSpecification
     ) {
     }
 
     public function cancel(
         int $authUserId,
-        int $passengerId,
-        int $rideId
+        int $rideRequestId
     ): RideRequest {
-        if (!$this->canCancelRideSpecification->satisfiedBy($authUserId, $passengerId, $rideId)) {
+        $rideRequest = RideRequest::findOrFail($rideRequestId);
+        $ride = $rideRequest->ride;
+
+        $canCancel = $this->canCancelRideSpecification->satisfiedBy(
+            authUserId: $authUserId,
+            rideRequest: $rideRequest,
+            ride: $ride
+        );
+
+        if (!$canCancel) {
             throw new Exception('You cannot cancel this ride');
         }
 
         $rideRequest = $this->cancelRideService->cancel(
-            passengerId: $passengerId,
-            rideId: $rideId,
+            rideRequest: $rideRequest,
             authUserId: $authUserId
         );
 
-        $this->removeRatingService->remove($rideRequest->ride, $passengerId);
+        if ($this->isLateCancellationSpecification->isSatisfied($ride)) {
+            $this->ratingService->setLateCancellationRating($rideRequest);
+            $this->cancelRideService->increaseLastMinuteCancellation($authUserId);
+        } else {
+            $this->ratingService->remove($rideRequest);
+            $this->cancelRideService->decreaseRidesCount($rideRequest);
+        }
 
         NotifyUserLogic::sendCancellationNotification($rideRequest, $authUserId);
 

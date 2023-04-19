@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Place;
 use App\Models\Ride;
 use App\Models\User;
+use App\Models\UserProfile;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
@@ -27,6 +28,11 @@ class RideSeeder extends Seeder
                         'time' => $time->addMinutes(rand(1, 10))
                     ]
                 )->create();
+
+                $userProfile = UserProfile::where('user_id', $user->getId())->first();
+                $userProfile
+                    ->increaseTotalRidesCount()
+                    ->save();
             }
         }
     }

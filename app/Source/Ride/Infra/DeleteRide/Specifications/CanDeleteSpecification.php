@@ -10,8 +10,18 @@ class CanDeleteSpecification
 {
     public function isSatisfied(int $rideId, int $userId): bool
     {
-        return Ride::where('driver_id', $userId)
-                ->where('id', $rideId)
-                ->count() > 0;
+        $ride = Ride::where('driver_id', $userId)
+            ->where('id', $rideId)
+            ->first();
+
+        if ($ride === null) {
+            return false;
+        }
+
+        if ($ride->isNonActiveRide()) {
+            return false;
+        }
+
+        return true;
     }
 }

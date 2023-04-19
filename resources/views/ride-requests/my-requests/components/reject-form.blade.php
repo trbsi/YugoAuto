@@ -9,8 +9,7 @@
     onsubmit="return confirm('{{__('Are you sure?')}}');"
 >
     @csrf
-    <input type="hidden" name="ride_id" value="{{$ride->getId()}}">
-    <input type="hidden" name="user_id" value="{{$request->getPassengerId()}}">
+    <input type="hidden" name="ride_request_id" value="{{$request->getId()}}">
     <input type="hidden" name="status" value="{{\App\Source\RideRequest\Enum\RideRequestEnum::REJECTED->value}}">
     <div class=" mb-6">
         <button type="submit"

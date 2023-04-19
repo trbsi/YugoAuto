@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Source\Rating\App\Controllers;
 
+use App\Models\Ride;
 use App\Models\User;
 use App\Source\Rating\App\Requests\SaveRatingRequest;
 use App\Source\Rating\Domain\GetRatings\GetRatingsLogic;
@@ -19,9 +20,11 @@ class RatingController
         GetRatingsLogic $logic
     ) {
         $ratings = $logic->getRatings(userId: Auth::id(), rideId: $rideId);
+        $ride = Ride::findOrFail($rideId);
+
         return view(
             'rating.show-for-ride',
-            compact('ratings')
+            compact('ratings', 'ride')
         );
     }
 

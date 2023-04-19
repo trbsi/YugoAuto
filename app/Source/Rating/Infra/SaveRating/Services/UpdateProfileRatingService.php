@@ -8,9 +8,9 @@ use App\Models\UserProfile;
 
 class UpdateProfileRatingService
 {
-    public function update(int $userId, int $rating): void
+    public function update(int $ratedUserId, int $rating): void
     {
-        $profile = UserProfile::where('user_id', $userId)->first();
+        $profile = UserProfile::where('user_id', $ratedUserId)->first();
         $profile
             ->setRatingCount($profile->getRatingCount() + 1)
             ->setRatingSum($profile->getRatingSum() + $rating)

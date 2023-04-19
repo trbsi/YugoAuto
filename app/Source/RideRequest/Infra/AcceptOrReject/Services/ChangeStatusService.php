@@ -7,18 +7,20 @@ use App\Models\RideRequest;
 class ChangeStatusService
 {
     public function change(
-        int $rideId,
-        int $passengerId,
+        RideRequest $rideRequest,
         string $status
     ): RideRequest {
-        $model = RideRequest::where('ride_id', $rideId)
-            ->where('passenger_id', $passengerId)
-            ->first();
-
-        $model
+        $rideRequest
             ->setStatus($status)
             ->save();
 
-        return $model;
+        if ($rideRequest->isAccepted()) {
+            $userProfile = $rideRequest->passenger->profile;
+            $userProfile
+                ->increaseTotalRidesCount()
+                ->save();
+        }
+
+        return $rideRequest;
     }
 }

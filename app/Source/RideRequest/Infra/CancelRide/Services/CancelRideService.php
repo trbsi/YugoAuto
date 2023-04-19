@@ -3,26 +3,39 @@
 namespace App\Source\RideRequest\Infra\CancelRide\Services;
 
 use App\Models\RideRequest;
+use App\Models\UserProfile;
 use App\Source\RideRequest\Enum\RideRequestEnum;
 use Illuminate\Support\Carbon;
 
 class CancelRideService
 {
     public function cancel(
-        int $passengerId,
-        int $rideId,
+        RideRequest $rideRequest,
         int $authUserId
     ): RideRequest {
-        $model = RideRequest::where('passenger_id', $passengerId)
-            ->where('ride_id', $rideId)
-            ->first();
-
-        $model
+        $rideRequest
             ->setStatus(RideRequestEnum::CANCELLED->value)
-            ->setCancelledBy($authUserId)
+            ->setCancelledByUserId($authUserId)
             ->setCancelledTime(Carbon::now())
             ->save();
 
-        return $model;
+        return $rideRequest;
+    }
+
+    public function decreaseRidesCount(RideRequest $rideRequest): void
+    {
+        //decrease for a passenger
+        $profile = $rideRequest->passenger->profile;
+        $profile
+            ->decreaseTotalRidesCount()
+            ->save();
+    }
+
+    public function increaseLastMinuteCancellation(int $authUserId): void
+    {
+        $profile = UserProfile::where('user_id', $authUserId)->first();
+        $profile
+            ->increaseLastMinuteCancelledRidesCount()
+            ->save();
     }
 }

@@ -103,6 +103,9 @@ class Rating extends Model
         return $this;
     }
 
+    /**
+     * Given by a passenger
+     */
     public function getDriverRating(): int
     {
         return $this->driver_rating;
@@ -114,6 +117,9 @@ class Rating extends Model
         return $this;
     }
 
+    /**
+     * Given by a driver
+     */
     public function getPassengerRating(): int
     {
         return $this->passenger_rating;
@@ -125,6 +131,9 @@ class Rating extends Model
         return $this;
     }
 
+    /**
+     * Given by a passenger
+     */
     public function getDriverComment(): ?string
     {
         return $this->driver_comment;
@@ -136,6 +145,9 @@ class Rating extends Model
         return $this;
     }
 
+    /**
+     * Given by a driver
+     */
     public function getPassengerComment(): ?string
     {
         return $this->passenger_comment;
@@ -143,7 +155,7 @@ class Rating extends Model
 
     public function setPassengerComment(?string $passenger_comment): self
     {
-        $this->passenger_comment = $passenger_comment;
+        $this->passenger_comment = empty($passenger_comment) ? null : $passenger_comment;
         return $this;
     }
 

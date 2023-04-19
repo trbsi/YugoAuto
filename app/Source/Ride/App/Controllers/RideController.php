@@ -105,7 +105,7 @@ class RideController extends Controller
                 driverId: Auth::id(),
                 fromPlaceId: (int)$request->from_place_id,
                 toPlaceId: (int)$request->to_place_id,
-                time: Carbon::createFromFormat(TimeEnum::DATETIME_FORMAT->value, $request->time),
+                time: $request->time,
                 numberOfSeats: (int)$request->number_of_seats,
                 price: (int)$request->price,
                 description: $request->description

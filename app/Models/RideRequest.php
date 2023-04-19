@@ -92,7 +92,7 @@ class RideRequest extends Model
         return $this;
     }
 
-    public function getCancelledTime(): Carbon
+    public function getCancelledTime(): ?Carbon
     {
         return $this->cancelled_time;
     }
@@ -103,12 +103,12 @@ class RideRequest extends Model
         return $this;
     }
 
-    public function getCancelledBy(): int
+    public function getCancelledByUserId(): ?int
     {
         return $this->cancelled_by;
     }
 
-    public function setCancelledBy(int $cancelled_by): self
+    public function setCancelledByUserId(int $cancelled_by): self
     {
         $this->cancelled_by = $cancelled_by;
         return $this;
@@ -123,12 +123,7 @@ class RideRequest extends Model
     {
         return
             ($this->amIPassenger() || $this->ride->isMyRide()) &&
-            in_array(
-                $this->getStatus(),
-                [
-                    RideRequestEnum::ACCEPTED->value
-                ]
-            );
+            $this->isAccepted();
     }
 
     /**
@@ -137,17 +132,27 @@ class RideRequest extends Model
     public function canBeAcceptedOrRejected(): bool
     {
         return $this->ride->getDriverId() === Auth::id() &&
-            in_array(
-                $this->getStatus(),
-                [
-                    RideRequestEnum::PENDING->value
-                ]
-            );
+            $this->isPending();
     }
 
     public function isAccepted(): bool
     {
         return $this->getStatus() === RideRequestEnum::ACCEPTED->value;
+    }
+
+    public function isPending(): bool
+    {
+        return $this->getStatus() === RideRequestEnum::PENDING->value;
+    }
+
+    public function isCancelledInLastMinute(): bool
+    {
+        if ($this->getCancelledByUserId() === null) {
+            return false;
+        }
+
+        return $this->getStatus() === RideRequestEnum::CANCELLED->value &&
+            $this->getCancelledByUserId() !== Auth::id();
     }
 
     public function amIPassenger(): bool

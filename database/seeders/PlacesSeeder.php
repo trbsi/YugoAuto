@@ -31,9 +31,12 @@ class PlacesSeeder extends Seeder
             foreach ($data as $place) {
                 try {
                     $country = Country::query()
-                        ->firstOrCreate(
+                        ->updateOrCreate(
                             [
                                 'name' => $place['country']
+                            ],
+                            [
+                                'code' => $place['iso2']
                             ]
                         );
 

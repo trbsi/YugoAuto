@@ -14,6 +14,7 @@ class CanCreateRideSpecification
         int $fromPlaceId,
         int $toPlaceId
     ): bool {
+        //make sure user cannot create multiple rides for the same locations for that day
         return Ride::where('driver_id', $driverId)
                 ->where('to_place_id', $toPlaceId)
                 ->where('from_place_id', $fromPlaceId)

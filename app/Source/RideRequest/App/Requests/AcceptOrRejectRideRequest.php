@@ -23,8 +23,7 @@ class AcceptOrRejectRideRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'ride_id' => ['required', 'integer', 'exists:rides,id'],
-            'user_id' => ['required', 'integer', 'exists:users,id'],
+            'ride_request_id' => ['required', 'integer', 'exists:ride_requests,id'],
             'status' => ['required', 'in:' . implode(',', RideRequestEnum::values())],
         ];
     }

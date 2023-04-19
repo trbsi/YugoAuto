@@ -41,8 +41,7 @@ class RideRequestController
         try {
             $logic->acceptOrReject(
                 driverId: Auth::id(),
-                rideId: (int)$request->ride_id,
-                passengerId: (int)$request->user_id,
+                rideRequestId: (int)$request->ride_request_id,
                 status: $request->status
             );
         } catch (Exception $exception) {
@@ -77,19 +76,18 @@ class RideRequestController
         try {
             $rideRequest = $logic->cancel(
                 authUserId: $authUserId,
-                passengerId: $request->passenger_id,
-                rideId: $request->ride_id
+                rideRequestId: $request->ride_request_id
             );
         } catch (Exception $exception) {
             $request->session()->flash('error', $exception->getMessage());
-            Log::error($exception->getMessage());
-            return redirect()->back();
+            return redirect(route('ride.my-rides'));
         }
 
         //at this point passenger does not have access to this ride
         if ($rideRequest->getPassengerId() === $authUserId) {
             return redirect(route('ride.my-rides'));
         }
+
         return redirect()->back();
     }
 }
