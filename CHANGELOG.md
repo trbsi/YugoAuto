@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.18.3] - 2023-04-19
+
+### Added
+
+- Added Serbian cities
+    - Thanks to https://simplemaps.com/data/rs-cities
+- Added BiH cities
+    - Thanks to https://simplemaps.com/data/ba-cities
+- Added Slovenian cities
+    - Thanks to https://simplemaps.com/data/si-cities
+- Added Montenegro cities
+    - Thanks to https://simplemaps.com/data/me-cities
+
 ## [1.18.2] - 2023-04-19
 
 ### Changed

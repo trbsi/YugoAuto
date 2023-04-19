@@ -6246,5 +6246,2875 @@
         "lat": 46.1,
         "lng": 19.66667,
         "population": 100386
+    },
+    {
+        "city": "Sarajevo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Banja Luka",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Mostar",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bijeljina",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Tuzla",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Prijedor",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Zenica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Doboj",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Zvornik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Sanski Most",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Lukavac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bihać",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bugojno",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Žepče",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Trebinje",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bosanska Krupa",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Čapljina",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Breza",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Derventa",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Goražde",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Foča",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Sapna",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Jablanica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Vareš",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Livno",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bosanski Petrovac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Mrkonjić Grad",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Drvar",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Velika Kladuša",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Višegrad",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Tomislavgrad",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Grude",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Neum",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Teočak",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Petrovo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Brčko",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Ilidža",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Vogošća",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Lukavica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Tešanj",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Omanjska",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Matuzići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Klokotnica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Gračanica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Živinice",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bužim",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kalesija",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Gradačac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Vitez",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Srebrenik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Orašje",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Cazin",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Visoko",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kiseljak",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Banovići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Domaljevac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Busovača",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Ljubuški",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Stanari",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Šamac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Čitluk",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kakanj",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Novi Travnik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Travnik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Odžak",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Vukosavlje",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Ugljevik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Laktaši",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Modriča",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Hadžići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Čelić",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Maglaj",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Donji Žabar",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Novi Grad",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Jajce",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bratunac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Široki Brijeg",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Osmaci",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Gradiška",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Brod",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Ilijaš",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Zavidovići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Prnjavor",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Gornji Vakuf",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Lopare",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Ključ",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Stolac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Posušje",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Teslić",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Vlasenica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Milići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Čelinac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Donji Vakuf",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kozarska Dubica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Fojnica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kreševo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Jezero",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Pale",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Srbac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kladanj",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kotor Varoš",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Pelagićevo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Prozor",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kneževo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Šekovići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Dobratići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Olovo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Srebrenica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kostajnica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Konjic",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Rudo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kopači",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Šipovo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Čajniče",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Donji Dubovik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Sokolac",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Trnovo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Rogatica",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bileća",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Oštra Luka",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Hreša",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Nevesinje",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Gacko",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Ravno",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Gornji Ribnik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Han Pijesak",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Ljubinje",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kupres",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Prača",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Berkovići",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Novo Selo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Bosansko Grahovo",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Glamoč",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Kalinovik",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Drinić",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Potoci",
+        "population": 0,
+        "country": "Bosnia and Herzegovina"
+    },
+    {
+        "city": "Beograd",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Novi Sad",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Niš",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Zemun",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kragujevac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Subotica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Valjevo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Loznica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Zrenjanin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Pančevo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Čačak",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kraljevo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Novi Pazar",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Leskovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Užice",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kruševac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vranje",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Sombor",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Batajnica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kikinda",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Prijepolje",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vršac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bor",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bačka Palanka",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Priboj",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bajina Bašta",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vrbas",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ćuprija",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Senta",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Trstenik",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bačka Topola",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Sjenica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bela Crkva",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ada",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vrnjačka Banja",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kanjiža",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Žabalj",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Odžaci",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Sremski Karlovci",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Beočin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Sokobanja",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Lapovo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Melenci",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bački Petrovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bogatić",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Horgoš",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bač",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Banatski Karlovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Debeljača",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Stara Moravica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Irig",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Čoka",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Elemir",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ečka",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Markovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Novi Slankamen",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vladimirovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Perlez",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kamenica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bašaid",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Aradac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Alibunar",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vreoci",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Čenta",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Klek",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Deliblato",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Padej",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Lazarevo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Novi Žednik",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Crna Trava",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Jagodina",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Šabac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Gornji Milanovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Požega",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Krupanj",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Lebane",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vladičin Han",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Knjaževac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ljubovija",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Smederevska Palanka",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Mali Zvornik",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Surdulica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Požarevac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Zaječar",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Paraćin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Lučani",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Smederevo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Aleksinac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Despotovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kladovo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Pirot",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vlasotince",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Prokuplje",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Batočina",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Dimitrovgrad",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Doljevac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Velika Plana",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Svilajnac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Svrljig",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Šid",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Negotin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bojnik",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Topola",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Blace",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Apatin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Arilje",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kovin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Boljevac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kosjerić",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ćićevac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Plandište",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Varvarin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ražanj",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Mionica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Aranđelovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kula",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Novi Bečej",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bečej",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Žitorađa",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Titel",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Merošina",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Stara Pazova",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bosilegrad",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Knić",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Sečanj",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kovačica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Medveđa",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Žitište",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Čajetina",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Sremska Mitrovica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ivanjica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Inđija",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Žabari",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Petrovac na Mlavi",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Mali Iđoš",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ub",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Rača",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Srbobran",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ljig",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Rekovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Novi Kneževac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Lajkovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Aleksandrovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Malo Crniće",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kuršumlija",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Raška",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Golubac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Pećinci",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Nova Crnja",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Majdanpek",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ruma",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Vladimirci",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Tutin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Babušnica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Brus",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Osečina",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Veliko Gradište",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kučevo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Koceljeva",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Temerin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Gadžin Han",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Opovo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Žagubica",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Trgovište",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Nova Varoš",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bela Palanka",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Preševo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Bujanovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Mladenovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Petrovaradin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Obrenovac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Grocka",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Surčin",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Barajevo",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Niška Banja",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Lazarevac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Sopot",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Kostolac",
+        "population": 0,
+        "country": "Serbia"
+    },
+    {
+        "city": "Ljubljana",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Maribor",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kranj",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Celje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Koper",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Velenje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Novo Mesto",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ptuj",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kamnik",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Jesenice",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Domžale",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Nova Gorica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Izola",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Murska Sobota",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Škofja Loka",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Postojna",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vrhnika",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Slovenska Bistrica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kočevje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Grosuplje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ravne na Koroškem",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Slovenj Gradec",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Krško",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Brežice",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ajdovščina",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Litija",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Sežana",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Zagorje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Idrija",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Črnomelj",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Slovenske Konjice",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Žalec",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Bled",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Hrastnik",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šentjur",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Prevalje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Sevnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ilirska Bistrica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ruše",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Cerknica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Trebnje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Piran",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šempeter pri Gorici",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Žiri",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Laško",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Lenart v Slovenskih Goricah",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Metlika",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ankaran",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Solkan",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Mežica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dravograd",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Gornja Radgona",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Lendava",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Radlje ob Dravi",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Borovnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vojnik",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Beltinci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vipava",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Radeče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ormož",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Naklo",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Odranci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Bovec",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vuzenica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šentjernej",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kobarid",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kostanjevica na Krki",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Gornji Petrovci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Tišina",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Bistrica ob Sotli",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Radovljica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Trbovlje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ivančna Gorica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Rogaška Slatina",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Žirovnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Štore",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Cerklje na Gorenjskem",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šoštanj",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Prebold",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Miklavž na Dravskem Polju",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Mozirje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Polzela",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Spodnje Hoče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Selnica ob Dravi",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šmartno",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Medvode",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Moravče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kanal",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Nazarje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Mengeš",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Zreče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Preddvor",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Poljčane",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šmarje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Komenda",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Škofljica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Brezovica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Muta",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Radenci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Log",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Spodnji Duplek",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ljutomer",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Oplotnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Lukovica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šmartno",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šenčur",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Mirna",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Rače",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vitanje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Majšperk",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Horjul",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Luče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Spodnja Hajdina",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vodice",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Pivka",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Braslovče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Lovrenc na Pohorju",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Črna na Koroškem",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Pesnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dobrna",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šentilj",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vransko",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šentrupert",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Logatec",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Tržič",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Bohinjska Bistrica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Trzin",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Rečica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Gorišnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Volčja Draga",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dornava",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Železniki",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dol",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ig",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Gorenja Vas",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Cerkno",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Stari Trg",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Sveti Jurij",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Videm",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ljubno",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Straža",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šmarješke Toplice",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kidričevo",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Semič",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Starše",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dobrovo",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Turnišče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Tabor",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Križevci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Sveta Trojica v Slovenskih Goricah",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Sveta Ana",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Tolmin",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Benedikt",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dolenjske Toplice",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Veržej",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Zgornja Kungota",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Črenšovci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Mirna Peč",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Markovci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Žužemberk",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dobrova",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Velike Lašče",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Puconci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Škocjan",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Mokronog",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kozina",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Velika Polana",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Cankova",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Središče ob Dravi",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Rogašovci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Nova Vas",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Apače",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Cerkvenjak",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kuzma",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Juršinci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Gornji Grad",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Videm pri Ptuju",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Cirkulane",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ribnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Miren",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Zavrč",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Podlehnik",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Ribnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Zgornje Gorje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Tomaž pri Ormožu",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Vitomarci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Komen",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Divača",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Destrnik",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kozje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Jurovski Dol",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dobje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Moravske-Toplice",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Podvelka",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Trnovska Vas",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Makole",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Grad",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Razkrižje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Rogatec",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Osilnica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Sodražica",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Dobrovnik",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Mislinja",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Podčetrtek",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Hrib-Loški Potok",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kobilje",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kranjska Gora",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Žetale",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Šalovci",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Solčava",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Hodoš",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Kostel",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Zgornje Jezersko",
+        "population": 0,
+        "country": "Slovenia"
+    },
+    {
+        "city": "Podgorica",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Pljevlja",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Ulcinj",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Budva",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Herceg Novi",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Bijelo Polje",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Cetinje",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Plav",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Bar",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Berane",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Mojkovac",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Rožaje",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Žabljak",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Andrijevica",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Prošćenje",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Muo",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Vojno Selo",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Desni Meteh",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Kavač",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Bogajići",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Sveti Stefan",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Žari",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Podostrog",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Bartula",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Donji Stoliv",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Sutvara",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Pržno",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Skić",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Mašnica",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Štitarica",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Gornja Ržanica",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Donji Morinj",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Donji Orahovac",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Murino",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Boreti",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Stevanovac",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Tivat",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Tuzi",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Kotor",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Petnjica",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Danilovgrad",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Nikšić",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Gusinje",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Kolašin",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Šavnik",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Plužine",
+        "population": 0,
+        "country": "Montenegro"
+    },
+    {
+        "city": "Golubovci",
+        "population": 0,
+        "country": "Montenegro"
     }
 ]
