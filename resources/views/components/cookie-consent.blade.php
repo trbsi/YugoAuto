@@ -23,7 +23,7 @@
 <script> window.start.init({
         Palette: "palette2",
         Mode: "floating right",
-        Message: "We use a 'remember me' cookie to keep you logged in. By continuing to use our app, you consent to the use of this cookie.",
+        Message: "{{__('We use a remember me cookie to keep you logged in. By continuing to use our app, you consent to the use of this cookie. We do not use cookies for tracking.')}}",
         Location: "https://www.yugoauto.com/privacy-policy",
         Time: "1",
     })</script>
