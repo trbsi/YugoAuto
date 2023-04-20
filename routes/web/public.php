@@ -8,6 +8,7 @@ use App\Source\Ride\App\Controllers\RideController;
 Route::get('/', [RideController::class, 'search'])->name('home');
 Route::get('android', [PublicController::class, 'androidStore'])->name('android.store');
 Route::get('iphone', [PublicController::class, 'iphoneStore'])->name('iphone.store');
+Route::get('app', [PublicController::class, 'app'])->name('app.redirect');
 Route::get('open-and-redirect/{route}', [PublicController::class, 'openAndRedirect'])->name('open-and-redirect');
 
 Route::prefix('ride')->group(function () {

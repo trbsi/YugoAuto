@@ -2,6 +2,7 @@
 
 namespace App\Source\Public\App\Controllers;
 
+use Detection\MobileDetect;
 use Illuminate\Support\Facades\Route;
 
 class PublicController
@@ -25,6 +26,20 @@ class PublicController
     public function iphoneStore()
     {
         return redirect(config('app.ios_url'));
+    }
+
+
+    public function app(MobileDetect $mobileDetect)
+    {
+        if ($mobileDetect->isiOS()) {
+            return redirect(config('app.ios_url'));
+        }
+
+        if ($mobileDetect->isAndroidOS()) {
+            return redirect(config('app.android_url'));
+        }
+
+        return redirect(route('home'));
     }
 
     /**
