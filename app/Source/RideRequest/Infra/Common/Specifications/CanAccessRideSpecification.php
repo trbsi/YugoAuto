@@ -8,10 +8,10 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
 
 class CanAccessRideSpecification
 {
-    public function isSatisfiedByDriver(int $userId, int $rideId): bool
+    public function isSatisfiedByDriver(int $driverId, int $rideId): bool
     {
-        return Ride::where('driver_id', $userId)
-                ->where('id', $rideId)
+        return Ride::where('id', $rideId)
+                ->where('driver_id', $driverId)
                 ->count() > 0;
     }
 
@@ -24,14 +24,18 @@ class CanAccessRideSpecification
                 ->where('id', $rideId)
                 ->count() > 0;
 
-        $rideRequestCount = RideRequest::where('passenger_id', $userId)
-            ->where('ride_id', $rideId);
-
-        if ($status !== null) {
-            $rideRequestCount->where('status', $status->value);
+        if ($rideCount) {
+            return true;
         }
-        $rideRequestCount = $rideRequestCount->count();
 
-        return $rideCount || $rideRequestCount;
+        $rideRequest = RideRequest::where('ride_id', $rideId)
+            ->where('passenger_id', $userId)
+            ->first();
+
+        if ($rideRequest && ($rideRequest->isAccepted() || $rideRequest->isCancelledInLastMinute())) {
+            return true;
+        }
+
+        return false;
     }
 }

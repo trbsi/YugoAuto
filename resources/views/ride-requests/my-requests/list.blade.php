@@ -21,7 +21,7 @@
                         <x-phone-number :user="$ride->driver" :forceShow="true"></x-phone-number>
                     </div>
                     <div>
-                        <b>{{__('Departure time')}}:</b> {{$ride->getTimeFormatted()}}
+                        <b>{{__('Departure time')}}:</b> {{$ride->getRideTimeFormatted()}}
                     </div>
                     @if ($ride->driver->driverProfile && ($ride->isMyRide() || $ride->rideRequestForAuthUser->isAccepted()))
                         <div>

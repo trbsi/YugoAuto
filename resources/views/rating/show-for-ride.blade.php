@@ -16,6 +16,13 @@
                 <div
                     class="p-1 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
+                    <div class="p-6">
+                        <h1 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h1>
+                        <div>
+                            <b>{{__('Departure time')}}:</b> {{$ride->getRideTimeFormatted()}}
+                        </div>
+                    </div>
+
                     <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                         @foreach($ratings as $rating)
                             <li class="py-3 sm:py-4">
@@ -45,7 +52,8 @@
                                             @elseif($rating->isCurrentUserPassenger())
                                                 @include('rating.components.stars-form', [
                                                         'rideId' => $rating->getRideId(),
-                                                        'userToBeRatedId' => $rating->getDriverId()
+                                                        'userToBeRatedId' => $rating->getDriverId(),
+                                                        'comment' => $rating->getDriverComment(),
                                                 ])
                                             @endif
                                         </div>
@@ -61,7 +69,8 @@
                                             @elseif($rating->isCurrentUserDriver())
                                                 @include('rating.components.stars-form', [
                                                     'rideId' => $rating->getRideId(),
-                                                    'userToBeRatedId' => $rating->getPassengerId()
+                                                    'userToBeRatedId' => $rating->getPassengerId(),
+                                                    'comment' => $rating->getPassengerComment(),
                                                 ])
                                             @endif
                                         </div>

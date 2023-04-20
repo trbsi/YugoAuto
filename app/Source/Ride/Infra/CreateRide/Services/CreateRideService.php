@@ -18,16 +18,22 @@ class CreateRideService
         int $price,
         ?string $description
     ): void {
-        $model = new Ride();
-        $model
+        $ride = new Ride();
+        $ride
             ->setDriverId($driverId)
             ->setCurrency('EUR')
             ->setPrice($price)
             ->setDescription($description)
             ->setRideTime($time)
+            ->setRideTimeUtc($time->clone()->utc())
             ->setNumberOfSeats($numberOfSeats)
             ->setFromPlaceId($fromPlaceId)
             ->setToPlaceId($toPlaceId)
+            ->save();
+
+        $userProfile = $ride->driver->profile;
+        $userProfile
+            ->increaseTotalRidesCount()
             ->save();
     }
 }

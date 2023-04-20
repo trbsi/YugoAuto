@@ -10,7 +10,7 @@ class UpdatePendingRequestsCountService
         Ride $ride
     ): void {
         $driverProfile = $ride->driver->profile;
-        $driverProfile->setPendingRequestsCount($driverProfile->getPendingRequestsCount() + 1)
+        $driverProfile->increasePendingRequestsCount()
             ->save();
     }
 
@@ -18,13 +18,15 @@ class UpdatePendingRequestsCountService
         Ride $ride
     ): void {
         $driverProfile = $ride->driver->profile;
+        $driverProfile->decreasePendingRequestsCount()
+            ->save();
+    }
 
-        //do not go below 0
-        if ($driverProfile->getPendingRequestsCount() === 0) {
-            return;
-        }
-        
-        $driverProfile->setPendingRequestsCount($driverProfile->getPendingRequestsCount() - 1)
+    public function setToZero(
+        Ride $ride
+    ): void {
+        $driverProfile = $ride->driver->profile;
+        $driverProfile->setPendingRequestsCount(0)
             ->save();
     }
 }

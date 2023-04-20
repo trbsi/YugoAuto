@@ -19,6 +19,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereUpdatedAt($value)
+ * @property string $code
+ * @method static \Illuminate\Database\Eloquent\Builder|Country whereCode($value)
  * @mixin \Eloquent
  */
 class Country extends Model
@@ -38,6 +40,20 @@ class Country extends Model
     public function setName(string $name): self
     {
         $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * ISO2 code
+     */
+    public function getCode(): string
+    {
+        return $this->code;
+    }
+
+    public function setCode(string $code): self
+    {
+        $this->code = $code;
         return $this;
     }
 }

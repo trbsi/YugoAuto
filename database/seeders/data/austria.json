@@ -2,1761 +2,2113 @@
     {
         "city": "Wien",
         "population": "1897491",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Graz",
         "population": "295781",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Linz",
         "population": "204846",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Salzburg",
         "population": "155031",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Innsbruck",
         "population": "132493",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Klagenfurt",
         "population": "100316",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Villach",
         "population": "62822",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wels",
         "population": "62505",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sankt P\u00f6lten",
+        "city": "Sankt Pölten",
         "population": "52686",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Dornbirn",
         "population": "51128",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wiener Neustadt",
         "population": "41491",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Steyr",
         "population": "39178",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Feldkirch",
         "population": "32247",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bregenz",
         "population": "28881",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Leonding",
         "population": "26934",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Klosterneuburg",
         "population": "26233",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Baden",
         "population": "25853",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wolfsberg",
         "population": "25488",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Leoben",
         "population": "25344",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Krems an der Donau",
         "population": "24453",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Traun",
         "population": "23810",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Amstetten",
         "population": "23233",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Lustenau",
         "population": "21997",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Lienz",
         "population": "21383",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Rankweil",
         "population": "21199",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "M\u00f6dling",
+        "city": "Mödling",
         "population": "21128",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gmunden",
         "population": "13111",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Telfs",
         "population": "12675",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bludenz",
         "population": "12643",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bruck an der Mur",
         "population": "12622",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ansfelden",
         "population": "12605",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hallein",
         "population": "12505",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bischofshofen",
         "population": "11821",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ebreichsdorf",
         "population": "11555",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "G\u00e4nserndorf",
+        "city": "Gänserndorf",
         "population": "11529",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ternitz",
         "population": "11335",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Saalfelden am Steinernen Meer",
         "population": "11186",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Tulln",
         "population": "11176",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schwechat",
         "population": "10833",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Perchtoldsdorf",
         "population": "10809",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Korneuburg",
         "population": "10624",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Lauterach",
         "population": "10528",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schwaz",
         "population": "10513",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kufstein",
         "population": "10335",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Kremsm\u00fcnster",
+        "city": "Kremsmünster",
         "population": "10292",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "H\u00f6chst",
+        "city": "Höchst",
         "population": "10179",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Waidhofen an der Ybbs",
         "population": "10137",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mistelbach",
         "population": "10009",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Marchtrenk",
         "population": "9839",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "G\u00f6tzis",
+        "city": "Götzis",
         "population": "9677",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "St. Johann im Pongau",
         "population": "9526",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Kitzb\u00fchel",
+        "city": "Kitzbühel",
         "population": "9466",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hohenems",
         "population": "9312",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Friesach",
         "population": "9227",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zwettl",
         "population": "9165",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Ischl",
         "population": "9087",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "M\u00fcrzzuschlag",
+        "city": "Mürzzuschlag",
         "population": "9009",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Enns",
         "population": "9005",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "V\u00f6cklabruck",
+        "city": "Vöcklabruck",
         "population": "8987",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Spittal an der Drau",
         "population": "8865",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Berndorf",
         "population": "8753",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gerasdorf bei Wien",
         "population": "8722",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gleisdorf",
         "population": "8627",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ried im Innkreis",
         "population": "8621",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Knittelfeld",
         "population": "8583",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mattersburg",
         "population": "8453",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "M\u00f6llersdorf",
+        "city": "Möllersdorf",
         "population": "8400",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sankt Andr\u00e4",
+        "city": "Sankt Andrä",
         "population": "8365",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "V\u00f6lkermarkt",
+        "city": "Völkermarkt",
         "population": "8325",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Viktring",
         "population": "8204",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Purkersdorf",
         "population": "8181",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gloggnitz",
         "population": "8128",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Neusiedl am See",
         "population": "8009",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Herzogenburg",
         "population": "7998",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Fohnsdorf",
         "population": "7973",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eisenstadt",
         "population": "7918",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schrems",
         "population": "7909",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Imst",
         "population": "7819",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "W\u00f6rgl",
+        "city": "Wörgl",
         "population": "7757",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sch\u00e4rding",
+        "city": "Schärding",
         "population": "7737",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schwanenstadt",
         "population": "7709",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schladming",
         "population": "7587",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "B\u00e4rnbach",
+        "city": "Bärnbach",
         "population": "7573",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Radkersburg",
         "population": "7542",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Judenburg",
         "population": "7499",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ternberg",
         "population": "7489",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "St. Valentin",
         "population": "7471",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Graz",
         "population": "280559",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wels",
         "population": "63461",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Traun",
         "population": "25097",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Leoben",
         "population": "24723",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Krems an der Donau",
         "population": "24381",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Amstetten",
         "population": "23146",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kapfenberg",
         "population": "21922",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Lustenau",
         "population": "21771",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gmunden",
         "population": "13164",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Rankweil",
         "population": "11039",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bregenz",
         "population": "28541",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ansfelden",
         "population": "14962",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Feldkirch",
         "population": "33830",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Saalfelden am Steinernen Meer",
         "population": "15808",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ternitz",
         "population": "14169",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Bad V\u00f6slau",
+        "city": "Bad Vöslau",
         "population": "11290",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Sankt Veit an der Glan",
         "population": "12741",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bruck an der Mur",
         "population": "13373",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Sankt Johann im Pongau",
         "population": "10974",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Korneuburg",
         "population": "12001",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bludenz",
         "population": "13636",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Spittal an der Drau",
         "population": "16628",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mistelbach",
         "population": "11154",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Marchtrenk",
         "population": "12309",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Knittelfeld",
         "population": "11729",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schwechat",
         "population": "16464",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schwaz",
         "population": "13908",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bischofshofen",
         "population": "10331",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zwettl",
         "population": "11172",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eisenstadt",
         "population": "13922",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Waidhofen an der Ybbs",
         "population": "11141",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sch\u00e4rding",
+        "city": "Schärding",
         "population": "4669",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "W\u00f6rgl",
+        "city": "Wörgl",
         "population": "13366",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Enns",
         "population": "10816",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schladming",
         "population": "4372",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "G\u00e4nserndorf",
+        "city": "Gänserndorf",
         "population": "11912",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "V\u00f6cklabruck",
+        "city": "Vöcklabruck",
         "population": "11897",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schrems",
         "population": "5566",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kufstein",
         "population": "19906",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Kitzb\u00fchel",
+        "city": "Kitzbühel",
         "population": "8220",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Freistadt",
         "population": "7881",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Radkersburg",
         "population": "5264",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "M\u00fcrzzuschlag",
+        "city": "Mürzzuschlag",
         "population": "7104",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Weiz",
         "population": "9429",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zell am See",
         "population": "9647",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Berndorf",
         "population": "6765",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gerasdorf bei Wien",
         "population": "6149",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hollabrunn",
         "population": "6764",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Lienz",
         "population": "11712",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gleisdorf",
         "population": "7067",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Voitsberg",
         "population": "5409",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sankt Andr\u00e4",
+        "city": "Sankt Andrä",
         "population": "6227",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Stockerau",
         "population": "13430",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Pregarten",
         "population": "5234",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "M\u00f6dling",
+        "city": "Mödling",
         "population": "12206",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Judenburg",
         "population": "9258",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mariazell",
         "population": "1872",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "G\u00f6tzis",
+        "city": "Götzis",
         "population": "11334",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hainburg an der Donau",
         "population": "6221",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Geras",
         "population": "888",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zistersdorf",
         "population": "3957",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Purkersdorf",
         "population": "6927",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wolkersdorf im Weinviertel",
         "population": "6063",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Leobendorf",
         "population": "5177",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Neunkirchen",
         "population": "11770",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ried im Innkreis",
         "population": "5297",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Neulengbach",
         "population": "5029",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wien-Umgebung",
         "population": "5186",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "B\u00e4rnbach",
+        "city": "Bärnbach",
         "population": "4746",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Laa an der Thaya",
         "population": "5651",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Oberndorf bei Salzburg",
         "population": "5127",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gloggnitz",
         "population": "5247",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Finkenstein am Faaker See",
         "population": "2215",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Altm\u00fcnster",
+        "city": "Altmünster",
         "population": "4902",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Graz-Umgebung",
         "population": "4884",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Ischl",
         "population": "13313",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Fohnsdorf",
         "population": "4224",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Liezen",
         "population": "7589",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "G\u00f6llersdorf",
+        "city": "Göllersdorf",
         "population": "3436",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hermagor-Pressegger See",
         "population": "6941",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Landeck",
         "population": "7847",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Reutte",
         "population": "6439",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "V\u00f6lkermarkt",
+        "city": "Völkermarkt",
         "population": "11037",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Feldkirchen",
         "population": "6783",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Villach-Land",
         "population": "5307",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "W\u00f6llersdorf-Steinabr\u00fcckl",
+        "city": "Wöllersdorf-Steinabrückl",
         "population": "4145",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sankt P\u00f6lten-Land",
+        "city": "Sankt Pölten-Land",
         "population": "11712",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bludenz",
         "population": "14077",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gerasdorf bei Wien",
         "population": "14055",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mittersill",
         "population": "14045",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sankt P\u00f6lten",
+        "city": "Sankt Pölten",
         "population": "14005",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Fulpmes",
         "population": "13872",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sch\u00e4rding",
+        "city": "Schärding",
         "population": "13793",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eugendorf",
         "population": "13756",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Neumarkt am Wallersee",
         "population": "13682",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Traiskirchen",
         "population": "13542",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mattighofen",
         "population": "13503",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sankt Andr\u00e4",
+        "city": "Sankt Andrä",
         "population": "13492",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Puch bei Hallein",
         "population": "13452",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Langenlois",
         "population": "13436",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wolkersdorf im Weinviertel",
         "population": "13371",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Liezen",
         "population": "13269",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Pregarten",
         "population": "13257",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Knittelfeld",
         "population": "13220",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Sankt Leonhard im Lavanttal",
         "population": "13156",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gloggnitz",
         "population": "13078",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Fehring",
         "population": "12988",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "P\u00f6chlarn",
+        "city": "Pöchlarn",
         "population": "12978",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Neufeld an der Leitha",
         "population": "12899",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hollabrunn",
         "population": "12894",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ferlach",
         "population": "12883",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Landeck",
         "population": "12878",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Laa an der Thaya",
         "population": "12862",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Braunau am Inn",
         "population": "12795",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ternitz",
         "population": "12762",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kufstein",
         "population": "12688",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "G\u00e4nserndorf",
+        "city": "Gänserndorf",
         "population": "12619",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Purkersdorf",
         "population": "12571",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Friesach",
         "population": "12550",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Jenbach",
         "population": "12524",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Radenthein",
         "population": "12507",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kindberg",
         "population": "12491",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Perg",
         "population": "12469",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "W\u00f6rgl",
+        "city": "Wörgl",
         "population": "12390",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Sankt Veit an der Glan",
         "population": "12382",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Graz",
         "population": "123677",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wiener Neustadt",
         "population": "41438",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Klagenfurt am W\u00f6rthersee",
+        "city": "Klagenfurt am Wörthersee",
         "population": "100316",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Villach",
         "population": "61003",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wels",
         "population": "60577",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Linz",
         "population": "204846",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Salzburg",
         "population": "153377",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Innsbruck",
         "population": "132493",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Graz",
         "population": "123677",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Dornbirn",
         "population": "49887",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Steyr",
         "population": "38304",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Feldkirch",
         "population": "33799",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bregenz",
         "population": "28785",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Leonding",
         "population": "27771",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Klosterneuburg",
         "population": "26911",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Baden",
         "population": "25745",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Traun",
         "population": "25122",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schwechat",
         "population": "20255",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Telfs",
         "population": "19897",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Saalfelden am Steinernen Meer",
         "population": "19844",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Korneuburg",
         "population": "12719",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Trofaiach",
         "population": "12596",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schladming",
         "population": "12551",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Altm\u00fcnster",
+        "city": "Altmünster",
         "population": "12509",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Waidhofen an der Ybbs",
         "population": "12469",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ebreichsdorf",
         "population": "12434",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Bad V\u00f6slau",
+        "city": "Bad Vöslau",
         "population": "12391",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Feldbach",
         "population": "12358",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zeltweg",
         "population": "12322",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Attnang-Puchheim",
         "population": "12273",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kirchdorf an der Krems",
         "population": "12248",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mank",
         "population": "12190",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Laakirchen",
         "population": "12128",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Aussee",
         "population": "12061",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Sankt Valentin",
         "population": "12029",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Waidhofen an der Thaya",
         "population": "11987",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Neusiedl am See",
         "population": "11959",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Purkersdorf",
         "population": "11898",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "K\u00f6flach",
+        "city": "Köflach",
         "population": "11883",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zwettl",
         "population": "11861",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Landeck",
         "population": "11840",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bischofshofen",
         "population": "11815",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mautern an der Donau",
         "population": "11762",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "P\u00f6chlarn",
+        "city": "Pöchlarn",
         "population": "11756",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Imst",
         "population": "11738",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eisenerz",
         "population": "11671",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Murau",
         "population": "11631",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hohenems",
         "population": "11550",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Friesach",
         "population": "11478",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "St. Johann im Pongau",
         "population": "11444",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schrems",
         "population": "11416",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Traun",
         "population": "25038",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kufstein",
         "population": "19735",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bregenz",
         "population": "14451",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Ischl",
         "population": "14294",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schwaz",
         "population": "14270",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "W\u00f6rgl",
+        "city": "Wörgl",
         "population": "13119",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zwettl",
         "population": "12277",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Oberndorf bei Salzburg",
         "population": "12249",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Berndorf",
         "population": "11948",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hollabrunn",
         "population": "11767",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ternitz",
         "population": "11751",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bruck an der Mur",
         "population": "11689",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bischofshofen",
         "population": "11028",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hohenems",
         "population": "10785",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Sankt Andr\u00e4",
+        "city": "Sankt Andrä",
         "population": "10739",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Lienz",
         "population": "10725",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "G\u00e4nserndorf",
+        "city": "Gänserndorf",
         "population": "10715",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gmunden",
         "population": "10447",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schladming",
         "population": "10121",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "M\u00f6dling",
+        "city": "Mödling",
         "population": "10120",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mistelbach",
         "population": "10064",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "V\u00f6cklabruck",
+        "city": "Vöcklabruck",
         "population": "10052",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Neusiedl am See",
         "population": "10019",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ried im Innkreis",
         "population": "9969",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Knittelfeld",
         "population": "9732",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Enns",
         "population": "9666",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Tulln",
         "population": "9647",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Purkersdorf",
         "population": "9507",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Gm\u00fcnd",
+        "city": "Gmünd",
         "population": "9367",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Judenburg",
         "population": "9342",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Landeck",
         "population": "9272",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Oberwart",
         "population": "9229",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gerasdorf bei Wien",
         "population": "9201",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Marchtrenk",
         "population": "9043",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Herzogenburg",
         "population": "9023",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ebreichsdorf",
         "population": "8918",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Kitzb\u00fchel",
+        "city": "Kitzbühel",
         "population": "8822",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Geras",
         "population": "8762",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wiener Neudorf",
         "population": "8735",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Altm\u00fcnster",
+        "city": "Altmünster",
         "population": "8685",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Fohnsdorf",
         "population": "8545",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Ferlach",
         "population": "8494",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Sankt Valentin",
         "population": "8341",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hainburg an der Donau",
         "population": "8314",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Attnang-Puchheim",
         "population": "8310",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Liezen",
         "population": "8196",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Trofaiach",
         "population": "8176",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Pregarten",
         "population": "8095",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kindberg",
         "population": "7998",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mattersburg",
         "population": "7976",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Feldbach",
         "population": "7938",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Leoben",
         "population": "7917",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Villach-Land",
         "population": "7838",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eisenerz",
         "population": "7829",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Sierning",
         "population": "7808",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kirchdorf an der Krems",
         "population": "7697",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Allentsteig",
         "population": "7678",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Saalbach-Hinterglemm",
         "population": "7673",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Waidhofen an der Thaya",
         "population": "7637",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Radkersburg",
         "population": "7538",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "P\u00f6chlarn",
+        "city": "Pöchlarn",
         "population": "7517",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Laa an der Thaya",
         "population": "7512",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Retz",
         "population": "7457",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gleisdorf",
         "population": "7418",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Zistersdorf",
         "population": "7379",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Bad Aussee",
         "population": "7370",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Feldkirchen in K\u00e4rnten",
+        "city": "Feldkirchen in Kärnten",
         "population": "7342",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Treffen",
         "population": "7338",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Braunau am Inn",
         "population": "7292",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kapfenberg",
         "population": "7275",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mistelbach an der Zaya",
         "population": "7270",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eisenstadt-Umgebung",
         "population": "7237",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mariazell",
         "population": "7205",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Gloggnitz",
         "population": "7124",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Lieboch",
         "population": "7086",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "W\u00f6llersdorf-Steinabr\u00fcckl",
+        "city": "Wöllersdorf-Steinabrückl",
         "population": "7047",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Hartberg",
         "population": "7003",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Mank",
         "population": "6961",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Kirchschlag in der Buckligen Welt",
         "population": "6949",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Purkersdorf",
         "population": "6931",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eibiswald",
         "population": "6872",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
-        "city": "Grafenw\u00f6rth",
+        "city": "Grafenwörth",
         "population": "6836",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Wolfsberg",
         "population": "6816",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Rankweil",
         "population": "6795",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Stainz",
         "population": "6774",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Finkenstein am Faaker See",
         "population": "6738",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Eferding",
         "population": "6736",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Schrems",
         "population": "6705",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     },
     {
         "city": "Feldkirchen an der Donau",
         "population": "6647",
-        "country": "Austria"
+        "country": "Austria",
+        "iso2": "AT"
     }
 ]

@@ -4,21 +4,25 @@ namespace App\Source\RideRequest\Infra\CancelRide\Specifications;
 
 use App\Models\Ride;
 use App\Models\RideRequest;
-use App\Source\RideRequest\Enum\RideRequestEnum;
 
 class CanCancelRideSpecification
 {
-    public function satisfiedBy(int $authUserId, int $passengerId, int $rideId): bool
+    public function satisfiedBy(int $authUserId, RideRequest $rideRequest, Ride $ride): bool
     {
-        $rideRequestCount = RideRequest::where('passenger_id', $passengerId)
-            ->where('ride_id', $rideId)
-            ->whereIn('status', [RideRequestEnum::ACCEPTED->value])
-            ->count();
+        if ($ride->isNonActiveRide()) {
+            return false;
+        }
 
-        $ride = Ride::where('driver_id', $authUserId)
-            ->where('id', $rideId)
-            ->count();
+        //user is passenger
+        if ($rideRequest->getPassengerId() === $authUserId && $rideRequest->isAccepted()) {
+            return true;
+        }
 
-        return $rideRequestCount || $ride;
+        //user is driver
+        if ($ride->getDriverId() === $authUserId) {
+            return true;
+        }
+
+        return false;
     }
 }

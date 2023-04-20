@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Source\Ride\Domain\DeleteRide;
 
 use App\Models\Ride;
+use App\Source\Ride\Infra\DeleteRide\Services\DeleteRideService;
 use App\Source\Ride\Infra\DeleteRide\Specifications\CanDeleteSpecification;
 use App\Source\RideRequest\Infra\Common\Services\UpdatePendingRequestsCountService;
 use Exception;
@@ -13,7 +14,8 @@ class DeleteRideLogic
 {
     public function __construct(
         private readonly CanDeleteSpecification $canDeleteSpecification,
-        private readonly UpdatePendingRequestsCountService $updatePendingRequestsCountService
+        private readonly UpdatePendingRequestsCountService $updatePendingRequestsCountService,
+        private readonly DeleteRideService $deleteRideService
     ) {
     }
 
@@ -24,7 +26,7 @@ class DeleteRideLogic
         }
 
         $ride = Ride::find($rideId);
-        $this->updatePendingRequestsCountService->decrease($ride);
-        $ride->delete();
+        $this->updatePendingRequestsCountService->setToZero($ride);
+        $this->deleteRideService->delete($ride);
     }
 }

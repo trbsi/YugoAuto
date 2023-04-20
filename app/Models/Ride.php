@@ -56,6 +56,12 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -64,7 +70,8 @@ class Ride extends Model
     use SoftDeletes;
 
     protected $casts = [
-        'time' => 'datetime'
+        'time' => 'datetime',
+        'time_utc' => 'datetime',
     ];
 
     public function fromPlace(): BelongsTo
@@ -191,7 +198,7 @@ class Ride extends Model
         return $this->time;
     }
 
-    public function getTimeFormatted(): string
+    public function getRideTimeFormatted(): string
     {
         return $this->getRideTime()->format('d.m.Y. H:i');
     }
@@ -199,6 +206,17 @@ class Ride extends Model
     public function setRideTime(Carbon $time): self
     {
         $this->time = $time;
+        return $this;
+    }
+
+    public function getRideTimeUtc(): Carbon
+    {
+        return $this->time_utc;
+    }
+
+    public function setRideTimeUtc(Carbon $time_utc): self
+    {
+        $this->time_utc = $time_utc;
         return $this;
     }
 
@@ -214,22 +232,20 @@ class Ride extends Model
     }
 
     /* HELPER METHODS */
-    public function isActiveRide(): bool
-    {
-        return $this->getRideTime() > Carbon::now();
-    }
-
     public function canLeaveRating(): bool
     {
         return
-            $this->getRideTime() < Carbon::now() &&
+            $this->isNonActiveRide() &&
             (
                 //user is driver and has accepted ride requests
-                ($this->isOwner() && $this->acceptedRideRequests->count() > 0) ||
+                $this->isOwner() ||
                 (
                     //user is passenger and status is accepted
                     $this->rideRequestForAuthUser &&
-                    $this->rideRequestForAuthUser->getStatus() === RideRequestEnum::ACCEPTED->value
+                    (
+                        $this->rideRequestForAuthUser->isAccepted() ||
+                        $this->rideRequestForAuthUser->isCancelledInLastMinute()
+                    )
                 )
             );
     }
@@ -242,6 +258,16 @@ class Ride extends Model
     public function isMyRide(): bool
     {
         return $this->getDriverId() === Auth::id();
+    }
+
+    public function isNonActiveRide(): bool
+    {
+        return $this->getRideTimeUtc() < Carbon::now();
+    }
+
+    public function isActiveRide(): bool
+    {
+        return $this->getRideTimeUtc() > Carbon::now();
     }
 }
 

@@ -6,6 +6,7 @@ use App\Models\Rating;
 use App\Models\Ride;
 use App\Models\RideRequest;
 use App\Models\User;
+use App\Models\UserProfile;
 use App\Source\RideRequest\Enum\RideRequestEnum;
 use Illuminate\Database\QueryException;
 use Illuminate\Database\Seeder;
@@ -57,6 +58,11 @@ class RideRequestSeeder extends Seeder
                             'passenger_id' => $passenger->getId(),
                         ]
                     )->create();
+
+                $userProfile = UserProfile::where('user_id', $passenger->getId())->first();
+                $userProfile
+                    ->increaseTotalRidesCount()
+                    ->save();
             }
         } catch (QueryException $exception) {
             //duplicate entry

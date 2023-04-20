@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * App\Models\Place
@@ -22,11 +23,17 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Place whereUpdatedAt($value)
  * @property int $country_id
  * @method static \Illuminate\Database\Eloquent\Builder|Place whereCountryId($value)
+ * @property-read \App\Models\Country|null $country
  * @mixin \Eloquent
  */
 class Place extends Model
 {
     use HasFactory;
+
+    public function country(): BelongsTo
+    {
+        return $this->belongsTo(Country::class, 'country_id', 'id');
+    }
 
     public function getId(): int
     {
@@ -41,6 +48,17 @@ class Place extends Model
     public function setName(string $name): self
     {
         $this->name = $name;
+        return $this;
+    }
+
+    public function getCountryId(): int
+    {
+        return $this->country_id;
+    }
+
+    public function setCountryId(int $country_id): self
+    {
+        $this->country_id = $country_id;
         return $this;
     }
 }

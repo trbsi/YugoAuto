@@ -13,6 +13,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $rating_sum
  * @property int $rating_count
  * @property int $unread_messages_count
+ * @property int $pending_requests_count
+ * @property int $total_rides_count
+ * @property int $last_minute_cancelled_rides_count
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Database\Factories\UserProfileFactory factory($count = null, $state = [])
@@ -21,13 +24,14 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile query()
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereLastMinuteCancelledRidesCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile wherePendingRequestsCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRatingCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereRatingSum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereTotalRidesCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUnreadMessagesCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|UserProfile whereUserId($value)
- * @property int $pending_requests_count
- * @method static \Illuminate\Database\Eloquent\Builder|UserProfile wherePendingRequestsCount($value)
  * @mixin \Eloquent
  */
 class UserProfile extends Model
@@ -101,5 +105,71 @@ class UserProfile extends Model
     {
         $this->pending_requests_count = $pending_requests_count;
         return $this;
+    }
+
+    public function increasePendingRequestsCount(): self
+    {
+        $this->setPendingRequestsCount($this->getPendingRequestsCount() + 1);
+        return $this;
+    }
+
+    public function decreasePendingRequestsCount(): self
+    {
+        //do not go below 0
+        if ($this->getPendingRequestsCount() > 0) {
+            $this->setPendingRequestsCount($this->getPendingRequestsCount() - 1);
+        }
+        return $this;
+    }
+
+    public function getTotalRidesCount(): int
+    {
+        return $this->total_rides_count;
+    }
+
+    public function setTotalRidesCount(int $total_rides_count): self
+    {
+        $this->total_rides_count = $total_rides_count;
+        return $this;
+    }
+
+    public function increaseTotalRidesCount(): self
+    {
+        $this->setTotalRidesCount($this->getTotalRidesCount() + 1);
+        return $this;
+    }
+
+    public function decreaseTotalRidesCount(): self
+    {
+        if ($this->getTotalRidesCount() > 0) {
+            $this->setTotalRidesCount($this->getTotalRidesCount() - 1);
+        }
+        return $this;
+    }
+
+    public function getLastMinuteCancelledRidesCount(): int
+    {
+        return $this->last_minute_cancelled_rides_count;
+    }
+
+    public function setLastMinuteCancelledRidesCount(int $last_minute_cancelled_rides_count): self
+    {
+        $this->last_minute_cancelled_rides_count = $last_minute_cancelled_rides_count;
+        return $this;
+    }
+
+    public function increaseLastMinuteCancelledRidesCount(): self
+    {
+        $this->setLastMinuteCancelledRidesCount($this->getLastMinuteCancelledRidesCount() + 1);
+        return $this;
+    }
+
+    public function getLastMinuteCancelledRidesPercentage(): int
+    {
+        if ($this->getTotalRidesCount() === 0 || $this->getLastMinuteCancelledRidesCount() === 0) {
+            return 0;
+        }
+
+        return (int)($this->getLastMinuteCancelledRidesCount() / $this->getTotalRidesCount() * 100);
     }
 }

@@ -22,8 +22,7 @@ class CancelRideRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'ride_id' => ['required', 'integer', 'exists:rides,id'],
-            'passenger_id' => ['required', 'integer', 'exists:users,id'],
+            'ride_request_id' => ['required', 'integer', 'exists:ride_requests,id'],
         ];
     }
 
