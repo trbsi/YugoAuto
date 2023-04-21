@@ -90,7 +90,7 @@ $('#switch_rides').click(function () {
 
 //MODAL
 //values in array corresponds to modalClass in custom-modal-content.blade.php
-let modals = [/*'appstoreinfo',*/ 'driverprofile'];
+let modals = ['newcities-and-lastmincancel', 'driverprofile'];
 $.each(modals, function (index, modalClass) {
     const modal = $('.custom-modal-' + modalClass)
     if (modal.length === 0) {

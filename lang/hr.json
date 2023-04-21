@@ -282,8 +282,6 @@
     "User report": "Prijava korisnika",
     "You have pending requests": "Imaš zahtjeve na čekanju",
     "If photo upload does not work": "Ako promjena profilne slike ne radi preko aplikacije, klikni ovdje i probaj ponovno.",
-    "Now you can download this app on your phone": "Od sada možeš skinuti i aplikaciju YugoAuto za svoj iPhone i Android.",
-    "App available for mobile": "Aplikacija dostupna za mobitele",
     "Back": "Nazad",
     "Person cancelled a ride": ":name je otkazao/la prijevoz",
     "Ride is created": "Prijevoz je kreiran",
@@ -325,5 +323,7 @@
     "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
     "Update your driver profile": "Ažuriraj svoj profil kao vozač",
     "Now you can update your driver profile": "Sada možete ažurirati vaš profil kao vozač. Dodati ime auta, tablice i dozvoljavate li pušenje i životinje. Također možeš dodati i svoj broj telefona.",
-    "Click here to update driver profile": "Klikni ovdje da ažuriraš profil vozača"
+    "Click here to update driver profile": "Klikni ovdje da ažuriraš profil vozača",
+    "New features": "Nove opcije",
+    "New features text": "1. Dodani su gradovi iz Srbije, BiH, Slovenije, Austrije i Njemačke<br>2. Ukoliko netko otkaže prijevoz do 2 sata prije polaska osobu ćete moći ocijeniti. Te će na profilu osobe biti prikazan postotak otkazanih prijevoza u zadnji tren."
 }

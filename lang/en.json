@@ -25,7 +25,6 @@
     "Leave rating": "Rate/See ratings",
     "Newest rides": "New rides",
     "If photo upload does not work": "If photo upload does not work from the app, click here and try again.",
-    "Now you can download this app on your phone": "Now you can download YugoAuto app for your iPhone and Android.",
     "Your ride is cancelled": "Ride is cancelled",
     "Person cancelled a ride": ":name cancelled a ride",
     "Ratings for user": "Ratings for: :name",
@@ -64,5 +63,6 @@
     "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
     "Update your driver profile": "Update your profile as a driver",
     "Now you can update your driver profile": "You can now update your profile as a driver. Add car name, car plates and if you allow smoking and animals. You can also add your phone number.",
-    "Click here to update driver profile": "Click here to update your driver profile"
+    "Click here to update driver profile": "Click here to update your driver profile",
+    "New features": "New features"
 }

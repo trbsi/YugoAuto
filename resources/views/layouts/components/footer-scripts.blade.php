@@ -22,8 +22,8 @@ use App\Enum\TimeEnum;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="{{asset('assets/datetimepicker/jquery.datetimepicker.full.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="{{asset('assets/js/custom.js?v=1.20.0')}}"></script>
-<script src="{{asset('assets/js/functions.js?v=1.20.0')}}"></script>
+<script src="{{asset('assets/js/custom.js?v=1.20.2')}}"></script>
+<script src="{{asset('assets/js/functions.js?v=1.20.2')}}"></script>
 @include('components.cookie-consent')
 @include('components.google-analytics')
 @include('components.toastr')
