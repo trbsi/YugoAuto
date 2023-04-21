@@ -40,6 +40,10 @@ class PlacesSeeder extends Seeder
                             ]
                         );
 
+                    if (isset($place['population']) && $place['population'] < 10000) {
+                        continue;
+                    }
+
                     Place::factory()
                         ->state([
                             'name' => $place['city'],
