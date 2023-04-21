@@ -3,7 +3,8 @@
 
 ?>
 <x-app-layout>
-    <div class="dark:bg-gray-800 bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
+    <div
+        class="dark:bg-gray-800 dark:text-white bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
         <div class="dark:bg-gray-700 card w-96 mx-auto bg-white  shadow-xl hover:shadow">
             <img class="w-32 h-32 mx-auto object-cover rounded-full border-8 border-white"
                  src="{{$user->getProfilePhotoUrl()}}" alt="">
