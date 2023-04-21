@@ -14,21 +14,42 @@ class SavePushToken
         string $token,
         string $tokenType
     ) {
-        $deviceId = md5($deviceId);
+        $deviceIdSha512 = hash('sha512', $deviceId);
+
+        //TODO remove this implementation when everyone move to sha512
+        //START remove this also
+        $deviceIdMd5 = md5($deviceId);
 
         /** @var PushToken $pushToken */
         $pushToken = PushToken::where('user_id', $userId)
             ->where('platform', $platform)
-            ->where('device_id', $deviceId)
+            ->where('device_id', $deviceIdMd5)
             ->first();
 
         if (null !== $pushToken) {
             $pushToken
                 ->setToken($token)
                 ->setTokenType($tokenType)
-                ->setUpdatedAt(Carbon::now());
+                ->setDeviceId($deviceIdSha512)
+                ->setUpdatedAt(Carbon::now())
+                ->save();
+            return;
+        }
+        //END remove this also
 
-            $pushToken->save();
+
+        /** @var PushToken $pushToken */
+        $pushToken = PushToken::where('user_id', $userId)
+            ->where('platform', $platform)
+            ->where('device_id', $deviceIdSha512)
+            ->first();
+
+        if (null !== $pushToken) {
+            $pushToken
+                ->setToken($token)
+                ->setTokenType($tokenType)
+                ->setUpdatedAt(Carbon::now())
+                ->save();
             return;
         }
 
