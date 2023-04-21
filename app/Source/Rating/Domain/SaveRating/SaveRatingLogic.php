@@ -21,14 +21,14 @@ class SaveRatingLogic
     public function save(
         int $graderId,
         int $userToBeRatedId,
-        int $rideId,
+        int $ratingId,
         int $rating,
         ?string $comment
     ): void {
         $isSatisfied = $this->canLeaveRatingSpecification->satisfiedBy(
             graderId: $graderId,
             userToBeRatedId: $userToBeRatedId,
-            rideId: $rideId
+            ratingId: $ratingId
         );
         if (!$isSatisfied) {
             throw new Exception(__('You cannot access this page'));
@@ -36,8 +36,7 @@ class SaveRatingLogic
 
         $model = $this->saveRatingService->save(
             graderId: $graderId,
-            userToBeRatedId: $userToBeRatedId,
-            rideId: $rideId,
+            ratingId: $ratingId,
             rating: $rating,
             comment: $comment
         );

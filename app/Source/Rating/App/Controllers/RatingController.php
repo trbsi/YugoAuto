@@ -48,7 +48,7 @@ class RatingController
             $logic->save(
                 graderId: Auth::id(),
                 userToBeRatedId: (int)$request->user_to_be_rated_id,
-                rideId: (int)$request->ride_id,
+                ratingId: (int)$request->rating_id,
                 comment: $request->comment,
                 rating: (int)$request->stars
             );

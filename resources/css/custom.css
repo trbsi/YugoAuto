@@ -29,10 +29,9 @@
 }
 
 /* Rides */
-.non-active-ride {
-    opacity: 0.3;
+.non-active-ride .make-transparent {
+    opacity: 0.5;
 }
-
 
 /* Rating  */
 .rating {

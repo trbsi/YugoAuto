@@ -3,7 +3,7 @@
 </div>
 <form method="POST" action="{{route('rating.save')}}">
     @csrf
-    <input type="hidden" name="ride_id" value="{{$rideId}}">
+    <input type="hidden" name="rating_id" value="{{$ratingId}}">
     <input type="hidden" name="user_to_be_rated_id" value="{{$userToBeRatedId}}">
     <div>
         <div class="rating">

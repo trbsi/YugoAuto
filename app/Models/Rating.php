@@ -141,7 +141,7 @@ class Rating extends Model
 
     public function setDriverComment(?string $driver_comment): self
     {
-        $this->driver_comment = $driver_comment;
+        $this->driver_comment = empty($driver_comment) ? null : $driver_comment;;
         return $this;
     }
 

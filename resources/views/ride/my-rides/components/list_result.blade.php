@@ -14,11 +14,12 @@
                 @if($ride->isActiveRide())
                     <div class="text-center font-bold text-xl mb-3 dark:text-white">{{__('Active ride')}}</div>
                 @else
-                    <div class="text-center font-bold text-xl mb-3 dark:text-white">{{__('Non active ride')}}</div>
+                    <div
+                        class="make-transparent text-center font-bold text-xl mb-3 dark:text-white">{{__('Non active ride')}}</div>
                 @endif
                 <div class="flex items-center space-x-4">
 
-                    <div class="flex-shrink-0">
+                    <div class="flex-shrink-0 make-transparent">
                         <a class="underline" href="{{user_profile_url($ride->driver->getId())}}">
                             <img class="w-8 h-8 rounded-full" src="{{$ride->driver->getProfilePhotoUrl()}}"
                                  alt="Neil image">
@@ -26,21 +27,21 @@
                     </div>
 
                     <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        <p class="make-transparent text-sm font-medium text-gray-900 truncate dark:text-white">
                             <a class="underline" href="{{user_profile_url($ride->driver->getId())}}">
                                 {{$ride->driver->getName()}}
                             </a>
                         </p>
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        <p class="make-transparent text-sm font-medium text-gray-900 truncate dark:text-white">
                             {{__('Route')}}: {{$ride->fromPlace->getName()}} -> {{$ride->toPlace->getName()}}
                         </p>
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        <p class="make-transparent text-sm font-medium text-gray-900 truncate dark:text-white">
                             {{__('Departure time')}}: {{$ride->getRideTimeFormatted()}}
                         </p>
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        <p class="make-transparent text-sm font-medium text-gray-900 truncate dark:text-white">
                             {{__('Number of seats')}}: {{$ride->getNumberOfSeats()}}
                         </p>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                        <p class="make-transparent text-sm text-gray-500 dark:text-gray-400">
                             {!! $ride->getDescriptionFormatted() !!}
                         </p>
 
@@ -59,7 +60,7 @@
                                     <a
                                         href="{{single_ride_requests_url($ride->getId())}}"
                                         class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {{__('Requests')}}
+                                        {{__('Requests/Details')}}
                                     </a>
                                 </div>
                                 <div class="p-1">
@@ -68,7 +69,7 @@
                             </div>
                         @endif
                         @if(!$ride->isOwner())
-                            <div class="p-1">
+                            <div class="make-transparent p-1">
                                 <span
                                     class="w-full text-center p-1 status-text status-{{$ride->rideRequestForAuthUser->getStatus()}}">
                                {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
@@ -79,7 +80,7 @@
                                     <a
                                         href="{{single_ride_requests_url($ride->getId())}}"
                                         class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {{__('Requests')}}
+                                        {{__('Requests/Details')}}
                                     </a>
                                 </div>
                             @endif
@@ -88,13 +89,14 @@
                             <div class="p-1">
                                 <a
                                     href="{{rating_for_ride_url($ride->getId())}}"
-                                    class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    class="rating-button w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     {{__('Leave rating')}}
                                 </a>
                             </div>
                         @endif
                     </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                    <div
+                        class="make-transparent inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                         {{$ride->getPrice()}} {{$ride->getCurrency()}}
                     </div>
                 </div>

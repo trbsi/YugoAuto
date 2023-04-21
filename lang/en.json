@@ -1,7 +1,7 @@
 {
     "Search ride": "Search rides",
-    "Minimum departure time": "Initial departure time",
-    "Maximum departure time": "Final departure time",
+    "Minimum departure time": "Initial departure date and time",
+    "Maximum departure time": "Final departure date and time",
     "Create ride": "Add a ride",
     "pending": "Pending",
     "accepted": "Accepted",

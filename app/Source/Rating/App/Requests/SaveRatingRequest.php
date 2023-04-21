@@ -23,7 +23,7 @@ class SaveRatingRequest extends FormRequest
     {
         return [
             'stars' => ['required', 'integer', 'min:1', 'max:5'],
-            'ride_id' => ['required', 'integer', 'exists:rides,id'],
+            'rating_id' => ['required', 'integer', 'exists:ratings,id'],
             'comment' => ['nullable', 'string', 'max:500'],
             'user_to_be_rated_id' => ['required', 'exists:users,id'],
         ];

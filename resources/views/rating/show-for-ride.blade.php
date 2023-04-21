@@ -51,7 +51,7 @@
                                                 {{__('You are not rated')}}
                                             @elseif($rating->isCurrentUserPassenger())
                                                 @include('rating.components.stars-form', [
-                                                        'rideId' => $rating->getRideId(),
+                                                        'ratingId' => $rating->getId(),
                                                         'userToBeRatedId' => $rating->getDriverId(),
                                                         'comment' => $rating->getDriverComment(),
                                                 ])
@@ -68,7 +68,7 @@
                                                 {{__('You are not rated')}}
                                             @elseif($rating->isCurrentUserDriver())
                                                 @include('rating.components.stars-form', [
-                                                    'rideId' => $rating->getRideId(),
+                                                    'ratingId' => $rating->getId(),
                                                     'userToBeRatedId' => $rating->getPassengerId(),
                                                     'comment' => $rating->getPassengerComment(),
                                                 ])
