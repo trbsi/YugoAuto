@@ -151,7 +151,7 @@ class RideRequest extends Model
         return $this->getStatus() === RideRequestEnum::PENDING->value;
     }
 
-    public function isCancelledInLastMinute(): bool
+    public function isCancelledAtLastMinute(): bool
     {
         if ($this->getCancelledByUserId() === null) {
             return false;

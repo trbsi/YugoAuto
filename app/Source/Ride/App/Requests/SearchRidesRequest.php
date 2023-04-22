@@ -26,7 +26,7 @@ class SearchRidesRequest extends FormRequest
             'from_place_id' => ['nullable', 'integer'],
             'to_place_id' => ['nullable', 'integer'],
             'min_time' => ['nullable', 'date_format:' . TimeEnum::DATE_FORMAT->value],
-            'filters' => ['nullable', 'array']
+            'filter' => ['nullable', 'string']
         ];
     }
 }

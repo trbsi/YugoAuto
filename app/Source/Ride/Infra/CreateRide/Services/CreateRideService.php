@@ -16,7 +16,8 @@ class CreateRideService
         Carbon $time,
         int $numberOfSeats,
         int $price,
-        ?string $description
+        ?string $description,
+        bool $isAcceptingPackage
     ): void {
         $ride = new Ride();
         $ride
@@ -29,6 +30,7 @@ class CreateRideService
             ->setNumberOfSeats($numberOfSeats)
             ->setFromPlaceId($fromPlaceId)
             ->setToPlaceId($toPlaceId)
+            ->setIsAcceptingPackage($isAcceptingPackage)
             ->save();
 
         $userProfile = $ride->driver->profile;

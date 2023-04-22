@@ -19,7 +19,7 @@ class RatingController
         int $rideId,
         GetRatingsLogic $logic
     ) {
-        $ratings = $logic->getRatings(userId: Auth::id(), rideId: $rideId);
+        $ratings = $logic->getRatings(authUserId: Auth::id(), rideId: $rideId);
         $ride = Ride::findOrFail($rideId);
 
         return view(

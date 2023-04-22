@@ -31,13 +31,14 @@ class RideController extends Controller
     ) {
         try {
             $requiredParams = ['from_place_id', 'to_place_id'];
-            $fromPlace = $toPlace = $minTime = $maxTime = null;
+            $fromPlace = $toPlace = $minTime = $maxTime = $isAcceptingPackage = null;
 
             if ($this->hasRequiredParams($requiredParams, $request->all())) {
                 $fromPlace = $request->from_place_id;
                 $toPlace = $request->to_place_id;
                 $minTime = $request->min_time;
                 $maxTime = $request->max_time;
+                $isAcceptingPackage = $request->is_accepting_package === 'on' ? true : false;
                 $filter = $request->filter ?? '';
 
                 $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);
@@ -54,6 +55,7 @@ class RideController extends Controller
                         TimeEnum::DATE_FORMAT->value,
                         $maxTime
                     ) : $maxTime,
+                    isAcceptingPackage: $isAcceptingPackage,
                     filter: $filter
                 );
             } else {
@@ -68,6 +70,7 @@ class RideController extends Controller
                     'toPlace' => $toPlace,
                     'minTime' => $minTime,
                     'maxTime' => $maxTime,
+                    'isAcceptingPackage' => $isAcceptingPackage
                 ]
             );
         } catch (Exception $exception) {
@@ -108,7 +111,8 @@ class RideController extends Controller
                 time: $request->time,
                 numberOfSeats: (int)$request->number_of_seats,
                 price: (int)$request->price,
-                description: $request->description
+                description: $request->description,
+                isAcceptingPackage: $request->is_accepting_package === 'on' ? true : false
             );
             $request->session()->flash('success', __('Ride is created'));
         } catch (Exception $exception) {

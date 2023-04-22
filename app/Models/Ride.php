@@ -227,6 +227,19 @@ class Ride extends Model
         return $this;
     }
 
+    private int $accepting_package;
+
+    public function getIsAcceptingPackage(): bool
+    {
+        return $this->is_accepting_package;
+    }
+
+    public function setIsAcceptingPackage(bool $accepting_package): self
+    {
+        $this->is_accepting_package = $accepting_package;
+        return $this;
+    }
+
     /* HELPER METHODS */
     public function canLeaveRating(): bool
     {
@@ -240,7 +253,7 @@ class Ride extends Model
                     $this->rideRequestForAuthUser &&
                     (
                         $this->rideRequestForAuthUser->isAccepted() ||
-                        $this->rideRequestForAuthUser->isCancelledInLastMinute()
+                        $this->rideRequestForAuthUser->isCancelledAtLastMinute()
                     )
                 )
             );

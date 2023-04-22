@@ -24,6 +24,7 @@ class SearchRidesLogic
         int $toPlaceId,
         ?Carbon $minStartTime,
         ?Carbon $maxStartTime,
+        bool $isAcceptingPackage,
         string $filter
     ): LengthAwarePaginator {
         $now = Carbon::now();
@@ -36,6 +37,7 @@ class SearchRidesLogic
             toPlaceId: $toPlaceId,
             minStartTime: $minStartTime,
             maxStartTime: $maxStartTime,
+            isAcceptingPackage: $isAcceptingPackage,
             filter: $filter
         );
     }

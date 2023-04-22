@@ -27,15 +27,16 @@ class CreateRideLogic
         string $time,
         int $numberOfSeats,
         int $price,
-        ?string $description
+        ?string $description,
+        bool $isAcceptingPackage
     ): void {
         $place = Place::find($fromPlaceId);
         $timezones = DateTimeZone::listIdentifiers(DateTimeZone::PER_COUNTRY, $place->country->getCode());
-        $carbonTime = Carbon::createFromFormat(TimeEnum::DATETIME_FORMAT->value, $time, $timezones[0] ?? 'UTC');
+        $timezonedTime = Carbon::createFromFormat(TimeEnum::DATETIME_FORMAT->value, $time, $timezones[0] ?? 'UTC');
 
         $canCreate = $this->canCreateRideSpecification->isSatisfied(
             driverId: $driverId,
-            creationTime: $carbonTime,
+            creationTime: $timezonedTime,
             fromPlaceId: $fromPlaceId,
             toPlaceId: $toPlaceId
         );
@@ -44,13 +45,14 @@ class CreateRideLogic
         }
 
         $this->createRideService->create(
-            $driverId,
-            $fromPlaceId,
-            $toPlaceId,
-            $carbonTime,
-            $numberOfSeats,
-            $price,
-            $description
+            driverId: $driverId,
+            fromPlaceId: $fromPlaceId,
+            toPlaceId: $toPlaceId,
+            time: $timezonedTime,
+            numberOfSeats: $numberOfSeats,
+            price: $price,
+            description: $description,
+            isAcceptingPackage: $isAcceptingPackage
         );
     }
 }
