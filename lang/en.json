@@ -60,6 +60,7 @@
     "Last minute cancelled rides percentage": "Percentage of rides canceled at the last minute",
     "Last minute cancelled rides count": "Number of rides canceled at the last minute",
     "Last minute cancellation explanation": "Rides that are canceled up to 2 hours before departure",
+    "You already requested a ride for this route": "You have sent a request for that route on that day. If you want to send a new request, cancel the current one.",
     "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
     "Update your driver profile": "Update your profile as a driver",
     "Now you can update your driver profile": "You can now update your profile as a driver. Add car name, car plates and if you allow smoking and animals. You can also add your phone number.",

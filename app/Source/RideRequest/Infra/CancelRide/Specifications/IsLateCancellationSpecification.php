@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Source\RideRequest\Infra\CancelRide\Specifications;
 
-use App\Models\Ride;
+use App\Models\RideRequest;
 use Illuminate\Support\Carbon;
 
 class IsLateCancellationSpecification
@@ -16,15 +16,18 @@ class IsLateCancellationSpecification
         $this->rideCancellationThresholdInSeconds = (int)config('ride.cancel_ride_threshold_in_hours') * 3600;
     }
 
-    public function isSatisfied(Ride $ride): bool
+    public function isSatisfied(RideRequest $rideRequest): bool
     {
-        $timeDifferenceInSeconds = $ride->getRideTimeUtc()->timestamp - Carbon::now()->timestamp;
-
-        //somehow ride time is lower than current time
-        if ($timeDifferenceInSeconds < 0) {
+        if (!$rideRequest->isAccepted()) {
             return false;
         }
 
+        $ride = $rideRequest->ride;
+        if ($ride->isNonActiveRide()) {
+            return false;
+        }
+
+        $timeDifferenceInSeconds = $ride->getRideTimeUtc()->timestamp - Carbon::now()->timestamp;
         if ($timeDifferenceInSeconds <= $this->rideCancellationThresholdInSeconds) {
             return true;
         }

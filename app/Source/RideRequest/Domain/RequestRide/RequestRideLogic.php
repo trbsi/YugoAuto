@@ -28,18 +28,29 @@ class RequestRideLogic
             throw new Exception(__('Ride is already requested'));
         }
 
-        if (!$this->canSendRequestSpecification->isSatisfied($passengerId, $rideId)) {
+        $ride = Ride::findOrFail($rideId);
+
+        if (!$this->canSendRequestSpecification->isSatisfiedByDriver(
+            passengerId: $passengerId,
+            ride: $ride
+        )) {
             throw new Exception(__('You cannot request for yourself'));
         }
 
-        $ride = Ride::findOrFail($rideId);
+        if (!$this->canSendRequestSpecification->isSatisfiedByTimeAndRoute(
+            passengerId: $passengerId,
+            ride: $ride
+        )) {
+            throw new Exception(__('You already requested a ride for this route'));
+        }
+
 
         if ($ride->isFilled()) {
             throw new Exception(__('Ride is filled'));
         }
 
         $rideRequest = $this->saveRideRequestService->save($passengerId, $rideId);
-        $this->updatePendingRequestsCountService->increase($ride);
+        $this->updatePendingRequestsCountService->increaseForDriver($ride);
         NotifyUserLogic::notifyDriverAboutRideRequest($ride, $rideRequest);
     }
 }

@@ -26,7 +26,7 @@ class DeleteRideLogic
         }
 
         $ride = Ride::find($rideId);
-        $this->updatePendingRequestsCountService->setToZero($ride);
+        $this->updatePendingRequestsCountService->setToZeroForDriver($ride);
         $this->deleteRideService->delete($ride);
     }
 }

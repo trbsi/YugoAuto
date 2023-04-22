@@ -14,7 +14,9 @@ class CanCancelRideSpecification
         }
 
         //user is passenger
-        if ($rideRequest->getPassengerId() === $authUserId && $rideRequest->isAccepted()) {
+        if ($rideRequest->getPassengerId() === $authUserId &&
+            ($rideRequest->isAccepted() || $rideRequest->isPending())
+        ) {
             return true;
         }
 

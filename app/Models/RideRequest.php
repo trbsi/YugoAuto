@@ -34,6 +34,7 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereRideId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|RideRequest whereUpdatedAt($value)
+ * @property-read \App\Models\User|null $cancelledBy
  * @mixin \Eloquent
  */
 class RideRequest extends Model
@@ -52,6 +53,11 @@ class RideRequest extends Model
     public function passenger(): BelongsTo
     {
         return $this->belongsTo(User::class, 'passenger_id', 'id');
+    }
+
+    public function cancelledBy(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'cancelled_by', 'id');
     }
 
     public function getId(): int

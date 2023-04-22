@@ -59,7 +59,7 @@ class SearchRidesService
                 'rideRequestForAuthUser',
                 'acceptedRideRequests'
             ])
-            ->where('time', '>=', Carbon::now()->format('Y-m-d H:i:s'))
+            ->where('time_utc', '>=', Carbon::now()->format('Y-m-d H:i:s'))
             ->limit(20)
             ->get();
     }

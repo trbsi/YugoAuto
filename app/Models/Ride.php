@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Auth;
  * @property int $from_place_id
  * @property int $to_place_id
  * @property Carbon $time
+ * @property Carbon $time_utc
  * @property int $price
  * @property string $currency
  * @property int $number_of_seats
@@ -52,16 +53,11 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereNumberOfSeats($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereTimeUtc($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereToPlaceId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
  * @mixin \Eloquent
  */
 class Ride extends Model

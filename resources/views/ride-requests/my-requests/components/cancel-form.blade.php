@@ -1,7 +1,6 @@
 <?php
-/** @var \App\Models\Ride $ride */
-
 /** @var \App\Models\RideRequest $request */
+
 ?>
 <form
     method="POST"

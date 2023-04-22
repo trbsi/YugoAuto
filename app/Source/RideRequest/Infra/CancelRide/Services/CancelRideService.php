@@ -22,7 +22,7 @@ class CancelRideService
         return $rideRequest;
     }
 
-    public function decreaseRidesCount(RideRequest $rideRequest): void
+    public function decreaseRidesCountForPassenger(RideRequest $rideRequest): void
     {
         //decrease for a passenger
         $profile = $rideRequest->passenger->profile;

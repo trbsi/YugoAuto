@@ -75,14 +75,25 @@
                                {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
                                </span>
                             </div>
-                            @if($ride->rideRequestForAuthUser->isAccepted() && $ride->isActiveRide())
-                                <div class="p-1">
-                                    <a
-                                        href="{{single_ride_requests_url($ride->getId())}}"
-                                        class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {{__('Requests/Details')}}
-                                    </a>
-                                </div>
+                            @if($ride->isActiveRide())
+                                @if($ride->rideRequestForAuthUser->isAccepted())
+                                    <div class="p-1">
+                                        <a
+                                            href="{{single_ride_requests_url($ride->getId())}}"
+                                            class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            {{__('Requests/Details')}}
+                                        </a>
+                                    </div>
+                                @endif
+
+                                @if($ride->rideRequestForAuthUser->isPending())
+                                    <div class="p-1">
+                                        @include('ride-requests.my-requests.components.cancel-form',
+                                        [
+                                            'request' => $ride->rideRequestForAuthUser
+                                        ])
+                                    </div>
+                                @endif
                             @endif
                         @endif
                         @if($ride->canLeaveRating())

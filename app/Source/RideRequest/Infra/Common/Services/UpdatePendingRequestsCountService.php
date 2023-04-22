@@ -6,7 +6,7 @@ use App\Models\Ride;
 
 class UpdatePendingRequestsCountService
 {
-    public function increase(
+    public function increaseForDriver(
         Ride $ride
     ): void {
         $driverProfile = $ride->driver->profile;
@@ -14,7 +14,7 @@ class UpdatePendingRequestsCountService
             ->save();
     }
 
-    public function decrease(
+    public function decreaseForDriver(
         Ride $ride
     ): void {
         $driverProfile = $ride->driver->profile;
@@ -22,7 +22,7 @@ class UpdatePendingRequestsCountService
             ->save();
     }
 
-    public function setToZero(
+    public function setToZeroForDriver(
         Ride $ride
     ): void {
         $driverProfile = $ride->driver->profile;

@@ -56,13 +56,9 @@ class NotifyUserLogic
         $toPerson = ($rideRequest->getPassengerId() === $authUserId) ?
             $rideRequest->ride->driver :
             $rideRequest->passenger;
-
-        $cancelledBy = ($rideRequest->getPassengerId() === $authUserId) ?
-            $rideRequest->passenger :
-            $rideRequest->ride->driver;
-
+        
         $subject = __('Your ride is cancelled');
-        $body = __('Person cancelled a ride', ['name' => $cancelledBy->getName()]);
+        $body = __('Person cancelled a ride', ['name' => $rideRequest->cancelledBy->getName()]);
 
         $viewData = new ViewDataValue(
             body: $body,

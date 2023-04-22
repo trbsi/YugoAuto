@@ -320,6 +320,7 @@
     "Last minute cancelled rides percentage": "Postotak vožnji otkazanih u zadnji tren",
     "Last minute cancelled rides count": "Broj vožnji otkazanih u zadnji tren",
     "Last minute cancellation explanation": "Vožnje koje su otkazane do 2 sata prije polaska",
+    "You already requested a ride for this route": "Imaš poslan zahtjev za tu rutu u tom danu. Ako želiš poslat novi zahtjev, otkaži trenutni.",
     "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
     "Update your driver profile": "Ažuriraj svoj profil kao vozač",
     "Now you can update your driver profile": "Sada možete ažurirati vaš profil kao vozač. Dodati ime auta, tablice i dozvoljavate li pušenje i životinje. Također možeš dodati i svoj broj telefona.",

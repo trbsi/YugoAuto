@@ -52,7 +52,7 @@ class AcceptOrRejectLogic
             );
         }
 
-        $this->updatePendingRequestsCountService->decrease($rideRequest->ride);
+        $this->updatePendingRequestsCountService->decreaseForDriver($rideRequest->ride);
         NotifyUserLogic::notifyPassengerAboutAcceptOrReject($rideRequest);
     }
 }
