@@ -56,7 +56,7 @@ class SavePushToken
         $pushToken = new PushToken();
         $pushToken
             ->setUserId($userId)
-            ->setDeviceId($deviceId)
+            ->setDeviceId($deviceIdSha512)
             ->setPlatform($platform)
             ->setToken($token)
             ->setTokenType($tokenType)
