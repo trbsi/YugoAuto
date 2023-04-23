@@ -125,15 +125,15 @@
         <div class="flex items-center px-4">
             <div>
                 <div
-                    class="font-medium text-base text-gray-800 dark:text-gray-200 font-bold">{{ __('Language') }}</div>
+                    class="font-medium text-base text-gray-800 dark:text-gray-200 font-bold">{{ __('Country') }}</div>
             </div>
         </div>
 
         <div class="mt-3 space-y-1">
-            @foreach(get_available_locale() as $key => $name)
-                <x-responsive-nav-link href="{{ change_lang_url($key) }}"
-                                       :active="request()->routeIs('change.language')">
-                    {{ $name }}
+            @foreach(get_available_countries() as $countryInEnglish => $countryInNative)
+                <x-responsive-nav-link href="{{ change_country_url($countryInEnglish) }}"
+                                       :active="request()->routeIs('change.localization')">
+                    {{ $countryInNative }}
                 </x-responsive-nav-link>
             @endforeach
 

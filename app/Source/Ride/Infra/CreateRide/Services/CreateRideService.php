@@ -6,6 +6,8 @@ namespace App\Source\Ride\Infra\CreateRide\Services;
 
 use App\Models\Country;
 use App\Models\Ride;
+use App\Source\Localization\Domain\Facade\LocalizationFacade;
+use App\Source\Localization\Infra\Helpers\LocalizationHelper;
 use Illuminate\Support\Carbon;
 
 class CreateRideService
@@ -24,7 +26,7 @@ class CreateRideService
         $ride = new Ride();
         $ride
             ->setDriverId($driverId)
-            ->setCurrency($country->getCurrency())
+            ->setCurrency($this->getCurrency($country))
             ->setPrice($price)
             ->setDescription($description)
             ->setRideTime($time)
@@ -39,5 +41,14 @@ class CreateRideService
         $userProfile
             ->increaseTotalRidesCount()
             ->save();
+    }
+
+    private function getCurrency(Country $country): string
+    {
+        if ($currency = LocalizationHelper::getCurrency()) {
+            return $currency;
+        }
+
+        return $country->getCurrency();
     }
 }

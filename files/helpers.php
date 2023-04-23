@@ -47,7 +47,16 @@ if (!function_exists('single_ride_requests_url')) {
 if (!function_exists('change_lang_url')) {
     function change_lang_url(string $lang): string
     {
-        return route('change.language', ['locale' => $lang]);
+        throw new Exception('Not used');
+        return route('change.localization', ['locale' => $lang]);
+    }
+}
+
+
+if (!function_exists('change_country_url')) {
+    function change_country_url(string $country): string
+    {
+        return route('change.localization', ['country' => $country]);
     }
 }
 
@@ -71,6 +80,22 @@ if (!function_exists('get_available_locale')) {
         $data = config('app.available_locale');
         asort($data);
         return $data;
+    }
+}
+
+if (!function_exists('get_available_countries')) {
+    function get_available_countries(): array
+    {
+        $data = config('app.available_countries');
+        asort($data);
+        return $data;
+    }
+}
+
+if (!function_exists('get_user_currency')) {
+    function get_user_currency(): string
+    {
+        return \App\Source\Localization\Infra\Helpers\LocalizationHelper::getCurrencyWithDefaultFallback();
     }
 }
 

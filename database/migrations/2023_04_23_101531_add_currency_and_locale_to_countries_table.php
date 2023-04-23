@@ -11,8 +11,12 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('countries', function (Blueprint $table) {
-            $table->string('currency', 5)
+            $table->string('currency', 3)
                 ->after('code')
+                ->default('');
+
+            $table->string('locale', 2)
+                ->after('currency')
                 ->default('');
         });
     }
@@ -23,7 +27,7 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::table('countries', function (Blueprint $table) {
-            $table->dropColumn('currency');
+            $table->dropColumn(['currency', 'locale']);
         });
     }
 };

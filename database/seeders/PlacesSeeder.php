@@ -18,7 +18,6 @@ class PlacesSeeder extends Seeder
     public function run(): void
     {
         $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(__DIR__ . '/data/'));
-        $countryData = json_decode(file_get_contents(__DIR__ . '/data/country_data.json'), true);
 
         /** @var SplFileInfo $file */
         foreach ($rii as $file) {
@@ -31,17 +30,7 @@ class PlacesSeeder extends Seeder
 
             foreach ($data as $place) {
                 try {
-                    $countryName = $place['country'];
-                    $country = Country::query()
-                        ->updateOrCreate(
-                            [
-                                'name' => $countryName
-                            ],
-                            [
-                                'code' => $countryData[$countryName]['iso2'],
-                                'currency' => $countryData[$countryName]['currency']
-                            ]
-                        );
+                    $country = Country::query()->where('name', $place['country'])->first();
 
                     if (isset($place['population']) && $place['population'] < 10000) {
                         continue;

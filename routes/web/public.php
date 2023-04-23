@@ -22,7 +22,7 @@ Route::prefix('contact')->group(function () {
     );
 });
 
-Route::get('language/{locale}', [PublicController::class, 'changeLanguage'])->name('change.language');
+Route::get('localization/{country}', [PublicController::class, 'changeLocalization'])->name('change.localization');
 
 Route::get('/email/verify/{id}/{hash}', [VerifyEmailController::class, 'verify'])
     ->middleware(['signed', 'throttle:6,1'])

@@ -69,4 +69,15 @@ class Country extends Model
         $this->currency = $currency;
         return $this;
     }
+
+    public function getLocale(): string
+    {
+        return $this->locale;
+    }
+
+    public function setLocale(string $locale): self
+    {
+        $this->locale = $locale;
+        return $this;
+    }
 }
