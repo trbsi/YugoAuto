@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Source\Ride\Infra\CreateRide\Services;
 
+use App\Models\Country;
 use App\Models\Ride;
 use Illuminate\Support\Carbon;
 
@@ -17,12 +18,13 @@ class CreateRideService
         int $numberOfSeats,
         int $price,
         ?string $description,
-        bool $isAcceptingPackage
+        bool $isAcceptingPackage,
+        Country $country
     ): void {
         $ride = new Ride();
         $ride
             ->setDriverId($driverId)
-            ->setCurrency('EUR')
+            ->setCurrency($country->getCurrency())
             ->setPrice($price)
             ->setDescription($description)
             ->setRideTime($time)

@@ -1,0 +1,30 @@
+{
+    "Croatia": {
+        "iso2": "HR",
+        "currency": "EUR"
+    },
+    "Serbia": {
+        "iso2": "RS",
+        "currency": "RSD"
+    },
+    "Slovenia": {
+        "iso2": "SI",
+        "currency": "EUR"
+    },
+    "Montenegro": {
+        "iso2": "ME",
+        "currency": "EUR"
+    },
+    "Bosnia and Herzegovina": {
+        "iso2": "BE",
+        "currency": "BAM"
+    },
+    "Austria": {
+        "iso2": "AT",
+        "currency": "EUR"
+    },
+    "Germany": {
+        "iso2": "DE",
+        "currency": "EUR"
+    }
+}

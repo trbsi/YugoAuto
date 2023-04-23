@@ -21,6 +21,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereUpdatedAt($value)
  * @property string $code
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereCode($value)
+ * @property string $currency
+ * @method static \Illuminate\Database\Eloquent\Builder|Country whereCurrency($value)
  * @mixin \Eloquent
  */
 class Country extends Model
@@ -54,6 +56,17 @@ class Country extends Model
     public function setCode(string $code): self
     {
         $this->code = $code;
+        return $this;
+    }
+
+    public function getCurrency(): string
+    {
+        return $this->currency;
+    }
+
+    public function setCurrency(string $currency): self
+    {
+        $this->currency = $currency;
         return $this;
     }
 }
