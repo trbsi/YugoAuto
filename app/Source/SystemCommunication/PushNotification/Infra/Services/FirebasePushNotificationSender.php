@@ -42,14 +42,13 @@ final class FirebasePushNotificationSender
                 $this->messaging->validate($message);
                 $this->messaging->send($message);
             } catch (InvalidMessage $e) {
-                if (str_contains($e->getMessage(), 'token is not a valid')) {
-                    $token->delete();
-                }
+                $this->deleteToken($e->getMessage(), $token);
                 Log::error('Firebase error InvalidMessage', [
                     'message' => $e->getMessage(),
                     'trace' => $e->getTraceAsString()
                 ]);
             } catch (FirebaseException $e) {
+                $this->deleteToken($e->getMessage(), $token);
                 Log::error('Firebase error FirebaseException', [
                     'message' => $e->getMessage(),
                     'trace' => $e->getTraceAsString()
@@ -60,6 +59,15 @@ final class FirebasePushNotificationSender
                     'trace' => $e->getTraceAsString()
                 ]);
             }
+        }
+    }
+
+    private function deleteToken(string $errorMessage, PushToken $token): void
+    {
+        if (
+            str_contains($errorMessage, 'token is not a valid') ||
+            str_contains($errorMessage, 'message could not be delivered to the device identified by')) {
+            $token->delete();
         }
     }
 }
