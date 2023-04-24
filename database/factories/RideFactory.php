@@ -21,7 +21,7 @@ class RideFactory extends Factory
             'price' => $this->faker->numberBetween(1, 100),
             'number_of_seats' => $this->faker->numberBetween(1, 3),
             'currency' => 'EUR',
-            'is_accepting_package' => $this->faker->randomElement([1, 2])
+            'is_accepting_package' => $this->faker->boolean()
         ];
     }
 }

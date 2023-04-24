@@ -46,6 +46,15 @@ use Illuminate\Database\Eloquent\Collection;
                         <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                             {{__('Departure time')}}: {{$ride->getRideTimeFormatted()}}
                         </p>
+
+                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            {{__('Is accepting package')}}
+                            @if($ride->getIsAcceptingPackage())
+                                {{__('Yes')}}
+                            @else
+                                {{__('No')}}
+                            @endif
+                        </p>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             {!! $ride->getDescriptionFormatted() !!}
                         </p>

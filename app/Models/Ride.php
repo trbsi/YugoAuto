@@ -75,6 +75,7 @@ class Ride extends Model
     protected $casts = [
         'time' => 'datetime',
         'time_utc' => 'datetime',
+        'is_accepting_package' => 'boolean',
     ];
 
     public function fromPlace(): BelongsTo
