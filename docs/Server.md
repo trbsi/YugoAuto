@@ -27,3 +27,11 @@ In order to be able to upload a file enable: highlight_file() and tmpfile().
 ## Supervisor
 
 `php artisan queue:work --sleep=3 --tries=3 --max-time=3600`
+
+## Cron
+
+`* * * * * php artisan schedule:run > /dev/null 2>&1`
+
+OR
+
+`* * * * * php artisan schedule:run >> logcron.log`
