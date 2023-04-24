@@ -91,6 +91,12 @@ return [
         'en' => 'English'
     ],
 
+    //key has to corresponds to "name" in "countries" table
+    'available_countries' => [
+        'Croatia' => 'Hrvatska',
+        'United Kingdom' => 'United Kingdom'
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -227,4 +233,5 @@ return [
      */
     'log_access_user_id' => env('LOG_VIEW_USER_ID', 0),
     'google_analytics_tag' => env('GTAG', null),
+    'default_currency' => 'EUR',
 ];

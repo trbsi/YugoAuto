@@ -21,7 +21,7 @@ class PlacesSeeder extends Seeder
 
         /** @var SplFileInfo $file */
         foreach ($rii as $file) {
-            if ($file->isDir()) {
+            if ($file->isDir() || $file->getBasename() === 'country_data.json') {
                 continue;
             }
 
@@ -30,15 +30,7 @@ class PlacesSeeder extends Seeder
 
             foreach ($data as $place) {
                 try {
-                    $country = Country::query()
-                        ->updateOrCreate(
-                            [
-                                'name' => $place['country']
-                            ],
-                            [
-                                'code' => $place['iso2']
-                            ]
-                        );
+                    $country = Country::query()->where('name', $place['country'])->first();
 
                     if (isset($place['population']) && $place['population'] < 10000) {
                         continue;

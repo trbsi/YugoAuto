@@ -12,14 +12,14 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 class RideRequestsLogic
 {
     public function __construct(
-        private CanAccessRideSpecification $canDriverAccessRideSpecification,
+        private CanAccessRideSpecification $canAccessRideSpecification,
         private GetRideRequestsService $getRideRequestsService
     ) {
     }
 
     public function getRequests(int $userId, int $rideId): LengthAwarePaginator
     {
-        $canAccess = $this->canDriverAccessRideSpecification->isSatisfiedByDriverOrPassenger(
+        $canAccess = $this->canAccessRideSpecification->isSatisfiedByDriverOrPassenger(
             userId: $userId,
             rideId: $rideId,
             status: RideRequestEnum::ACCEPTED

@@ -18,10 +18,10 @@ class GetRatingsLogic
     ) {
     }
 
-    public function getRatings(int $userId, int $rideId): Collection
+    public function getRatings(int $authUserId, int $rideId): Collection
     {
         $canAccess = $this->canAccessRideSpecification->isSatisfiedByDriverOrPassenger(
-            userId: $userId,
+            userId: $authUserId,
             rideId: $rideId,
             status: RideRequestEnum::ACCEPTED
         );

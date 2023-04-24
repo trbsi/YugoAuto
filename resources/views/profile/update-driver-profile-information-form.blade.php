@@ -23,7 +23,7 @@
         </div>
 
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="animals" value="{{ __('Pets allowed') }}"/>
+            <x-label for="animals" value="{{ __('Animals allowed') }}"/>
             <x-checkbox id="animals" class="mt-1" wire:model.defer="animals"
                         autocomplete="animals"/>
             <x-input-error for="animals" class="mt-2"/>

@@ -58,6 +58,13 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
+ * @property int $country_id
+ * @property int $is_accepting_package
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCountryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereIsAcceptingPackage($value)
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -68,6 +75,7 @@ class Ride extends Model
     protected $casts = [
         'time' => 'datetime',
         'time_utc' => 'datetime',
+        'is_accepting_package' => 'boolean',
     ];
 
     public function fromPlace(): BelongsTo
@@ -227,6 +235,19 @@ class Ride extends Model
         return $this;
     }
 
+    private int $accepting_package;
+
+    public function getIsAcceptingPackage(): bool
+    {
+        return $this->is_accepting_package;
+    }
+
+    public function setIsAcceptingPackage(bool $accepting_package): self
+    {
+        $this->is_accepting_package = $accepting_package;
+        return $this;
+    }
+
     /* HELPER METHODS */
     public function canLeaveRating(): bool
     {
@@ -240,7 +261,7 @@ class Ride extends Model
                     $this->rideRequestForAuthUser &&
                     (
                         $this->rideRequestForAuthUser->isAccepted() ||
-                        $this->rideRequestForAuthUser->isCancelledInLastMinute()
+                        $this->rideRequestForAuthUser->isCancelledAtLastMinute()
                     )
                 )
             );

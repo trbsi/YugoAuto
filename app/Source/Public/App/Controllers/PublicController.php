@@ -2,7 +2,10 @@
 
 namespace App\Source\Public\App\Controllers;
 
+use App\Models\Country;
+use App\Source\Localization\Infra\Helpers\LocalizationHelper;
 use Detection\MobileDetect;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 class PublicController
@@ -10,11 +13,17 @@ class PublicController
     /**
      * @see https://lokalise.com/blog/laravel-localization-step-by-step/
      */
-    public function changeLanguage(
-        string $locale
+    public function changeLocalization(
+        string $country
     ) {
-        app()->setLocale($locale);
-        session()->put('locale', $locale);
+        $country = Country::where('name', $country)->first();
+        if (!$country) {
+            return redirect()->back();
+        }
+
+        App::setLocale($country->getLocale());
+        LocalizationHelper::saveLocalization($country);
+
         return redirect()->back();
     }
 

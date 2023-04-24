@@ -32,7 +32,7 @@ class CanAccessRideSpecification
             ->where('passenger_id', $userId)
             ->first();
 
-        if ($rideRequest && ($rideRequest->isAccepted() || $rideRequest->isCancelledInLastMinute())) {
+        if ($rideRequest && ($rideRequest->isAccepted() || $rideRequest->isCancelledAtLastMinute())) {
             return true;
         }
 

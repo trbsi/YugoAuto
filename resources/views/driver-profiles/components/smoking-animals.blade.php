@@ -14,19 +14,17 @@
 
 <div>
     @if($driverProfile->animalsAllowed())
-        <i class="fa-solid fa-circle-check"
-           style="color: #008f02;"></i>
+        <x-checkmark type="tick"/>
     @else
-        <i class="fa-sharp fa-solid fa-circle-xmark" style="color: #bd0000;"></i>
+        <x-checkmark type="cross"/>
     @endif
     {{$animalsAllowedString}}
 </div>
 <div>
     @if($driverProfile->smokingAllowed())
-        <i class="fa-solid fa-circle-check"
-           style="color: #008f02;"></i>
+        <x-checkmark type="tick"/>
     @else
-        <i class="fa-sharp fa-solid fa-circle-xmark" style="color: #bd0000;"></i>
+        <x-checkmark type="cross"/>
     @endif
     {{$smokingAllowedString}}
 </div>

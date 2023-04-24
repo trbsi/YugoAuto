@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Source\Localization\Infra\Helpers\LocalizationHelper;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -17,6 +18,11 @@ class LocalizationMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if ($locale = LocalizationHelper::getLocale()) {
+            App::setLocale($locale);
+            return $next($request);
+        }
+
         if (Session::has('locale')) {
             App::setLocale(Session::get('locale'));
         }

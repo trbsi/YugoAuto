@@ -23,6 +23,14 @@
                     <div>
                         <b>{{__('Departure time')}}:</b> {{$ride->getRideTimeFormatted()}}
                     </div>
+                    <div>
+                        <b>{{__('Is accepting package')}}</b>
+                        @if($ride->getIsAcceptingPackage())
+                            <x-checkmark type="tick"/>
+                        @else
+                            <x-checkmark type="cross"/>
+                        @endif
+                    </div>
                     @if ($ride->driver->driverProfile && ($ride->isMyRide() || $ride->rideRequestForAuthUser->isAccepted()))
                         <div>
                             <b>{{__('Car name')}}:</b> {{$ride->driver->driverProfile->getCarName()}}

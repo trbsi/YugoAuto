@@ -26693,5 +26693,18 @@
         "country": "Germany",
         "city": "ArnisArnæs",
         "iso2": "DE"
+    },
+    {
+        "area": "0",
+        "coords": {
+            "lat": "0",
+            "lon": "0"
+        },
+        "district": "",
+        "population": "1500000",
+        "state": "",
+        "country": "Germany",
+        "city": "München",
+        "iso2": "DE"
     }
 ]

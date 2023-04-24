@@ -29,6 +29,7 @@ class CreateRideRequest extends FormRequest
             'number_of_seats' => ['required', 'integer', 'min:1', 'max:10'],
             'price' => ['required', 'integer', 'max:10000'],
             'description' => ['nullable', 'string', 'max:500'],
+            'is_accepting_package' => ['nullable', 'string', 'in:on'],
         ];
     }
 

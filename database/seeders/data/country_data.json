@@ -1,0 +1,42 @@
+{
+    "Croatia": {
+        "iso2": "HR",
+        "currency": "EUR",
+        "locale": "hr"
+    },
+    "Serbia": {
+        "iso2": "RS",
+        "currency": "RSD",
+        "locale": "sr"
+    },
+    "Slovenia": {
+        "iso2": "SI",
+        "currency": "EUR",
+        "locale": "sl"
+    },
+    "Montenegro": {
+        "iso2": "ME",
+        "currency": "EUR",
+        "locale": "me"
+    },
+    "Bosnia and Herzegovina": {
+        "iso2": "BE",
+        "currency": "BAM",
+        "locale": "bs"
+    },
+    "Austria": {
+        "iso2": "AT",
+        "currency": "EUR",
+        "locale": "de"
+    },
+    "Germany": {
+        "iso2": "DE",
+        "currency": "EUR",
+        "locale": "de"
+    },
+    "United Kingdom": {
+        "iso2": "GB",
+        "currency": "GBP",
+        "locale": "en"
+    }
+}
