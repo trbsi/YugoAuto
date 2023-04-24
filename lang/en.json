@@ -260,7 +260,6 @@
     "Ride is created": "Ride is created",
     "View ratings": "View ratings",
     "Deleted user": "Deleted user",
-    "New features text": "New features text",
     "Search ride": "Search rides",
     "Minimum departure time": "Initial departure date and time",
     "Maximum departure time": "Final departure date and time",
@@ -332,5 +331,7 @@
     "Update your driver profile": "Update your profile as a driver",
     "Now you can update your driver profile": "You can now update your profile as a driver. Add car name, car plates and if you allow smoking and animals. You can also add your phone number.",
     "Click here to update driver profile": "Click here to update your driver profile",
-    "New features": "New features"
+    "New features": "New features",
+    "New features text": "1. Cities from Serbia, BiH, Slovenia, Austria and Germany have been added<br>2. If someone cancels the ride up to 2 hours before departure, you will be able to rate the person. That person's profile will show the percentage of last-minute canceled rides.",
+    "New features text for accepting package and passenger restriction": "1. As a passenger, you can cancel a ride that is still pending<br>2. When adding a ride as a driver, you can indicate whether you are accepting packages<br>3. You can search for rides that accept packages"
 }

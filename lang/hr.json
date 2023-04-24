@@ -332,5 +332,6 @@
     "Now you can update your driver profile": "Sada možete ažurirati vaš profil kao vozač. Dodati ime auta, tablice i dozvoljavate li pušenje i životinje. Također možeš dodati i svoj broj telefona.",
     "Click here to update driver profile": "Klikni ovdje da ažuriraš profil vozača",
     "New features": "Nove opcije",
-    "New features text": "1. Dodani su gradovi iz Srbije, BiH, Slovenije, Austrije i Njemačke<br>2. Ukoliko netko otkaže prijevoz do 2 sata prije polaska osobu ćete moći ocijeniti. Te će na profilu osobe biti prikazan postotak otkazanih prijevoza u zadnji tren."
+    "New features text": "1. Dodani su gradovi iz Srbije, BiH, Slovenije, Austrije i Njemačke<br>2. Ukoliko netko otkaže prijevoz do 2 sata prije polaska osobu ćete moći ocijeniti. Te će na profilu osobe biti prikazan postotak otkazanih prijevoza u zadnji tren.",
+    "New features text for accepting package and passenger restriction": "1. Kao putnik možeš otkazati prijevoz koji je još na čekanju<br>2. Prilikom dodavanja vožnje kao vozač možeš označiti primaš li pakete za prijevoz<br>3. Možeš pretraživati prijevoze koji prihvaćaju prijevoz paketa."
 }

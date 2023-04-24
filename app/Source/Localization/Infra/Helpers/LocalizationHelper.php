@@ -12,7 +12,7 @@ class LocalizationHelper
 {
     public static function getLocale(): null|string
     {
-        return self::getLocaleExtended() ?
+        return self::hasLocaleExtended() ?
             self::getLocaleExtended()['locale'] :
             null;
     }
@@ -20,14 +20,14 @@ class LocalizationHelper
 
     public static function getCurrency(): null|string
     {
-        return self::getLocaleExtended() ?
+        return self::hasLocaleExtended() ?
             self::getLocaleExtended()['currency'] :
             null;
     }
 
     public static function getCurrencyWithDefaultFallback(): null|string
     {
-        return self::getLocaleExtended() ?
+        return self::hasLocaleExtended() ?
             self::getLocaleExtended()['currency'] :
             config('app.default_currency');
     }
@@ -40,12 +40,13 @@ class LocalizationHelper
         ]);
     }
 
-    private static function getLocaleExtended(): null|array
+    private static function getLocaleExtended(): array
     {
-        if (Session::has(LocaleEnum::LOCALE_EXTENDED->value)) {
-            return Session::get(LocaleEnum::LOCALE_EXTENDED->value);
-        }
+        return Session::get(LocaleEnum::LOCALE_EXTENDED->value);
+    }
 
-        return null;
+    private static function hasLocaleExtended(): bool
+    {
+        return Session::has(LocaleEnum::LOCALE_EXTENDED->value);
     }
 }

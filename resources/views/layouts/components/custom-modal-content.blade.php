@@ -9,6 +9,17 @@
     </x-slot>
 </x-custom-modal>
 
+<x-custom-modal modalClass="package-and-passenger-restriction">
+    <x-slot name="title">
+        {{ __('New features') }}
+    </x-slot>
+    <x-slot name="content">
+        <div class="flex flex-col items-center justify-center">
+            {!! __('New features text for accepting package and passenger restriction') !!}
+        </div>
+    </x-slot>
+</x-custom-modal>
+
 @if(!auth()->guest())
     <x-custom-modal modalClass="driverprofile">
         <x-slot name="title">
