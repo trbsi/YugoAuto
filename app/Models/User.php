@@ -152,13 +152,18 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->name;
     }
 
+    public function hasName(): bool
+    {
+        return !empty($this->getName());
+    }
+
     public function setName(string $name): self
     {
         $this->name = $name;
         return $this;
     }
 
-    public function getProfilePhotoPath(): string
+    public function getProfilePhotoPath(): ?string
     {
         return $this->profile_photo_path;
     }
@@ -172,6 +177,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getProfilePhotoUrl(): string
     {
         return $this->profile_photo_url;
+    }
+
+    public function hasProfilePhoto(): bool
+    {
+        return !empty($this->getProfilePhotoPath());
     }
 
     public function getPhoneNumber(): ?string

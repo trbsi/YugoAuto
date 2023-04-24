@@ -14,6 +14,7 @@ use App\Source\Ride\Domain\CreateRide\CreateRideLogic;
 use App\Source\Ride\Domain\DeleteRide\DeleteRideLogic;
 use App\Source\Ride\Domain\MyRides\MyRidesLogic;
 use App\Source\Ride\Domain\SearchRides\SearchRidesLogic;
+use App\Source\Ride\Domain\ShowCreateForm\ShowCreateFormLogic;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -83,20 +84,18 @@ class RideController extends Controller
 
     public function showCreate(
         Request $request,
-        SearchPlacesLogic $searchPlacesBusinessLogic
+        SearchPlacesLogic $searchPlacesBusinessLogic,
+        ShowCreateFormLogic $showCreateFormLogic
     ) {
         $fromPlaceId = old('from_place_id');
         $toPlaceId = old('to_place_id');
-        $toPlace = $fromPlace = null;
-        if ($fromPlaceId && $toPlaceId) {
-            $fromPlace = $searchPlacesBusinessLogic->getById((int)$fromPlaceId);
-            $toPlace = $searchPlacesBusinessLogic->getById((int)$toPlaceId);
-        }
+
         return view(
             'ride.create.create-form',
             [
-                'fromPlace' => $fromPlace,
-                'toPlace' => $toPlace,
+                'fromPlace' => ($fromPlaceId) ? $searchPlacesBusinessLogic->getById((int)$fromPlaceId) : null,
+                'toPlace' => ($toPlaceId) ? $searchPlacesBusinessLogic->getById((int)$toPlaceId) : null,
+                'canCreateRide' => $showCreateFormLogic->canCreateRide(Auth::id()),
                 'driverProfile' => Auth::user()->driverProfile
             ]
         );

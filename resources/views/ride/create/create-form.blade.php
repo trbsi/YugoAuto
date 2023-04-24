@@ -15,6 +15,12 @@
                 <div
                     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
+                    @if(!$canCreateRide)
+                        <x-alert role="warning"
+                                 :content="__('Please fill your profile in order to create a ride')"
+                                 :link="route('profile.show')"></x-alert>
+                    @endif
+
                     <form method="POST" action="{{route('ride.save')}}">
                         @csrf
                         <div class="mb-6">
@@ -115,12 +121,14 @@
                             <x-input type="checkbox" id="is_accepting_package" name="is_accepting_package"/>
                         </div>
 
-                        <div class=" mb-6">
-                            <button type="submit"
-                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                {{__('Create')}}
-                            </button>
-                        </div>
+                        @if($canCreateRide)
+                            <div class=" mb-6">
+                                <button type="submit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    {{__('Create')}}
+                                </button>
+                            </div>
+                        @endif
 
                     </form>
                 </div>
