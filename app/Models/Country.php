@@ -23,6 +23,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereCode($value)
  * @property string $currency
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereCurrency($value)
+ * @property string $locale
+ * @method static \Illuminate\Database\Eloquent\Builder|Country whereLocale($value)
  * @mixin \Eloquent
  */
 class Country extends Model

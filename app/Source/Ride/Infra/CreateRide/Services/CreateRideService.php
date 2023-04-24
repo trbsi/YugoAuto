@@ -6,7 +6,6 @@ namespace App\Source\Ride\Infra\CreateRide\Services;
 
 use App\Models\Country;
 use App\Models\Ride;
-use App\Source\Localization\Domain\Facade\LocalizationFacade;
 use App\Source\Localization\Infra\Helpers\LocalizationHelper;
 use Illuminate\Support\Carbon;
 
@@ -27,6 +26,7 @@ class CreateRideService
         $ride
             ->setDriverId($driverId)
             ->setCurrency($this->getCurrency($country))
+            ->setCountryId($country->getId())
             ->setPrice($price)
             ->setDescription($description)
             ->setRideTime($time)

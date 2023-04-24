@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
  *
  * @property int $id
  * @property int $driver_id
+ * @property int $country_id
  * @property int $from_place_id
  * @property int $to_place_id
  * @property Carbon $time
@@ -25,6 +26,7 @@ use Illuminate\Support\Facades\Auth;
  * @property string $currency
  * @property int $number_of_seats
  * @property string|null $description
+ * @property bool $is_accepting_package
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property Carbon|null $deleted_at
@@ -43,6 +45,7 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCountryId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCurrency($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDeletedAt($value)
@@ -50,6 +53,7 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereDriverId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereFromPlaceId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereIsAcceptingPackage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereNumberOfSeats($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride wherePrice($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereTime($value)
@@ -58,13 +62,6 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
- * @property int $country_id
- * @property int $is_accepting_package
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
- * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCountryId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Ride whereIsAcceptingPackage($value)
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -247,6 +244,18 @@ class Ride extends Model
         $this->is_accepting_package = $accepting_package;
         return $this;
     }
+
+    public function getCountryId(): int
+    {
+        return $this->country_id;
+    }
+
+    public function setCountryId(int $country_id): self
+    {
+        $this->country_id = $country_id;
+        return $this;
+    }
+
 
     /* HELPER METHODS */
     public function canLeaveRating(): bool

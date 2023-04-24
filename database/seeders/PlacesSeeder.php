@@ -32,7 +32,11 @@ class PlacesSeeder extends Seeder
                 try {
                     $country = Country::query()->where('name', $place['country'])->first();
 
-                    if (isset($place['population']) && $place['population'] < 10000) {
+                    if (
+                        in_array($file->getBasename(), ['germany.json']) &&
+                        isset($place['population']) &&
+                        $place['population'] < 10000
+                    ) {
                         continue;
                     }
 
