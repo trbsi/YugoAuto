@@ -1,4 +1,5 @@
 @import "custom.css";
+@import "token_input/token-input-facebook.css";
 
 @tailwind base;
 @tailwind components;

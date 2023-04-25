@@ -18,8 +18,8 @@ class PlaceController
         $data = [];
         foreach ($places as $place) {
             $data[] = [
-                'value' => $place->getId(),
-                'label' => $place->getName()
+                'id' => $place->getId(),
+                'name' => $place->getName()
             ];
         }
 

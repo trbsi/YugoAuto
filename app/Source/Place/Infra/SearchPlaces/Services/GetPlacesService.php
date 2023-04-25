@@ -18,4 +18,9 @@ class GetPlacesService
     {
         return Place::findOrFail($id);
     }
+
+    public function getByIds(array $ids): Collection
+    {
+        return Place::whereIn('id', $ids)->get();
+    }
 }

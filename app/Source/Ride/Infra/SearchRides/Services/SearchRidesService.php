@@ -14,7 +14,7 @@ class SearchRidesService
 {
     public function search(
         int $fromPlaceId,
-        int $toPlaceId,
+        array $toPlaceIds,
         ?Carbon $minStartTime,
         ?Carbon $maxStartTime,
         bool $isAcceptingPackage,
@@ -22,7 +22,7 @@ class SearchRidesService
     ): LengthAwarePaginator {
         //TODO - check query index
         $rides = Ride::where('from_place_id', $fromPlaceId)
-            ->where('to_place_id', $toPlaceId)
+            ->whereIn('to_place_id', $toPlaceIds)
             ->with([
                 'fromPlace',
                 'toPlace',

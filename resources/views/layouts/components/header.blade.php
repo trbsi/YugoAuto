@@ -1,7 +1,6 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.bunny.net">
 <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -22,3 +21,6 @@
 <meta property="og:description" content="YugoAuto je besplatna alternativa za dijeljenje prijevoza">
 <meta property="og:type" content=website>
 <meta property="og:image" content=https://yugoauto.com/assets/img/fb-share.png?v=1>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+

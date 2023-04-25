@@ -248,8 +248,7 @@
         var input_val;
 
         // Create a new text input an attach keyup events
-        //MODIFIED - to required
-        var input_box = $("<input required type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
+        var input_box = $("<input type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
             .css({
                 outline: "none"
             })
@@ -573,10 +572,6 @@
         }
 
         function resize_input() {
-            //MODIFIED
-            //input_box.css('width', '100%');
-            //return;
-
             if (input_val === (input_val = input_box.val())) {
                 return;
             }

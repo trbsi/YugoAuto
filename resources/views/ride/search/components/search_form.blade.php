@@ -1,7 +1,7 @@
 <?php
 /** @var \App\Models\Place $fromPlace */
 
-/** @var \App\Models\Place $toPlace */
+/** @var \Illuminate\Database\Eloquent\Collection $toPlaces */
 ?>
 <div
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
@@ -12,7 +12,6 @@
                 <i>({{__('Required')}})</i></label>
             <input type="text"
                    id="from_place"
-                   value="{{!empty($fromPlace) ? $fromPlace->getName() : $fromPlace}}"
                    class="clear-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                    placeholder="Zagreb" required>
 
@@ -35,13 +34,12 @@
                 <i>({{__('Required')}})</i></label>
             <input type="text"
                    id="to_place"
-                   value="{{!empty($toPlace) ? $toPlace->getName() : $toPlace}}"
                    class="clear-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                    placeholder="Split" required>
 
             <input
                 type="hidden"
-                value="{{!empty($toPlace) ? $toPlace->getId() : $toPlace}}"
+                value="{{$toPlaces->isNotEmpty() ? implode(',', $toPlaces->pluck('id')->toArray()) : null}}"
                 name="to_place_id"
                 id="to_place_id" required>
         </div>
@@ -93,3 +91,26 @@
 
     </form>
 </div>
+
+@push('javascript')
+    <script>
+        $(function () {
+            @if(!empty($fromPlace))
+            $('#from_place').tokenInput('add', {id: {{$fromPlace->getId()}}, name: '{{$fromPlace->getName()}}'});
+            @endif
+
+
+            @if($toPlaces->isNotEmpty())
+            var tmpToPlaceIds = [
+                @foreach($toPlaces as $toPlace)
+                {id: {{$toPlace->getId()}}, name: '{{$toPlace->getName()}}'},
+                @endforeach
+            ];
+
+            tmpToPlaceIds.forEach(function (element) {
+                $('#to_place').tokenInput('add', element);
+            })
+            @endif
+        });
+    </script>
+@endpush

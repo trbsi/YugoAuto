@@ -21,20 +21,20 @@ class SearchRidesLogic
 
     public function search(
         int $fromPlaceId,
-        int $toPlaceId,
+        array $toPlaceIds,
         ?Carbon $minStartTime,
         ?Carbon $maxStartTime,
         bool $isAcceptingPackage,
         string $filter
     ): LengthAwarePaginator {
-        $now = Carbon::now();
+        $now = Carbon::now()->startOfDay();
         if ($minStartTime < $now) {
             $minStartTime = $now;
         }
 
         return $this->searchRidesService->search(
             fromPlaceId: $fromPlaceId,
-            toPlaceId: $toPlaceId,
+            toPlaceIds: $toPlaceIds,
             minStartTime: $minStartTime,
             maxStartTime: $maxStartTime,
             isAcceptingPackage: $isAcceptingPackage,

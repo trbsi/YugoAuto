@@ -17,6 +17,7 @@ use App\Source\Ride\Domain\SearchRides\SearchRidesLogic;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
@@ -31,7 +32,8 @@ class RideController extends Controller
     ) {
         try {
             $requiredParams = ['from_place_id', 'to_place_id'];
-            $fromPlace = $toPlace = $minTime = $maxTime = $isAcceptingPackage = null;
+            $fromPlace = $minTime = $maxTime = $isAcceptingPackage = null;
+            $toPlaces = new Collection();
 
             if ($this->hasRequiredParams($requiredParams, $request->all())) {
                 $fromPlace = $request->from_place_id;
@@ -42,11 +44,11 @@ class RideController extends Controller
                 $filter = $request->filter ?? '';
 
                 $fromPlace = $placesBusinessLogic->getById((int)$fromPlace);
-                $toPlace = $placesBusinessLogic->getById((int)$toPlace);
+                $toPlaces = $placesBusinessLogic->getByIds(explode(',', $toPlace));
 
                 $rides = $logic->search(
                     fromPlaceId: $fromPlace->getId(),
-                    toPlaceId: $toPlace->getId(),
+                    toPlaceIds: $toPlaces->pluck('id')->toArray(),
                     minStartTime: $minTime ? Carbon::createFromFormat(
                         TimeEnum::DATE_FORMAT->value,
                         $minTime
@@ -67,7 +69,7 @@ class RideController extends Controller
                 [
                     'rides' => $rides,
                     'fromPlace' => $fromPlace,
-                    'toPlace' => $toPlace,
+                    'toPlaces' => $toPlaces,
                     'minTime' => $minTime,
                     'maxTime' => $maxTime,
                     'isAcceptingPackage' => $isAcceptingPackage

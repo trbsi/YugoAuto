@@ -9,13 +9,13 @@ use Illuminate\Database\Eloquent\Collection;
 
 /** @var \App\Models\Place $fromPlace */
 
-/** @var \App\Models\Place $toPlace */
+/** @var Collection $toPlaces */
 ?>
 <div
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
-    @if($fromPlace && $toPlace)
-        <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}} - {{$toPlace->getName()}}</h2>
+    @if($fromPlace && $toPlaces->isNotEmpty())
+        <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}} - {{implode(', ', $toPlaces->pluck('name')->toArray())}}</h2>
     @endif
 
     @if($rides instanceof Collection)

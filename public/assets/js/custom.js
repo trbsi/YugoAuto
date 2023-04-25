@@ -1,46 +1,69 @@
 //AUTOCOMPLETE FOR PLACES
 $(function () {
+    let tokenInputSettings = {
+        theme: 'facebook',
+        minChars: 3,
+        hintText: transTypeInCity,
+        resultsLimit: 5,
+        tokenLimit: 1,
+        queryParam: 'term'
+    };
 
-    if ($("#from_place").length) {
-        $("#from_place").autocomplete({
-            minLength: 3,
-            source: "/api/place/search",
-            focus: function (event, ui) {
-                $("#from_place").val(ui.item.label);
-                return false;
+    var fromPlaceInput = $("#from_place");
+    var fromPlaceId = $("#from_place_id");
+    fromPlaceInput.tokenInput(citySearchRoute,
+        {
+            ...tokenInputSettings,
+            onAdd: function (item) {
+                fromPlaceId.val(item.id);
             },
-            select: function (event, ui) {
-                $("#from_place_id").val(ui.item.value);
-                $("#from_place").val(ui.item.label);
-                return false;
+            onDelete: function (item) {
+                fromPlaceId.val('');
             }
-        }).autocomplete("instance")._renderItem = function (ul, item) {
-            return $("<li>")
-                .append("<div>" + item.label + "</div>")
-                .appendTo(ul);
-        };
-    }
+        }
+    );
 
-    if ($("#to_place").length) {
-        $("#to_place").autocomplete({
-            minLength: 3,
-            source: "/api/place/search",
-            focus: function (event, ui) {
-                $("#to_place").val(ui.item.label);
-                return false;
-            },
-            select: function (event, ui) {
-                $("#to_place_id").val(ui.item.value);
-                $("#to_place").val(ui.item.label);
-                return false;
-            }
-        }).autocomplete("instance")._renderItem = function (ul, item) {
-            return $("<li>")
-                .append("<div>" + item.label + "</div>")
-                .appendTo(ul);
-        };
-    }
+    var currentUrl = window.location.href;
+    var toPlaceIds = [];
+    var toPlaceInput = $("#to_place");
+    var toPlaceId = $("#to_place_id");
+    toPlaceInput.tokenInput(citySearchRoute, {
+        ...tokenInputSettings,
+        ...{tokenLimit: (currentUrl.indexOf('ride/create') !== -1) ? 1 : 5},
+        onAdd: function (item) {
+            toPlaceIds.push(item.id);
+            toPlaceId.val(toPlaceIds.join(','));
+        },
+        onDelete: function (item) {
+            toPlaceIds = toPlaceIds.filter(function (elem) {
+                return elem !== item.id;
+            });
+            toPlaceId.val(toPlaceIds.join(','));
+        }
+    });
 
+    //SWITCH RIDES
+    $('#switch_rides').click(function () {
+        //switch places ids
+        var tmpToPlaceId = toPlaceId.val();
+        toPlaceId.val(fromPlaceId.val());
+        fromPlaceId.val(tmpToPlaceId);
+
+        //clear array because onAdd() function will be triggered
+        toPlaceIds = [];
+
+        //switch token input valus
+        var tmpToPlaceInput = toPlaceInput.tokenInput('get');
+        toPlaceInput.tokenInput('clear');
+        (fromPlaceInput.tokenInput('get')).forEach(function (element) {
+            toPlaceInput.tokenInput('add', element);
+        })
+
+        fromPlaceInput.tokenInput('clear');
+        if (tmpToPlaceInput.length > 0) {
+            fromPlaceInput.tokenInput('add', tmpToPlaceInput[0]);
+        }
+    });
 });
 
 //DATE TIME PICKER
@@ -70,23 +93,6 @@ $('.clear-input').on('click focusin', function () {
     this.value = '';
 });
 
-
-//SWITCH RIDES
-$('#switch_rides').click(function () {
-    var fromPlace = $('#from_place');
-    var fromPlaceId = $('#from_place_id');
-    var toPlace = $('#to_place');
-    var toPlaceId = $('#to_place_id');
-
-    var tmpFromPlaceValue = fromPlace.val();
-    var tmpFromPlaceIdValue = fromPlaceId.val();
-
-    fromPlace.val(toPlace.val());
-    fromPlaceId.val(toPlaceId.val());
-
-    toPlace.val(tmpFromPlaceValue);
-    toPlaceId.val(tmpFromPlaceIdValue);
-});
 
 //MODAL
 //values in array corresponds to modalClass in custom-modal-content.blade.php

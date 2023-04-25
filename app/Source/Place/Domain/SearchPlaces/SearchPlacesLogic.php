@@ -32,4 +32,13 @@ class SearchPlacesLogic
             throw new Exception(__('Chosen city does not exist'));
         }
     }
+
+    public function getByIds(array $ids): Collection
+    {
+        try {
+            return $this->getPlacesService->getByIds($ids);
+        } catch (Exception $exception) {
+            throw new Exception(__('Chosen city does not exist'));
+        }
+    }
 }
