@@ -1033,7 +1033,7 @@
                         }
 
                         // only populate the dropdown if the results are associated with the active search query
-                        if (input_box.val() === query) {
+                        if ((input_box.val()).indexOf(query) !== -1) {
                             populateDropdown(query, $(input).data("settings").jsonContainer ? results[$(input).data("settings").jsonContainer] : results);
                         }
                     };
