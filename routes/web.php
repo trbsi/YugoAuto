@@ -20,15 +20,17 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    require __DIR__ . '/web/auth.php';
-    require __DIR__ . '/web/ride.php';
-    require __DIR__ . '/web/ride-request.php';
-    require __DIR__ . '/web/user.php';
-    require __DIR__ . '/web/messaging.php';
-    require __DIR__ . '/web/rating.php';
-    require __DIR__ . '/web/push-token.php';
-    require __DIR__ . '/web/report.php';
+    require __DIR__ . '/web/private/auth.php';
+    require __DIR__ . '/web/private/ride.php';
+    require __DIR__ . '/web/private/ride-request.php';
+    require __DIR__ . '/web/private/user.php';
+    require __DIR__ . '/web/private/messaging.php';
+    require __DIR__ . '/web/private/rating.php';
+    require __DIR__ . '/web/private/push-token.php';
+    require __DIR__ . '/web/private/report.php';
 });
 
 //PUBLIC
-require __DIR__ . '/web/public.php';
+require __DIR__ . '/web/public/public.php';
+require __DIR__ . '/web/public/auth.php';
+require __DIR__ . '/web/public/ride.php';

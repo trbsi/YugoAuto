@@ -12,3 +12,4 @@ Route::prefix('phone-number')->group(function () {
         'phone-verification.can-verify'
     );
 });
+
