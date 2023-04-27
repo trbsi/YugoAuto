@@ -3,6 +3,12 @@
 
 ?>
 <x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ $user->getName() }}
+        </h2>
+    </x-slot>
+
     <div
         class="dark:bg-gray-800 dark:text-white bg-gray-200 font-sans h-screen w-full flex flex-row justify-center items-center">
         <div class="dark:bg-gray-700 card w-96 mx-auto bg-white  shadow-xl hover:shadow">
