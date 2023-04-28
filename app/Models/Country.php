@@ -82,4 +82,9 @@ class Country extends Model
         $this->locale = $locale;
         return $this;
     }
+
+    public static function getDefaultCountry(): Country
+    {
+        return Country::query()->where('name', 'Croatia')->first();
+    }
 }

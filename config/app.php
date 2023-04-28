@@ -94,7 +94,7 @@ return [
     //key has to corresponds to "name" in "countries" table
     'available_countries' => [
         'Croatia' => 'Hrvatska',
-        'United Kingdom' => 'United Kingdom'
+        'United Kingdom' => 'United Kingdom',
     ],
 
     /*

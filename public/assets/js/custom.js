@@ -96,7 +96,7 @@ $('.clear-input').on('click focusin', function () {
 
 //MODAL
 //values in array corresponds to modalClass in custom-modal-content.blade.php
-let modals = ['newcities-and-lastmincancel', 'driverprofile', 'package-and-passenger-restriction'];
+let modals = ['driverprofile', 'package-and-passenger-restriction', 'choose-country'];
 $.each(modals, function (index, modalClass) {
     const modal = $('.custom-modal-' + modalClass)
     if (modal.length === 0) {

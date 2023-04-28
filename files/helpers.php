@@ -1,5 +1,7 @@
 <?php
 
+use App\Source\Localization\Infra\Helpers\LocalizationHelper;
+
 /* URL GENERATOR */
 if (!function_exists('user_profile_url')) {
     function user_profile_url(int $userId): string
@@ -43,20 +45,10 @@ if (!function_exists('single_ride_requests_url')) {
     }
 }
 
-
-if (!function_exists('change_lang_url')) {
-    function change_lang_url(string $lang): string
-    {
-        throw new Exception('Not used');
-        return route('change.localization', ['locale' => $lang]);
-    }
-}
-
-
 if (!function_exists('change_country_url')) {
-    function change_country_url(string $country): string
+    function change_country_url(string $countryNameInEnglish): string
     {
-        return route('change.localization', ['country' => $country]);
+        return route('change.localization', ['country' => $countryNameInEnglish]);
     }
 }
 
@@ -73,16 +65,6 @@ if (!function_exists('build_ride_search_base_query')) {
     }
 }
 
-
-if (!function_exists('get_available_locale')) {
-    function get_available_locale(): array
-    {
-        $data = config('app.available_locale');
-        asort($data);
-        return $data;
-    }
-}
-
 if (!function_exists('get_available_countries')) {
     function get_available_countries(): array
     {
@@ -92,10 +74,17 @@ if (!function_exists('get_available_countries')) {
     }
 }
 
+if (!function_exists('is_country_chosen')) {
+    function is_country_chosen(): bool
+    {
+        return LocalizationHelper::hasLocaleExtended();
+    }
+}
+
 if (!function_exists('get_user_currency')) {
     function get_user_currency(): string
     {
-        return \App\Source\Localization\Infra\Helpers\LocalizationHelper::getCurrencyWithDefaultFallback();
+        return LocalizationHelper::getCurrencyWithDefaultFallback();
     }
 }
 

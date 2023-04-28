@@ -24,6 +24,7 @@ class LocalizationMiddleware
         }
 
         if (Session::has('locale')) {
+            LocalizationHelper::saveLocalizationByLocale(Session::get('locale'));
             App::setLocale(Session::get('locale'));
         }
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Source\Ride\Infra\SearchRides\Services;
 
 use App\Models\Ride;
+use App\Source\Localization\Infra\Helpers\LocalizationHelper;
 use App\Source\Ride\Enum\RideExtraFiltersEnum;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
@@ -55,7 +56,8 @@ class SearchRidesService
 
     public function latestRides(): Collection
     {
-        return Ride::orderBy('time', 'ASC')
+        return Ride::query()
+            ->orderBy('time', 'ASC')
             ->with([
                 'fromPlace',
                 'toPlace',
@@ -63,6 +65,7 @@ class SearchRidesService
                 'rideRequestForAuthUser',
                 'acceptedRideRequests'
             ])
+            ->where('country_id', LocalizationHelper::getCountryId())
             ->where('time_utc', '>=', Carbon::now()->format('Y-m-d H:i:s'))
             ->limit(20)
             ->get();
