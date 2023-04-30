@@ -12,3 +12,6 @@ https://yugoauto.com
 - [Server](./docs/Server.md)
 - [Other](./docs/Other.md)
 
+# Contributing
+
+Everyone is welcome to contribute to the YugoAuto.
