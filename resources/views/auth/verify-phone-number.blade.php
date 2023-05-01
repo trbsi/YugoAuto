@@ -161,17 +161,22 @@ use App\Enum\CoreEnum;
                                 }).catch((error) => {
                                     verifyCodeButton.prop('disabled', false);
                                     resetForm();
-                                    triggerAlert();
+                                    triggerAlert(error);
                                 });
                             });
                         })
                         .catch((error) => {
                             resetForm();
-                            triggerAlert();
+                            triggerAlert(error);
                         });
                 }
 
-                function triggerAlert() {
+                function triggerAlert(error) {
+                    sendRequest('POST', '{{route('phone-verification.log-error')}}', {
+                        message: JSON.stringify(error),
+                        phoneNumberInput: phoneNumberInput.val()
+                    });
+
                     Swal.fire({
                         title: '{{__('Whoops! Something went wrong.')}}',
                         text: '{{__('Phone number could not be verified')}}',

@@ -11,5 +11,8 @@ Route::prefix('phone-number')->group(function () {
     Route::post('/can-verify', [VerifyPhoneNumberController::class, 'canVerify'])->name(
         'phone-verification.can-verify'
     );
+    Route::post('/log-error', [VerifyPhoneNumberController::class, 'logVerificationError'])->name(
+        'phone-verification.log-error'
+    );
 });
 

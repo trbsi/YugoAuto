@@ -24,7 +24,34 @@ class VerifyPhoneNumberLogic
         $this->increaseDailyLimitService->increaseUserDailyLimit($userId);
     }
 
-    public function saveVerificationId(
+    public function verifyPhoneNumber(
+        string $type,
+        int $userId,
+        string $verificationId,
+        string $phoneNumber
+    ): void {
+        switch ($type) {
+            case 'code-sent':
+                $this->saveVerificationId(
+                    userId: $userId,
+                    verificationId: $verificationId,
+                    phoneNumber: $phoneNumber
+                );
+                break;
+            case 'verify':
+                $this->verify(
+                    userId: $userId,
+                    verificationId: $verificationId,
+                    phoneNumber: $phoneNumber
+                );
+                break;
+            default:
+                throw new Exception(__('Whoops! Something went wrong.'));
+        }
+    }
+
+
+    private function saveVerificationId(
         int $userId,
         string $verificationId,
         string $phoneNumber
@@ -35,7 +62,7 @@ class VerifyPhoneNumberLogic
         );
     }
 
-    public function verify(
+    private function verify(
         int $userId,
         string $verificationId,
         string $phoneNumber

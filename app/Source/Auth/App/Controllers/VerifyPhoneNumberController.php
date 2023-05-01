@@ -6,6 +6,7 @@ namespace App\Source\Auth\App\Controllers;
 
 use App\Source\Auth\App\Requests\VerifyPhoneRequest;
 use App\Source\Auth\Domain\PhoneVerificationStatus\PhoneVerificationStatusLogic;
+use App\Source\Auth\Domain\VerifyPhoneNumber\LogVerificationErrorLogic;
 use App\Source\Auth\Domain\VerifyPhoneNumber\VerifyPhoneNumberLogic;
 use Exception;
 use Illuminate\Http\Request;
@@ -56,25 +57,12 @@ class VerifyPhoneNumberController
     ) {
         try {
             $logic->increaseLimits(Auth::id());
-
-            switch ($type) {
-                case 'code-sent':
-                    $logic->saveVerificationId(
-                        userId: Auth::id(),
-                        verificationId: $request->verification_id,
-                        phoneNumber: $request->phone_number
-                    );
-                    break;
-                case 'verify':
-                    $logic->verify(
-                        userId: Auth::id(),
-                        verificationId: $request->verification_id,
-                        phoneNumber: $request->phone_number
-                    );
-                    break;
-                default:
-                    throw new Exception(__('Whoops! Something went wrong.'));
-            }
+            $logic->verifyPhoneNumber(
+                type: $type,
+                userId: Auth::id(),
+                verificationId: $request->verification_id,
+                phoneNumber: $request->phone_number
+            );
             return response()->json();
         } catch (Exception $exception) {
             return response()->json(
@@ -84,5 +72,21 @@ class VerifyPhoneNumberController
                 400
             );
         }
+    }
+
+    public function logVerificationError(
+        Request $request,
+        LogVerificationErrorLogic $logic
+    ): void {
+        $request->validate([
+            'message' => 'required',
+            'phoneNumberInput' => 'required',
+        ]);
+
+        $logic->log(
+            $request->message,
+            $request->phoneNumberInput,
+            Auth::user()
+        );
     }
 }
