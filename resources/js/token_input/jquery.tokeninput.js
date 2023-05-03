@@ -248,7 +248,7 @@
         var input_val;
 
         // Create a new text input an attach keyup events
-        var input_box = $("<input type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
+        var input_box = $("<input class='bg-gray-50' type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
             .css({
                 outline: "none"
             })
@@ -412,6 +412,7 @@
         // The list to store the token items in
         var token_list = $("<ul />")
             .addClass($(input).data("settings").classes.tokenList)
+            .addClass('bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500')
             .click(function (event) {
                 var li = $(event.target).closest("li");
                 if (li && li.get(0) && $.data(li.get(0), "tokeninput")) {
