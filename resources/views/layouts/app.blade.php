@@ -45,6 +45,8 @@
         @include('components.pending-requests-alert')
         {{ $slot }}
     </main>
+
+    @include('layouts.components.bottom-navigation')
 </div>
 
 @stack('modals')

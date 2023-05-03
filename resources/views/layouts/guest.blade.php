@@ -24,6 +24,7 @@
     {{ $slot }}
 </div>
 
+@include('layouts.components.bottom-navigation')
 @stack('modals')
 @include('layouts.components.custom-modal-content')
 @include('layouts.components.footer')

@@ -10,6 +10,17 @@ if (!function_exists('user_profile_url')) {
     }
 }
 
+if (!function_exists('auth_user_profile_url')) {
+    function auth_user_profile_url(): string
+    {
+        if (auth()->guest()) {
+            return route('login');
+        }
+
+        return route('user.show', ['id' => auth()->id()]);
+    }
+}
+
 if (!function_exists('my_profile_url')) {
     function my_profile_url(): string
     {
