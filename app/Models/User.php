@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\User\AdditionalPhonesCollection;
+use App\Models\User\AdditionalPhoneValue;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -21,6 +23,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @property string $name
  * @property string $email
  * @property string|null $phone_number
+ * @property array|null $additional_phones
  * @property bool $is_phone_number_verified
  * @property int $is_phone_number_public
  * @property Carbon|null $email_verified_at
@@ -47,6 +50,7 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereAdditionalPhones($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCurrentTeamId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
@@ -66,12 +70,6 @@ use Laravel\Sanctum\HasApiTokens;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutTrashed()
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\SocialLogin> $socialLogins
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\SocialLogin> $socialLogins
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
  * @mixin \Eloquent
  */
 class User extends Authenticatable implements MustVerifyEmail
@@ -113,7 +111,8 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'is_phone_number_verified' => 'boolean'
+        'is_phone_number_verified' => 'boolean',
+        'additional_phones' => 'array',
     ];
 
     /**
@@ -240,6 +239,38 @@ class User extends Authenticatable implements MustVerifyEmail
     public function setEmailVerifiedAt(Carbon $email_verified_at): self
     {
         $this->email_verified_at = $email_verified_at;
+        return $this;
+    }
+
+    public function getAdditionalPhones(): array
+    {
+        return $this->additional_phones ?: [];
+    }
+
+    public function getAdditionalPhonesCollection(): AdditionalPhonesCollection
+    {
+        if (!$this->getAdditionalPhones()) {
+            return new AdditionalPhonesCollection();
+        }
+
+        return new AdditionalPhonesCollection(
+            ...array_map(
+                fn(array $value): AdditionalPhoneValue => new AdditionalPhoneValue(
+                    phoneNumber: $value['phoneNumber'],
+                    isVerified: $value['isVerified']
+                ),
+                $this->getAdditionalPhones()
+            )
+        );
+    }
+
+    public function setAdditionalPhones(AdditionalPhonesCollection $phoneCollection): self
+    {
+        if ($phoneCollection->isEmpty()) {
+            $this->additional_phones = null;
+        } else {
+            $this->additional_phones = $phoneCollection->toArray();
+        }
         return $this;
     }
 }

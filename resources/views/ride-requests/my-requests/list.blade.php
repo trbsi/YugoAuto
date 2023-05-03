@@ -17,8 +17,11 @@
                 <div class="p-6 lg:p-8">
                     <h1 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h1>
                     <div>
-                        <b>{{__('Driver')}}:</b> {{$ride->driver->getName()}}
-                        <x-phone-number :user="$ride->driver" :forceShow="true"></x-phone-number>
+                        <b>{{__('Driver')}}:</b>
+                        <a class="underline"
+                           href="{{user_profile_url($ride->getDriverId())}}">
+                            {{$ride->driver->getName()}}
+                        </a>
                     </div>
                     <div>
                         <b>{{__('Departure time')}}:</b> {{$ride->getRideTimeFormatted()}}
@@ -41,6 +44,14 @@
                             'shorthand' => false
                         ])
                     @endif
+                    <div>
+                        <span class="font-bold">{{__('Phone')}}:</span>
+                        <x-phone-number :user="$ride->driver" :forceShow="true" type="main"></x-phone-number>
+                    </div>
+                    <div>
+                        <span class="font-bold">{{__('Additional phones')}}:</span>
+                        <x-phone-number :user="$ride->driver" :forceShow="true" type="additional"></x-phone-number>
+                    </div>
                 </div>
 
                 @if($requests !== null && $requests->isNotEmpty())

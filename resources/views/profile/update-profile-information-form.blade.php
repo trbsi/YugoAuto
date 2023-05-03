@@ -1,3 +1,8 @@
+<?php
+
+use App\Source\User\Enum\PhoneNumberEnum;
+
+?>
 <x-form-section submit="updateProfileInformation">
     <x-slot name="title">
         {{ __('Profile Information') }}
@@ -74,7 +79,7 @@
 
         <!-- Phone number -->
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="phone_number" value="{{ __('Phone number') }}"/>
+            <x-label for="phone_number" value="{{ __('Primary phone number') }}"/>
             <x-input id="phone_number"
                      :disabled="$state['is_phone_number_verified']"
                      type="text"
@@ -84,7 +89,14 @@
                      placeholder="+385..."/>
 
             <x-input-error for="phone_number" class="mt-2"/>
-            
+
+            <x-label for="is_phone_number_public" value="{{ __('Is phone number visible on your profile') }}"/>
+            <x-checkbox id="is_phone_number_public"
+                        class="mt-1 block"
+                        wire:model.defer="state.is_phone_number_public"/>
+
+            <x-input-error for="is_phone_number_public" class="mt-2"/>
+
             @if(!$state['is_phone_number_verified'])
                 <x-anchor role="red"
                           :url="route('phone-verification.show')"
@@ -92,15 +104,30 @@
             @endif
         </div>
 
-        <!-- Phone number visibility -->
-        <div class="col-span-6 sm:col-span-4">
-            <x-label for="is_phone_number_public" value="{{ __('Is phone number visible on your profile') }}"/>
-            <x-checkbox id="is_phone_number_public"
-                        class="mt-1 block"
-                        wire:model.defer="state.is_phone_number_public"/>
+        <!-- Additional Phones -->
+        <div class="col-span-6 sm:col-span-4 bg-gray-100 p-4">
+            <div class="pb-4">{{__('Additional phones')}}</div>
+            <div class="italic text-sm mb-4">
+                {{ __('These phones will be visible on your public profile only if your main phone is visible') }}
+            </div>
 
-            <x-input-error for="is_phone_number_public" class="mt-2"/>
+            @for($i = 0; $i < PhoneNumberEnum::MAX_ADDITIONAL_NUMBERS->value ;$i++)
+                <div class="mb-2 mt-2">
+                    <x-label for="phone_number_{{$i}}" value="{{ __('Phone number') }}"/>
+                    <x-input id="phone_number_{{$i}}"
+                             :disabled="$state['additional_phones'][$i]['isVerified'] ?? false"
+                             type="text"
+                             class="mt-1 block w-full"
+                             wire:model.defer="state.additional_phones.{{$i}}.phoneNumber"
+                             autocomplete="phone_number_{{$i}}"
+                             placeholder="+385..."/>
+                    <x-input-error for="additional_phones.{{$i}}.phoneNumber" class="mt-2"/>
+                </div>
+
+                <div class="border-b border-gray-300 border-solid border-1"></div>
+            @endfor
         </div>
+
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">

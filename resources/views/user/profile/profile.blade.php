@@ -58,9 +58,18 @@
 
             <hr>
             <div class="flex p-4">
-                <div class="w-full text-center">
-                    <b>{{__('Phone')}}:</b>
-                    <x-phone-number :user="$user" :forceShow="false"></x-phone-number>
+                <div class="w-1/2 text-center">
+                    <span class="font-bold">{{__('Phone')}}</span>
+                    <div>
+                        <x-phone-number :user="$user" :forceShow="false" type="main"></x-phone-number>
+                    </div>
+                </div>
+                <div class="w-0 border border-gray-300"></div>
+                <div class="w-1/2 text-center">
+                    <span class="font-bold">{{__('Additional phones')}}</span>
+                    <div>
+                        <x-phone-number :user="$user" :forceShow="false" type="additional"></x-phone-number>
+                    </div>
                 </div>
             </div>
 

@@ -5,7 +5,7 @@ namespace App\Actions\Fortify;
 use App\Enum\CoreEnum;
 use App\Models\User;
 use App\Source\User\Domain\UpdateProfilePhoto\UpdateProfilePhotoLogic;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Source\User\Domain\UpdateUserProfile\UpdateUserProfileLogic;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
@@ -13,7 +13,8 @@ use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
 class UpdateUserProfileInformation implements UpdatesUserProfileInformation
 {
     public function __construct(
-        private readonly UpdateProfilePhotoLogic $updateProfilePhotoLogic
+        private readonly UpdateProfilePhotoLogic $updateProfilePhotoLogic,
+        private readonly UpdateUserProfileLogic $updateUserProfileLogic
     ) {
     }
 
@@ -32,10 +33,20 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                     'nullable',
                     'string',
                     'max:255',
+                    'regex:' . CoreEnum::PHONE_REGEX->value,
                     Rule::unique('users')->ignore($user->id),
-                    'regex:' . CoreEnum::PHONE_REGEX->value
+                    // user must have this field filled before adding additional phones
+                    Rule::requiredIf(!empty($input['additional_phones'])),
                 ],
                 'is_phone_number_public' => ['nullable', 'boolean'],
+                'additional_phones' => ['array', 'nullable'],
+                'additional_phones.*.phoneNumber' => [
+                    'required',
+                    'string',
+                    'max:255',
+                    Rule::unique('users', 'phone_number')->ignore($user->id),
+                    'regex:' . CoreEnum::PHONE_REGEX->value
+                ],
                 'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
                 'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:10024'],
             ],
@@ -49,34 +60,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             $this->updateProfilePhotoLogic->modifyPhoto($user);
         }
 
-        if ($input['email'] !== $user->email &&
-            $user instanceof MustVerifyEmail) {
-            $this->updateVerifiedUser($user, $input);
-        } else {
-            $user->forceFill([
-                'name' => $input['name'],
-                'phone_number' => $input['phone_number'],
-                'is_phone_number_public' => $input['is_phone_number_public'] ?: false,
-                'email' => $input['email'],
-            ])->save();
-        }
+        $this->updateUserProfileLogic->update($input, $user);
     }
 
-    /**
-     * Update the given verified user's profile information.
-     *
-     * @param array<string, string> $input
-     */
-    protected function updateVerifiedUser(User $user, array $input): void
-    {
-        $user->forceFill([
-            'name' => $input['name'],
-            'phone_number' => $input['phone_number'],
-            'is_phone_number_public' => $input['is_phone_number_public'] ?: false,
-            'email' => $input['email'],
-            'email_verified_at' => null,
-        ])->save();
-
-        $user->sendEmailVerificationNotification();
-    }
 }
