@@ -41,6 +41,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'is_phone_number_public' => ['nullable', 'boolean'],
                 'additional_phones' => ['array', 'nullable'],
                 'additional_phones.*.phoneNumber' => [
+                    'required',
                     'string',
                     'max:255',
                     Rule::unique('users', 'phone_number')->ignore($user->id),
@@ -50,7 +51,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:10024'],
             ],
             [
-                'regex' => __('validation.phone_number_validation_message')
+                'regex' => __('validation.phone_number_validation_message'),
+                'required' => __('validation.required', ['attribute' => ''])
             ]
         )->validateWithBag('updateProfileInformation');
 
