@@ -15,7 +15,7 @@ class SaveAdditionalPhonesService
                 $phone['phoneNumber'],
                 $phone['isVerified'] ?? false
             ),
-            $input['additional_phones']
+            $input['additional_phones'] ?? []
         );
 
         $user
