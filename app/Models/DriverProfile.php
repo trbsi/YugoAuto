@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\DriverProfile\AdditionalCarsCollection;
+use App\Models\DriverProfile\AdditionalCarValue;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -27,11 +29,17 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereSmoking($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereUserId($value)
+ * @property array|null $additional_cars
+ * @method static \Illuminate\Database\Eloquent\Builder|DriverProfile whereAdditionalCars($value)
  * @mixin \Eloquent
  */
 class DriverProfile extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'additional_cars' => 'array'
+    ];
 
     public function getId(): int
     {
@@ -90,6 +98,43 @@ class DriverProfile extends Model
     public function setSmoking(bool $smoking): self
     {
         $this->smoking = $smoking;
+        return $this;
+    }
+
+    public function getCarNameAndPlate(): string
+    {
+        return sprintf('%s (%s)', $this->getCarName(), $this->getCarPlate());
+    }
+
+    public function getAdditionalCars(): array
+    {
+        return $this->additional_cars ?: [];
+    }
+
+    public function getAdditionalCarsCollection(): AdditionalCarsCollection
+    {
+        if (!$this->getAdditionalCars()) {
+            return new AdditionalCarsCollection();
+        }
+
+        return new AdditionalCarsCollection(
+            ...array_map(
+                fn(array $value): AdditionalCarValue => new AdditionalCarValue(
+                    carName: $value['carName'],
+                    carPlate: $value['carPlate']
+                ),
+                $this->getAdditionalCars()
+            )
+        );
+    }
+
+    public function setAdditionalCars(AdditionalCarsCollection $carsCollection): self
+    {
+        if ($carsCollection->isEmpty()) {
+            $this->additional_cars = null;
+        } else {
+            $this->additional_cars = $carsCollection->toArray();
+        }
         return $this;
     }
 }

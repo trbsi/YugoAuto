@@ -16,41 +16,99 @@
 
                 <div class="p-6 lg:p-8">
                     <h1 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h1>
-                    <div>
-                        <b>{{__('Driver')}}:</b>
-                        <a class="underline"
-                           href="{{user_profile_url($ride->getDriverId())}}">
-                            {{$ride->driver->getName()}}
-                        </a>
-                    </div>
-                    <div>
-                        <b>{{__('Departure time')}}:</b> {{$ride->getRideTimeFormatted()}}
-                    </div>
-                    <div>
-                        <b>{{__('Is accepting package')}}</b>
-                        @if($ride->getIsAcceptingPackage())
-                            <x-checkmark type="tick"/>
-                        @else
-                            <x-checkmark type="cross"/>
-                        @endif
-                    </div>
-                    @if ($ride->driver->driverProfile && ($ride->isMyRide() || $ride->rideRequestForAuthUser->isAccepted()))
-                        <div>
-                            <b>{{__('Car name')}}:</b> {{$ride->driver->driverProfile->getCarName()}}
-                            ({{$ride->driver->driverProfile->getCarPlate()}})
+
+                    <div class="flex flex-col">
+                        <div class="flex flex-row">
+                            <div class="flex-1 font-bold">
+                                {{__('Driver')}}:
+                            </div>
+                            <div class="flex-1">
+                                <a class="underline"
+                                   href="{{user_profile_url($ride->getDriverId())}}">
+                                    {{$ride->driver->getName()}}
+                                </a>
+                            </div>
                         </div>
-                        @include('driver-profiles.components.smoking-animals', [
-                            'driverProfile' => $ride->driver->driverProfile,
-                            'shorthand' => false
-                        ])
-                    @endif
-                    <div>
-                        <span class="font-bold">{{__('Phone')}}:</span>
-                        <x-phone-number :user="$ride->driver" :forceShow="true" type="main"></x-phone-number>
-                    </div>
-                    <div>
-                        <span class="font-bold">{{__('Additional phones')}}:</span>
-                        <x-phone-number :user="$ride->driver" :forceShow="true" type="additional"></x-phone-number>
+                        <div class="flex flex-row ">
+                            <div class="flex-1 font-bold">
+                                {{__('Departure time')}}:
+                            </div>
+                            <div class="flex-1">
+                                {{$ride->getRideTimeFormatted()}}
+                            </div>
+                        </div>
+                        <div class="flex flex-row ">
+                            <div class="flex-1 font-bold">
+                                {{__('Is accepting package')}}
+                            </div>
+                            <div class="flex-1">
+                                @if($ride->getIsAcceptingPackage())
+                                    <x-checkmark type="tick"/>
+                                @else
+                                    <x-checkmark type="cross"/>
+                                @endif
+                            </div>
+                        </div>
+
+
+                        @if ($ride->driver->driverProfile && ($ride->isMyRide() || $ride->rideRequestForAuthUser->isAccepted()))
+                            <div class="flex flex-row ">
+                                <div class="flex-1 font-bold">
+                                    {{__('Car name')}}:
+                                </div>
+                                <div class="flex-1">
+                                    @if ($ride->getCar())
+                                        {{$ride->getCar()}}
+                                    @else
+                                        {{$ride->driver->driverProfile->getCarNameAndPlate()}}
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row ">
+                                <div class="flex-1 font-bold">
+                                    {{__('Animals allowed')}}
+                                </div>
+                                <div class="flex-1">
+                                    @include('driver-profiles.components.smoking-animals', [
+                                        'driverProfile' => $ride->driver->driverProfile,
+                                        'type' => 'animals'
+                                    ])
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row ">
+                                <div class="flex-1 font-bold">
+                                    {{__('Smoking allowed')}}
+                                </div>
+                                <div class="flex-1">
+                                    @include('driver-profiles.components.smoking-animals', [
+                                        'driverProfile' => $ride->driver->driverProfile,
+                                        'type' => 'smoking'
+                                    ])
+                                </div>
+                            </div>
+                        @endif
+
+
+                        <div class="flex flex-row ">
+                            <div class="flex-1 ">
+                                <span class="font-bold">{{__('Phone')}}:</span>
+                            </div>
+                            <div class="flex-1">
+                                <x-phone-number :user="$ride->driver" :forceShow="true" type="main"></x-phone-number>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row ">
+                            <div class="flex-1 ">
+                                <span class="font-bold">{{__('Additional phones')}}:</span>
+                            </div>
+                            <div class="flex-1">
+                                <x-phone-number :user="$ride->driver" :forceShow="true"
+                                                type="additional"></x-phone-number>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

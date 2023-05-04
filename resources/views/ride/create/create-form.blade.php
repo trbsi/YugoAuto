@@ -1,3 +1,7 @@
+<?php
+/** @var $driverProfile \App\Models\DriverProfile */
+
+?>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -74,6 +78,23 @@
                                    value="{{old('price')}}"
                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder="15" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <x-label for="car" value="{{ __('Car') }}"/>
+                            <select
+                                id="car"
+                                name="car"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="{{$driverProfile->getCarNameAndPlate()}}">
+                                    {{$driverProfile->getCarNameAndPlate()}}
+                                </option>
+                                @foreach($driverProfile->getAdditionalCarsCollection()->getCars() as $car)
+                                    <option value="{{$car->getCarNameAndPlate()}}">
+                                        {{$car->getCarNameAndPlate()}}
+                                    </option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="mb-6">

@@ -3,8 +3,11 @@
 namespace App\Http\Livewire\Profile;
 
 use App\Models\DriverProfile;
+use App\Models\DriverProfile\AdditionalCarsCollection;
+use App\Models\DriverProfile\AdditionalCarValue;
 use App\Source\DriverProfile\Domain\SaveDriverProfile\SaveDriverProfileLogic;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 use Livewire\Component;
 
 class UpdateDriverProfileInformationForm extends Component
@@ -14,13 +17,8 @@ class UpdateDriverProfileInformationForm extends Component
     public bool $animals;
     public bool $smoking;
     public bool $hasPhoneNumber;
+    public array $additionalCars;
 
-    protected $rules = [
-        'carName' => 'required|string|max:20',
-        'carPlate' => 'required|string|max:20',
-        'animals' => 'nullable|boolean',
-        'smoking' => 'nullable|boolean',
-    ];
 
     public function render()
     {
@@ -32,6 +30,7 @@ class UpdateDriverProfileInformationForm extends Component
         $this->animals = false;
         $this->smoking = false;
         $this->hasPhoneNumber = Auth::user()->hasPhoneNumber();
+        $this->additionalCars = [];
 
         $profile = DriverProfile::where('user_id', Auth::id())->first();
         if ($profile !== null) {
@@ -39,21 +38,54 @@ class UpdateDriverProfileInformationForm extends Component
             $this->smoking = $profile->smokingAllowed();
             $this->carPlate = $profile->getCarPlate();
             $this->carName = $profile->getCarName();
+            $this->additionalCars = $profile->getAdditionalCars();
         }
     }
 
     public function updateDriverProfile(SaveDriverProfileLogic $saveDriverProfileLogic)
     {
-        $this->validate();
+        $this->validate($this->validationRules());
 
         $saveDriverProfileLogic->save(
             userId: Auth::id(),
             carName: $this->carName,
             carPlate: $this->carPlate,
             animals: $this->animals,
-            smoking: $this->smoking
+            smoking: $this->smoking,
+            additionalCars: $this->getAdditionalCars()
         );
 
         $this->emit('saved');
+    }
+
+    private function validationRules(): array
+    {
+        return [
+            'carName' => [
+                'required',
+                'string',
+                'max:20',
+                Rule::requiredIf(!empty($this->additionalCars)),
+            ],
+            'carPlate' => 'required|string|max:10',
+            'animals' => 'nullable|boolean',
+            'smoking' => 'nullable|boolean',
+            'additionalCars' => 'array|nullable',
+            'additionalCars.*.carName' => 'required|string|max:20',
+            'additionalCars.*.carPlate' => 'required|string|max:10',
+        ];
+    }
+
+    private function getAdditionalCars(): AdditionalCarsCollection
+    {
+        return new AdditionalCarsCollection(
+            ...array_map(
+                static fn(array $car): AdditionalCarValue => new AdditionalCarValue(
+                    $car['carName'],
+                    $car['carPlate']
+                ),
+                $this->additionalCars
+            )
+        );
     }
 }

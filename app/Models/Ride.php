@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Auth;
  * @property int $number_of_seats
  * @property string|null $description
  * @property bool $is_accepting_package
+ * @property string|null $car
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property Carbon|null $deleted_at
@@ -45,6 +46,7 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCar($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCountryId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereCurrency($value)
@@ -62,6 +64,9 @@ use Illuminate\Support\Facades\Auth;
  * @method static \Illuminate\Database\Eloquent\Builder|Ride whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride withoutTrashed()
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
  * @mixin \Eloquent
  */
 class Ride extends Model
@@ -253,6 +258,17 @@ class Ride extends Model
     public function setCountryId(int $country_id): self
     {
         $this->country_id = $country_id;
+        return $this;
+    }
+
+    public function getCar(): string
+    {
+        return $this->car;
+    }
+
+    public function setCar(string $car): self
+    {
+        $this->car = $car;
         return $this;
     }
 

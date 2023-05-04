@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Source\DriverProfile\Domain\SaveDriverProfile;
 
+use App\Models\DriverProfile\AdditionalCarsCollection;
 use App\Source\DriverProfile\Infra\SaveDriverProfile\Services\SaveDriverProfileService;
 
 class SaveDriverProfileLogic
@@ -18,14 +19,16 @@ class SaveDriverProfileLogic
         string $carName,
         string $carPlate,
         bool $animals,
-        bool $smoking
+        bool $smoking,
+        AdditionalCarsCollection $additionalCars
     ) {
         $this->saveDriverProfileService->save(
             userId: $userId,
             carName: $carName,
             carPlate: $carPlate,
             animals: $animals,
-            smoking: $smoking
+            smoking: $smoking,
+            additionalCars: $additionalCars
         );
     }
 }

@@ -20,7 +20,8 @@ class CreateRideService
         int $price,
         ?string $description,
         bool $isAcceptingPackage,
-        Country $country
+        Country $country,
+        string $car
     ): void {
         $ride = new Ride();
         $ride
@@ -35,6 +36,7 @@ class CreateRideService
             ->setFromPlaceId($fromPlaceId)
             ->setToPlaceId($toPlaceId)
             ->setIsAcceptingPackage($isAcceptingPackage)
+            ->setCar($car)
             ->save();
 
         $userProfile = $ride->driver->profile;

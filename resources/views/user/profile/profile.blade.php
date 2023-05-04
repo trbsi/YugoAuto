@@ -83,10 +83,21 @@
                     </div>
                     <div class="w-0 border border-gray-300"></div>
                     <div class="w-1/2 text-center">
-                        @include('driver-profiles.components.smoking-animals', [
-                            'driverProfile' => $user->driverProfile,
-                            'shorthand' => true
-                        ])
+                        <div>
+                            {{__('Animals allowed shorthand')}}
+                            @include('driver-profiles.components.smoking-animals', [
+                                'driverProfile' => $user->driverProfile,
+                                'type' => 'animals'
+                            ])
+                        </div>
+
+                        <div>
+                            {{__('Smoking allowed shorthand')}}
+                            @include('driver-profiles.components.smoking-animals', [
+                                 'driverProfile' => $user->driverProfile,
+                                 'type' => 'smoking'
+                             ])
+                        </div>
                     </div>
                 </div>
             @endif

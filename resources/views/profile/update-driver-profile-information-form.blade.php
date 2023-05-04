@@ -1,3 +1,9 @@
+<?php
+
+use App\Source\DriverProfile\Enum\DriverCarEnum;
+
+?>
+
 <x-form-section submit="updateDriverProfile">
     <x-slot name="title">
         {{ __('Update driver profile') }}
@@ -20,6 +26,34 @@
             <x-input id="carPlate" type="text" class="mt-1 block w-full" wire:model.defer="carPlate"
                      autocomplete="carPlate" required/>
             <x-input-error for="carPlate" class="mt-2"/>
+        </div>
+
+        <!-- Additional Cars -->
+        <div class="col-span-6 sm:col-span-4 bg-gray-100 p-4">
+            {{__('Additional cars')}}
+            @for($i = 0; $i < DriverCarEnum::MAX_ADDITIONAL_CARS->value ;$i++)
+                <div class="col-span-6 sm:col-span-4 mt-2">
+                    <x-label for="carName_{{$i}}" value="{{ __('Car name') }}"/>
+                    <x-input id="carName_{{$i}}"
+                             type="text"
+                             class="mt-1 block w-full"
+                             wire:model.defer="additionalCars.{{$i}}.carName"
+                             autocomplete="carName_{{$i}}" placeholder="BMW X5"/>
+                    <x-input-error for="additionalCars.{{$i}}.carName" class="mt-2"/>
+                </div>
+
+                <div class="col-span-6 sm:col-span-4 mb-2">
+                    <x-label for="carPlate_{{$i}}" value="{{ __('Car plate') }}"/>
+                    <x-input id="carPlate_{{$i}}"
+                             type="text"
+                             class="mt-1 block w-full"
+                             wire:model.defer="additionalCars.{{$i}}.carPlate"
+                             autocomplete="additionalCars.{{$i}}.carPlate"/>
+                    <x-input-error for="additionalCars.{{$i}}.carPlate" class="mt-2"/>
+                </div>
+
+                <div class="border-b border-gray-300 border-solid border-1"></div>
+            @endfor
         </div>
 
         <div class="col-span-6 sm:col-span-4">

@@ -97,6 +97,7 @@ class RideController extends Controller
             [
                 'fromPlace' => $fromPlace,
                 'toPlace' => $toPlace,
+                'driverProfile' => Auth::user()->driverProfile
             ]
         );
     }
@@ -114,7 +115,8 @@ class RideController extends Controller
                 numberOfSeats: (int)$request->number_of_seats,
                 price: (int)$request->price,
                 description: $request->description,
-                isAcceptingPackage: $request->is_accepting_package === 'on' ? true : false
+                isAcceptingPackage: $request->is_accepting_package === 'on' ? true : false,
+                car: $request->car
             );
             $request->session()->flash('success', __('Ride is created'));
         } catch (Exception $exception) {
