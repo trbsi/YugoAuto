@@ -41,7 +41,6 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'is_phone_number_public' => ['nullable', 'boolean'],
                 'additional_phones' => ['array', 'nullable'],
                 'additional_phones.*.phoneNumber' => [
-                    'required',
                     'string',
                     'max:255',
                     Rule::unique('users', 'phone_number')->ignore($user->id),

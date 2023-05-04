@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('driver_profiles', function (Blueprint $table) {
-            $table->json('additional_cars')->after('car_plate')->nullable();
+            $table->text('additional_cars')->after('car_plate')->nullable();
         });
 
         Schema::table('rides', function (Blueprint $table) {

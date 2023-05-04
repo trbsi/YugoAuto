@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->json('additional_phones')->after('phone_number')->nullable();
+            $table->text('additional_phones')->after('phone_number')->nullable();
         });
     }
 
