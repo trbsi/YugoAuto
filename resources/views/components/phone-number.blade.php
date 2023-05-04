@@ -2,7 +2,7 @@
 /** @var $user \App\Models\User */
 
 ?>
-@if(($user->hasPhoneNumber() && $user->isPhoneNumberPublic()) || $forceShow)
+@if($user->hasPhoneNumber() && ($user->isPhoneNumberPublic() || $forceShow))
     @if($type === 'main')
         <a class="underline"
            href="tel:{{$user->getPhoneNumber()}}">{{$user->getPhoneNumber()}}</a>
