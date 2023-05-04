@@ -43,9 +43,8 @@ class AdditionalCarsCollection
         return array_values(
             array_filter(
                 $this->additionalCars,
-                static fn(AdditionalCarValue $phone): bool => !empty(
-                    $phone->getCarName()
-                    ) && !empty($phone->getCarPlate())
+                static fn(AdditionalCarValue $phone): bool => !empty($phone->getCarName())
+                    && !empty($phone->getCarPlate())
             )
         );
     }

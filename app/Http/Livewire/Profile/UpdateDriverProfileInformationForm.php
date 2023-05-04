@@ -78,8 +78,8 @@ class UpdateDriverProfileInformationForm extends Component
             'animals' => 'nullable|boolean',
             'smoking' => 'nullable|boolean',
             'additionalCars' => 'array|nullable',
-            'additionalCars.*.carName' => 'required|string|max:20',
-            'additionalCars.*.carPlate' => 'required|string|max:10',
+            'additionalCars.*.carName' => 'string|max:20',
+            'additionalCars.*.carPlate' => 'string|max:10',
         ];
     }
 
@@ -88,8 +88,8 @@ class UpdateDriverProfileInformationForm extends Component
         return new AdditionalCarsCollection(
             ...array_map(
                 static fn(array $car): AdditionalCarValue => new AdditionalCarValue(
-                    $car['carName'],
-                    $car['carPlate']
+                    $car['carName'] ?? '',
+                    $car['carPlate'] ?? ''
                 ),
                 $this->additionalCars
             )
