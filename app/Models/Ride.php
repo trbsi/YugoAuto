@@ -258,12 +258,12 @@ class Ride extends Model
         return $this;
     }
 
-    public function getCar(): string
+    public function getCar(): ?string
     {
         return $this->car;
     }
 
-    public function setCar(string $car): self
+    public function setCar(?string $car): self
     {
         $this->car = $car;
         return $this;

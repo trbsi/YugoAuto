@@ -21,7 +21,7 @@ class CreateRideService
         ?string $description,
         bool $isAcceptingPackage,
         Country $country,
-        string $car
+        null|string $car
     ): void {
         $ride = new Ride();
         $ride

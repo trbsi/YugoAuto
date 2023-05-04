@@ -29,7 +29,7 @@ class CreateRideLogic
         int $price,
         ?string $description,
         bool $isAcceptingPackage,
-        string $car
+        null|string $car
     ): void {
         $place = Place::find($fromPlaceId);
         $country = $place->country;
