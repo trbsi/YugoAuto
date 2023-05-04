@@ -16,18 +16,17 @@
                 </div>
             </div>
             <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
+                <span class="flex w-full gap-4 rounded-md shadow-sm">
                     @if(isset($link))
                         <a href="{{$link->attributes['url']}}"
                            class="custom-modal-button-{{$modalClass}} inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-blue-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                             {{$link->attributes['linkText']}}
                         </a>
-                    @else
-                        <button type="button"
-                                class="custom-modal-button-{{$modalClass}} inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-blue-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                            {{__($buttonText ?? 'OK')}}
-                        </button>
                     @endif
+                    <button type="button"
+                            class="custom-modal-button-{{$modalClass}} inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-blue-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                        {{__($buttonText ?? 'OK')}}
+                    </button>
                 </span>
             </div>
         </div>

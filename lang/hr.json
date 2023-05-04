@@ -336,10 +336,10 @@
     "Primary phone number": "Primarni telefon",
     "Additional cars": "Dodatni auti",
     "Car": "Auto",
+    "Click here": "Klikni ovdje",
     "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
-    "Update your driver profile": "Ažuriraj svoj profil kao vozač",
-    "Now you can update your driver profile": "Sada možete ažurirati vaš profil kao vozač. Dodati ime auta, tablice i dozvoljavate li pušenje i životinje. Također možeš dodati i svoj broj telefona.",
-    "Click here to update driver profile": "Klikni ovdje da ažuriraš profil vozača",
     "New features": "Nove opcije",
-    "New features text": "1. Dodani su gradovi iz Srbije, BiH, Slovenije, Austrije i Njemačke<br>2. Ukoliko netko otkaže prijevoz do 2 sata prije polaska osobu ćete moći ocijeniti. Te će na profilu osobe biti prikazan postotak otkazanih prijevoza u zadnji tren.<br>3. Kao putnik možeš otkazati prijevoz koji je još na čekanju<br>4. Prilikom dodavanja vožnje kao vozač možeš označiti primaš li pakete za prijevoz<br>5. Možeš pretraživati prijevoze koji prihvaćaju prijevoz paketa."
+    "New features text": "1. Dodani su gradovi iz Srbije, BiH, Slovenije, Austrije i Njemačke<br>2. Ukoliko netko otkaže prijevoz do 2 sata prije polaska osobu ćete moći ocijeniti. Te će na profilu osobe biti prikazan postotak otkazanih prijevoza u zadnji tren.<br>3. Kao putnik možeš otkazati prijevoz koji je još na čekanju<br>4. Prilikom dodavanja vožnje kao vozač možeš označiti primaš li pakete za prijevoz<br>5. Možeš pretraživati prijevoze koji prihvaćaju prijevoz paketa.",
+    "New features additional cars and phones": "Dodatni auti i brojevi",
+    "New features additional cars and phones description": "Od sada možeš dodati 2 dodatna automobila i 2 dodatna broja telefona."
 }
