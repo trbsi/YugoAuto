@@ -44,7 +44,7 @@ class UpdateDriverProfileInformationForm extends Component
 
     public function updateDriverProfile(SaveDriverProfileLogic $saveDriverProfileLogic)
     {
-        $this->validate($this->validationRules());
+        $this->validate($this->validationRules(), $this->validationMessages());
 
         $saveDriverProfileLogic->save(
             userId: Auth::id(),
@@ -56,6 +56,13 @@ class UpdateDriverProfileInformationForm extends Component
         );
 
         $this->emit('saved');
+    }
+
+    private function validationMessages(): array
+    {
+        return [
+            'required' => __('validation.required', ['attribute' => ''])
+        ];
     }
 
     private function validationRules(): array
@@ -71,8 +78,8 @@ class UpdateDriverProfileInformationForm extends Component
             'animals' => 'nullable|boolean',
             'smoking' => 'nullable|boolean',
             'additionalCars' => 'array|nullable',
-            'additionalCars.*.carName' => 'string|max:20',
-            'additionalCars.*.carPlate' => 'string|max:10',
+            'additionalCars.*.carName' => 'required|string|max:20',
+            'additionalCars.*.carPlate' => 'required|string|max:10',
         ];
     }
 
