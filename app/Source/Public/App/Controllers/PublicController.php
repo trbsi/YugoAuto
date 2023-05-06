@@ -22,9 +22,9 @@ class PublicController
         }
 
         App::setLocale($country->getLocale());
-        LocalizationHelper::saveLocalization($country);
+        $cookie = LocalizationHelper::saveLocalization($country);
 
-        return redirect()->back();
+        return redirect()->back()->withCookie($cookie);
     }
 
     public function androidStore()
