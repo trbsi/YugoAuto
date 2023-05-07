@@ -86,14 +86,10 @@ return [
 
     'locale' => 'hr',
 
-    'available_locale' => [
-        'hr' => 'Hrvatski',
-        'en' => 'English'
-    ],
-
     //key has to corresponds to "name" in "countries" table
     'available_countries' => [
         'Croatia' => 'Hrvatska',
+        'Serbia' => 'Srbija',
         'United Kingdom' => 'United Kingdom',
     ],
 
