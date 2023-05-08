@@ -46,7 +46,7 @@ class LocalizationHelper
 
     public static function saveLocalization(Country $country): SymfonyCookie
     {
-        return Cookie::make(
+        return Cookie::forever(
             LocaleEnum::LOCALE_EXTENDED->value,
             json_encode([
                 'locale' => $country->getLocale(),
