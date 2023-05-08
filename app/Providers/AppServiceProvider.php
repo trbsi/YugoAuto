@@ -21,6 +21,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $this->setViewVariables();
+    }
+
+    private function setViewVariables(): void
+    {
         FacadeView::composer('*', function (View $view) {
             $unreadMessages = $pendingRequestsCount = 0;
             if ($user = Auth::user()) {

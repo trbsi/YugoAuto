@@ -34,3 +34,4 @@ Route::middleware([
 require __DIR__ . '/web/public/public.php';
 require __DIR__ . '/web/public/auth.php';
 require __DIR__ . '/web/public/ride.php';
+require __DIR__ . '/web/public/staging.php';
