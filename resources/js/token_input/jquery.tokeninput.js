@@ -248,7 +248,7 @@
         var input_val;
 
         // Create a new text input an attach keyup events
-        var input_box = $("<input class='bg-gray-50' type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
+        var input_box = $("<input class='bg-gray-50 border-gray-300 dark:border-gray-700 dark:bg-gray-700 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm' type=\"text\" autocomplete=\"off\" autocapitalize=\"off\"/>")
             .css({
                 outline: "none"
             })

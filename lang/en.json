@@ -317,7 +317,7 @@
     "Verify phone number": "Verify phone number",
     "We use a remember me cookie to keep you logged in. By continuing to use our app, you consent to the use of this cookie. We do not use cookies for tracking.": "We use a 'remember me' cookie to keep you logged in. By continuing to use our app, you consent to the use of this cookie. We do not use cookies for tracking.",
     "Cancelled too late in hours and minutes": "The person cancelled the ride :hours h and :minutes min before departure.",
-    "Cancelled too late in minutes": "The person canceled the ride: minutes before departure.",
+    "Cancelled too late in minutes": "The person canceled the ride :minutes before departure.",
     "Last minute cancelled rides percentage": "Percentage of rides canceled at the last minute",
     "Last minute cancelled rides count": "Number of rides canceled at the last minute",
     "Last minute cancellation explanation": "Rides that are canceled up to 2 hours before departure",
