@@ -24,19 +24,6 @@
         "iso2": "DE"
     },
     {
-        "area": "310.71",
-        "coords": {
-            "lat": "48.133",
-            "lon": "11.567"
-        },
-        "district": "Urban district",
-        "population": "1488202",
-        "state": "Bavaria",
-        "country": "Germany",
-        "city": "Munich",
-        "iso2": "DE"
-    },
-    {
         "area": "405.15",
         "coords": {
             "lat": "50.93639",
