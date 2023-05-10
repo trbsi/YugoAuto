@@ -80,7 +80,6 @@ if (!function_exists('get_available_countries')) {
     function get_available_countries(): array
     {
         $data = config('app.available_countries');
-        asort($data);
         return $data;
     }
 }
