@@ -29,7 +29,14 @@
 
         <a href="{{route('ride.my-rides')}}" data-tooltip-target="tooltip-search" type="button"
            class="inline-flex flex-col items-center justify-center py-4 px-0 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-            <i class="fa-solid fa-car"></i>
+            <i class="fa-solid fa-car relative">
+                @if($pendingRequestsCount)
+                    <div
+                        class="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-3 -right-3 dark:border-gray-900">
+                        *
+                    </div>
+                @endif
+            </i>
             <span
                 class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('My rides')}}</span>
         </a>
