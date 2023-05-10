@@ -7,7 +7,7 @@
     <h1 class="pb-6 text-4xl">{{$ride->fromPlace->getName()}} - {{$ride->toPlace->getName()}}</h1>
 
     <div class="flex flex-col">
-        <div class="flex flex-row h-8">
+        <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
             <div class="flex-1 font-bold">
                 {{__('Driver')}}:
             </div>
@@ -18,7 +18,7 @@
                 </a>
             </div>
         </div>
-        <div class="flex flex-row h-8">
+        <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
             <div class="flex-1 font-bold">
                 {{__('Departure time')}}:
             </div>
@@ -26,7 +26,7 @@
                 {{$ride->getRideTimeFormatted()}}
             </div>
         </div>
-        <div class="flex flex-row h-8">
+        <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
             <div class="flex-1 font-bold">
                 {{__('Is accepting package')}}
             </div>
@@ -41,7 +41,7 @@
 
 
         @if ($ride->driver->driverProfile && ($ride->isMyRide() || $ride->rideRequestForAuthUser->isAccepted()))
-            <div class="flex flex-row h-8">
+            <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
                 <div class="flex-1 font-bold">
                     {{__('Car name')}}:
                 </div>
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-row h-8">
+            <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
                 <div class="flex-1 font-bold">
                     {{__('Animals allowed')}}
                 </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-row h-8">
+            <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
                 <div class="flex-1 font-bold">
                     {{__('Smoking allowed')}}
                 </div>
@@ -79,7 +79,7 @@
             </div>
         @endif
 
-        <div class="flex flex-row h-8">
+        <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
             <div class="flex-1 ">
                 <span class="font-bold">{{__('Phone')}}:</span>
             </div>
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div class="flex flex-row h-8">
+        <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
             <div class="flex-1">
                 <span class="font-bold">{{__('Additional phones')}}:</span>
             </div>
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <div class="flex flex-row h-8">
+        <div class="flex flex-row min-h-8 pb-2 pt-2 border-b">
             <div class="flex-1">
                 <span class="font-bold">{{__('Description')}}:</span>
             </div>
