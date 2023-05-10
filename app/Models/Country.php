@@ -25,6 +25,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereCurrency($value)
  * @property string $locale
  * @method static \Illuminate\Database\Eloquent\Builder|Country whereLocale($value)
+ * @property int|null $parent_id
+ * @method static \Illuminate\Database\Eloquent\Builder|Country whereParentId($value)
  * @mixin \Eloquent
  */
 class Country extends Model
