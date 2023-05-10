@@ -90,6 +90,7 @@ return [
     'available_countries' => [
         'Croatia' => 'Hrvatska',
         'Serbia' => 'Srbija',
+        'Serbia_Cyrl' => 'Србија',
         'United Kingdom' => 'United Kingdom',
     ],
 

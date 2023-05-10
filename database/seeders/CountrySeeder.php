@@ -15,6 +15,11 @@ class CountrySeeder extends Seeder
         $countryData = json_decode(file_get_contents(__DIR__ . '/data/country_data.json'), true);
 
         foreach ($countryData as $countryName => $data) {
+            $parentCountry = null;
+            if (isset($data['parent'])) {
+                $parentCountry = Country::where('name', $data['parent'])->first();
+            }
+
             Country::query()
                 ->updateOrCreate(
                     [
@@ -24,6 +29,7 @@ class CountrySeeder extends Seeder
                         'code' => $data['iso2'],
                         'currency' => $data['currency'],
                         'locale' => $data['locale'],
+                        'parent_id' => $parentCountry ? $parentCountry->getId() : null
                     ]
                 );
         }

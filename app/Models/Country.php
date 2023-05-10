@@ -87,4 +87,15 @@ class Country extends Model
     {
         return Country::query()->where('name', 'Croatia')->first();
     }
+
+    public function getParentId(): ?int
+    {
+        return $this->parent_id;
+    }
+
+    public function setParentId(?int $parent_id): self
+    {
+        $this->parent_id = $parent_id;
+        return $this;
+    }
 }

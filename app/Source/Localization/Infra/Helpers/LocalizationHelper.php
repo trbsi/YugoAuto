@@ -51,7 +51,7 @@ class LocalizationHelper
             json_encode([
                 'locale' => $country->getLocale(),
                 'currency' => $country->getCurrency(),
-                'countryId' => $country->getId()
+                'countryId' => $country->getParentId() ?: $country->getId()
             ])
         );
     }

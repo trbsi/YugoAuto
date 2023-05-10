@@ -1,16 +1,3 @@
-<x-custom-modal modalClass="multiple-numbers-cars">
-    <x-slot name="title">
-        {{ __('New features additional cars and phones') }}
-    </x-slot>
-    <x-slot name="content">
-        <div class="flex flex-col items-center justify-center">
-            {!! __('New features additional cars and phones description') !!}
-            <x-slot name="link" :url="route('profile.show')" :linkText="__('Click here')">
-            </x-slot>
-        </div>
-    </x-slot>
-</x-custom-modal>
-
 @if(!is_country_chosen())
     <x-custom-modal modalClass="choose-country">
         <x-slot name="title">

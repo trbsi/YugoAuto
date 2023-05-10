@@ -220,7 +220,6 @@
     "Cancel ride": "Otkaži prijevoz",
     "Ride is filled": "Prijevoz je popunjen",
     "Phone": "Telefon",
-    "No phone": "Nema",
     "You have active ride for this date. Delete it first": "Imaš aktivan prijevoz za taj datum. Obriši ga pa napravi novi.",
     "Cannot delete ride": "Ne možeš izbrisati ovu vožnju",
     "You cannot change the status": "Ne možeš promijeniti status",
@@ -268,7 +267,7 @@
     "Route": "Relacija",
     "Public profile": "Javni profil",
     "Settings": "Postavke",
-    "Verification email has been sent. Check your email": "Verification email has been sent. Check your email",
+    "Verification email has been sent. Check your email": "Verifikacijski email je poslan.",
     "Contact from site": "Kontakt sa stranice",
     "Language": "Jezik",
     "Country": "Država",
@@ -339,7 +338,5 @@
     "Click here": "Klikni ovdje",
     "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
     "New features": "Nove opcije",
-    "New features text": "1. Dodani su gradovi iz Srbije, BiH, Slovenije, Austrije i Njemačke<br>2. Ukoliko netko otkaže prijevoz do 2 sata prije polaska osobu ćete moći ocijeniti. Te će na profilu osobe biti prikazan postotak otkazanih prijevoza u zadnji tren.<br>3. Kao putnik možeš otkazati prijevoz koji je još na čekanju<br>4. Prilikom dodavanja vožnje kao vozač možeš označiti primaš li pakete za prijevoz<br>5. Možeš pretraživati prijevoze koji prihvaćaju prijevoz paketa.",
-    "New features additional cars and phones": "Dodatni auti i brojevi",
-    "New features additional cars and phones description": "Od sada možeš dodati 2 dodatna automobila i 2 dodatna broja telefona."
+    "New features text": "1. Dodani su gradovi iz Srbije, BiH, Slovenije, Austrije i Njemačke<br>2. Ukoliko netko otkaže prijevoz do 2 sata prije polaska osobu ćete moći ocijeniti. Te će na profilu osobe biti prikazan postotak otkazanih prijevoza u zadnji tren.<br>3. Kao putnik možeš otkazati prijevoz koji je još na čekanju<br>4. Prilikom dodavanja vožnje kao vozač možeš označiti primaš li pakete za prijevoz<br>5. Možeš pretraživati prijevoze koji prihvaćaju prijevoz paketa."
 }

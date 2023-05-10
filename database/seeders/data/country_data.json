@@ -38,5 +38,11 @@
         "iso2": "GB",
         "currency": "GBP",
         "locale": "en"
+    },
+    "Serbia_Cyrl": {
+        "iso2": "RS",
+        "currency": "RSD",
+        "locale": "sr_Cyrl",
+        "parent": "Serbia"
     }
 }
