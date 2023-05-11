@@ -59,11 +59,13 @@
 
     @push('javascript')
         <script>
+            /*
             document.querySelector('#message_content').addEventListener('keypress', function (e) {
                 if (e.key === 'Enter') {
                     $('#send_message_form').submit();
                 }
             });
+            */
         </script>
     @endpush
 </x-app-layout>
