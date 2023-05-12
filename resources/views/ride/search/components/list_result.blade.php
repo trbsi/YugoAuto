@@ -70,7 +70,7 @@ use Illuminate\Database\Eloquent\Collection;
                                 role="blue"
                                 :url="update_ride($ride->getId())"
                                 class="text-sm p-1"
-                                :text="__('Edit')"
+                                :text="__('Edit ride')"
                             ></x-anchor>
                         @elseif(!$ride->rideRequestForAuthUser)
                             @include('ride.search.components.request-ride-form')
