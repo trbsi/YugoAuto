@@ -22,7 +22,7 @@ class DeleteRideLogic
     public function delete(int $rideId, int $userId): void
     {
         if (!$this->canDeleteSpecification->isSatisfied($rideId, $userId)) {
-            throw new Exception('Cannot delete ride');
+            throw new Exception(__('Cannot delete ride'));
         }
 
         $ride = Ride::find($rideId);

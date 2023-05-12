@@ -15,7 +15,8 @@ use Illuminate\Database\Eloquent\Collection;
     class="p-6 lg:p-8 bg-white dark:bg-gray-800 dark:bg-gradient-to-bl dark:from-gray-700/50 dark:via-transparent border-b border-gray-200 dark:border-gray-700">
 
     @if($fromPlace && $toPlaces->isNotEmpty())
-        <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}} - {{implode(', ', $toPlaces->pluck('name')->toArray())}}</h2>
+        <h2 class="pb-6 text-4xl">{{$fromPlace->getName()}}
+            - {{implode(', ', $toPlaces->pluck('name')->toArray())}}</h2>
     @endif
 
     @if($rides instanceof Collection)
@@ -65,15 +66,17 @@ use Illuminate\Database\Eloquent\Collection;
                                 {{__('Ride is filled')}}
                             </div>
                         @elseif($ride->isMyRide())
-                            <b>{{__('Your ride')}}</b>
+                            <x-anchor
+                                role="blue"
+                                :url="update_ride($ride->getId())"
+                                class="text-sm p-1"
+                                :text="__('Edit')"
+                            ></x-anchor>
                         @elseif(!$ride->rideRequestForAuthUser)
                             @include('ride.search.components.request-ride-form')
                         @else
                             <p class="mt-2">
-                                <span
-                                    class="w-full text-center p-1 status-text status-{{$ride->rideRequestForAuthUser->getStatus()}}">
-                                {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
-                                </span>
+                                <x-ride-status :status="$ride->rideRequestForAuthUser->getStatus()"></x-ride-status>
                             </p>
                         @endif
                     </div>

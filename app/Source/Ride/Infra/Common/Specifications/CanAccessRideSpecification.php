@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Source\RideRequest\Infra\Common\Specifications;
+namespace App\Source\Ride\Infra\Common\Specifications;
 
 use App\Models\Ride;
 use App\Models\RideRequest;
-use App\Source\RideRequest\Enum\RideRequestEnum;
 
 class CanAccessRideSpecification
 {
@@ -17,9 +16,9 @@ class CanAccessRideSpecification
 
     public function isSatisfiedByDriverOrPassenger(
         int $userId,
-        int $rideId,
-        null|RideRequestEnum $status
-    ): bool {
+        int $rideId
+    ): bool
+    {
         $rideCount = Ride::where('driver_id', $userId)
                 ->where('id', $rideId)
                 ->count() > 0;

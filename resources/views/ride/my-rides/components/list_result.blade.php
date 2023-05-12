@@ -21,8 +21,7 @@
 
                     <div class="flex-shrink-0 make-transparent">
                         <a class="underline" href="{{user_profile_url($ride->driver->getId())}}">
-                            <img class="w-8 h-8 rounded-full" src="{{$ride->driver->getProfilePhotoUrl()}}"
-                                 alt="Neil image">
+                            <img class="w-8 h-8 rounded-full" src="{{$ride->driver->getProfilePhotoUrl()}}">
                         </a>
                     </div>
 
@@ -49,40 +48,47 @@
                             <div class="flex flex-col">
                                 @if ($ride->pendingRideRequests->count())
                                     <div class="p-1">
-                                        <div
-                                            class="p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
-                                            role="alert">
-                                            {{__('You have x pending requests', ['number' => $ride->pendingRideRequests->count()])}}
-                                        </div>
+                                        <x-alert
+                                            role="warning"
+                                            :content="__('You have x pending requests', ['number' => $ride->pendingRideRequests->count()])"
+                                        ></x-alert>
                                     </div>
                                 @endif
                                 <div class="p-1">
-                                    <a
-                                        href="{{single_ride_requests_url($ride->getId())}}"
-                                        class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {{__('Requests/Details')}}
-                                    </a>
+                                    <x-anchor
+                                        role="blue"
+                                        :url="single_ride_requests_url($ride->getId())"
+                                        class="text-sm p-1"
+                                        :text="__('Requests/Details')"
+                                    ></x-anchor>
+                                </div>
+                                <div class="p-1">
+                                    <x-anchor
+                                        role="blue"
+                                        :url="update_ride($ride->getId())"
+                                        class="text-sm p-1"
+                                        :text="__('Edit')"
+                                    ></x-anchor>
                                 </div>
                                 <div class="p-1">
                                     @include('ride.my-rides.components.delete-form')
                                 </div>
                             </div>
                         @endif
+
                         @if(!$ride->isOwner())
                             <div class="make-transparent p-1">
-                                <span
-                                    class="w-full text-center p-1 status-text status-{{$ride->rideRequestForAuthUser->getStatus()}}">
-                               {{__('Ride request status')}}: {{__($ride->rideRequestForAuthUser->getStatus())}}
-                               </span>
+                                <x-ride-status :status="$ride->rideRequestForAuthUser->getStatus()"></x-ride-status>
                             </div>
                             @if($ride->isActiveRide())
                                 @if($ride->rideRequestForAuthUser->isAccepted())
                                     <div class="p-1">
-                                        <a
-                                            href="{{single_ride_requests_url($ride->getId())}}"
-                                            class="w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                            {{__('Requests/Details')}}
-                                        </a>
+                                        <x-anchor
+                                            role="blue"
+                                            :url="single_ride_requests_url($ride->getId())"
+                                            class="text-sm p-1"
+                                            :text="__('Requests/Details')"
+                                        ></x-anchor>
                                     </div>
                                 @endif
 
@@ -98,11 +104,12 @@
                         @endif
                         @if($ride->canLeaveRating())
                             <div class="p-1">
-                                <a
-                                    href="{{rating_for_ride_url($ride->getId())}}"
-                                    class="rating-button w-full block px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    {{__('Leave rating')}}
-                                </a>
+                                <x-anchor
+                                    role="blue"
+                                    :url="rating_for_ride_url($ride->getId())"
+                                    class="text-sm p-1"
+                                    :text="__('Leave rating')"
+                                ></x-anchor>
                             </div>
                         @endif
                     </div>

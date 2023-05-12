@@ -99,6 +99,7 @@ use App\Source\User\Enum\PhoneNumberEnum;
 
             @if(!$state['is_phone_number_verified'])
                 <x-anchor role="red"
+                          class="text-sm px-5 py-2.5 my-3"
                           :url="route('phone-verification.show')"
                           :text="__('Verify phone number')"></x-anchor>
             @endif

@@ -63,6 +63,13 @@ if (!function_exists('change_country_url')) {
     }
 }
 
+if (!function_exists('update_ride')) {
+    function update_ride(int $rideId): string
+    {
+        return route('ride.show-update', ['id' => $rideId]);
+    }
+}
+
 /* VARIOUS */
 if (!function_exists('build_ride_search_base_query')) {
     function build_ride_search_base_query(): string

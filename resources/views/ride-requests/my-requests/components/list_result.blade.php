@@ -31,10 +31,7 @@
                             {{__('Rating')}}: {{$request->passenger->profile->getRating()}}
                         </p>
                         <p class="mt-2">
-                                <span
-                                    class="w-full text-center p-1 status-text status-{{$request->getStatus()}}">
-                                {{__('Ride request status')}}: {{__($request->getStatus())}}
-                                </span>
+                            <x-ride-status :status="$request->getStatus()"></x-ride-status>
                         </p>
                         @if($request->canBeAcceptedOrRejected())
                             <div class="mt-3">

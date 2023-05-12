@@ -55,6 +55,7 @@ use App\Enum\CoreEnum;
                         </x-button>
 
                         <x-anchor role="light"
+                                  class="text-sm px-5 py-2.5 my-3"
                                   :url="route('phone-verification.show')"
                                   :text="__('Try again')"></x-anchor>
                     </div>

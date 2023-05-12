@@ -6,7 +6,8 @@ $(function () {
         hintText: transTypeInCity,
         resultsLimit: 5,
         tokenLimit: 1,
-        queryParam: 'term'
+        queryParam: 'term',
+        preventDuplicates: true
     };
 
     var fromPlaceInput = $("#from_place");
@@ -27,9 +28,16 @@ $(function () {
     var toPlaceIds = [];
     var toPlaceInput = $("#to_place");
     var toPlaceId = $("#to_place_id");
+    var tokenLimit = {};
+    if (currentUrl.indexOf('ride/create') !== -1 || currentUrl.indexOf('ride/update') !== -1) {
+        tokenLimit = {tokenLimit: 1};
+    } else {
+        tokenLimit = {tokenLimit: 5};
+    }
+
     toPlaceInput.tokenInput(citySearchRoute, {
         ...tokenInputSettings,
-        ...{tokenLimit: (currentUrl.indexOf('ride/create') !== -1) ? 1 : 5},
+        ...tokenLimit,
         onAdd: function (item) {
             toPlaceIds.push(item.id);
             toPlaceId.val(toPlaceIds.join(','));

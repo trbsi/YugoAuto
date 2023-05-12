@@ -10,10 +10,13 @@ use App\Source\Helper\Trait\RequiredParamsCheckTrait;
 use App\Source\Place\Domain\SearchPlaces\SearchPlacesLogic;
 use App\Source\Ride\App\Requests\CreateRideRequest;
 use App\Source\Ride\App\Requests\SearchRidesRequest;
+use App\Source\Ride\App\Requests\UpdateRideRequest;
 use App\Source\Ride\Domain\CreateRide\CreateRideLogic;
 use App\Source\Ride\Domain\DeleteRide\DeleteRideLogic;
 use App\Source\Ride\Domain\MyRides\MyRidesLogic;
 use App\Source\Ride\Domain\SearchRides\SearchRidesLogic;
+use App\Source\Ride\Domain\UpdateRide\GetRideLogic;
+use App\Source\Ride\Domain\UpdateRide\UpdateRideLogic;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -100,6 +103,36 @@ class RideController extends Controller
                 'driverProfile' => Auth::user()->driverProfile
             ]
         );
+    }
+
+    public function showUpdate(
+        int $id,
+        Request $request,
+        GetRideLogic $logic
+    ) {
+        $ride = $logic->getById(rideId: $id, userId: Auth::id());
+        return view(
+            'ride.update.update-form',
+            [
+                'ride' => $ride,
+                'driverProfile' => $ride->driver->driverProfile
+            ]
+        );
+    }
+
+    public function update(
+        UpdateRideRequest $request,
+        UpdateRideLogic $logic
+    ) {
+        $logic->update(
+            rideId: (int)$request->ride_id,
+            driverId: Auth::id(),
+            numberOfSeats: (int)$request->number_of_seats,
+            description: $request->description,
+            isAcceptingPackage: $request->is_accepting_package === 'on' ? true : false,
+            car: $request->car
+        );
+        return redirect()->back();
     }
 
     public function save(
