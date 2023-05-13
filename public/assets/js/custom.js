@@ -74,8 +74,8 @@ $(function () {
     });
 });
 
-//DATE TIME PICKER
 $(document).ready(function () {
+    //DATE TIME PICKER
     $('.datetimepicker').datetimepicker(
         {
             format: dateTimePickerFormat,
@@ -93,46 +93,46 @@ $(document).ready(function () {
             dayOfWeekStart: 1,
         }
     );
+
+    //MODAL
+    //values in array corresponds to modalClass in custom-modal-content.blade.php
+    let modals = ['choose-country'];
+    $.each(modals, function (index, modalClass) {
+        const modal = $('.custom-modal-' + modalClass)
+        if (modal.length === 0) {
+            return;
+        }
+
+        var localStorageItem = 'modalClosed-' + modalClass;
+        if (!localStorage.getItem(localStorageItem)) {
+            modal.show();
+        }
+        $('.custom-modal-button-' + modalClass).click(function () {
+            modal.hide();
+            localStorage.setItem(localStorageItem, true);
+        });
+    });
+
+    //ON FORM SUBMIT
+    $(".formOnSubmitAsk").on('click', function (event) {
+        event.preventDefault(); // prevent the default form submission
+        var $this = $(this);
+
+        Swal.fire({
+            title: areYouSureTitle,
+            showCancelButton: true,
+            confirmButtonText: 'OK',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $this.closest('form').submit();
+            }
+        });
+    });
+
 });
 
 
 //CLEAR INPUTS ON FOCUS
 $('.clear-input').on('click focusin', function () {
     this.value = '';
-});
-
-
-//MODAL
-//values in array corresponds to modalClass in custom-modal-content.blade.php
-let modals = ['choose-country'];
-$.each(modals, function (index, modalClass) {
-    const modal = $('.custom-modal-' + modalClass)
-    if (modal.length === 0) {
-        return;
-    }
-
-    var localStorageItem = 'modalClosed-' + modalClass;
-    if (!localStorage.getItem(localStorageItem)) {
-        modal.show();
-    }
-    $('.custom-modal-button-' + modalClass).click(function () {
-        modal.hide();
-        localStorage.setItem(localStorageItem, true);
-    });
-});
-
-//ON FORM SUBMIT
-$(".formOnSubmitAsk").on('click', function (event) {
-    event.preventDefault(); // prevent the default form submission
-    var $this = $(this);
-
-    Swal.fire({
-        title: areYouSureTitle,
-        showCancelButton: true,
-        confirmButtonText: 'OK',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            $this.closest('form').submit();
-        }
-    });
 });
