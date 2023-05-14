@@ -8,6 +8,8 @@ use App\Source\SystemCommunication\Base\Infra\Services\SendSystemCommunicationIn
 use App\Source\SystemCommunication\Base\Infra\Value\SystemCommunicationValueInterface;
 use App\Source\SystemCommunication\Email\Infra\Mailable\MarkdownEmailMailable;
 use App\Source\SystemCommunication\Email\Infra\Value\EmailSystemCommunicationValue;
+use Exception;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class SendEmailSystemCommunicationService implements SendSystemCommunicationInterface
@@ -42,6 +44,14 @@ class SendEmailSystemCommunicationService implements SendSystemCommunicationInte
             $emails = $communicationValue->getToEmails();
         }
 
-        Mail::to($emails)->send($mail);
+        try {
+            Mail::to($emails)->send($mail);
+        } catch (Exception $exception) {
+            Log::notice('Email sent failed', [
+                'exception' => $exception->getMessage(),
+                'code' => $exception->getCode(),
+                'exceptionClass' => get_class($exception)
+            ]);
+        }
     }
 }
