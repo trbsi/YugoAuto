@@ -20,9 +20,9 @@ class UpdateRideLogic
         int $rideId,
         int $driverId,
         int $numberOfSeats,
-        string $description,
+        null|string $description,
         bool $isAcceptingPackage,
-        ?string $car,
+        null|string $car,
     ): void {
         $canAccess = $this->canAccessRideSpecification->isSatisfiedByDriver(driverId: $driverId, rideId: $rideId);
 

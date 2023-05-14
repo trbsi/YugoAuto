@@ -11,9 +11,9 @@ class UpdateRideService
     public function update(
         int $rideId,
         int $numberOfSeats,
-        string $description,
+        null|string $description,
         bool $isAcceptingPackage,
-        ?string $car,
+        null|string $car,
     ): void {
         $ride = Ride::find($rideId);
         $ride
