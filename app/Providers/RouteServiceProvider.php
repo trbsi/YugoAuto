@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Source\Staging\StagingHelper;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -46,7 +47,8 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         RateLimiter::for('registration-limiter', function (Request $request) {
-            return Limit::perDay(3)->by($request->ip());
+            $limit = StagingHelper::isStaging() ? 100 : 3;
+            return Limit::perDay($limit)->by($request->ip());
         });
     }
 }

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Source\Commands\General;
 
+use App\Source\Staging\StagingHelper;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 
 class StagingAppMiddleware
@@ -33,7 +33,7 @@ class StagingAppMiddleware
             return $next($request);
         }
 
-        if (Cookie::get('staging_access') !== config('staging.access_key')) {
+        if (!StagingHelper::isStaging()) {
             abort(403);
         }
 
