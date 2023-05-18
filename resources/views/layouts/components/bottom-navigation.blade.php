@@ -5,7 +5,7 @@
            class="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group">
             <i class="fa-solid fa-magnifying-glass"></i>
             <span
-                class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Search')}}</span>
+                class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Search')}}</span>
         </a>
         <a href="{{route('messaging.conversation.list')}}" data-tooltip-target="tooltip-bookmark" type="button"
            class="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group">
@@ -18,13 +18,13 @@
                 @endif
             </i>
             <span
-                class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Messages')}}</span>
+                class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Messages')}}</span>
         </a>
         <a href="{{route('ride.create')}}" data-tooltip-target="tooltip-post" type="button"
            class="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group">
             <i class="fa-solid fa-circle-plus"></i>
             <span
-                class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Add')}}</span>
+                class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Add')}}</span>
         </a>
 
         <a href="{{route('ride.my-rides')}}" data-tooltip-target="tooltip-search" type="button"
@@ -38,14 +38,14 @@
                 @endif
             </i>
             <span
-                class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('My rides')}}</span>
+                class="text-xs text-center text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('My rides')}}</span>
         </a>
         <a href="{{auth_user_profile_url()}}" data-tooltip-target="tooltip-settings" type="button"
            class="inline-flex flex-col items-center justify-center p-4 hover:bg-gray-50 dark:hover:bg-gray-800 group">
             <i class="fa-solid fa-user relative"></i>
 
             <span
-                class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Profile')}}</span>
+                class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">{{__('Profile')}}</span>
         </a>
     </div>
 </div>

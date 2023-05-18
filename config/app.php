@@ -92,6 +92,7 @@ return [
         'Serbia' => 'Srbija',
         'Serbia_Cyrl' => 'Србија',
         'United Kingdom' => 'United Kingdom',
+        'Austria' => 'Österreich',
     ],
 
     /*
