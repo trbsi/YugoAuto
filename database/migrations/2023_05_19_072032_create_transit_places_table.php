@@ -10,19 +10,18 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('transit_cities', function (Blueprint $table) {
+        Schema::create('transit_places', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('city_id')
-                ->nullable()
-                ->constrained('places')
-                ->cascadeOnUpdate()
-                ->cascadeOnDelete();
             $table->foreignId('ride_id')
                 ->nullable()
                 ->constrained('rides')
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
-            $table->timestamps();
+            $table->foreignId('to_place_id')
+                ->nullable()
+                ->constrained('places')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('transit_cities');
+        Schema::dropIfExists('transit_places');
     }
 };

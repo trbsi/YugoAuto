@@ -27,6 +27,7 @@ class UpdateRideRequest extends FormRequest
             'description' => ['nullable', 'string', 'max:500'],
             'is_accepting_package' => ['nullable', 'string', 'in:on'],
             'car' => ['nullable', 'string', 'max:50'],
+            'transit_places_ids' => ['nullable', 'string'],
         ];
     }
 

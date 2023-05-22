@@ -42,6 +42,8 @@ use Illuminate\Support\Facades\Auth;
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $rideRequests
  * @property-read int|null $ride_requests_count
  * @property-read \App\Models\Place $toPlace
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Place> $transitPlaces
+ * @property-read int|null $transit_places_count
  * @method static \Database\Factories\RideFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Ride newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Ride newQuery()
@@ -116,9 +118,9 @@ class Ride extends Model
             ->where('passenger_id', Auth::id());
     }
 
-    public function transitCities(): BelongsToMany
+    public function transitPlaces(): BelongsToMany
     {
-        return $this->belongsToMany(Place::class, 'transit_cities');
+        return $this->belongsToMany(Place::class, 'transit_places', 'ride_id', 'to_place_id');
     }
 
     public function getId(): int

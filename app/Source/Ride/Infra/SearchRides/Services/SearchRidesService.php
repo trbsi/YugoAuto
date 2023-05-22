@@ -8,6 +8,7 @@ use App\Models\Ride;
 use App\Source\Localization\Infra\Helpers\LocalizationHelper;
 use App\Source\Ride\Enum\RideExtraFiltersEnum;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Carbon;
 
@@ -22,8 +23,19 @@ class SearchRidesService
         string $filter
     ): LengthAwarePaginator {
         //TODO - check query index
-        $rides = Ride::where('from_place_id', $fromPlaceId)
-            ->whereIn('to_place_id', $toPlaceIds)
+        $rides = Ride::query()
+            ->distinct()
+            ->select('rides.*')
+            ->leftJoin('transit_places', 'transit_places.ride_id', '=', 'rides.id')
+            ->where(function (Builder $query) use ($fromPlaceId, $toPlaceIds) {
+                $query
+                    ->where(function (Builder $query) use ($fromPlaceId, $toPlaceIds) {
+                        $query
+                            ->where('rides.from_place_id', $fromPlaceId)
+                            ->whereIn('rides.to_place_id', $toPlaceIds);
+                    })
+                    ->orWhereIn('transit_places.to_place_id', $toPlaceIds);
+            })
             ->with([
                 'fromPlace',
                 'toPlace',
@@ -39,6 +51,7 @@ class SearchRidesService
         if ($maxStartTime) {
             $rides->whereRaw(sprintf('DATE(time) <= "%s"', $maxStartTime->format('Y-m-d')));
         }
+
         if ($isAcceptingPackage) {
             $rides->where('is_accepting_package', 1);
         }
@@ -50,7 +63,7 @@ class SearchRidesService
             RideExtraFiltersEnum::TIME_LATEST->value => $rides->orderBy('time', 'DESC'),
             default => $rides->orderBy('time', 'ASC')
         };
-
+    
         return $rides->paginate();
     }
 

@@ -21,7 +21,8 @@ class CreateRideService
         ?string $description,
         bool $isAcceptingPackage,
         Country $country,
-        null|string $car
+        null|string $car,
+        array $transitPlaces
     ): void {
         $ride = new Ride();
         $ride
@@ -43,6 +44,10 @@ class CreateRideService
         $userProfile
             ->increaseTotalRidesCount()
             ->save();
+
+        if ($transitPlaces) {
+            $ride->transitPlaces()->attach($transitPlaces);
+        }
     }
 
     private function getCurrency(Country $country): string

@@ -337,6 +337,7 @@
     "Car": "Auto",
     "Click here": "Klicken Sie hier",
     "Edit ride": "Fahrt bearbeiten",
+    "Transit places": "Transitstädte",
     "--------------FOR MODAL--------------": "--------------FOR MODAL--------------",
     "New features": "New features",
     "New features text": "1. Cities from Serbia, BiH, Slovenia, Austria and Germany have been added<br>2. If someone cancels the ride up to 2 hours before departure, you will be able to rate the person. That person's profile will show the percentage of last-minute canceled rides.<br>3. As a passenger, you can cancel a ride that is still pending<br>4. When adding a ride as a driver, you can indicate whether you are accepting packages<br>5. You can search for rides that accept packages"

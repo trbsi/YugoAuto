@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Source\Ride\Infra\UpdateRide\Services;
@@ -11,7 +12,7 @@ class GetRideService
     {
         return Ride::query()
             ->where('id', $rideId)
-            ->with(['fromPlace', 'toPlace', 'driver.driverProfile'])
+            ->with(['fromPlace', 'toPlace', 'driver.driverProfile', 'transitPlaces'])
             ->firstOrFail();
     }
 }

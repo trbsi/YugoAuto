@@ -1,5 +1,7 @@
 //AUTOCOMPLETE FOR PLACES
 $(function () {
+    let maxTokenLimit = 5;
+
     let tokenInputSettings = {
         theme: 'facebook',
         minChars: 3,
@@ -10,29 +12,52 @@ $(function () {
         preventDuplicates: true
     };
 
+    // FROM PLACE
     var fromPlaceInput = $("#from_place");
-    var fromPlaceId = $("#from_place_id");
+    var fromPlaceIdInput = $("#from_place_id");
     fromPlaceInput.tokenInput(citySearchRoute,
         {
             ...tokenInputSettings,
             onAdd: function (item) {
-                fromPlaceId.val(item.id);
+                fromPlaceIdInput.val(item.id);
             },
             onDelete: function (item) {
-                fromPlaceId.val('');
+                fromPlaceIdInput.val('');
             }
         }
     );
 
+    // TRANSIT PLACES
+    var transitPlacesInput = $("#transit_places");
+    var transitPlacesIdInput = $("#transit_places_ids");
+    var transitPlacesIds = [];
+    transitPlacesInput.tokenInput(citySearchRoute,
+        {
+            ...tokenInputSettings,
+            ...{tokenLimit: maxTokenLimit},
+            onAdd: function (item) {
+                transitPlacesIds.push(item.id);
+                transitPlacesIdInput.val(transitPlacesIds.join(','));
+            },
+            onDelete: function (item) {
+                transitPlacesIds = transitPlacesIds.filter(function (elem) {
+                    return elem !== item.id;
+                });
+                transitPlacesIdInput.val(transitPlacesIds.join(','));
+            }
+        }
+    );
+
+    // TO PLACE
     var currentUrl = window.location.href;
     var toPlaceIds = [];
     var toPlaceInput = $("#to_place");
-    var toPlaceId = $("#to_place_id");
+    var toPlaceIdInput = $("#to_place_id");
     var tokenLimit = {};
     if (currentUrl.indexOf('ride/create') !== -1 || currentUrl.indexOf('ride/update') !== -1) {
         tokenLimit = {tokenLimit: 1};
     } else {
-        tokenLimit = {tokenLimit: 5};
+        tokenLimit = {tokenLimit: maxTokenLimit};
     }
 
     toPlaceInput.tokenInput(citySearchRoute, {
@@ -40,22 +65,22 @@ $(function () {
         ...tokenLimit,
         onAdd: function (item) {
             toPlaceIds.push(item.id);
-            toPlaceId.val(toPlaceIds.join(','));
+            toPlaceIdInput.val(toPlaceIds.join(','));
         },
         onDelete: function (item) {
             toPlaceIds = toPlaceIds.filter(function (elem) {
                 return elem !== item.id;
             });
-            toPlaceId.val(toPlaceIds.join(','));
+            toPlaceIdInput.val(toPlaceIds.join(','));
         }
     });
 
     //SWITCH RIDES
     $('#switch_rides').click(function () {
         //switch places ids
-        var tmpToPlaceId = toPlaceId.val();
-        toPlaceId.val(fromPlaceId.val());
-        fromPlaceId.val(tmpToPlaceId);
+        var tmpToPlaceId = toPlaceIdInput.val();
+        toPlaceIdInput.val(fromPlaceIdInput.val());
+        fromPlaceIdInput.val(tmpToPlaceId);
 
         //clear array because onAdd() function will be triggered
         toPlaceIds = [];

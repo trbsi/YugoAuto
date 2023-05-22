@@ -23,6 +23,7 @@ class UpdateRideLogic
         null|string $description,
         bool $isAcceptingPackage,
         null|string $car,
+        array $transitPlaces
     ): void {
         $canAccess = $this->canAccessRideSpecification->isSatisfiedByDriver(driverId: $driverId, rideId: $rideId);
 
@@ -35,7 +36,8 @@ class UpdateRideLogic
             isAcceptingPackage: $isAcceptingPackage,
             description: $description,
             car: $car,
-            rideId: $rideId
+            rideId: $rideId,
+            transitPlaces: $transitPlaces
         );
     }
 }

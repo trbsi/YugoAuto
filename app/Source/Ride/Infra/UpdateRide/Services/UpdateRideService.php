@@ -14,6 +14,7 @@ class UpdateRideService
         null|string $description,
         bool $isAcceptingPackage,
         null|string $car,
+        array $transitPlaces
     ): void {
         $ride = Ride::find($rideId);
         $ride
@@ -22,5 +23,9 @@ class UpdateRideService
             ->setIsAcceptingPackage($isAcceptingPackage)
             ->setCar($car)
             ->save();
+
+        if ($transitPlaces) {
+            $ride->transitPlaces()->sync($transitPlaces);
+        }
     }
 }

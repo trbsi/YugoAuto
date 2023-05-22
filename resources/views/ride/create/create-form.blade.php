@@ -1,6 +1,10 @@
 <?php
 /** @var $driverProfile \App\Models\DriverProfile */
 
+/** @var $transitPlaces \Illuminate\Database\Eloquent\Collection */
+/** @var $toPlace \App\Models\Place */
+/** @var $fromPlace \App\Models\Place */
+/** @var $transitPlace \App\Models\Place */
 ?>
 <x-app-layout>
     <x-slot name="header">
@@ -21,28 +25,38 @@
                             <label for="from_place"
                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('From place')}}</label>
                             <input type="text" id="from_place"
-                                   value="{{$fromPlace ? $fromPlace->getName() : $fromPlace}}"
                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    required>
 
                             <input
                                 type="hidden"
-                                value="{{old('from_place_id')}}"
                                 name="from_place_id"
                                 id="from_place_id" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="transit_places"
+                                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('Transit places')}}</label>
+                            <input type="text"
+                                   id="transit_places"
+                                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   required>
+
+                            <input
+                                type="hidden"
+                                name="transit_places_ids"
+                                id="transit_places_ids" required>
                         </div>
 
                         <div class="mb-6">
                             <label for="to_place"
                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('To place')}}</label>
                             <input type="text" id="to_place"
-                                   value="{{$toPlace ? $toPlace->getName() : $toPlace}}"
                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    required>
 
                             <input
                                 type="hidden"
-                                value="{{old('to_place_id')}}"
                                 name="to_place_id"
                                 id="to_place_id" required>
                         </div>
@@ -128,4 +142,32 @@
         </div>
     </div>
 
+    @push('javascript')
+        <script>
+            $(function () {
+                @if(!empty($fromPlace))
+                $('#from_place').tokenInput('add', {id: {{$fromPlace->getId()}}, name: '{{$fromPlace->getName()}}'});
+                @endif
+
+                @if(!empty($toPlace))
+                $('#to_place').tokenInput('add', {id: {{$toPlace->getId()}}, name: '{{$toPlace->getName()}}'});
+                @endif
+
+                @if($transitPlaces->isNotEmpty())
+                var tmpTransitPlaces = [
+                        @foreach($transitPlaces as $transitPlace)
+                    {
+                        id: {{$transitPlace->getId()}}, name: '{{$transitPlace->getName()}}'
+                    },
+                    @endforeach
+                ];
+
+                tmpTransitPlaces.forEach(function (element) {
+                    $('#transit_places').tokenInput('add', element);
+                })
+                @endif
+
+            });
+        </script>
+    @endpush
 </x-app-layout>

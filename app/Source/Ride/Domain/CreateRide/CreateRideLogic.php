@@ -29,7 +29,8 @@ class CreateRideLogic
         int $price,
         ?string $description,
         bool $isAcceptingPackage,
-        null|string $car
+        null|string $car,
+        array $transitPlaces
     ): void {
         $place = Place::find($fromPlaceId);
         $country = $place->country;
@@ -56,7 +57,8 @@ class CreateRideLogic
             description: $description,
             isAcceptingPackage: $isAcceptingPackage,
             country: $country,
-            car: $car
+            car: $car,
+            transitPlaces: $transitPlaces
         );
     }
 }

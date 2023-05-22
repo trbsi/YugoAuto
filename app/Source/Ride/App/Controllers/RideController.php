@@ -84,26 +84,6 @@ class RideController extends Controller
         }
     }
 
-    public function showCreate(
-        Request $request,
-        SearchPlacesLogic $searchPlacesBusinessLogic
-    ) {
-        $fromPlaceId = old('from_place_id');
-        $toPlaceId = old('to_place_id');
-        $toPlace = $fromPlace = null;
-        if ($fromPlaceId && $toPlaceId) {
-            $fromPlace = $searchPlacesBusinessLogic->getById((int)$fromPlaceId);
-            $toPlace = $searchPlacesBusinessLogic->getById((int)$toPlaceId);
-        }
-        return view(
-            'ride.create.create-form',
-            [
-                'fromPlace' => $fromPlace,
-                'toPlace' => $toPlace,
-                'driverProfile' => Auth::user()->driverProfile
-            ]
-        );
-    }
 
     public function showUpdate(
         int $id,
@@ -111,6 +91,7 @@ class RideController extends Controller
         GetRideLogic $logic
     ) {
         $ride = $logic->getById(rideId: $id, userId: Auth::id());
+
         return view(
             'ride.update.update-form',
             [
@@ -130,12 +111,43 @@ class RideController extends Controller
             numberOfSeats: (int)$request->number_of_seats,
             description: $request->description,
             isAcceptingPackage: $request->is_accepting_package === 'on' ? true : false,
-            car: $request->car
+            car: $request->car,
+            transitPlaces: $request->transit_places_ids ? explode(',', $request->transit_places_ids) : [],
         );
         return redirect()->back();
     }
 
-    public function save(
+    public function showCreate(
+        Request $request,
+        SearchPlacesLogic $searchPlacesBusinessLogic
+    ) {
+        $fromPlaceId = old('from_place_id');
+        $toPlaceId = old('to_place_id');
+        $transitPlacesIds = old('transit_places_ids');
+        $fromPlace = $toPlace = null;
+        $transitPlaces = new Collection();
+
+        if ($fromPlaceId && $toPlaceId) {
+            $fromPlace = $searchPlacesBusinessLogic->getById((int)$fromPlaceId);
+            $toPlace = $searchPlacesBusinessLogic->getById((int)$toPlaceId);
+        }
+
+        if ($transitPlacesIds) {
+            $transitPlaces = $searchPlacesBusinessLogic->getByIds(explode(',', $transitPlacesIds));
+        }
+
+        return view(
+            'ride.create.create-form',
+            [
+                'fromPlace' => $fromPlace,
+                'toPlace' => $toPlace,
+                'transitPlaces' => $transitPlaces,
+                'driverProfile' => Auth::user()->driverProfile
+            ]
+        );
+    }
+
+    public function create(
         CreateRideRequest $request,
         CreateRideLogic $logic
     ) {
@@ -149,7 +161,8 @@ class RideController extends Controller
                 price: (int)$request->price,
                 description: $request->description,
                 isAcceptingPackage: $request->is_accepting_package === 'on' ? true : false,
-                car: $request->car
+                car: $request->car,
+                transitPlaces: $request->transit_places_ids ? explode(',', $request->transit_places_ids) : [],
             );
             $request->session()->flash('success', __('Ride is created'));
         } catch (Exception $exception) {

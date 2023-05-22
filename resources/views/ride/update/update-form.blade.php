@@ -1,6 +1,8 @@
 <?php
 /** @var $ride \App\Models\Ride */
 
+/** @var $transitPlace \App\Models\Place */
+
 /** @var $driverProfile \App\Models\DriverProfile */
 
 use App\Enum\TimeEnum;
@@ -27,6 +29,20 @@ use App\Enum\TimeEnum;
                             <label for="from_place"
                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('From place')}}</label>
                             {{$ride->fromPlace->getName()}}
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="transit_places"
+                                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('Transit places')}}</label>
+                            <input type="text"
+                                   id="transit_places"
+                                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   required>
+
+                            <input
+                                type="hidden"
+                                name="transit_places_ids"
+                                id="transit_places_ids" required>
                         </div>
 
                         <div class="mb-6">
@@ -123,14 +139,19 @@ use App\Enum\TimeEnum;
     @push('javascript')
         <script>
             $(function () {
-                $('#from_place').tokenInput('add', {
-                    id: {{$ride->fromPlace->getId()}},
-                    name: '{{$ride->fromPlace->getName()}}'
-                });
-                $('#to_place').tokenInput('add', {
-                    id: {{$ride->toPlace->getId()}},
-                    name: '{{$ride->toPlace->getName()}}'
-                });
+                @if($ride->transitPlaces->isNotEmpty())
+                var tmpTransitPlaces = [
+                        @foreach($ride->transitPlaces as $transitPlace)
+                    {
+                        id: {{$transitPlace->getId()}}, name: '{{$transitPlace->getName()}}'
+                    },
+                    @endforeach
+                ];
+
+                tmpTransitPlaces.forEach(function (element) {
+                    $('#transit_places').tokenInput('add', element);
+                })
+                @endif
             });
         </script>
     @endpush

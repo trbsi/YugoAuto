@@ -32,14 +32,18 @@ class SearchRidesLogic
             $minStartTime = $now;
         }
 
-        return $this->searchRidesService->search(
-            fromPlaceId: $fromPlaceId,
-            toPlaceIds: $toPlaceIds,
-            minStartTime: $minStartTime,
-            maxStartTime: $maxStartTime,
-            isAcceptingPackage: $isAcceptingPackage,
-            filter: $filter
-        );
+        try {
+            return $this->searchRidesService->search(
+                fromPlaceId: $fromPlaceId,
+                toPlaceIds: $toPlaceIds,
+                minStartTime: $minStartTime,
+                maxStartTime: $maxStartTime,
+                isAcceptingPackage: $isAcceptingPackage,
+                filter: $filter
+            );
+        } catch (\Exception $exception) {
+            dd($exception->getMessage());
+        }
     }
 
     public function latestRides(): Collection
