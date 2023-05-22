@@ -6,6 +6,7 @@ use App\Source\RideRequest\Enum\RideRequestEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -113,6 +114,11 @@ class Ride extends Model
     {
         return $this->hasOne(RideRequest::class, 'ride_id', 'id')
             ->where('passenger_id', Auth::id());
+    }
+
+    public function transitCities(): BelongsToMany
+    {
+        return $this->belongsToMany(Place::class, 'transit_cities');
     }
 
     public function getId(): int
