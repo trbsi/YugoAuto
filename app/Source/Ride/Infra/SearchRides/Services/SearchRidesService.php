@@ -27,13 +27,10 @@ class SearchRidesService
             ->distinct()
             ->select('rides.*')
             ->leftJoin('transit_places', 'transit_places.ride_id', '=', 'rides.id')
+            ->where('rides.from_place_id', $fromPlaceId)
             ->where(function (Builder $query) use ($fromPlaceId, $toPlaceIds) {
                 $query
-                    ->where(function (Builder $query) use ($fromPlaceId, $toPlaceIds) {
-                        $query
-                            ->where('rides.from_place_id', $fromPlaceId)
-                            ->whereIn('rides.to_place_id', $toPlaceIds);
-                    })
+                    ->whereIn('rides.to_place_id', $toPlaceIds)
                     ->orWhereIn('transit_places.to_place_id', $toPlaceIds);
             })
             ->with([
@@ -63,7 +60,7 @@ class SearchRidesService
             RideExtraFiltersEnum::TIME_LATEST->value => $rides->orderBy('time', 'DESC'),
             default => $rides->orderBy('time', 'ASC')
         };
-    
+
         return $rides->paginate();
     }
 
