@@ -113,6 +113,8 @@ class RideController extends Controller
             isAcceptingPackage: $request->is_accepting_package === 'on' ? true : false,
             car: $request->car,
             transitPlaces: $request->transit_places_ids ? explode(',', $request->transit_places_ids) : [],
+            price: $request->price ? (int)$request->price : null,
+            time: $request->time,
         );
         return redirect()->back();
     }

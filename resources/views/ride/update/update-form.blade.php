@@ -54,7 +54,17 @@ use App\Enum\TimeEnum;
                         <div class="mb-6">
                             <label for="time"
                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{__('Minimum departure time')}}</label>
-                            {{$ride->getRideTime()->format(TimeEnum::DATETIME_FORMAT->value)}}
+                            @if($ride->acceptedRideRequests->count())
+                                {{$ride->getRideTime()->format(TimeEnum::DATETIME_FORMAT->value)}}
+                            @else
+                                <input type="text"
+                                       name="time"
+                                       readonly
+                                       value="{{$ride->getRideTimeFormatted()}}"
+                                       class="datetimepicker bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                       required>
+                            @endif
+
                         </div>
 
                         <div class="mb-6">
@@ -73,7 +83,15 @@ use App\Enum\TimeEnum;
                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                 {{__('Price')}} {{$ride->getCurrency()}}
                             </label>
-                            {{$ride->getPrice()}}
+
+                            @if($ride->acceptedRideRequests->count())
+                                {{$ride->getPrice()}}
+                            @else
+                                <input type="number" id="price" name="price"
+                                       value="{{$ride->getPrice()}}"
+                                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                       placeholder="15" required>
+                            @endif
                         </div>
 
                         <div class="mb-6">

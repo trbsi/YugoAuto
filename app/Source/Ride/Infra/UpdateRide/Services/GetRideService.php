@@ -12,7 +12,13 @@ class GetRideService
     {
         return Ride::query()
             ->where('id', $rideId)
-            ->with(['fromPlace', 'toPlace', 'driver.driverProfile', 'transitPlaces'])
+            ->with([
+                'fromPlace',
+                'toPlace',
+                'driver.driverProfile',
+                'transitPlaces',
+                'acceptedRideRequests'
+            ])
             ->firstOrFail();
     }
 }

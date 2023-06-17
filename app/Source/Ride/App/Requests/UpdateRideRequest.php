@@ -2,6 +2,7 @@
 
 namespace App\Source\Ride\App\Requests;
 
+use App\Enum\TimeEnum;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateRideRequest extends FormRequest
@@ -28,6 +29,8 @@ class UpdateRideRequest extends FormRequest
             'is_accepting_package' => ['nullable', 'string', 'in:on'],
             'car' => ['nullable', 'string', 'max:50'],
             'transit_places_ids' => ['nullable', 'string'],
+            'price' => ['nullable', 'integer', 'max:10000'],
+            'time' => ['nullable', 'date_format:' . TimeEnum::DATETIME_FORMAT->value],
         ];
     }
 

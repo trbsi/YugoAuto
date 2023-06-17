@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Source\Ride\Domain\UpdateRide;
@@ -12,9 +13,8 @@ class GetRideLogic
 {
     public function __construct(
         private readonly CanAccessRideSpecification $canAccessRideSpecification,
-        private readonly GetRideService             $getRideService
-    )
-    {
+        private readonly GetRideService $getRideService
+    ) {
     }
 
     public function getById(int $rideId, int $userId): Ride

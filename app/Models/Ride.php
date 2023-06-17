@@ -34,6 +34,7 @@ use Illuminate\Support\Facades\Auth;
  * @property Carbon|null $deleted_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $acceptedRideRequests
  * @property-read int|null $accepted_ride_requests_count
+ * @property-read \App\Models\Country $country
  * @property-read \App\Models\User $driver
  * @property-read \App\Models\Place $fromPlace
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\RideRequest> $pendingRideRequests
@@ -121,6 +122,11 @@ class Ride extends Model
     public function transitPlaces(): BelongsToMany
     {
         return $this->belongsToMany(Place::class, 'transit_places', 'ride_id', 'to_place_id');
+    }
+
+    public function country(): BelongsTo
+    {
+        return $this->belongsTo(Country::class, 'country_id');
     }
 
     public function getId(): int

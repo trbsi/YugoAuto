@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace App\Source\Ride\Domain\CreateRide;
 
-use App\Enum\TimeEnum;
 use App\Models\Place;
+use App\Source\Ride\Domain\Traits\RideTimeTrait;
 use App\Source\Ride\Infra\CreateRide\Services\CreateRideService;
 use App\Source\Ride\Infra\CreateRide\Specifications\CanCreateRideSpecification;
-use DateTimeZone;
 use Exception;
-use Illuminate\Support\Carbon;
 
 class CreateRideLogic
 {
+    use RideTimeTrait;
+
     public function __construct(
         private CreateRideService $createRideService,
         private CanCreateRideSpecification $canCreateRideSpecification
@@ -34,8 +34,7 @@ class CreateRideLogic
     ): void {
         $place = Place::find($fromPlaceId);
         $country = $place->country;
-        $timezones = DateTimeZone::listIdentifiers(DateTimeZone::PER_COUNTRY, $country->getCode());
-        $timezonedTime = Carbon::createFromFormat(TimeEnum::DATETIME_FORMAT->value, $time, $timezones[0] ?? 'UTC');
+        $timezonedTime = $this->getTimezonedTime($time, $country->getCode());
 
         $canCreate = $this->canCreateRideSpecification->isSatisfied(
             driverId: $driverId,

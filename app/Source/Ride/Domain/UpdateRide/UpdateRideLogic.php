@@ -4,12 +4,16 @@ declare(strict_types=1);
 
 namespace App\Source\Ride\Domain\UpdateRide;
 
+use App\Models\Ride;
+use App\Source\Ride\Domain\Traits\RideTimeTrait;
 use App\Source\Ride\Infra\Common\Specifications\CanAccessRideSpecification;
 use App\Source\Ride\Infra\UpdateRide\Services\UpdateRideService;
 use Exception;
 
 class UpdateRideLogic
 {
+    use RideTimeTrait;
+
     public function __construct(
         private readonly UpdateRideService $updateRideService,
         private readonly CanAccessRideSpecification $canAccessRideSpecification,
@@ -23,7 +27,9 @@ class UpdateRideLogic
         null|string $description,
         bool $isAcceptingPackage,
         null|string $car,
-        array $transitPlaces
+        array $transitPlaces,
+        null|int $price,
+        null|string $time
     ): void {
         $canAccess = $this->canAccessRideSpecification->isSatisfiedByDriver(driverId: $driverId, rideId: $rideId);
 
@@ -31,13 +37,19 @@ class UpdateRideLogic
             throw new Exception(__('Cannot access ride'));
         }
 
+        $ride = Ride::find($rideId);
+
+        $timezonedTime = $this->getTimezonedTime($time, $ride->country->getCode());
+
         $this->updateRideService->update(
             numberOfSeats: $numberOfSeats,
             isAcceptingPackage: $isAcceptingPackage,
             description: $description,
             car: $car,
             rideId: $rideId,
-            transitPlaces: $transitPlaces
+            transitPlaces: $transitPlaces,
+            price: $price,
+            time: $timezonedTime
         );
     }
 }
