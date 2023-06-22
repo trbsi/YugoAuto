@@ -39,7 +39,10 @@ class UpdateRideLogic
 
         $ride = Ride::find($rideId);
 
-        $timezonedTime = $this->getTimezonedTime($time, $ride->country->getCode());
+        $timezonedTime = null;
+        if ($time) {
+            $timezonedTime = $this->getTimezonedTime($time, $ride->country->getCode());
+        }
 
         $this->updateRideService->update(
             numberOfSeats: $numberOfSeats,
