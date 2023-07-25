@@ -15,6 +15,7 @@ use App\Source\Ride\Domain\CreateRide\CreateRideLogic;
 use App\Source\Ride\Domain\DeleteRide\DeleteRideLogic;
 use App\Source\Ride\Domain\MyRides\MyRidesLogic;
 use App\Source\Ride\Domain\SearchRides\SearchRidesLogic;
+use App\Source\Ride\Domain\Stats\RideStatsLogic;
 use App\Source\Ride\Domain\UpdateRide\GetRideLogic;
 use App\Source\Ride\Domain\UpdateRide\UpdateRideLogic;
 use Exception;
@@ -31,7 +32,8 @@ class RideController extends Controller
     public function search(
         SearchRidesRequest $request,
         SearchRidesLogic $logic,
-        SearchPlacesLogic $placesBusinessLogic
+        SearchPlacesLogic $placesBusinessLogic,
+        RideStatsLogic $rideStatsLogic
     ) {
         try {
             $requiredParams = ['from_place_id', 'to_place_id'];
@@ -75,7 +77,8 @@ class RideController extends Controller
                     'toPlaces' => $toPlaces,
                     'minTime' => $minTime,
                     'maxTime' => $maxTime,
-                    'isAcceptingPackage' => $isAcceptingPackage
+                    'isAcceptingPackage' => $isAcceptingPackage,
+                    'stats' => $rideStatsLogic->getStats(),
                 ]
             );
         } catch (Exception $exception) {
