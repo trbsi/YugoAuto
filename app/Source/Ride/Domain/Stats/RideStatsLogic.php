@@ -24,6 +24,7 @@ class RideStatsLogic
         $lastRequestedRide = RideRequest::latest()->first();
         $totalRides = Ride::count();
         $firstRide = Ride::first();
+        $lastPublishedRide = Ride::query()->latest()->first();
 
         $data = [
             'totalAccepted' => $totalAccepted,
@@ -32,7 +33,8 @@ class RideStatsLogic
             'totalRideRequestsPercentage' => round(($totalRideRequests / $totalRides) * 100, 0),
             'lastRideRequestDate' => $lastRequestedRide->created_at->format('d.m.Y.'),
             'totalRides' => $totalRides,
-            'firstRideDate' => $firstRide->created_at->format('d.m.Y.')
+            'firstRideDate' => $firstRide->created_at->format('d.m.Y.'),
+            'lastPublishedRideDate' => $lastPublishedRide->created_at->format('d.m.Y.'),
         ];
         Cache::put(self::CACHE_KEY, $data, now()->addHours(1));
 

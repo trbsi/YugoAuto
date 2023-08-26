@@ -18,6 +18,7 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
                     </li>
                     <li>Datum zadnjeg zahtjeva za prijevoz: {{$stats['lastRideRequestDate']}}</li>
                     <li>Datum prvog prijevoza ikad objavljenog: {{$stats['firstRideDate']}}</li>
+                    <li>Datum zadnjeg objavljenog prijevoza: {{$stats['lastPublishedRideDate']}}</li>
                 </ul>
             @endif
 
