@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\EndGameMiddleware;
 use App\Http\Middleware\LocalizationMiddleware;
 use App\Http\Middleware\LogAuthMiddleware;
 use App\Source\Commands\General\StagingAppMiddleware;
@@ -41,6 +42,7 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             LocalizationMiddleware::class,
             StagingAppMiddleware::class,
+            EndGameMiddleware::class,
         ],
 
         'api' => [

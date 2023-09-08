@@ -4,6 +4,7 @@ namespace App\Source\Public\App\Controllers;
 
 use App\Models\Country;
 use App\Source\Localization\Infra\Helpers\LocalizationHelper;
+use App\Source\Ride\Domain\Stats\RideStatsLogic;
 use Detection\MobileDetect;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -63,5 +64,13 @@ class PublicController
             abort(404);
         }
         return redirect(route($route));
+    }
+
+    public function endGame(
+        RideStatsLogic $rideStatsLogic
+    ) {
+        return view('public.endgame', [
+            'stats' => $rideStatsLogic->getStats(),
+        ]);
     }
 }

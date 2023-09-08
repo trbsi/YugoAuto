@@ -18,3 +18,4 @@ Route::prefix('contact')->group(function () {
 });
 
 Route::get('localization/{country}', [PublicController::class, 'changeLocalization'])->name('change.localization');
+Route::get('end-game', [PublicController::class, 'endGame'])->name('endgame');
