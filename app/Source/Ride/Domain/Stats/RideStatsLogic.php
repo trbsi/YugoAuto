@@ -22,7 +22,7 @@ class RideStatsLogic
         $totalAccepted = RideRequest::where('status', RideRequestEnum::ACCEPTED->value)->count();
         $totalRideRequests = RideRequest::query()->count();
         $lastRequestedRide = RideRequest::latest()->first();
-        $totalRides = Ride::query()->trashed()->count();
+        $totalRides = Ride::query()->withTrashed()->count();
         $firstRide = Ride::first();
         $lastPublishedRide = Ride::query()->latest()->first();
 
